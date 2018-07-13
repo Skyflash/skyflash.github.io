@@ -1,0 +1,43 @@
+# careers section data
+# if you don't have language feature(language.yml is empty), ignore "i18n" items
+- name:
+    detail: Novomatic Italia Services
+    i18n: novomatic_b
+  desc:
+    detail: Coordinatore Office Automation Systems
+    i18n: novomatic_b_desc
+  date:
+    detail: Gennaio 2017 - Presente
+    i18n: novomatic_b_date
+  job:
+    detail: Coordinatore Office Automation Systems
+    i18n: novomatic_b_job
+  icon: fa-plus-square
+
+- name:
+    detail: Novomatic Italia Services
+    i18n: novomatic
+  desc:
+    detail: Referente Office Automation
+    i18n: novomatic_desc
+  date:
+    detail: Gennaio 2015 - Dicembre 2016
+    i18n: novomatic_date
+  job:
+    detail: Referente Office Automation
+    i18n: novomatic_job
+  icon: fa-plus-square
+
+- name:
+    detail: SO.GE.M.A. SpA
+    i18n: sogema
+  desc:
+    detail: I worked at Company C ...
+    i18n: sogema_desc
+  date:
+    detail: Gennaio 2006 - Dicembre 2014
+    i18n: sogema_date
+  job:
+    detail: Responsabile IT
+    i18n: sogema_job
+  icon: fa-server

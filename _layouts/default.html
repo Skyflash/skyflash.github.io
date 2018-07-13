@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Person" lang="it">
+
+    {% if page.title != 'Home' %}
+        {% include head.html %}
+    {% else %}
+        {% include index_head.html %}
+    {% endif %}
+
+<body id="page-top" class="landing-page">
+
+    {% if page.title != 'Home' %}
+        {% include blog_header.html %}
+    {% endif %}
+
+    {{ content }}
+
+    {% if page.title != 'Home' %}
+        {% include foot.html %}
+    {% else %}
+        {% include index_foot.html %}
+    {% endif %}
+
+</body>
+</html>

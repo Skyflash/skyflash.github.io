@@ -1,0 +1,30 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1; minimum-scale=1; user-scalable=no;">
+
+  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+  <meta name="baseurl" content="{{ site.baseurl }}">
+  <meta name="robots" content="index,follow" />
+  <meta name="rating" content="{{ site.settings.rating }}">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="{{ " /static/assets/img/favicon.jpg " | prepend: site.baseurl }}">
+  {% seo %}
+  <!--
+  Blog
+  -->
+  <!-- Main CSS -->
+  <link href="{{ "/static/assets/app-20180711.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link href="{{ "/static/css/custom.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <!-- Layout Specific CSS -->
+  {% if layout.custom_css %}{% for css_name in layout.custom_css %}
+  <link href="/static/css/{{ css_name | prepend: site.baseurl }}" rel="stylesheet" media="screen">
+  {% endfor %}{% endif %}
+  <!-- Post/Page Specific CSS -->
+  {% if page.custom_css and page.title != 'Blog' %}%}{% for css_name in page.custom_css %}
+  <link href="/static/css/{{ css_name | prepend: site.baseurl }}" rel="stylesheet" media="screen">
+  {% endfor %}{% endif %}
+  <!-- Main Scripts -->
+  <script src="{{"/static/assets/app-20180711.min.js"| prepend: site.baseurl }}"></script>
+  <script src="{{"/static/assets/blog-20180711.min.js"| prepend: site.baseurl }}"></script>
+  </head>

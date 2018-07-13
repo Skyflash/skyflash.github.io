@@ -1,0 +1,29 @@
+# projects section data
+# If you don't have language feature(language.yml is empty), ignore "i18n" items
+# Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
+- name: Kace SMA Tools
+  i18n: kace-sma-tools
+  gh_user: skyflash
+  url: https://github.com/kace-sma-tools
+  img: /static/assets/img/landing/kacesmatools.png
+  desc: Useful scripts and ideas for Quest Kace Systems Management Appliace (K1000). 
+
+- name: K1000 Database Queries
+  i18n: k1000-database-queries
+  gh_user: skyflash
+  repo: K1000-Database-Queries
+  img: /static/assets/img/landing/development.png
+  desc:  A collection of MySQL queries for the Dell KACE K1000 appliance.
+
+- name: This website on Github
+  i18n: skyflash-github
+  gh_user: skyflash
+  repo: skyflash.github.io
+  img: /static/assets/img/landing/me.jpg
+  desc: This project is my project. I use javescript to get repo's information all my repos have only one request.
+
+- name: La Traduzione di Morrowind
+  i18n: morrowind-translation
+  url: https://www.skyflash.it/traduzione-italiano-morrowind-tribunal-bloodmoon/3581/
+  img: /static/assets/img/blog/29-morrowind.webp
+  desc: La traduzione in Italiano di Morrowind, Tribunal e Bloodmoon - A cura dell'ITP
