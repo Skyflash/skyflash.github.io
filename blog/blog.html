@@ -33,8 +33,14 @@ custom_css: blogmenu.css
                          {% if site.disqus %}
                             <i class="fa fa-comments-o"> </i> <a>Comments (<span class="disqus-comment-count" data-disqus-url="{{ site.url }}{{ post.url }}">0</span>)</a>
                         {% endif %}
+                        {% capture words %} 
+                            {{ post.content | number_of_words }} 
+                        {% endcapture %} 
+                        {% unless words contains "-" %} 
                             <i class="fa fa-clock-o"></i> <a>{{ post.date | date: "%-d %b %Y" }}</a>
                             <i class="fa fa-user"></i> <a>{{ site.author.name }}</a>
+                            <i class="fa fa-clock-o"></i> <a>Tempo di lettura: {{ post.content | number_of_words | divided_by: 180 | append: " minuti" }}</a>
+                        {% endunless %}
                         </div>
                     </div>
                     <div class="col-md-2 ">
