@@ -1,6 +1,5 @@
 $(document).ready(function() {
   var i18nOpts = {
-    load: 'unspecific',
     lng: 'it',
     getAsync: true,
     fallbackLng: 'en',
