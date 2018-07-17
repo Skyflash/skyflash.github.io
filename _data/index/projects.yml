@@ -6,21 +6,21 @@
   gh_user: skyflash
   url: https://github.com/kace-sma-tools
   img: /static/assets/img/landing/kacesmatools.png
-  desc: Useful scripts and ideas for Quest Kace Systems Management Appliace (K1000). 
+  desc: Idee, script e suggerimenti utili per Quest Kace Systems Management Appliace (precedentmente noto come K1000) 
 
 - name: K1000 Database Queries
   i18n: k1000-database-queries
   gh_user: skyflash
   repo: K1000-Database-Queries
   img: /static/assets/img/landing/development.png
-  desc:  A collection of MySQL queries for the Dell KACE K1000 appliance.
+  desc:  Una collezione di queries MySQL per Il KACE 1000 (Quest Kace Systems Management Appliance)
 
 - name: This website on Github
   i18n: skyflash-github
   gh_user: skyflash
   repo: skyflash.github.io
   img: /static/assets/img/landing/me.jpg
-  desc: This project is my project. I use javescript to get repo's information all my repos have only one request.
+  desc: Il repository GitHub su cui viene sviluppato questo sito
 
 - name: La Traduzione di Morrowind
   i18n: morrowind-translation
