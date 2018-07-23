@@ -1,0 +1,15 @@
+<div class="row" style="background: #1c1e1e">
+    <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+      <p id="jalpc_site_pv" style="color: #FFFFFF">
+        <strong>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</strong>
+      </p>
+    </div>
+</div>
+
+{% if site.ga %}
+    {% include analytics.html %}
+{% endif %}
+
+{% if page.title != 'Home' and site.disqus %}
+<script id="dsq-count-scr" src="https://{{ site.disqus.name }}.disqus.com/count.js" async></script>
+{% endif %}
