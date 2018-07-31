@@ -31,7 +31,7 @@ custom_css: blogmenu.css
                          {{ post.description }}
                         </p>
                          {% if site.disqus %}
-                            <i class="fa fa-comments-o"> </i> <a>Comments (<span class="disqus-comment-count" data-disqus-url="{{ site.url }}{{ post.url }}">0</span>)</a>
+                            <i class="fa fa-comments-o"> </i> <a>Commenti (<span class="disqus-comment-count" data-disqus-url="{{ site.url }}{{ post.url }}">0</span>)</a>
                         {% endif %}
                         {% capture words %} 
                             {{ post.content | number_of_words }} 
