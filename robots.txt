@@ -4,4 +4,5 @@ title: robots
 User-agent: *
 Disallow: /assets/
 Disallow: /donate/
+Disallow: /donate
 Sitemap: {{site.url}}/sitemap.xml
