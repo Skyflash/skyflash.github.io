@@ -9,6 +9,8 @@ keywords: "morrowind,traduzione,itp"
 categories: [Games]
 tags: [Morrowind,ITP,Games]
 icon: fa-gamepad
+seo:
+    links: https://www.skyflash.it/2009/10/la-traduzione-in-italiano-di-planescape-torment-del-team-itp/
 ---
 <!-- ![TitleImg]({{ site.img_path }}/29-morrowind.webp) -->
 
@@ -26,7 +28,7 @@ Qualche mese prima della sua uscita nel nostro mercato, io ed altri appassionati
 
 Quasi per gioco, iniziai a tradurre il tutorial e le prime fasi di gioco. In quegli anni uno dei miei contatti era Lello Sarti, responsabile della testata online [RPGPlayer.it](http://forum.multiplayer.it/showthread.php?209954-RPGPLAYER), poi assorbita da Multiplayer. Lello era a sua volta in contatti con alcuni membri dell’ITP, a cui riferì che io avevo iniziato a tradurre il gioco. Il prossimo passo fu ovvio: stava per prendere il via la traduzione in Italiano più lunga e complessa mai realizzata a livello amatoriale!
 
-Proprio su questo stesso dominio istituimmo una mailing list con cui tenerci in contatto, e creai anche un piccolo forum (utilizzando lo storico [Snitz! forum](http://forum.snitz.com/), un ormai obsoleto forum in .ASP). Nel frattempo il gioco era già uscito in Italia e, come c’era da immaginarsi, venne accolto con molta timidezza, proprio a causa della sua gigantesca mole di testo in Inglese. Non ci volle molto perchè la voce secondo cui l’ITP, già noto per il meraviglioso lavoro svolto con [Planescape: Torment](http://www.skyflash.it/2009/10/la-traduzione-in-italiano-di-planescape-torment-del-team-itp/), si era messo al lavoro su Morrowind si diffondesse. Nel giro di alcuni mesi si parlava di noi su Usenet, sui forum, e persino su qualche rivista.
+Proprio su questo stesso dominio istituimmo una mailing list con cui tenerci in contatto, e creai anche un piccolo forum (utilizzando lo storico [Snitz! forum](http://forum.snitz.com/), un ormai obsoleto forum in .ASP). Nel frattempo il gioco era già uscito in Italia e, come c’era da immaginarsi, venne accolto con molta timidezza, proprio a causa della sua gigantesca mole di testo in Inglese. Non ci volle molto perchè la voce secondo cui l’ITP, già noto per il meraviglioso lavoro svolto con [Planescape: Torment](https://www.skyflash.it/2009/10/la-traduzione-in-italiano-di-planescape-torment-del-team-itp/), si era messo al lavoro su Morrowind si diffondesse. Nel giro di alcuni mesi si parlava di noi su Usenet, sui forum, e persino su qualche rivista.
 
 ### I PRIMI PROBLEMI…
 
