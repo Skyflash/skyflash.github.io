@@ -312,6 +312,9 @@ body.canvas-menu .nav-header {
         display: block;
         float: none;
     }
+    img {
+        max-width: 100%;
+    }
 }
 
 .menu-visible-lg,
@@ -335,6 +338,9 @@ body.canvas-menu .nav-header {
     .menu-visible-lg,
     .menu-visible-md {
         display: block !important;
+    }
+    img {
+        max-width: 100%;
     }
 }
 
