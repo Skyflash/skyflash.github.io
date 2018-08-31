@@ -33,6 +33,8 @@ GEM
       jekyll (~> 3.3)
       sinatra (~> 1.4)
       sinatra-contrib (~> 1.4)
+    jekyll-redirect-from (0.14.0)
+      jekyll (~> 3.3)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-seo-tag (2.5.0)
@@ -90,6 +92,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll-admin
+  jekyll-redirect-from
   jekyll-seo-tag
   tzinfo-data
   wdm (>= 0.1.0)
