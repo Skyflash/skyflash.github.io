@@ -5,6 +5,12 @@
     height: 75px;
     visibility: hidden;
 }
+.ibox {
+    max-width: 960px;
+    align-items: center;
+    margin: 0 auto;
+    justify-items: center;
+}
 .related-container {
     max-width: 800px;
     text-align: center;
@@ -24,8 +30,8 @@ h4.relh4 {
     padding-bottom: 15px;
     text-align: center;
     display: inline-flex;*/
-    border-top: 2px solid #eeeeee;/*
-    border-bottom: 2px solid #eeeeee;*/
+    border-top: 2px solid #eeeeee;
+    border-bottom: 2px solid #eeeeee;
     padding-top: 10px;
     margin: 0 auto;
     padding-bottom: 15px;
