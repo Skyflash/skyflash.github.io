@@ -4,7 +4,7 @@
 ####################################
 #
 title: Cristian Castellari
-description: "infromatico, padre e marito. Nel tempo libero mi dedico alla famiglia, agli amici e ai videogiochi"
+description: "Informatico, padre e marito. Nel tempo libero mi dedico alla famiglia, agli amici e ai videogiochi"
 keywords: cristian, castellari, blog, jekyll, gh-pages, kace, github, wordpress
 baseurl:  '' # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
 url: https://cristiancastellari.it  # url should be 'http://<github_username>.github.io/homepage' as before
