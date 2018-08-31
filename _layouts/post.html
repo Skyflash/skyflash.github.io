@@ -53,10 +53,10 @@ custom_css:
                             <!-- share -->
                             {% include share.html %}
                             <br>
-                            <div class="col-lg-12">
+                                <div class="related-container">
                                 <h4 class="relh4">Potrebbe Interessarti Anche...</h4>    
                                             <div class="rect">                                        
-                                            {% assign maxRelated = 3 %}
+                                            {% assign maxRelated = 4 %}
                                             {% assign minCommonTags =  1 %}
                                             {% assign maxRelatedCounter = 0 %}
                                             
@@ -79,7 +79,7 @@ custom_css:
                                                  <a href="{{ site.baseurl }}{{ post.url }}">
                                                    <div class="rel">
                                                       <img src="{{post.image}}" alt="{{post.description}}">
-                                                      <h5>{{ post.title }}</h5>
+                                                          <h5>{{ post.title }}</h5>
                                                   </div>
                                                  </a>
                                                  {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
@@ -88,13 +88,14 @@ custom_css:
                                                   {% endif %}
                                                 {% endif %}                                          
                                               {% endfor %}
-                                        </div>
+                                            </div>
                                     </div>
+                                </div>  
                             <br>
                             <!-- comment -->
                             {% include comments.html %}
                         </div>
-                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
         </div>

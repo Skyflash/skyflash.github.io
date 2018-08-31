@@ -5,50 +5,50 @@
     height: 75px;
     visibility: hidden;
 }
-/*
-.rect {
-    border-top: 2px solid #eeeeee;
-    border-bottom: 2px solid #eeeeee;
-    padding-top: 15px;
-    margin:0 auto;
+.related-container {
+    max-width: 800px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
-.rel {
-    width: 25%;
-    max-width: 25%;
-    min-width: 25%;
-    padding: 10px;
-    vertical-align: middle;
-    display: inline-block;
-    flex-basis: 25%;
-}
-.rel-image{
-    display: inline-block;
-    padding: 0px 20px 5px 10px;
-    opacity: 0.7;
-}
-*/
 h4.relh4 {
     margin-top: 2em !important;
-    margin-bottom: .5em !important;
+    margin-bottom: .5em;
+    text-align: left;
 }
-.rect {
+.rect {/*
     border-top: 2px solid #eeeeee;
     border-bottom: 2px solid #eeeeee;
     padding-top: 10px;
     padding-bottom: 15px;
-    width: 100%;
-    display: inline-flex;
+    text-align: center;
+    display: inline-flex;*/
+    border-top: 2px solid #eeeeee;/*
+    border-bottom: 2px solid #eeeeee;*/
+    padding-top: 10px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+}
+.rect a, .rect a:hover {
+    border: none;
 }
 .rel {
     width: 100%;
-    max-width: 250px;
-    min-width: 33%;
-    padding: 10px;
+    /*max-width: 250px; 
+    min-width: 33%;*/
     text-align: left;
+    padding: 10px;
 }
 .rel img {
     max-width: 100%;
     opacity: 0.7;
+    height: auto;
 }
 .rel img:hover {
     opacity: 1;
