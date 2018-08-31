@@ -1,13 +1,20 @@
 ---
+title: Identificare e terminare processi zombie su Linux
 layout: post
-title:  "Identificare e terminare processi zombie su Linux"
-date:   2015-10-25
-description: "Vediamo come uccidere, con un semplice script, eventuali processi zombie rimasti attivi sul nostro server Linux"
+date: '2015-10-25'
+description: Vediamo come uccidere, con un semplice script, eventuali processi zombie
+  rimasti attivi sul nostro server Linux
 lang: it_IT
-image: /static/assets/img/blog/zombout.webp
-keywords: "linux,script,process,kill,zombie,server"
-categories: [Linux]
-tags: [Linux,Scripting,Process]
+image: "/static/assets/img/blog/zombout.webp"
+keywords: linux,script,process,kill,zombie,server
+categories:
+- Linux
+tags:
+- Linux
+- Scripting
+- Process
+- sicurezza
+- script
 icon: fa-linux
 ---
 
@@ -109,4 +116,3 @@ Riferimenti:
 
 * [Identificare ed uccidere processi zombie in un server Linux](https://www.skyflash.it/computer/linux-os/identificare-ed-uccidere-processi-zombie-in-un-server-linux/6076/)
 * [CronHowTo](https://help.ubuntu.com/community/CronHowto)
-

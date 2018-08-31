@@ -9,6 +9,9 @@ keywords: "kace,k1000,script,vbs,visualbasic,smartcard,security,encryption"
 categories: [Kace]
 tags: [kace,script,vbs,smartcard,security,encryption]
 icon: fa-server
+redirect_from:
+    - /blog/kace/k1000-report-pc-with-smartcard-reader/blog/
+permalink: /blog/kace/:title/
 ---
 
 # Target

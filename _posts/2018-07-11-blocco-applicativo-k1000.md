@@ -8,7 +8,7 @@ image: /static/assets/img/blog/kace/smartcard/kace.jpg
 keywords: "kace,k1000,script,vbs,visualbasic,smartcard,security,encryption"
 categories: [Kace]
 tags: [kace,script,vbs,smartcard,security,encryption]
-icon: fa-unlock-alt
+icon: fa-unlock
 ---
 
 # Premessa

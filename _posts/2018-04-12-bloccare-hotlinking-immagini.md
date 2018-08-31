@@ -10,6 +10,8 @@ categories: [Wordpress,Apache]
 permalink: /blog/wordpress/:title/
 tags: [htaccess,apache,wordpress]
 icon: fa-wordpress
+redirect_from:
+    - /blog/wordpress/bloccare-hotlinking-immagini/blog/
 ---
 
 Quando si parla di hotlinking  ci si riferisce ad una pratica – molto abusata – che permette di mostrare una risorsa (tipicamente un’immagine) all’interno di una pagina web senza che questa sia presente all’interno del proprio spazio, sfruttando quindi la banda e le risorse del server esterno che la ospita fisicamente.
