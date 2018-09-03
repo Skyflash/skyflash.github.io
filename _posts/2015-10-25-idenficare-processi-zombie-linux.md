@@ -5,7 +5,7 @@ date: '2015-10-25'
 description: Vediamo come uccidere, con un semplice script, eventuali processi zombie
   rimasti attivi sul nostro server Linux
 lang: it_IT
-image: "/static/assets/img/blog/zombiesign.webp"
+image: "/static/assets/img/blog/zombiesign.jpg"
 keywords: linux,script,process,kill,zombie,server
 categories:
 - Linux
