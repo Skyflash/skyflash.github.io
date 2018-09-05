@@ -3,6 +3,8 @@ layout: post
 title:  "[K1000 Scripting] Find and report all PCs with a smartcard reader installed"
 date:   2018-02-14
 description: "Find and report all managed Windows PCs in K1000 Inventory with a smartcard reader installed."
+intro: "The new Custom Inventory Rule creates a new entry in every device record managed by the K1000.
+If a smart card reader has been discovered we’ll have at least one “DeviceClass: SMARTCARDREADER” text iside the Custom Inventory Fields section into every device record in Inventory / Devices"
 lang: en_US
 image: /static/assets/img/blog/kace/smartcard/kace.jpg
 keywords: "kace,k1000,script,vbs,visualbasic,smartcard,security,encryption"
