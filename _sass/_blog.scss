@@ -4,7 +4,40 @@
     margin: 0 auto;
     justify-items: center;
   }
-  
+  .desc {
+    max-width: 960px;
+    margin: 0 auto;
+    overflow: auto;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 60px;
+    .post-image {
+      float: left;
+      width: 50%;
+      margin-right: 1em;
+      border-right: 1px solid #e8e8e8;
+      padding: 0px 10px 0px 10px;
+    }
+  }
+  .intro {
+    color: #1c1c1c;
+    border-radius: 2px;
+    margin-right: 1.2em;
+    font-size: 1.4em !important;
+    /* padding-top: 15px; */
+    line-height: 1.9em !important;
+    text-align: justify;
+    margin-top: 20px;
+    &:before {
+      content: "\275D";
+      font-size: 95px;
+      float: left;
+      line-height: 15px;
+      padding-right: 8px;
+      padding-top: 18px;
+      color: #3986FC;
+    }
+  }
   .related-container {
     max-width: 800px;
     text-align: center;

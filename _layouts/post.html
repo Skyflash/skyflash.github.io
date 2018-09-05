@@ -25,6 +25,10 @@ custom_css:
                         <i class="fa fa-clock-o"></i> <a>Tempo di lettura: {{ page.content | number_of_words | divided_by: 180 | append: " minuti" }}</a>
                      </div>
                     </div>
+                    <div class="desc">
+                        <img itemprop="image" class="post-image" src="{{ page.image }}" alt="{{ page.title }}">
+                        <p itemprop="description" class="intro">{{ page.intro }}</p>
+                    </div>
                     	{{ content }}
                     <hr>
                     <div class="row">
