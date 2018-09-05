@@ -3,6 +3,7 @@ layout: post
 title:  "Blocco delle applicazioni con K1000"
 date:   2018-07-11
 description: "Come utilizzare KACE 1000 per il controllo ed il blocco dei software non autorizzati sui PC - Una breve guida."
+intro: "In seguito alla creazione della lista di blocco quando l’utente tenterà di aprire un software non autorizzato riceverà invece un avviso nell’angolo basso a destra dello schermo. "
 lang: it_IT
 image: /static/assets/img/blog/kace/smartcard/kace.jpg
 keywords: "kace,k1000,script,vbs,visualbasic,smartcard,security,encryption"

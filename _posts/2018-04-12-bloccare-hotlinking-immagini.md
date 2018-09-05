@@ -4,6 +4,8 @@ title:  "Come bloccare l'hotlinking delle immagini con .htaccess"
 date:   2018-04-13
 lang: it_IT
 description: "L'hotlinking consiste nel mostrare una o più risorse (tipicamente immagini) all’interno di una pagina web, ad insaputa del proprietario del sito originale. Vediamo come impedirla, usando .htaccess e Apache"
+intro: "
+Quando si parla di hotlinking  ci si riferisce ad una pratica – molto abusata – che permette di mostrare una risorsa (tipicamente un’immagine) all’interno di una pagina web senza che questa sia presente all’interno del proprio spazio, sfruttando quindi la banda e le risorse del server esterno che la ospita fisicamente"
 image: /static/assets/img/blog/hotlinking-htaccess/NoHotlinking.jpg
 keywords: "htaccess,apache,wordpress"
 categories: [Wordpress,Apache]
@@ -13,8 +15,6 @@ icon: fa-wordpress
 redirect_from:
     - /blog/wordpress/bloccare-hotlinking-immagini/blog/
 ---
-
-Quando si parla di hotlinking  ci si riferisce ad una pratica – molto abusata – che permette di mostrare una risorsa (tipicamente un’immagine) all’interno di una pagina web senza che questa sia presente all’interno del proprio spazio, sfruttando quindi la banda e le risorse del server esterno che la ospita fisicamente.
 
 # L’HOTLINKING DANNEGGIA IL TUO SITO
 

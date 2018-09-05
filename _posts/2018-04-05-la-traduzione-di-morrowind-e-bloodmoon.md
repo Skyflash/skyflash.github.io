@@ -4,6 +4,7 @@ title:  "La traduzione in italiano di Morrowind, Tribunal e Bloodmoon"
 date:   2018-04-05
 lang: it_IT
 description: "La storia della traduzione di Morrowind in Italiano creata dal team ITP - Contiene i link per scaricare la traduzione in Italiano di Morrowind"
+intro: "The Elder Scrolls III: Morrowind ha rivoluzionato i canoni di libertà individuale del giocatore nel mondo virtuale del gioco stesso. Mai, fino a Morrowind, un CRPG era stato in grado di offrire una tale libertà di esplorazione ed una tale quantità di quests secondarie e PNG."
 image: /static/assets/img/blog/29-morrowind.webp
 keywords: "morrowind,traduzione,itp"
 categories: [Games]
@@ -15,13 +16,8 @@ redirect_from:
     - /blog/games/la-traduzione-di-morrowind-e-bloodmoon/blog/
 permalink: /blog/games/:title/
 ---
-<!-- ![TitleImg]({{ site.img_path }}/29-morrowind.webp) -->
 
-#### IL 2002, LUDICAMENTE PARLANDO, VERRÀ RICORDATO PER L’USCITA DELL’ATTESISSIMO TERZO CAPITOLO DELLA SAGA THE ELDER SCROLLS.
-
-The Elder Scrolls III: Morrowind ha rivoluzionato i canoni di libertà individuale del giocatore nel mondo virtuale del gioco stesso. Mai, fino a Morrowind, un CRPG era stato in grado di offrire una tale libertà di esplorazione ed una tale quantità di quests secondarie e PNG.
-
-### LA TRADUZIONE DI MORROWIND: UN PO’ DI STORIA
+## LA TRADUZIONE IN ITALIANO DI MORROWIND: UN PO’ DI STORIA
 
 Atteso dai fan di mezzo mondo, il suo lancio Italiano destò molte polemiche. Il gioco infatti, inspiegabilmente, non venne tradotto in nessuna sua parte. Ricordo ancora le parole di un P.R. Ubisoft, il quale dichiarò, più o meno, che la traduzione non era stata fatta per motivi di tempo. In pratica, ci disse che non lo avevano tradotto perchè altrimenti ci sarebbe stato un pesante ritardo nella distribuzione, e che quindi avevano preso questa decisione per fare un favore a noi giocatori. Che avesse forse dinanzi un roseo futuro da umorista? O forse da politico? Fatto sta che Morrowind venne distribuito in rigorosa lingua Inglese. Il CRPG che avrebbe rivoluzionato il genere, il gioco con la più grande mole di testi mai realizzato, sarebbe stato di difficile comprensione per molti giocatori Italiani.
 

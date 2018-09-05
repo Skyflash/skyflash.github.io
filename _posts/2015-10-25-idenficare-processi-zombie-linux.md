@@ -4,6 +4,7 @@ layout: post
 date: '2015-10-25'
 description: Vediamo come uccidere, con un semplice script, eventuali processi zombie
   rimasti attivi sul nostro server Linux
+intro: "Nei sistemi operativi Unix e Unix-like, un processo zombie o processo defunto è un processo informatico che, nonostante abbia terminato la propria esecuzione, possiede ancora un PID ed un process control block"
 lang: it_IT
 image: "/static/assets/img/blog/zombiesign.jpg"
 keywords: linux,script,process,kill,zombie,server
