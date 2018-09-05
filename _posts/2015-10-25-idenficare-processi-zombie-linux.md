@@ -25,6 +25,9 @@ Recentemente ho avuto necessità di eseguire un pò di tuning su un server Linux
 
 Girovagando alla ricerca di informazioni utili, mi sono imbattuto in un ottimo script, da copiare sui vostri server, in grado di identificare e killare lo zombie, oltre a lasciarne una traccia un un file di log apposito.
 
+* TOC 
+{:toc}
+
 ## LO SCRIPT KILL-ZOMBIE
 
 Come prima cosa, creeremo (con i permessi di root) un nuovo file kill-zombie

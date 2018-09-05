@@ -1,7 +1,43 @@
 *[id]:before {
-    display: block;
+    /*display: block;*/
     content: " ";
     margin-top: -75px; 
     height: 75px;
     visibility: hidden;
+}
+#markdown-toc::before {
+    content: "Sommario";
+    font-weight: bold;
+    visibility: visible;
+    font-weight: 700;
+    line-height: 1.8;
+    font-size: 20px;
+}
+#markdown-toc ul {
+    list-style: decimal;
+}
+#markdown-toc {
+    border: 1px solid #aaa;
+    padding: 1.5em;
+    list-style: decimal;
+    display: inline-block;
+    visibility: visible;
+}
+@media screen and (max-width: 600px) {
+.desc .post-image {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+}
+#markdown-toc {
+    float: none;
+    margin-right: 0;
+}
+}
+p#jalpc_site_pv {
+    text-align: center;
+    font-size: inherit;
+}
+.wrapper-content {
+    padding: 20px 10px 0px !important;
 }

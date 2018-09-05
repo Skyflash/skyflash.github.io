@@ -12,9 +12,10 @@ tags: [kace,script,vbs,smartcard,security,encryption]
 icon: fa-unlock
 ---
 
-# Premessa
-
 In questa veloce guida si dà per scontato che il lettore abbia già una buona conoscenza dell'ambiente KACE 1000 (KACE SMA) e del funzionamento delle etichette (_Labels_)
+
+* TOC 
+{:toc}
 
 # Il blocco delle applicazioni tramite K1000, passo per passo
 
@@ -94,7 +95,7 @@ Uno dei punti di forza dell’agente Kace è quello di lavorare sostanzialmente 
 
 *Le nuove regole di blocco, quindi, verranno applicate al PC al suo prossimo contatto (cioè al prossimo inventario)*. Le potremo forzare manualmente (click sul box del device e poi “**Force Inventory**”) ma, in condizioni normali, il frutto delle nostre regole si vedrà solo dopo alcune ore (ed un riavvio del PC) e non in tempo reale.
 
-## Il risultato finale
+# Il risultato finale
 
 ![Screenshot 8]({{ site.img_path }}/kace/appcontrol/final_result.png)
 

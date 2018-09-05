@@ -16,6 +16,9 @@ redirect_from:
     - /blog/wordpress/bloccare-hotlinking-immagini/blog/
 ---
 
+* TOC 
+{:toc}
+
 # L’HOTLINKING DANNEGGIA IL TUO SITO
 
 Facciamo un esempio. L’immagine che vedete qui sotto è stata caricata direttamente su un mio sito (ospite originale di questo articolo). Il server web non fa altro che andare a caricare una risorsa interna (l’immagine stessa) e mostrarla al visitatore, senza alcun carico elaborativo extra.
