@@ -1,5 +1,5 @@
 *[id]:before {
-    /*display: block;*/
+    display: inherit;
     content: " ";
     margin-top: -75px; 
     height: 75px;
@@ -9,6 +9,8 @@
     content: "Sommario";
     font-weight: bold;
     visibility: visible;
+    margin-bottom: -35px;
+    margin-top: auto;
     font-weight: 700;
     line-height: 1.8;
     font-size: 20px;

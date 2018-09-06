@@ -1449,21 +1449,6 @@ code {
     padding: 2px 4px;
 }
 
-.ibox-content,
-.ibox-title {
-    background-color: #fff;
-    border-color: #e7eaec;
-    border-image: none;
-    border-style: solid solid none;
-}
-
-.ibox {
-    clear: both;
-    margin-bottom: 25px;
-    margin-top: 0;
-    padding: 0;
-}
-
 .ibox.collapsed .ibox-content {
     display: none;
 }
@@ -1483,13 +1468,6 @@ code {
     margin-bottom: 0;
     padding: 14px 15px 7px;
     min-height: 48px;
-}
-
-.ibox-content {
-    color: inherit;
-    padding: 15px 20px 20px;
-    border-width: 1px 0;
-    clear: both;
 }
 
 .star-mail {
