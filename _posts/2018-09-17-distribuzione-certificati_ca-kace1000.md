@@ -2,8 +2,7 @@
 title: Come importare un certificato CA su PC Windows con Kace 1000
 layout: post
 date: '2018-09-17 11:30:00'
-description: Vediamo come è possibile distribuire i .Net Framework 2.0 e 3.5 offline
-  sui PC Windows tramite KACE 1000
+description: Vediamo insieme come distribuire certificati Windows usando KACE 1000
 lang: it_IT
 image: "/static/assets/img/blog/ssl.png"
 categories:
