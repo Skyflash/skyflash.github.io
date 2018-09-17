@@ -50,7 +50,7 @@ Si usa da riga di comando e per la sintassi completa vi rimando [all'apposita pa
 Il comando di importazione, che possiamo eseguire da un qualsiasi prompt amministrativo, è il seguente
 
 ```batch
-start /wait certutil -addstore Root RootCA01.cer
+start /wait certutil -addstore Root NGIRootCA01.cer
 ```
 
 Il parametro -addstore deifnisce il datastore in cui andremo ad installare il certificato. *Root* corrisponde a "**Autorità di certificazione radice attendibili**"
@@ -61,7 +61,7 @@ Il parametro -addstore deifnisce il datastore in cui andremo ad installare il ce
 Il certificato intermedio (che chiameremo SSLCA01.cer) a cui si faceva riferimento poco fa si importerà nella stessa maniera, cambiando solamente il datastore di riferimento:
 
 ```msdos
-start /wait certutil -addstore CA SSLCA01.cer
+start /wait certutil -addstore CA NGISSLCA01.cer
 ```
 
 
@@ -102,13 +102,10 @@ Andiamo ora a riportare tutto su Kace 1000, creando uno script apposito.
 ## Schedulazione
 
 In caso volessimo schedulare lo script, sarà sufficiente, una volta tornati in editing, andare ad impostare la finestra desiderata.
-Ad esempio, nel nostro caso lo script verrà eseguito sui devices desiderati ogni tre ore
-
-![kscript Schedule](/static/assets/img/blog/kace/cassl/schedule.png)  
-
-secondo questa logica:
+Ad esempio, nel nostro caso lo script verrà eseguito sui devices desiderati ogni tre ore secondo questa logica:
 
    1. Lo script viene eseguito la prima volta
    2. Al termine, lascia un file "_certificato.ok_", di dimensione 0 bytes, in C:\Tools\
    3. Dalla volta seguente (ogni tre ore...) se trova il file "certificato.ok" allora si interrompe e non fa null'altro
 
+![kscript Schedule](/static/assets/img/blog/kace/cassl/schedule.png)  
