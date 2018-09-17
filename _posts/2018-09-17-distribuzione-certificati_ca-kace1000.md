@@ -83,7 +83,7 @@ Andiamo ora a riportare tutto su Kace 1000, creando uno script apposito.
   ![kscript Manage Operating Systems](/static/assets/img/blog/kace/cassl/oss.png)  
 3. Verifichiamo che _Windows Run As_ sia impostato a **Local System**  
   ![kscript Run As](/static/assets/img/blog/kace/cassl/runas.png)  
-4. Nella sezione **Dependencies** facciamo clieck su **+New Dependency...** e carichiamo:
+4. Nella sezione **Dependencies** facciamo click su **+New Dependency...** e carichiamo:
 
    1. Il certificato Root
    2. Il certificato Intermedio  
@@ -94,6 +94,13 @@ Andiamo ora a riportare tutto su Kace 1000, creando uno script apposito.
    2. **On Success**: nulla
    3. **Remediation**: Run the batch file "_Install_CA_Root_Script_" with params ""  
     ![kscript Script](/static/assets/img/blog/kace/cassl/script.png)  
+    Codice:
+    ```dosbatch
+    @echo off
+    start /wait certutil -addstore Root NGIRootCA01.cer
+    start /wait certutil -addstore CA NGISSLCA01.cer
+    exit
+    ```  
    4. **On Remediaton Success** Launch a program...  
     ![kscript Remediation](/static/assets/img/blog/kace/cassl/remediation.png)  
 
