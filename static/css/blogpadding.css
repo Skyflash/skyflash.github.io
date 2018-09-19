@@ -26,15 +26,26 @@
     visibility: visible;
 }
 @media screen and (max-width: 600px) {
+.desc {
+    overflow: hidden;
+    }
 .desc .post-image {
     width: 100%;
     float: none;
     margin-right: 0;
-}
+    }
+.intro {
+    padding: 0 10px;
+    }
+.intro:before {
+    font-size: 55px;
+    line-height: 10px;
+    padding-top: 15px;
+    }
 #markdown-toc {
     float: none;
     margin-right: 0;
-}
+    }
 }
 p#jalpc_site_pv {
     text-align: center;
