@@ -12,8 +12,6 @@ categories: [Wordpress,Apache]
 permalink: /blog/wordpress/:title/
 tags: [htaccess,apache,wordpress]
 icon: fa-wordpress
-redirect_from:
-    - /blog/wordpress/bloccare-hotlinking-immagini/blog/
 ---
 
 * TOC 

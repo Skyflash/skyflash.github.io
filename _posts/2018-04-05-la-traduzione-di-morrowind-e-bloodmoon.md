@@ -12,8 +12,6 @@ tags: [Morrowind,ITP,Games]
 icon: fa-gamepad
 seo:
     links: https://www.skyflash.it/2009/10/la-traduzione-in-italiano-di-planescape-torment-del-team-itp/
-redirect_from: 
-    - /blog/games/la-traduzione-di-morrowind-e-bloodmoon/blog/
 permalink: /blog/games/:title/
 ---
 
