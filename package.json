@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Skyflash/skyflash.github.io/#readme",
   "dependencies": {
     "animate.css": "^3.5.2",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.1.2",
     "chart.js": "^2.7.2",
     "colors": "^1.1.2",
     "components-font-awesome": "^4.7.0",
@@ -35,7 +35,7 @@
     "wowjs": "^1.1.2"
   },
   "devDependencies": {
-    "clean-css": "^4.0.6",
+    "clean-css": "^4.2.1",
     "shelljs": "^0.7.6",
     "uglify-js": "^2.7.5"
   }
