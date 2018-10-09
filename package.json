@@ -1,7 +1,7 @@
 {
   "name": "skyflash.github.io",
   "version": "1.3.2",
-  "description": "npm config file for Jalpc",
+  "description": "npm config file for cristiancastellari.it",
   "main": "",
   "scripts": {
     "build": "node build/build.js",
