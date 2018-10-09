@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Skyflash/skyflash.github.io/#readme",
   "dependencies": {
     "animate.css": "^3.5.2",
+    "atob": "^2.1.2",
     "bootstrap": "^4.1.2",
     "chart.js": "^2.7.2",
     "colors": "^1.1.2",
