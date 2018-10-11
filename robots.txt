@@ -5,6 +5,9 @@ User-agent: *
 Disallow: /static/*
 Disallow: /donate/
 Disallow: /donate
+Disallow: /ciao-mondo/
+Disallow: /comments/feed/
+Disallow: /disclaimer-e-privacy/
 Disallow: /blog/kace/k1000-report-pc-with-smartcard-reader/blog/
 Disallow: /blog/wordpress/bloccare-hotlinking-immagini/blog/
 Disallow: /*.json
