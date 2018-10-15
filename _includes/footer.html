@@ -10,6 +10,6 @@
     {% include analytics.html %}
 {% endif %}
 
-{% if page.title != 'Cristian Castellari' and site.disqus %}
+{% if page.title != site.title and site.disqus %}
 <script id="dsq-count-scr" src="https://{{ site.disqus.name }}.disqus.com/count.js" async></script>
 {% endif %}
