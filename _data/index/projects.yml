@@ -2,28 +2,34 @@
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
 - name: Kace SMA Tools
-  #i18n: kace-sma-tools
   gh_user: skyflash
   url: https://github.com/kace-sma-tools
   img: /static/assets/img/landing/kacesmatools.png
   desc: Idee, script e suggerimenti utili per Quest Kace Systems Management Appliace (precedentmente noto come K1000) 
+  #i18n: kace-sma-tools
 
 - name: K1000 Database Queries
-  #i18n: k1000-database-queries
   gh_user: skyflash
   repo: K1000-Database-Queries
   img: /static/assets/img/landing/development.png
   desc:  Una collezione di queries MySQL per Il KACE 1000 (Quest Kace Systems Management Appliance)
+  #i18n: k1000-database-queries
+
+- name: IPUI to IPEI
+  gh_user: skyflash
+  repo: ipui2ipei
+  img: /static/assets/img/landing/dect-85-512.png
+  desc: IPUI 2 IPEI converte i codici IPUI, tipici dei telefoni DECT Siemens, allo standard IPEI.
+
+- name: La Traduzione di Morrowind
+  url: https://www.skyflash.it/traduzione-italiano-morrowind-tribunal-bloodmoon/3581/
+  img: /static/assets/img/landing/morrowind.png
+  desc: La traduzione in Italiano di Morrowind, Tribunal e Bloodmoon - A cura dell'ITP
+  #i18n: morrowind-translation
 
 - name: This website on Github
-  #i18n: skyflash-github
   gh_user: skyflash
   repo: skyflash.github.io
   img: /static/assets/img/landing/me.jpg
   desc: Il repository GitHub su cui viene sviluppato questo sito
-
-- name: La Traduzione di Morrowind
-  #i18n: morrowind-translation
-  url: https://www.skyflash.it/traduzione-italiano-morrowind-tribunal-bloodmoon/3581/
-  img: /static/assets/img/landing/morrowind.png
-  desc: La traduzione in Italiano di Morrowind, Tribunal e Bloodmoon - A cura dell'ITP
+  #i18n: skyflash-github
