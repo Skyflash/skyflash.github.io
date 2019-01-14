@@ -53,4 +53,9 @@ sitemap:
     </url>
     {% endunless %}
   {% endfor %}
+    <url>
+      <loc>{{ site.url }}/ipui2ipei/</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.3</priority>
+    </url>
 </urlset>
