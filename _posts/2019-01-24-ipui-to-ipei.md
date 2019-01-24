@@ -53,6 +53,8 @@ Il suo utilizzo è semplicissimo: è sufficiente scrivere nel primo campo il cod
 
 Un attimo dopo avrete il risultato desiderato, con tanto di spiegazione sul tipo di calcoli che sono stati eseguiti.
 
+![Calcolo IPUI a IPEI](/static/assets/img/blog/ipuitoipei/calcolo.jpg)
+
 ## Informazioni aggiuntive
 
 ### Come trovare il codice IPUI di un telefono SIEMENS?
