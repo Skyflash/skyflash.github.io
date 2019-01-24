@@ -2,8 +2,7 @@
 title: IPUI to IPEI
 layout: post
 date: '2019-01-24 12:30:00'
-description: Vediamo cos'è un redirect permanente, quando deve essere utilizzato,
-  che vantaggi comporta da un punto di vista SEO e come implementarlo
+description: Cosa è un codice IPUI e come convertirlo facilmente in IPEI per registrare un telefono DECT Siemens su un centralino di un altro produttore.
 intro: non tutti i produttori di telefoni DECT usano la stessa notazione IPEI. Più
   precisamente, il principale produttore di telefoni DECT di fascia consumer al mondo,
   Siemens, utilizza un proprio codice chiamato IPUI, che differisce dal primo in modo
