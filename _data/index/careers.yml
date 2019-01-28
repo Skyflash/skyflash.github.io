@@ -1,7 +1,7 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: Novomatic Italia Services
+    detail: Novomatic Italia 
     i18n: novomatic_b
   desc:
     detail: Coordinatore Office Automation Systems
@@ -13,6 +13,7 @@
     detail: Coordinatore Office Automation Systems
     i18n: novomatic_b_job
   icon: fa-plus-square
+  present: true
 
 - name:
     detail: Novomatic Italia Services
