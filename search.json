@@ -7,7 +7,8 @@ layout: null
      {% for post in site.posts %}
     {
         "title" : "{{ post.title }} - {{ post.date | date_to_utc | date: '%Y-%m-%d'}}",
-        "url" : "{{ site.baseurl }}{{ post.url }}"
+        "url" : "{{ site.baseurl }}{{ post.url }}",
+        "description" : "{{ post.description }}"
     }
     {% if forloop.rindex != 1  %}
     ,
