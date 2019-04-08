@@ -21,6 +21,13 @@
   img: /static/assets/img/landing/dect-85-512.png
   desc: IPUI 2 IPEI converte i codici IPUI, tipici dei telefoni DECT Siemens, allo standard IPEI.
 
+- name: FlottaStellare.it
+  gh_user:  ed-acfs
+  repo: ed-acfs.github.io
+  url:  http://flottastellare.it
+  img:  /static/assets/img/landing/flottastellare.png
+  desc: "Il sito web per lo Squadrone Flotta Stellare di Elite: Dangerous"
+
 - name: La Traduzione di Morrowind
   url: https://www.skyflash.it/traduzione-italiano-morrowind-tribunal-bloodmoon/3581/
   img: /static/assets/img/landing/morrowind.png
