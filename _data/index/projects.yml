@@ -2,21 +2,21 @@
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
 - name: Kace SMA Tools
-  gh_user: skyflash
+  gh_user: KACE-SMA-Tools
   url: https://github.com/kace-sma-tools
   img: /static/assets/img/landing/kacesmatools.png
   desc: Idee, script e suggerimenti utili per Quest Kace Systems Management Appliace (precedentmente noto come K1000) 
   #i18n: kace-sma-tools
 
 - name: K1000 Database Queries
-  gh_user: skyflash
+  gh_user: KACE-SMA-Tools
   repo: K1000-Database-Queries
   img: /static/assets/img/landing/development.png
   desc:  Una collezione di queries MySQL per Il KACE 1000 (Quest Kace Systems Management Appliance)
   #i18n: k1000-database-queries
 
 - name: IPUI to IPEI
-  gh_user: skyflash
+  gh_user: Skyflash
   repo: ipui2ipei
   img: /static/assets/img/landing/dect-85-512.png
   desc: IPUI 2 IPEI converte i codici IPUI, tipici dei telefoni DECT Siemens, allo standard IPEI.
@@ -24,7 +24,7 @@
 - name: FlottaStellare.it
   gh_user:  ed-acfs
   repo: ed-acfs.github.io
-  url:  http://flottastellare.it
+  url:  https://flottastellare.it
   img:  /static/assets/img/landing/flottastellare.png
   desc: "Il sito web per lo Squadrone Flotta Stellare di Elite: Dangerous"
 
@@ -35,7 +35,7 @@
   #i18n: morrowind-translation
 
 - name: This website on Github
-  gh_user: skyflash
+  gh_user: Skyflash
   repo: skyflash.github.io
   img: /static/assets/img/landing/me.jpg
   desc: Il repository GitHub su cui viene sviluppato questo sito
