@@ -5,7 +5,7 @@ date:   2018-04-05
 lang: it_IT
 description: "La storia della traduzione di Morrowind in Italiano creata dal team ITP - Contiene i link per scaricare la traduzione in Italiano di Morrowind"
 intro: "The Elder Scrolls III: Morrowind ha rivoluzionato i canoni di libertà individuale del giocatore nel mondo virtuale del gioco stesso. Mai, fino a Morrowind, un CRPG era stato in grado di offrire una tale libertà di esplorazione ed una tale quantità di quests secondarie e PNG."
-image: /static/assets/img/blog/29-morrowind.webp
+image: /static/assets/img/blog/29-morrowind.jpg
 keywords: "morrowind,traduzione,itp"
 categories: [Games]
 tags: [Morrowind,ITP,Games]
@@ -43,10 +43,26 @@ Purtroppo, a causa di mancanza di tempo, io fui costretto a sospendere la mia co
 
 Ebbene, se siete arrivati fin qui a leggere e state cercando disperatamente la traduzione di Morrowind, direi che è giunto il momento di ricompensarvi per il tempo dedicato ai miei ricordi.
 
-### LA TRADUZIONE DI MORROWIND IN ITALIANO – DOWNLOAD
+## La traduzione in Italiano di Morrowind - Download
 
 Questa è la versione definitiva della traduzione, che non necessita di preventivi aggiornamenti del gioco. Si basa sull’edizione Game of the Year di Morrowind e contiene sia la traduzione del gioco base che della sua espansione “vampiresca”, BloodMoon. E’ un unico file auto installante che, se necessario, aggiornerà la vostra copia di The Elder Scrolls III: Morrowind alla più recente versione 1.6
 
 Si consiglia di non applicare la traduzione ad una partita già in corso; ciò potrebbe corrompere i salvataggi. E’ comunque possibile “trattare” i propri salvataggi con il programma Savepatcher, distribuito nell’archivio Tribunal.zip
 
 Installare la traduzione di Tribunal solo dopo aver installato il file precedente, relativo alle traduzioni di Morrowind e Bloodmoon
+
+### Mirror 1
+
+- [Traduzione di Morrowind e BloodMoon](https://www.skyflash.it/download/8164/)
+- [Traduzione di Tribunal](https://www.skyflash.it/download/8167/)
+
+### Mirror 2
+
+- [Traduzione di Morrowind e BloodMoon](https://github.com/Skyflash/morrowind-italian-itp-translation/blob/master/assets/morrowind/Morrowind_Bloodmoon_ITA_WinXP2K.zip)
+- [Traduzione di Tribunal](https://github.com/Skyflash/morrowind-italian-itp-translation/blob/master/assets/tribunal/Tribunal.zip)
+
+---
+
+### Riferimenti:
+
+[skyflash.it - La traduzione in Italiano di Morrowind, Tribunal e Bloodmoon](https://www.skyflash.it/traduzione-italiano-morrowind-tribunal-bloodmoon/3581/)

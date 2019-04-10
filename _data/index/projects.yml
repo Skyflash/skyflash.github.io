@@ -29,6 +29,8 @@
   desc: "Il sito web per lo Squadrone Flotta Stellare di Elite: Dangerous"
 
 - name: La Traduzione di Morrowind
+  gh_user:  Skyflash
+  repo: morrowind-italian-itp-translation
   url: https://www.skyflash.it/traduzione-italiano-morrowind-tribunal-bloodmoon/3581/
   img: /static/assets/img/landing/morrowind.png
   desc: La traduzione in Italiano di Morrowind, Tribunal e Bloodmoon - A cura dell'ITP
