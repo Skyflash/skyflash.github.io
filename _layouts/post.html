@@ -4,7 +4,7 @@ custom_css:
     - blogpadding.css
     - blogmenu.css
 ---
-
+<div id="post">
 <div class="wrapper wrapper-content  animated fadeInRight article">
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
@@ -29,7 +29,9 @@ custom_css:
                         <img itemprop="image" class="post-image" src="{{ page.image }}" alt="{{ page.title }}">
                         <p itemprop="description" class="intro">{{ page.intro }}</p>
                     </div>
-                    	{{ content }}
+                    <article>
+                        {{ content }}
+                    </article>
                     <hr>
                     <div class="row">
                             <div class="row">
@@ -106,4 +108,5 @@ custom_css:
         </div>
     </div>
 
+</div>
 </div>

@@ -38,6 +38,16 @@
       color: #3986FC;
     }
   }
+  #post article > p:first-child:first-letter {
+    color: #337ab7;
+    float: left;
+    /* font-family: josefin sans,sans-serif; */
+    font-size: 85px;
+    line-height: 65px;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
   .related-container {
     max-width: 800px;
     text-align: center;
