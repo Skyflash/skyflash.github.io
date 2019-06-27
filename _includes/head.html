@@ -14,7 +14,7 @@
   Blog
   -->
   <!-- Main CSS -->
-  <link href="{{ "/static/assets/app-20190125.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link href="{{ "/static/assets/app-20190620.min.css" | prepend: site.baseurl }}" rel="stylesheet">
   <link href="{{ "/static/css/custom.css" | prepend: site.baseurl }}" rel="stylesheet">
   <!-- Layout Specific CSS -->
   {% if layout.custom_css %}{% for css_name in layout.custom_css %}
@@ -25,7 +25,7 @@
   <link href="/static/css/{{ css_name | prepend: site.baseurl }}" rel="stylesheet" media="screen">
   {% endfor %}{% endif %}
   <!-- Main Scripts -->
-  <script src="{{"/static/assets/app-20190125.min.js"| prepend: site.baseurl }}"></script>
-  <script src="{{"/static/assets/blog-20190125.min.js"| prepend: site.baseurl }}"></script>
+  <script src="{{"/static/assets/app-20190620.min.js"| prepend: site.baseurl }}"></script>
+  <script src="{{"/static/assets/blog-20190620.min.js"| prepend: site.baseurl }}"></script>
   {% include cookieconsent.html %}
   </head>

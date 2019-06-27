@@ -49,6 +49,7 @@ module.exports = {
             'node_modules/font-mfizz/dist/font-mfizz.css',
             'node_modules/gritter/jquery.gritter.css',
             'node_modules/pace-progress/themes/blue/pace-theme-flash.css',
+            'fork-awesome/css/fork-awesome.min.css',
         ]
     }]
 }
