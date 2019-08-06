@@ -1,10 +1,10 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: Novomatic Italia 
+    detail: Novomatic Italia s.p.a.
     i18n: novomatic_b
   desc:
-    detail: Coordinatore Office Automation Systems
+    detail: Ho il compito di gestire, analizzare e realizzare soluzioni per supportare i servizi Office Automation erogati dall’Azienda. Il sistema Kace 1000 è stato nel tempo evoluto e grazie ad esso oggi gestiamo anche script automatizzati e configurazioni dei PC client ed installazioni software on demand.
     i18n: novomatic_b_desc
   date:
     detail: Gennaio 2017 - Presente
@@ -16,10 +16,10 @@
   present: true
 
 - name:
-    detail: Novomatic Italia Services
+    detail: Novomatic Italia Services s.r.l.
     i18n: novomatic
   desc:
-    detail: Referente Office Automation
+    detail: Assistenza in ambito Office Automation a tutti gli utenti del Gruppo Novomatic sul territorio italiano. Gestione di server Linux e Windows che offrono diversi servizi quali Git, MDM, siti web corporate, antivirus eccetera
     i18n: novomatic_desc
   date:
     detail: Gennaio 2015 - Dicembre 2016
@@ -41,4 +41,4 @@
   job:
     detail: Responsabile IT
     i18n: sogema_job
-  icon: fa-server
+  icon: fa-plus-square
