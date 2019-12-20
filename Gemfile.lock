@@ -54,7 +54,7 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (3.1.1)
-    rack (1.6.11)
+    rack (1.6.12)
     rack-protection (1.5.5)
       rack
     rack-test (1.1.0)
@@ -86,7 +86,6 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2019.2)
       tzinfo (>= 1.0.0)
-    wdm (0.1.1)
 
 PLATFORMS
   ruby
@@ -97,7 +96,6 @@ DEPENDENCIES
   jekyll-redirect-from
   jekyll-seo-tag
   tzinfo-data
-  wdm (>= 0.1.0)
 
 BUNDLED WITH
    2.0.1
