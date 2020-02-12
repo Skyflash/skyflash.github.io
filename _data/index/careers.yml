@@ -1,19 +1,33 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
+    detail: Integra s.r.l. (Gruppo L'Operosa)
+    i18n: integra
+  desc:
+    detail: 
+    i18n: integra_desc
+  date:
+    detail: Febbraio 2020 - Presente
+    i18n: integra_date
+  job:
+    detail: Sistemista IT Senior & Supporto Tecnico
+    i18n: integra_job
+  icon: fa-plus-square
+  present: true
+
+- name:
     detail: Novomatic Italia s.p.a.
     i18n: novomatic_b
   desc:
     detail: Ho il compito di gestire, analizzare e realizzare soluzioni per supportare i servizi Office Automation erogati dall’Azienda. Il sistema Kace 1000 è stato nel tempo evoluto e grazie ad esso oggi gestiamo anche script automatizzati e configurazioni dei PC client ed installazioni software on demand.
     i18n: novomatic_b_desc
   date:
-    detail: Gennaio 2017 - Presente
+    detail: Gennaio 2017 - Febbraio 2020
     i18n: novomatic_b_date
   job:
     detail: Coordinatore Office Automation Systems
     i18n: novomatic_b_job
   icon: fa-plus-square
-  present: true
 
 - name:
     detail: Novomatic Italia Services s.r.l.
