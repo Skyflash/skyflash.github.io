@@ -77,7 +77,7 @@ author:  # change following line to your infomation.
   skill_icon2:
     - name: fa-apple
     - name: fa-chrome
-  desc: Introduce myself will be here.  # Describe yourself.
+  desc: Informatico, padre e marito. Appassionato di tecnologia da sempre, curioso di natura. Nel tempo libero mi dedico alla famiglia, agli amici, alla cucina e ai videogiochi.  # Describe yourself.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
