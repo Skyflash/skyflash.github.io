@@ -4,7 +4,7 @@ layout: page
 date: '2021-02-16'
 description: Disclaimer e Licenza d'uso del sito web
 lang: it_IT
-permalink: /about/disclaimer.html
+permalink: /about/disclaimer/
 ---
 ### DISCLAIMER
 L’accesso al sito è completamente gratuito ma comporta l’accettazione delle seguenti condizioni d’uso. Siete pregati di leggerle attentamente poiché **il solo fatto di proseguire nell’utilizzo o consultazione del sito costituisce completa accettazione delle condizioni** stesse da parte di ogni visitatore o utente.
@@ -27,7 +27,7 @@ Qualora l'utente del sito riscontri errori, omissioni ed inesattezze nelle infor
 Per quanto riguarda notizie, analisi, opinioni pubblicate sul sito ma tratte da altri siti, si rimanda al disclaimer dei relativi siti.
 L'amministratore non potrà mai essere ritenuto responsabile per i contenuti di siti esterni, collegati tramite link da una qualunque pagina del sito, non essendo in grado di verificarli continuamente. I link vengono forniti al visitatore esclusivamente per comodità degli utenti e l'inclusione di qualsiasi link non implica alcun avallo né controllo del relativo sito o delle opinioni ivi espresse.
 
-<br>
+<hr>
 
 ### Notizie e Commenti
 <i class="fa fa-comments-o fa-3x fa-pull-left" aria-hidden="true" style="color: #337ab7;"></i> Il contenuto degli articoli presenti nel sito rappresenta il punto di vista dell'autore. In alcuni casi è consentito da parte degli utenti inserire dei **commenti** agli articoli, i quali commenti rappresentano esclusivamente il punto di vista dell'autore del commento medesimo, per cui l'utente che inserisce il commento si assume integralmente la responsabilità di quanto scritto.
@@ -48,7 +48,7 @@ Per ulteriori informazioni sul trattamento dei dati nell'utilizzo del box commen
 
 Si fa presente che domande e richieste inserite nei commenti non comportano alcun obbligo da parte del titolare del sito di rispondere. In particolare non si risponderà a domande la cui risposta è presente già nell'articolo, a domande già risposte a seguito di altri commenti e in generale a domande inerenti attività commerciali (per queste si dovrà chiedere apposita consulenza a pagamento tramite la sezione Contatti).
 
-<br> 
+<hr> 
 
 ### Licenza d'uso
 

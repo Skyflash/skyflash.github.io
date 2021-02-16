@@ -4,7 +4,7 @@ layout: page
 date: '2021-02-12'
 description: Privacy Policy e Cookie Policy del sito web
 lang: it_IT
-permalink: /about/privacy.html
+permalink: /about/privacy/
 ---
 ### Informativa Privacy (semplificata)
 
