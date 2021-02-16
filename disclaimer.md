@@ -2,8 +2,7 @@
 title: Disclaimer e Licenza
 layout: page
 date: '2021-02-16'
-description: Vediamo come uccidere, con un semplice script, eventuali processi zombie
-  rimasti attivi sul nostro server Linux
+description: Disclaimer e Licenza d'uso del sito web
 lang: it_IT
 permalink: /about/disclaimer.html
 ---

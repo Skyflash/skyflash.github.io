@@ -2,8 +2,7 @@
 title: Informativa Privacy e Cookie
 layout: page
 date: '2021-02-12'
-description: Vediamo come uccidere, con un semplice script, eventuali processi zombie
-  rimasti attivi sul nostro server Linux
+description: Privacy Policy e Cookie Policy del sito web
 lang: it_IT
 permalink: /about/privacy.html
 ---
