@@ -44,7 +44,7 @@ L'amministratore non assume alcuna responsabilità dei commenti, ma si riserva l
 - contenente dati personali di terzi
 - promotore di attività commerciali
 
-Per ulteriori informazioni sul trattamento dei dati nell'utilizzo del box commenti si rimanda all'[informativa privacy](/about/privacy.html).
+Per ulteriori informazioni sul trattamento dei dati nell'utilizzo del box commenti si rimanda all'[informativa privacy](/about/privacy/).
 
 Si fa presente che domande e richieste inserite nei commenti non comportano alcun obbligo da parte del titolare del sito di rispondere. In particolare non si risponderà a domande la cui risposta è presente già nell'articolo, a domande già risposte a seguito di altri commenti e in generale a domande inerenti attività commerciali (per queste si dovrà chiedere apposita consulenza a pagamento tramite la sezione Contatti).
 
