@@ -21,7 +21,7 @@
     "animate.css": "^4.1.1",
     "atob": "^2.1.2",
     "bootstrap": "^4.6.0",
-    "chart.js": "^3.0.2",
+    "chart.js": "^3.1.0",
     "colors": "^1.4.0",
     "components-font-awesome": "^5.9.0",
     "font-mfizz": "^2.4.1",
@@ -43,6 +43,6 @@
     "clean-css": "^5.1.2",
     "mem": "^6.1.1",
     "shelljs": "^0.8.4",
-    "uglify-js": "^3.13.3"
+    "uglify-js": "^3.13.4"
   }
 }
