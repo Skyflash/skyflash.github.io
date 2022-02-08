@@ -1,20 +1,34 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: Integra s.r.l. (Gruppo L'Operosa)
+    detail: Integra S.r.l. (Gruppo L'Operosa)
     i18n: integra
   desc:
     detail: 
     i18n: integra_desc
   date:
-    detail: Febbraio 2020 - Presente
+    detail: Dicembre 2021 - Presente
+    i18n: integra_date
+  job:
+    detail: Digital Infrastructures Unit Manager
+    i18n: integra_job
+  icon: fa-plus-square
+  present: true
+
+- name:
+    detail: Integra S.r.l. (Gruppo L'Operosa)
+    i18n: integra
+  desc:
+    detail: 
+    i18n: integra_desc
+  date:
+    detail: Febbraio 2020 - Dicembre 2021
     i18n: integra_date
   job:
     detail: Senior System Administrator - Digital Infrastructures
     i18n: integra_job
   icon: fa-plus-square
-  present: true
-
+ 
 - name:
     detail: Novomatic Italia s.p.a.
     i18n: novomatic_b

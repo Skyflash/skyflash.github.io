@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Skyflash/skyflash.github.io/#readme",
   "dependencies": {
+    "@npmcli/arborist": "^4.3.1",
     "animate.css": "^4.1.1",
     "atob": "^2.1.2",
     "bootstrap": "^5.0.0",
@@ -45,7 +46,7 @@
   "devDependencies": {
     "clean-css": "^5.1.2",
     "mem": "^8.1.1",
-    "shelljs": "^0.8.4",
+    "shelljs": "^0.8.5",
     "tar": ">=6.1.9",
     "uglify-js": "^3.13.5"
   }
