@@ -50,8 +50,13 @@ GEM
     mercenary (0.4.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+<<<<<<< HEAD
     public_suffix (4.0.7)
     rack (2.2.4)
+=======
+    public_suffix (4.0.6)
+    rack (2.2.3.1)
+>>>>>>> c47f85d28320b326b9d4647bc017d1a6e799239d
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -69,8 +74,11 @@ GEM
     tzinfo-data (1.2022.1)
       tzinfo (>= 1.0.0)
     unicode-display_width (1.8.0)
+<<<<<<< HEAD
     wdm (0.1.1)
     webrick (1.7.0)
+=======
+>>>>>>> c47f85d28320b326b9d4647bc017d1a6e799239d
 
 PLATFORMS
   ruby
@@ -81,8 +89,11 @@ DEPENDENCIES
   jekyll-seo-tag
   rack (>= 2.1.4)
   tzinfo-data
+<<<<<<< HEAD
   wdm (~> 0.1.0)
   webrick
+=======
+>>>>>>> c47f85d28320b326b9d4647bc017d1a6e799239d
 
 BUNDLED WITH
    2.2.33
