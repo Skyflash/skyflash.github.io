@@ -21,7 +21,7 @@
     "@npmcli/arborist": "^4.3.1",
     "animate.css": "^4.1.1",
     "atob": "^2.1.2",
-    "bootstrap": "^5.0.0",
+    "bootstrap": "^5.2.1",
     "chart.js": "^3.7.0",
     "colors": "^1.4.0",
     "components-font-awesome": "^5.9.0",
