@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Regole operative per la gestione dell’Infrastruttura IT: Il Black Cat Agreement"
-date: '2022-08-10 10:00:00'
+date: '2023-01-26 10:00:00'
 description: Non si effettuano attività sull’infrastruttura IT di produzione il Venerdì, il Sabato e la Domenica/Festivi (ed anche il giovedì dopo le 16:00)
 intro: Non si effettuano attività sull’infrastruttura IT di produzione il Venerdì, il Sabato e la Domenica/Festivi (ed anche il giovedì dopo le 16:00)
 image: "/static/assets/img/blog/blackcat-agreement/blackcat.jpg"
@@ -34,7 +34,7 @@ Il preavviso di 24h si può ridurre al minimo indispensabile in caso di attivit�
 5. Riunioni interne di allineamento che coinvolgono tutto il gruppo:
 
     - Almeno **una a settimana** il Venerdì mattina.
-    - Non pià di **3 a settimana**.
+    - Non più di **3 a settimana**.
     - Durata MAX di ciascuna riunione **90 minuti**<br>
 
 6. La gestione dei progetti prevede:
