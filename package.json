@@ -44,7 +44,7 @@
     "yargs-parser": "^21.0.0"
   },
   "devDependencies": {
-    "clean-css": "^5.2.4",
+    "clean-css": "^5.3.3",
     "mem": "^9.0.2",
     "shelljs": "^0.8.5",
     "tar": ">=6.2.1",
