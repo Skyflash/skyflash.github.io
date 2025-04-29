@@ -46,7 +46,7 @@
   "devDependencies": {
     "clean-css": "^5.3.3",
     "mem": "^9.0.2",
-    "shelljs": "^0.8.5",
+    "shelljs": "^0.9.2",
     "tar": ">=6.2.1",
     "uglify-js": "^3.19.3"
   }
