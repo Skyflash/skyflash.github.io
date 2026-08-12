@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 4.4'
+# GitHub Pages (pipeline classica "Deploy from a branch") ignora i pin di
+# Jekyll/plugin di questo Gemfile e builda sempre con QUESTA gem, che fissa
+# tutte le versioni (Jekyll incluso) a quelle effettivamente in uso in
+# produzione. Usarla anche in locale evita che qualcosa funzioni qui e si
+# rompa solo alla pubblicazione (jekyll-seo-tag, jekyll-redirect-from e
+# jekyll-paginate sono già inclusi come dipendenze di questa gem).
+gem "github-pages", "~> 232", group: :jekyll_plugins
 
 # Ruby 3.4+ stopped shipping these as default gems; Jekyll/Liquid still need them
 gem 'logger'
 gem 'bigdecimal'
-
-group :jekyll_plugins do
-    gem 'jekyll-seo-tag'
-    gem 'jekyll-redirect-from'
-    gem 'jekyll-paginate'
-end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data"

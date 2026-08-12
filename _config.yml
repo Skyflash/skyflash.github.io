@@ -103,4 +103,4 @@ sass:
 # Build settings
 encoding: utf-8
 
-exclude: ['README.md', 'CHANGELOG.md', 'Gemfile', 'Gemfile.lock']
+exclude: ['README.md', 'CHANGELOG.md', 'Gemfile', 'Gemfile.lock', 'node_modules']
