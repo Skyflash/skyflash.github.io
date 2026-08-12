@@ -1,33 +1,18 @@
-# blog page sections
-- name: Blog
-  href: /blog/
+# categorie del blog, mostrate nel sottomenu di navigazione (ordine alfabetico)
+- name: Infrastruttura & Sistemi
+  href: /infrastruttura/
 
-# edit following lines to custom your blog page, make sure name is the same as href but capitalized first letter(except HTML)
+- name: Filosofia di Lavoro
+  href: /itil/
+  
+- name: Strumenti
+  href: /tools/
 
 - name: Kace
   href: /kace/
-  
-- name: HTML
-  href: /html/
 
-- name: ITIL
-  href: /itil/
-  
-- name: Linux
-  href: /linux/
+- name: Progetti Personali
+  href: /progetti-personali/
 
-- name: Wordpress
-  href: /wordpress/
-
-- name: Games
-  href: /games/
-  
-- name: Tools
-  href: /tools/
-  
-- name: Life
-  href: /life/
-
-# Don't display donation page: change donation to off at file '_config.yml'
-- name: Donate
-  href: /donate/
+- name: "Fuori dall'Ufficio"
+  href: /fuori-ufficio/

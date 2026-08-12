@@ -7,12 +7,13 @@ description: "La storia della traduzione di Morrowind in Italiano creata dal tea
 intro: "The Elder Scrolls III: Morrowind ha rivoluzionato i canoni di libertà individuale del giocatore nel mondo virtuale del gioco stesso. Mai, fino a Morrowind, un CRPG era stato in grado di offrire una tale libertà di esplorazione ed una tale quantità di quests secondarie e PNG."
 image: /static/assets/img/blog/29-morrowind.jpg
 keywords: "morrowind,traduzione,itp"
-categories: [Games]
+categories: ["Fuori dall'Ufficio"]
 tags: [Morrowind,ITP,Games]
 icon: fa-gamepad
 seo:
     links: https://www.skyflash.it/2009/10/la-traduzione-in-italiano-di-planescape-torment-del-team-itp/
-permalink: /blog/games/:title/
+permalink: /blog/fuori-ufficio/:title/
+redirect_from: /blog/games/la-traduzione-di-morrowind-e-bloodmoon/
 ---
 Atteso dai fan di mezzo mondo, il lancio Italiano di **The Elder Scrolls 3: Morrowind** destò molte polemiche. Il gioco infatti, inspiegabilmente, non venne tradotto in nessuna sua parte. Ricordo ancora le parole di un P.R. Ubisoft, il quale dichiarò, più o meno, che la traduzione non era stata fatta per motivi di tempo. In pratica, ci disse che non lo avevano tradotto perchè altrimenti ci sarebbe stato un pesante ritardo nella distribuzione, e che quindi avevano preso questa decisione per fare un favore a noi giocatori. Che avesse forse dinanzi un roseo futuro da umorista? O forse da politico? Fatto sta che Morrowind venne distribuito in rigorosa lingua Inglese. Il CRPG che avrebbe rivoluzionato il genere, il gioco con la più grande mole di testi mai realizzato, sarebbe stato di difficile comprensione per molti giocatori Italiani.
 

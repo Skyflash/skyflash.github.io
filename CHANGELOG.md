@@ -2,6 +2,46 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.0.0] - 2026-08-14 — Ricostruzione completa del sito
+
+### Contesto
+
+Il tema precedente (derivato da [Jalpc](https://github.com/jarrekk/Jalpc): Bootstrap 3, jQuery, layout one-page a scroll) è stato sostituito da zero con un tema scritto interamente per questo sito: nessuna dipendenza da framework CSS/JS di terze parti, nessuna pipeline di build front-end, palette e componenti propri. Il lavoro è stato svolto sul branch `redesign-2026`, con [Claude Code](https://claude.com/claude-code) come collaboratore — la serie di articoli "Il nuovo sito" (parti [1](https://cristiancastellari.it/blog/progetti-personali/il-nuovo-sito-parte-1-perche-ripartire-da-zero/), [2](https://cristiancastellari.it/blog/progetti-personali/il-nuovo-sito-parte-2-i-bug-nascosti-in-un-sito-nuovo/), [3](https://cristiancastellari.it/blog/progetti-personali/il-nuovo-sito-parte-3-le-copertine-che-si-adattano-al-tema/), [4](https://cristiancastellari.it/blog/progetti-personali/il-nuovo-sito-parte-4-le-ultime-finiture/)) racconta il processo per esteso.
+
+**Vincolo rispettato al 100%: permalink invariati.** Ogni post del blog e ogni pagina categoria mantiene esattamente lo stesso URL del sito precedente (verificato per diff completo dell'elenco URL generato, ripetuto più volte durante il lavoro) — nessun impatto sull'indicizzazione Google.
+
+### Stack e architettura
+
+- Via Bootstrap 3, jQuery e tutti i plugin jQuery (metismenu, jquery-slimscroll, peity, wowjs, particles.js, pace-progress, gritter), Chart.js, l'intera pipeline npm di build (`build/`, `package.json`, bundle compilati) — CSS compilato nativamente da Jekyll/Sass, zero JavaScript di terze parti.
+- Icone tramite [Fork Awesome](https://forkaweso.me/) (già vendorizzato nel repo, mai collegato prima), più alcune icone SVG inline scritte a mano per i loghi non presenti nel set (X/Twitter, Bluesky — entrambi rebrand successivi al 2016).
+- Design system proprio in `_sass/_tokens.scss`: palette a custom property CSS, tema chiaro/scuro/automatico a 3 stati (`prefers-color-scheme` + override esplicito via `[data-theme]`, persistente fra le pagine tramite `localStorage`).
+- Struttura multi-pagina: Home, CV (`/cv/`), Progetti (`/progetti/`), Blog (`/blog/` + pagine categoria), Contatti (`/contatti/`) — al posto della singola pagina a scroll infinito.
+
+### Contenuti
+
+- Competenze e timeline di carriera aggiornate (in `_data/index/skills.yml` e `_data/index/careers.yml`), competenze raggruppate per area invece del radar Chart.js.
+- Categorie del blog riorganizzate e rinominate per un taglio più tecnico: **Kace**, **Filosofia di Lavoro**, **Strumenti**, **Infrastruttura & Sistemi**, **Fuori dall'Ufficio**, **Progetti Personali** (rimossa la categoria WordPress e un post di test senza contenuto reale).
+- `/blog/`: aggiunto un indice di categorie navigabile con conteggio articoli, e paginazione ogni 15 post (`jekyll-paginate`).
+- Bottoni di condivisione (`social.html`) riscritti: link aggiornati (X al posto di Twitter, endpoint LinkedIn corrente, Reddit su https, tutti i parametri con `url_encode`), aggiunti Bluesky/WhatsApp/Telegram, colori di brand per icona con hover a colore pieno.
+- Copertine dei post con tecnica theme-adaptive: due immagini per articolo (una per tema chiaro, una per scuro), scelta puramente via CSS senza JavaScript.
+
+### Bug corretti durante la ricostruzione
+
+- Tema chiaro/scuro che non persisteva navigando fra le pagine su Brave (il fix via `<head>` inline veniva bloccato dagli shield privacy del browser); risolto rendendo `theme.js` autosufficiente.
+- Sottolineatura CSS dei link che "sanguinava" nei bottoni/card annidati in blocchi di prosa (bottone CV, card Contatti) — regola `.prose a` troppo generica, corretta con esclusioni esplicite.
+- Pillole categoria sulle card dei post che puntavano a URL inesistenti dopo la rinomina delle categorie (logica che indovinava l'URL dal nome invece di leggerlo da `_data/blog.yml`).
+- `jekyll-paginate`: quattro pagine che scrivevano tutte sullo stesso file di destinazione, causato da un `permalink:` esplicito in front matter che aveva priorità assoluta sulla riassegnazione di `Page#dir` fatta dal plugin.
+- Voce di menu "Blog" che non portava a `/blog/` cliccandoci sopra direttamente (link e toggle del sottomenu condividevano lo stesso elemento).
+- Box commenti Disqus che restava vuoto al primo caricamento (senza il cookie `cookiebar` già presente, il parsing del cookie lanciava un'eccezione non gestita che interrompeva l'intero script).
+- Card statistiche GitHub (stelle/fork) che andavano a capo per pochi pixel nella pagina Progetti; risolto allargando leggermente il container generale (1280→1360px) e riducendo il padding delle pillole statistiche.
+- Hero della home page: spazio vuoto crescente fra testo e foto a schermi larghi (causato da `justify-content: space-between` su un contenitore a piena larghezza), corretto con un gruppo testo+foto compatto ancorato allo stesso margine delle sezioni sottostanti.
+
+### Verifiche eseguite
+
+- Confronto completo dell'elenco URL generati fra `master` (sito precedente) e `redesign-2026`, ripetuto a più riprese: zero permalink di post/categorie rimossi o modificati.
+- Diff di `sitemap.xml` e `feed.xml` fra le due build.
+- Build Jekyll pulita e verifica visiva (screenshot headless) su entrambi i temi colore, ad ogni modifica rilevante.
+
 ## [Non rilasciato] - 2026-08-12
 
 ### Contesto

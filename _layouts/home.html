@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<section class="section container">
+  <div class="hero">
+    <div class="hero__content">
+      <span class="hero__eyebrow">{{ site.data.index.careers.first.job.detail }} presso {{ site.data.index.careers.first.name.detail }}</span>
+      <h1 class="hero__title">{{ site.author.first_name }} {{ site.author.last_name }}</h1>
+      <p class="hero__lead">{{ site.author.desc }}</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="{{ '/cv/' | relative_url }}">Vedi il CV</a>
+        <a class="btn btn--ghost" href="{{ '/contatti/' | relative_url }}">Contattami</a>
+      </div>
+    </div>
+    <img class="hero__avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
+  </div>
+</section>
+
+<section class="section section--subtle">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Progetti</span>
+      <h2>Alcune cose che ho costruito</h2>
+    </div>
+    <div class="grid grid--3">
+      {% for project in site.data.index.projects limit:3 %}
+      {% include project-card.html project=project %}
+      {% endfor %}
+    </div>
+    <p style="margin-top: var(--space-4);"><a class="btn btn--ghost" href="{{ '/progetti/' | relative_url }}">Vedi tutti i progetti</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Blog</span>
+      <h2>Ultimi articoli</h2>
+    </div>
+    <div class="grid grid--3">
+      {% for post in site.posts limit:3 %}
+      {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+    <p style="margin-top: var(--space-4);"><a class="btn btn--ghost" href="{{ '/blog/' | relative_url }}">Vai al blog</a></p>
+  </div>
+</section>

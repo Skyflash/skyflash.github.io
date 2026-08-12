@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<section class="section container">
+  <div class="section-header">
+    <h1>{{ page.title }}</h1>
+  </div>
+
+  {% include category-index.html %}
+
+  <div class="grid grid--3">
+    {% for post in paginator.posts %}
+    {% include post-card.html post=post %}
+    {% endfor %}
+  </div>
+
+  {% if paginator.total_pages > 1 %}
+  <nav class="pagination" aria-label="Paginazione articoli">
+    {% if paginator.previous_page %}
+    <a class="btn btn--ghost" href="{{ paginator.previous_page_path | relative_url }}">&larr; Più recenti</a>
+    {% else %}
+    <span class="btn btn--ghost is-disabled">&larr; Più recenti</span>
+    {% endif %}
+
+    <span class="pagination__status">Pagina {{ paginator.page }} di {{ paginator.total_pages }}</span>
+
+    {% if paginator.next_page %}
+    <a class="btn btn--ghost" href="{{ paginator.next_page_path | relative_url }}">Meno recenti &rarr;</a>
+    {% else %}
+    <span class="btn btn--ghost is-disabled">Meno recenti &rarr;</span>
+    {% endif %}
+  </nav>
+  {% endif %}
+</section>

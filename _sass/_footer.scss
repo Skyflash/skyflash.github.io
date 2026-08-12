@@ -1,0 +1,46 @@
+// Footer
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-subtle);
+  padding-block: var(--space-5);
+  margin-top: var(--space-8);
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: center;
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+
+  @media (min-width: $bp-md) {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--space-3);
+
+  a {
+    color: var(--color-text-muted);
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-accent);
+    }
+  }
+}
+
+.footer-legal {
+  display: flex;
+  gap: var(--space-3);
+
+  a {
+    color: var(--color-text-muted);
+  }
+}

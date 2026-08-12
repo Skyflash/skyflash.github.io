@@ -9,8 +9,7 @@ intro: non tutti i produttori di telefoni DECT usano la stessa notazione IPEI. P
   piuttosto evidente
 image: "/static/assets/img/blog/ipuitoipei/ipui2ipei.jpg"
 categories:
-- HTML
-- Tools
+- Strumenti
 keywords: html,ipui,ipei,dect,siemes,conversione,tool,converter
 tags:
 - telefonia

@@ -1,0 +1,8 @@
+<nav class="category-index" aria-label="Categorie del blog">
+  {% for category in site.data.blog %}
+  <a class="category-pill" href="{{ category.href | relative_url }}">
+    {{ category.name }}
+    <span class="category-pill__count">{{ site.categories[category.name].size | default: 0 }}</span>
+  </a>
+  {% endfor %}
+</nav>

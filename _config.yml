@@ -66,17 +66,9 @@ author:  # change following line to your infomation.
   linkedin_id: cristiancastellari # Leave blank if you don't have now
   facebook_username: cristian.castellari  # Leave blank if you don't have now
   twitter: BloggerStanco
+  bluesky: cristiancastellari.bsky.social  # Leave blank if you don't have now
   email: c.castellari@gmail.com  # Leave blank if you don't have now
   cv: https://cristiancastellari.it/static/assets/cv/CV_Cristian_Castellari.pdf  # An online CV can be printed as PDF, leave blank if you don't have now
-
-
-  # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
-  skill_icon1:
-    - name: fa-paper-plane-o
-    - name: fa-linux
-  skill_icon2:
-    - name: fa-apple
-    - name: fa-code
   desc: "Informatico, padre e marito. Appassionato di tecnologia da sempre, curioso di natura. Nel tempo libero mi dedico alla famiglia, agli amici, alla cucina e ai videogiochi.
   Credo fortmente in ITIL come framework da applicare non solo all'IT ma anche a normali situazioni di vita quotidiana"
 
@@ -93,16 +85,13 @@ ga:  # if you wanna this feature, go to https://www.google.com/analytics/ to get
 go:
   # id:
 
-## donation
-donation: off  # type 'on'/'off' to choice display donation button at post page or not
-
-## carousels
-index_carousel: on  # index page carousel switch
-blog_carousel: off  # blog page carousel switch
-
 plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
+  - jekyll-paginate
+
+paginate: 15
+paginate_path: "/blog/pagina:num/"
 
 # scss
 sass:
@@ -113,14 +102,4 @@ sass:
 # Build settings
 encoding: utf-8
 
-jekyll_admin:
-  hidden_links:
-#    - posts
-#    - pages
-#    - staticfiles
-#    - datafiles
-#    - configuration
-
-
-
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
+exclude: ['README.md', 'CHANGELOG.md', 'Gemfile', 'Gemfile.lock']

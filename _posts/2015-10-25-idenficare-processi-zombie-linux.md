@@ -9,7 +9,9 @@ lang: it_IT
 image: "/static/assets/img/blog/zombiesign.jpg"
 keywords: linux,script,process,kill,zombie,server
 categories:
-- Linux
+- Infrastruttura & Sistemi
+permalink: "/blog/infrastruttura/:title/"
+redirect_from: /blog/linux/idenficare-processi-zombie-linux/
 tags:
 - Linux
 - Scripting

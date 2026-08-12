@@ -1,25 +1,20 @@
 ---
 layout: compress
 ---
-
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/Person" lang="it">
 
-    {% if page.title != 'Cristian Castellari' %}
-        {% include head.html %}
-    {% else %}
-        {% include index_head.html %}
-    {% endif %}
+{% include head.html %}
 
-<body id="page-top" class="landing-page">
+<body>
 
-    {% if page.title != 'Cristian Castellari' %}
-        {% include blog_header.html %}
-    {% endif %}
+{% include nav.html %}
 
-    {{ content }}
+<main>
+{{ content }}
+</main>
 
-{% include footer.html %}   
+{% include footer.html %}
 
 </body>
 </html>

@@ -1,112 +1,77 @@
 ---
 layout: default
-custom_css: 
-    - blogpadding.css
-    - blogmenu.css
 ---
-<div id="post">
-<div class="wrapper wrapper-content  animated fadeInRight article">
-    <div class="row">
-        <div class="col-lg-10 col-lg-offset-1">
-            <div class="ibox">
-                <div class="ibox-content">
-                    <div class="pull-right">
-                    	{% for category in page.categories %}
-                        	<a class="btn btn-white btn-xs" href="{{ category | downcase | prepend: '/' | prepend: site.baseurl }}">{{ category }}</a>
-                        {% endfor %}
-                    </div>
-                    <div class="text-center article-title">
-                    <span class="text-muted"><i class="fa fa-clock-o"></i> {{ page.date | date: "%-d %b %Y" }}</span>
-                        <h1>
-                            {{ page.title }}
-                        </h1>
-                     <div class="vote-info">
-                        <i class="fa fa-book"></i> <a>{{ page.content | number_of_words | append: " Parole" }}</a>
-                        <i class="fa fa-clock-o"></i> <a>Tempo di lettura: {{ page.content | number_of_words | divided_by: 180 | append: " minuti" }}</a>
-                     </div>
-                    </div>
-                    <div class="desc">
-                        <img itemprop="image" class="post-image" src="{{ page.image }}" alt="{{ page.title }}">
-                        <p itemprop="description" class="intro">{{ page.intro }}</p>
-                    </div>
-                    <article>
-                        {{ content }}
-                    </article>
-                    <hr>
-                    <div class="row">
-                            <div class="row">
-                                    <div class="col-md-6">
-                                            <h5 style="display: inline;">Tags:</h5>
-                                            {% for tag in page.tags %}
-                                                <button class="btn btn-white btn-xs" type="button">{{ tag }}</button>
-                                            {% endfor %}
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="small text-right">
-                                            <div>
-                                            {% if site.disqus %}
-                                            <i class="fa fa-comments-o"> </i> <span class="disqus-comment-count" data-disqus-url="{{ site.url }}{{ page.url }}">0</span> 
-                                            {% endif %}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-                    <div class="row">
-                      
-                        <div class="col-lg-12">
-                            <br>
-                            <!-- share -->
-                            {% include social.html %}
-                            <br>
-                                <div class="related-container">
-                                <h4 class="relh4">Potrebbe Interessarti Anche...</h4>    
-                                            <div class="rect">                                        
-                                            {% assign maxRelated = 4 %}
-                                            {% assign minCommonTags =  1 %}
-                                            {% assign maxRelatedCounter = 0 %}
-                                            
-                                              {% for post in site.posts %}
-                                            
-                                                {% assign sameTagCount = 0 %}
-                                                {% assign commonTags = '' %}
-                                            
-                                                {% for tag in post.tags %}
-                                                  {% if post.url != page.url %}
-                                                    {% if page.tags contains tag %}
-                                                      {% assign sameTagCount = sameTagCount | plus: 1 %}
-                                                      {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
-                                                      {% assign commonTags = commonTags | append: tagmarkup %}
-                                                    {% endif %}
-                                                  {% endif %}
-                                                {% endfor %}
-                                            
-                                                {% if sameTagCount >= minCommonTags %}
-                                                 <a href="{{ site.baseurl }}{{ post.url }}">
-                                                   <div class="rel">
-                                                      <img src="{{post.image}}" alt="{{post.description}}">
-                                                          <h5>{{ post.title }}</h5>
-                                                  </div>
-                                                 </a>
-                                                 {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-                                                  {% if maxRelatedCounter >= maxRelated %}
-                                                    {% break %}
-                                                  {% endif %}
-                                                {% endif %}                                          
-                                              {% endfor %}
-                                            </div>
-                            <!-- comment -->
-                            {% include comments.html %}
-                                    </div>
-                                </div>  
-                            <br>
-                            
-                        </div>
-                    <!-- </div> -->
-                </div>
-            </div>
-        </div>
+<article class="section container">
+  <header class="post-header">
+    <p class="card__meta">
+      {{ page.date | date: "%-d %b %Y" }} · {{ page.content | number_of_words }} parole · Tempo di lettura: {{ page.content | number_of_words | divided_by: 180 }} min
+    </p>
+    <h1>{{ page.title }}</h1>
+    {% if page.categories %}
+    <div class="pill-row">
+      {% for category in page.categories %}
+      {% assign cat_data = site.data.blog | where: "name", category | first %}
+      <a class="pill" href="{{ cat_data.href | relative_url }}">{{ category }}</a>
+      {% endfor %}
     </div>
+    {% endif %}
+  </header>
 
-</div>
-</div>
+  {% if page.image %}
+  <img class="post-image post-image--on-light" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  {% endif %}
+  {% if page.image_dark %}
+  <img class="post-image post-image--on-dark" src="{{ page.image_dark | relative_url }}" alt="{{ page.title }}">
+  {% endif %}
+
+  {% if page.intro %}<p class="post-intro">{{ page.intro }}</p>{% endif %}
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  {% if page.tags %}
+  <div class="pill-row prose" style="margin-top: var(--space-4);">
+    {% for tag in page.tags %}<span class="pill">{{ tag }}</span>{% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="post-share">
+    {% include social.html %}
+  </div>
+
+  {% assign maxRelated = 4 %}
+  {% assign minCommonTags = 1 %}
+  {% assign maxRelatedCounter = 0 %}
+  {% assign related = "" | split: "" %}
+  {% for post in site.posts %}
+    {% assign sameTagCount = 0 %}
+    {% for tag in post.tags %}
+      {% if post.url != page.url and page.tags contains tag %}
+        {% assign sameTagCount = sameTagCount | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if sameTagCount >= minCommonTags %}
+      {% assign related = related | push: post %}
+      {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+      {% if maxRelatedCounter >= maxRelated %}{% break %}{% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% if related.size > 0 %}
+  <div class="related-posts">
+    <div class="section-header">
+      <h2>Potrebbe interessarti anche</h2>
+    </div>
+    <div class="grid grid--3">
+      {% for post in related %}
+      {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="post-comments">
+    {% include comments.html %}
+  </div>
+</article>

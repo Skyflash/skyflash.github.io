@@ -1,0 +1,104 @@
+// Design tokens — palette, tipografia, spaziatura, breakpoint
+//
+// Tema: chiaro di default. Lo scuro si attiva in due modi, entrambi gestiti
+// qui sotto:
+//  1) automaticamente, se il sistema del visitatore preferisce lo scuro
+//     e non ha scelto esplicitamente un tema (nessun [data-theme] impostato)
+//  2) esplicitamente, tramite il selettore in nav (imposta [data-theme] su <html>)
+:root {
+  color-scheme: light;
+
+  // Colori
+  --color-bg: #ffffff;
+  --color-bg-subtle: #f6f7f9;
+  --color-text: #1a1d21;
+  --color-text-muted: #5b6370;
+  --color-border: #e3e6ea;
+  --color-accent: #3385ff;
+  --color-accent-hover: #1e6fe0;
+  --color-accent-subtle: #eaf1ff;
+
+  // Tipografia
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --text-xs: 0.75rem;   // 12px
+  --text-sm: 0.875rem;  // 14px
+  --text-base: 1rem;    // 16px
+  --text-lg: 1.25rem;   // 20px
+  --text-xl: 1.563rem;  // 25px
+  --text-2xl: 1.953rem; // 31px
+  --text-3xl: 2.441rem; // 39px
+
+  // Spaziatura (base 8px)
+  --space-1: 0.25rem; // 4px
+  --space-2: 0.5rem;  // 8px
+  --space-3: 1rem;    // 16px
+  --space-4: 1.5rem;  // 24px
+  --space-5: 2rem;    // 32px
+  --space-6: 3rem;    // 48px
+  --space-7: 4rem;    // 64px
+  --space-8: 6rem;    // 96px
+
+  // Altro
+  --radius: 8px;
+  --shadow-sm: 0 1px 2px rgba(26, 29, 33, 0.06);
+  --shadow-md: 0 4px 16px rgba(26, 29, 33, 0.08);
+  --content-max-width: 1360px;
+}
+
+// Automatico: segue le impostazioni del sistema/browser, solo se l'utente
+// non ha scelto esplicitamente "chiaro" tramite il selettore.
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-bg: #12141a;
+    --color-bg-subtle: #1a1d24;
+    --color-text: #e8eaed;
+    --color-text-muted: #9aa3af;
+    --color-border: #2a2e37;
+    --color-accent: #5b9dff;
+    --color-accent-hover: #7fb2ff;
+    --color-accent-subtle: #1c2b42;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  }
+}
+
+// Esplicito: l'utente ha scelto "scuro" dal selettore, indipendentemente
+// dalle impostazioni del sistema.
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #12141a;
+  --color-bg-subtle: #1a1d24;
+  --color-text: #e8eaed;
+  --color-text-muted: #9aa3af;
+  --color-border: #2a2e37;
+  --color-accent: #5b9dff;
+  --color-accent-hover: #7fb2ff;
+  --color-accent-subtle: #1c2b42;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+// Esplicito: l'utente ha scelto "chiaro" dal selettore. Regola positiva
+// (non solo "non-scuro") così vince sempre, indipendentemente dal sistema.
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #ffffff;
+  --color-bg-subtle: #f6f7f9;
+  --color-text: #1a1d21;
+  --color-text-muted: #5b6370;
+  --color-border: #e3e6ea;
+  --color-accent: #3385ff;
+  --color-accent-hover: #1e6fe0;
+  --color-accent-subtle: #eaf1ff;
+  --shadow-sm: 0 1px 2px rgba(26, 29, 33, 0.06);
+  --shadow-md: 0 4px 16px rgba(26, 29, 33, 0.08);
+}
+
+// Breakpoint (da usare con @media (min-width: $bp-md) ecc.)
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;

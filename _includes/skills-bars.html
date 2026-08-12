@@ -1,0 +1,20 @@
+<div class="skills-groups">
+  {% for category in site.data.index.skills.categories %}
+  <div class="skills-group">
+    <h3 class="skills-group__title">{{ category.name }}</h3>
+    <div class="skill-bars">
+      {% for skill in category.skills %}
+      <div class="skill-bar">
+        <div class="skill-bar__label">
+          <span>{{ skill.name }}</span>
+          <span class="skill-bar__value">{{ skill.percentage }}%</span>
+        </div>
+        <div class="skill-bar__track">
+          <div class="skill-bar__fill" style="width: {{ skill.percentage }}%;"></div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>

@@ -1,6 +1,42 @@
-# skills section data
+# skills section data — competenze raggruppate per area
 
-label: Ability
-id : cs
-aspects: Windows Server, Hyper-V/VMware, AD / Entra ID, Fortinet NSE6, Backup & DR, Quest KACE, Linux/Shell, PowerShell, Apache Tomcat, ITIL v4, Team Leadership, Service Mgmt, Git/GitHub/Jekyll
-percentage: 95, 95, 95, 90, 95, 99, 85, 80, 88, 85, 90, 90, 70
+label: Competenze
+id: cs
+categories:
+  - name: Infrastruttura & Virtualizzazione
+    skills:
+      - name: Windows Server
+        percentage: 95
+      - name: Hyper-V/VMware
+        percentage: 95
+      - name: Apache Tomcat
+        percentage: 88
+      - name: Linux/Shell
+        percentage: 85
+
+  - name: Sicurezza & Identity
+    skills:
+      - name: AD / Entra ID
+        percentage: 95
+      - name: Fortinet NSE6
+        percentage: 90
+      - name: Backup & DR
+        percentage: 95
+
+  - name: Systems Management & Automazione
+    skills:
+      - name: Quest KACE
+        percentage: 99
+      - name: PowerShell
+        percentage: 80
+      - name: Git/GitHub/Jekyll
+        percentage: 70
+
+  - name: Leadership & Metodologia
+    skills:
+      - name: ITIL v4
+        percentage: 85
+      - name: Team Leadership
+        percentage: 90
+      - name: Service Management
+        percentage: 90

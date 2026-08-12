@@ -1,19 +1,39 @@
-<div class="row" style="background: #1c1e1e">
-    <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-      <p id="jalpc_site_pv" style="color: #FFFFFF">
-        <strong>&copy; 2019 - {{ 'now' | date: "%Y" }} {{ site.title }}</strong><br />
-        <a href="/about/disclaimer/"> Disclaimer </a> | <a href="/about/privacy/"> Informativa Privacy</a>
-        <a rel="me" style="display:none;" href="https://mastodon.uno/@cristiancastellari">Mastodon - @cristiancastellari@mastodon.uno</a> 
-        <a rel="me" style="display:none;" href="https://livellosegreto.it/@cristian">@cristian@livellosegreto.it</a> 
-        <a rel="me" style="display:none;" href="https://sociale.network/@cristian"></a>
-      </p>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name }}</p>
+
+    <div class="footer-social">
+      {% if site.author.github_username %}
+      <a href="https://github.com/{{ site.author.github_username }}" target="_blank" rel="me noopener" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+      {% endif %}
+      {% if site.author.linkedin_id %}
+      <a href="https://www.linkedin.com/in/{{ site.author.linkedin_id }}" target="_blank" rel="me noopener" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      {% endif %}
+      {% if site.author.facebook_username %}
+      <a href="https://www.facebook.com/{{ site.author.facebook_username }}" target="_blank" rel="me noopener" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      {% endif %}
+      {% if site.author.twitter %}
+      <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="me noopener" aria-label="Twitter/X"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      {% endif %}
+      {% if site.author.bluesky %}
+      <a href="https://bsky.app/profile/{{ site.author.bluesky }}" target="_blank" rel="me noopener" aria-label="Bluesky">{% include icon-bluesky.html %}</a>
+      {% endif %}
+      {% if site.author.email %}
+      <a href="mailto:{{ site.author.email }}" aria-label="Email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+      {% endif %}
+      <a href="{{ '/feed.xml' | relative_url }}" aria-label="Feed RSS"><i class="fa fa-rss" aria-hidden="true"></i></a>
     </div>
-</div>
 
-{% if site.ga %}
-    {% include analytics.html %}
-{% endif %}
+    <div class="footer-legal">
+      <a href="{{ '/about/disclaimer/' | relative_url }}">Disclaimer</a>
+      <a href="{{ '/about/privacy/' | relative_url }}">Privacy</a>
+    </div>
+  </div>
+</footer>
 
-{% if page.title != site.title and site.disqus %}
-<script id="dsq-count-scr" src="https://{{ site.disqus.name }}.disqus.com/count.js" async></script>
-{% endif %}
+{% include cookieconsent.html %}
+{% include analytics.html %}
+<script src="{{ '/assets/js/nav.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/github-stats.js' | relative_url }}"></script>

@@ -7,7 +7,7 @@ intro: "Oggi ho aggiornato le dipendenze di questo sito (Ruby, Jekyll, npm, Boot
 image: "/static/assets/img/blog/manutenzione-sito-2026/cover.jpg"
 lang: it_IT
 categories:
-- Tools
+- Progetti Personali
 keywords: jekyll, npm, bootstrap, chart.js, dependency update, manutenzione, dependabot, uglify-js
 tags:
 - jekyll
@@ -18,7 +18,8 @@ tags:
 - dependabot
 - manutenzione
 - debugging
-permalink: "/blog/tools/:title/"
+permalink: "/blog/progetti-personali/:title/"
+redirect_from: /blog/tools/manutenzione-sito-2026/
 icon: fa-wrench
 ---
 

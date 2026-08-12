@@ -1,105 +1,216 @@
-.ibox {
-    max-width: 960px;
-    align-items: center;
-    margin: 0 auto;
-    justify-items: center;
+// Tipografia articolo blog + liste post
+.post-header {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: left;
+  margin-bottom: var(--space-4);
+}
+
+.post-image {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto var(--space-4);
+  border-radius: var(--radius);
+}
+
+// Alcuni post hanno due copertine (post-image--on-light / --on-dark), pensate
+// per fare contrasto con lo sfondo della pagina: quella "chiara" si mostra su
+// tema scuro e viceversa. Stesso schema automatico/chiaro/scuro dei colori.
+.post-image--on-dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    .post-image--on-light {
+      display: none;
+    }
+    .post-image--on-dark {
+      display: block;
+    }
   }
-  .desc {
-    max-width: 960px;
-    margin: 0 auto;
-    overflow: auto;
-    border: 1px solid #eee;
+}
+
+:root[data-theme="dark"] {
+  .post-image--on-light {
+    display: none;
+  }
+  .post-image--on-dark {
+    display: block;
+  }
+}
+
+.post-intro {
+  max-width: 760px;
+  margin: 0 auto var(--space-5);
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  border-left: 3px solid var(--color-accent);
+  padding-left: var(--space-3);
+}
+
+.prose {
+  max-width: 760px;
+  margin-inline: auto;
+
+  h2,
+  h3,
+  h4 {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-2);
+  }
+
+  p,
+  ul,
+  ol,
+  blockquote,
+  table,
+  .highlight {
+    margin-bottom: var(--space-3);
+  }
+
+  ul,
+  ol {
+    padding-left: var(--space-4);
+    list-style: revert;
+  }
+
+  // Solo i link dentro al testo vero e proprio vanno sottolineati (leggibilità);
+  // componenti come .card/.btn/.pill gestiscono la propria decorazione e non
+  // vanno toccati, anche quando (come capita spesso, es. il bottone "Scarica CV")
+  // si trovano dentro a un <p> o altro tag di testo dentro a .prose.
+  p a:not(.btn):not(.pill):not(.card),
+  li a:not(.btn):not(.pill):not(.card),
+  blockquote a:not(.btn):not(.pill):not(.card),
+  td a:not(.btn):not(.pill):not(.card),
+  th a:not(.btn):not(.pill):not(.card) {
+    text-decoration: underline;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: var(--radius);
+  }
+
+  blockquote {
+    border-left: 3px solid var(--color-border);
+    padding-left: var(--space-3);
+    color: var(--color-text-muted);
+  }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background: var(--color-bg-subtle);
+    padding: 0.1em 0.35em;
     border-radius: 4px;
-    margin-bottom: 60px;
-    .post-image {
-      float: left;
-      width: 50%;
-      margin-right: 1em;
-      border-right: 1px solid #e8e8e8;
-      padding: 0px 10px 0px 10px;
+  }
+
+  pre {
+    padding: var(--space-3);
+    border-radius: var(--radius);
+    overflow-x: auto;
+
+    code {
+      background: none;
+      padding: 0;
     }
   }
-  .intro {
-    color: #1c1c1c;
-    border-radius: 2px;
-    margin-right: 1.2em;
-    font-size: 1.4em !important;
-    /* padding-top: 15px; */
-    line-height: 1.9em !important;
-    text-align: justify;
-    margin-top: 20px;
-    &:before {
-      content: "\275D";
-      font-size: 95px;
-      float: left;
-      line-height: 15px;
-      padding-right: 8px;
-      padding-top: 18px;
-      color: #3986FC;
-    }
-  }
-  #post article > p:first-child:first-letter {
-    color: #337ab7;
-    float: left;
-    /* font-family: josefin sans,sans-serif; */
-    font-size: 85px;
-    line-height: 65px;
-    padding-top: 5px;
-    padding-right: 8px;
-    padding-left: 3px;
-  }
-  .related-container {
-    max-width: 800px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-  }
-  
-  h4.relh4 {
-    margin-top: 2em !important;
-    margin-bottom: .5em;
-    text-align: left;
-  }
-  
-  .rect {
-     /*
-  border-top: 2px solid #eeeeee;
-  border-bottom: 2px solid #eeeeee;
-  padding-top: 10px;
-  padding-bottom: 15px;
-  text-align: center;
-  display: inline-flex;*/
-    border-top: 2px solid #eeeeee;
-    border-bottom: 2px solid #eeeeee;
-    padding-top: 10px;
-    margin: 0 auto;
-    padding-bottom: 15px;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    max-width: 800px;
-    a {
-      border: none;
-      &:hover {
-        border: none;
-      }
-    }
-  }
-  
-  .rel {
+
+  table {
     width: 100%;
-    /*max-width: 250px; 
-    min-width: 33%;*/
-    text-align: left;
-    padding: 10px;
-    img {
-      max-width: 100%;
-      opacity: 0.7;
-      height: auto;
-      &:hover {
-        opacity: 1;
+    border-collapse: collapse;
+
+    th,
+    td {
+      border: 1px solid var(--color-border);
+      padding: var(--space-2);
+      text-align: left;
+    }
+  }
+
+  // Table of contents (kramdown `* TOC {:toc}`)
+  #markdown-toc {
+    background: var(--color-bg-subtle);
+    border-radius: var(--radius);
+    padding: var(--space-3) var(--space-4);
+    list-style: revert;
+
+    ul {
+      list-style: revert;
+    }
+  }
+}
+
+.post-share {
+  max-width: 760px;
+  margin: var(--space-5) auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+
+  h5 {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-2);
+  }
+
+  .share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      padding: var(--space-1) var(--space-3);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      font-size: var(--text-xs);
+      color: var(--color-text);
+      transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+
+      &:hover,
+      &:focus-visible {
+        text-decoration: none;
+      }
+    }
+
+    // Ogni piattaforma nel proprio colore di brand; al passaggio del mouse il
+    // pulsante si riempie di quel colore e testo/icona diventano bianchi.
+    $share-brands: (
+      "facebook": #3b5998,
+      "x": #4099ff,
+      "whatsapp": #25d366,
+      "telegram": #229ed9,
+      "bluesky": #0085ff,
+      "linkedin": #0077b5,
+      "reddit": #ff5700,
+      "email": #444444,
+    );
+
+    @each $name, $brand-color in $share-brands {
+      .share-btn--#{$name} {
+        color: $brand-color;
+
+        &:hover,
+        &:focus-visible {
+          background: $brand-color;
+          border-color: $brand-color;
+          color: #fff;
+        }
       }
     }
   }
+}
+
+.related-posts {
+  max-width: 960px;
+  margin: var(--space-6) auto 0;
+}
+
+.post-comments {
+  max-width: 760px;
+  margin: var(--space-6) auto 0;
+}

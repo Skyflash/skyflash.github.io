@@ -6,8 +6,8 @@ description: Non si effettuano attività sull’infrastruttura IT di produzione 
 intro: Non si effettuano attività sull’infrastruttura IT di produzione il Venerdì, il Sabato e la Domenica/Festivi (ed anche il giovedì dopo le 16:00)
 image: "/static/assets/img/blog/blackcat-agreement/blackcat.jpg"
 categories:
-- ITIL
-- Life
+- Filosofia di Lavoro
+- "Fuori dall'Ufficio"
 keywords: it, service management
 tags:
 - it
