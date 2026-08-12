@@ -4,10 +4,10 @@
     detail: Integra S.r.l. (Gruppo L'Operosa)
     i18n: integra
   desc:
-    detail: 
+    detail: Responsabile dell'unità IT & Service Management, con coordinamento di un team di supporto di 4 persone su infrastrutture multi-cliente. Gestisco infrastrutture IT eterogenee (Windows Server, Linux, virtualizzazione Hyper-V/VMware), amministrazione di Active Directory e Microsoft 365/Entra ID, sicurezza di rete (FortiGate, FortiClient EMS) e supporto infrastrutturale alle soluzioni ERP Zucchetti, dal tuning di database e application server a backup e disaster recovery. Sono il punto di riferimento del team di supporto su priorità, escalation e relazione con i clienti.
     i18n: integra_desc
   date:
-    detail: Dicembre 2021 - Presente
+    detail: Gennaio 2022 - Presente
     i18n: integra_date
   job:
     detail: IT & Service Management Unit Manager
@@ -19,16 +19,16 @@
     detail: Integra S.r.l. (Gruppo L'Operosa)
     i18n: integra
   desc:
-    detail: 
+    detail: Gestione end-to-end di infrastrutture IT eterogenee (Windows Server, Linux, virtualizzazione Hyper-V/VMware) per i clienti del gruppo, con amministrazione di Active Directory, Microsoft 365/Entra ID e sicurezza di rete (FortiGate, FortiClient EMS).
     i18n: integra_desc
   date:
-    detail: Febbraio 2020 - Dicembre 2021
+    detail: Febbraio 2020 - Gennaio 2022
     i18n: integra_date
   job:
     detail: Senior System Administrator - Digital Infrastructures
     i18n: integra_job
   icon: fa-plus-square
- 
+
 - name:
     detail: Novomatic Italia s.p.a.
     i18n: novomatic_b
@@ -50,7 +50,7 @@
     detail: Assistenza in ambito Office Automation a tutti gli utenti del Gruppo Novomatic sul territorio italiano. Gestione di server Linux e Windows che offrono diversi servizi quali Git, MDM, siti web corporate, antivirus eccetera
     i18n: novomatic_desc
   date:
-    detail: Gennaio 2015 - Dicembre 2016
+    detail: Gennaio 2015 - Gennaio 2017
     i18n: novomatic_date
   job:
     detail: Referente Office Automation

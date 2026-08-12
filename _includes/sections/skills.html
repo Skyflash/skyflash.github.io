@@ -7,7 +7,7 @@
     </div>
     <div class="row features-block">
         <div class="wow zoomIn col-lg-6 col-lg-offset-3">
-            <canvas id="{{ site.data.index.skills.id }}" height="500" width="500"></canvas>
+            <canvas id="{{ site.data.index.skills.id }}" height="600" width="600"></canvas>
         </div>
         <div class="col-lg-1"></div>
         <script>
@@ -30,11 +30,14 @@
             data: data,
             options: {
                 responsive: true,
+                layout: {
+                    padding: 24
+                },
                 scales: {
                     r: {
                         min: 0,
                         max: 100,
-                        pointLabels: {font: {size: 14}},
+                        pointLabels: {font: {size: 12}},
                     }
                 },
                 plugins: {
