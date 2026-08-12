@@ -17,7 +17,7 @@ Il tema — scritto da zero, senza framework CSS/JS di terze parti — è **open
 
 ## Stack
 
-- [Jekyll](https://jekyllrb.com/) 4.x (Ruby), Sass nativo (`sass-embedded`)
+- [Jekyll](https://jekyllrb.com/) 3.10 (Ruby, via la gem [`github-pages`](https://github.com/github/pages-gem) che fissa le versioni a quelle usate in produzione), Sass nativo
 - Plugin: `jekyll-seo-tag`, `jekyll-redirect-from`, `jekyll-paginate`
 - [Fork Awesome](https://forkaweso.me/) per le icone
 

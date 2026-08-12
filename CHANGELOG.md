@@ -42,6 +42,15 @@ Il tema precedente (derivato da [Jalpc](https://github.com/jarrekk/Jalpc): Boots
 - Diff di `sitemap.xml` e `feed.xml` fra le due build.
 - Build Jekyll pulita e verifica visiva (screenshot headless) su entrambi i temi colore, ad ogni modifica rilevante.
 
+## [Non rilasciato] - 2026-08-13
+
+### Ricerca interna potenziata
+
+- `search.json` ora indicizza anche le pagine di contenuto (CV, Progetti, Contatti, pagine legali, indice blog, pagine categoria), non solo i post del blog, e porta con sé tag/categorie oltre a titolo e descrizione.
+- Corretto un bug latente: i valori venivano inseriti nel JSON senza escaping (una virgoletta doppia in un titolo avrebbe rotto silenziosamente il file); ora si usa il filtro `jsonify` di Liquid.
+- `search.js`: la query viene spezzata in parole con match "AND" su tutti i campi (titolo, descrizione, tag, categorie) invece della frase esatta su solo titolo/descrizione; punteggio semplice che privilegia i match nel titolo, risultati ordinati per rilevanza invece che per ordine cronologico, estratto (descrizione) mostrato sotto ogni risultato.
+- **Bug fix — build rotta su GitHub Pages**: la pipeline "Deploy from a branch" builda con Jekyll 3.10.0 (gem `github-pages`), che non supporta `where_exp` con condizioni multiple in `or` usato per filtrare le pagine da indicizzare. Sostituito con tre `where` singoli (uno per layout) uniti via `concat` — sintassi base, stabile su qualunque versione di Jekyll.
+
 ## [Non rilasciato] - 2026-08-12
 
 ### Contesto
