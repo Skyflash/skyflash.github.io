@@ -8,7 +8,7 @@ intro: "The Elder Scrolls III: Morrowind ha rivoluzionato i canoni di libertà i
 image: /static/assets/img/blog/29-morrowind.jpg
 keywords: "morrowind,traduzione,itp"
 categories: ["Fuori dall'Ufficio"]
-tags: [Morrowind,ITP,Games]
+tags: [morrowind,itp,games]
 icon: fa-gamepad
 seo:
     links: https://www.skyflash.it/2009/10/la-traduzione-in-italiano-di-planescape-torment-del-team-itp/

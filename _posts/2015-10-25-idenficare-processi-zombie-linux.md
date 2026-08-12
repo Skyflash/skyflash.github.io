@@ -13,9 +13,9 @@ categories:
 permalink: "/blog/infrastruttura/:title/"
 redirect_from: /blog/linux/idenficare-processi-zombie-linux/
 tags:
-- Linux
-- Scripting
-- Process
+- linux
+- scripting
+- process
 - sicurezza
 - script
 icon: fa-linux

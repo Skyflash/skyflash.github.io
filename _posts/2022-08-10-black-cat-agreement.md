@@ -13,7 +13,7 @@ tags:
 - it
 - service management
 - gestione
-- ITIL
+- itil
 permalink: "/blog/itil/:title/"
 icon: fa-refresh
 ---
