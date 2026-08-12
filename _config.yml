@@ -3,8 +3,9 @@
 # Site wide configuration
 ####################################
 #
-title: Cristian Castellari
-description: "Informatico, padre e marito. Nel tempo libero mi dedico alla famiglia, agli amici e ai videogiochi"
+title: Cristian Castellari — CV, Progetti e Blog
+tagline: "Lavoro e passioni personali"
+description: "Il CV, le esperienze e il blog di Cristian Castellari — si parla tanto di lavoro quanto delle mie passioni personali."
 keywords: cristian, castellari, blog, jekyll, gh-pages, kace, github, wordpress
 baseurl:  '' # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
 url: https://cristiancastellari.it  # url should be 'http://<github_username>.github.io/homepage' as before
