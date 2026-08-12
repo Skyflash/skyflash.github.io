@@ -5,7 +5,10 @@ permalink: /search.json
 {
     "code" : 0,
     "data" : [
-    {% assign search_pages = site.pages | where_exp: "p", "p.layout == 'page' or p.layout == 'category' or p.layout == 'blog-index'" %}
+    {% assign search_pages_a = site.pages | where: "layout", "page" %}
+    {% assign search_pages_b = site.pages | where: "layout", "category" %}
+    {% assign search_pages_c = site.pages | where: "layout", "blog-index" %}
+    {% assign search_pages = search_pages_a | concat: search_pages_b | concat: search_pages_c %}
     {% for page in search_pages %}
     {
         "title" : {{ page.title | jsonify }},
