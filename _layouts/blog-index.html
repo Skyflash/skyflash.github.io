@@ -3,6 +3,13 @@ layout: default
 ---
 {% assign short_lang = page.lang | slice: 0, 2 | default: site.default_lang %}
 {% assign i18n = site.data.i18n %}
+{% assign per_page = site.blog_posts_per_page %}
+{% assign page_num = page.page_num | default: 1 %}
+{% assign lang_posts = site.posts | where: "lang", page.lang %}
+{% assign total_posts = lang_posts.size %}
+{% assign total_pages = total_posts | plus: per_page | minus: 1 | divided_by: per_page %}
+{% assign offset = page_num | minus: 1 | times: per_page %}
+{% assign base_blog_url = "/" | append: short_lang | append: "/blog/" %}
 <section class="section container">
   <div class="section-header">
     <h1>{{ page.title }}</h1>
@@ -10,36 +17,35 @@ layout: default
 
   {% include category-index.html %}
 
-  {% if page.paginate_lang %}
-  {% assign display_posts = site.posts | where: "lang", page.paginate_lang %}
   <div class="grid grid--3">
-    {% for post in display_posts %}
-    {% include post-card.html post=post %}
-    {% endfor %}
-  </div>
-  {% else %}
-  <div class="grid grid--3">
-    {% for post in paginator.posts %}
+    {% for post in lang_posts offset: offset limit: per_page %}
     {% include post-card.html post=post %}
     {% endfor %}
   </div>
 
-  {% if paginator.total_pages > 1 %}
+  {% if total_pages > 1 %}
   <nav class="pagination" aria-label="{{ i18n.pagination_aria[short_lang] }}">
-    {% if paginator.previous_page %}
-    <a class="btn btn--ghost" href="{{ paginator.previous_page_path | relative_url }}">{{ i18n.pagination_newer[short_lang] }}</a>
+    {% if page_num > 1 %}
+      {% assign prev_num = page_num | minus: 1 %}
+      {% if prev_num == 1 %}
+        {% assign prev_url = base_blog_url %}
+      {% else %}
+        {% assign prev_url = base_blog_url | append: "pagina" | append: prev_num | append: "/" %}
+      {% endif %}
+    <a class="btn btn--ghost" href="{{ prev_url | relative_url }}">{{ i18n.pagination_newer[short_lang] }}</a>
     {% else %}
     <span class="btn btn--ghost is-disabled">{{ i18n.pagination_newer[short_lang] }}</span>
     {% endif %}
 
-    <span class="pagination__status">{{ i18n.pagination_status_prefix[short_lang] }} {{ paginator.page }} {{ i18n.pagination_status_of[short_lang] }} {{ paginator.total_pages }}</span>
+    <span class="pagination__status">{{ i18n.pagination_status_prefix[short_lang] }} {{ page_num }} {{ i18n.pagination_status_of[short_lang] }} {{ total_pages }}</span>
 
-    {% if paginator.next_page %}
-    <a class="btn btn--ghost" href="{{ paginator.next_page_path | relative_url }}">{{ i18n.pagination_older[short_lang] }}</a>
+    {% if page_num < total_pages %}
+      {% assign next_num = page_num | plus: 1 %}
+      {% assign next_url = base_blog_url | append: "pagina" | append: next_num | append: "/" %}
+    <a class="btn btn--ghost" href="{{ next_url | relative_url }}">{{ i18n.pagination_older[short_lang] }}</a>
     {% else %}
     <span class="btn btn--ghost is-disabled">{{ i18n.pagination_older[short_lang] }}</span>
     {% endif %}
   </nav>
-  {% endif %}
   {% endif %}
 </section>

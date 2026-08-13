@@ -3,7 +3,7 @@ layout: default
 ---
 {% assign short_lang = page.lang | slice: 0, 2 | default: site.default_lang %}
 {% assign i18n = site.data.i18n %}
-{% assign latest_posts = site.posts | where: "lang", page.lang | limit: 3 %}
+{% assign latest_posts = site.posts | where: "lang", page.lang | slice: 0, 6 %}
 <section class="section container">
   <div class="hero">
     <div class="hero__content">

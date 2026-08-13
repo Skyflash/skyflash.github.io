@@ -93,10 +93,11 @@ go:
 plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
-  - jekyll-paginate
 
-paginate: 15
-paginate_path: "/it/blog/pagina:num/"
+# Paginazione del blog: gestita a mano in _layouts/blog-index.html (non da un
+# plugin) perché deve filtrare i post per lingua — jekyll-paginate pagina
+# sempre TUTTI i site.posts, senza modo di escludere le altre lingue.
+blog_posts_per_page: 15
 
 # scss
 sass:

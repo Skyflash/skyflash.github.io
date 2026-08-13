@@ -2,6 +2,16 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.1.1] - 2026-08-13 — Fix paginazione blog e limite home
+
+### Bug fix — post in un'altra lingua nel blog
+
+`_layouts/blog-index.html` per la lingua IT usava `paginator.posts` di `jekyll-paginate`, che pagina **tutti** i `site.posts` senza modo di filtrare per lingua — appena sono comparsi i primi post inglesi, sono spuntati anche nell'elenco del blog italiano. Il plugin è stato rimosso del tutto (era usato solo lì) e sostituito con paginazione manuale filtrata per `page.lang`, implementata con i parametri `offset:`/`limit:` del tag `{% for %}` (non un filtro — vedi sotto). `_config.yml`: tolto `jekyll-paginate` dai plugin e `paginate`/`paginate_path`, aggiunta la chiave `blog_posts_per_page`.
+
+### Bug fix — "Ultimi articoli" in home mostrava tutti i post
+
+`{{ site.posts | where: ... | limit: 6 }}` non troncava nulla: **`limit` non esiste come filtro Liquid** (esiste solo come parametro del tag `{% for %}`, es. `{% for x in y limit:3 %}`), quindi in modalità non-strict di Jekyll veniva ignorato silenziosamente e la sezione mostrava tutti e 23 i post italiani invece di un numero limitato — bug presente fin dall'introduzione della sezione, mascherato dal fatto che con pochi post il risultato "sembrava" quasi giusto. Sostituito con il filtro `slice: 0, 6`, che tronca davvero l'array. Portato anche il numero di articoli mostrati in home da 3 a 6.
+
 ## [2.1.0] - 2026-08-13 — Sito multilingua (IT/EN)
 
 ### Contesto
