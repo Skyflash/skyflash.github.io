@@ -1,7 +1,7 @@
 ---
 title: "Il nuovo sito, parte 4: le ultime finiture"
 layout: post
-date: '2026-08-14 11:15:00'
+date: '2026-08-13 21:15:00'
 description: Un menu che non portava dove prometteva, un indice di categorie per un blog destinato a crescere, bottoni di condivisione con link rotti e senza i colori dei social, un box dei commenti che si rompeva silenziosamente al primo caricamento, numeri di GitHub che andavano a capo per pochi pixel, e una hero in home che sembrava avere due blocchi scollegati. Il lavoro meno glamour ma più importante prima di andare online.
 intro: "Non tutto il lavoro su un sito nuovo è fatto di decisioni grandi. Buona parte è fatta di questo: un menu che non porta dove promette, bottoni di condivisione che puntano a endpoint dismessi, un box commenti che si rompe in silenzio, tre pixel di troppo che fanno andare a capo un numero, uno spazio vuoto che cresce a dismisura fra un testo e una foto. Le ultime finiture, appunto."
 image: "/static/assets/img/blog/nuovo-sito-2026/parte4-cover.jpg"
