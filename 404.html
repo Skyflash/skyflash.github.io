@@ -4,23 +4,118 @@ title: 404
 permalink: /404.html
 ---
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{{ site.data.i18n.not_found_title.it }} / {{ site.data.i18n.not_found_title.en }} — {{ site.title }}</title>
+    <title>404 — Cristian Castellari</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
+    <meta name="color-scheme" content="dark">
     <link rel="shortcut icon" href="{{ '/static/assets/img/favicon.jpg' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <style>
+        * { box-sizing: border-box; }
+        html, body {
+            margin: 0;
+            min-height: 100%;
+            background: #000;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #fff;
+            font-family: "Courier New", Courier, monospace;
+        }
+        .hud {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.25rem 1.5rem 0.75rem;
+            font-size: clamp(0.65rem, 2vw, 0.8rem);
+            letter-spacing: 0.06em;
+            text-align: center;
+        }
+        .hud div { line-height: 1.6; }
+        .hud .value { color: #fff; }
+        .hud .coin { color: #5b9dff; }
+        .brickline {
+            height: 14px;
+            border-top: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            background-image: repeating-linear-gradient(90deg, #5b9dff 0 14px, #000 14px 16px);
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.75rem;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .big404 {
+            margin: 0;
+            font-size: clamp(3.5rem, 14vw, 6rem);
+            line-height: 1;
+            font-weight: bold;
+            color: #5b9dff;
+            letter-spacing: 0.05em;
+            text-shadow: 3px 3px 0 #1c2b42, 6px 6px 0 #000;
+        }
+        .message {
+            margin: 0;
+            font-size: clamp(0.85rem, 2.6vw, 1.05rem);
+            line-height: 2.1;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .message strong { color: #5b9dff; }
+        .sprites {
+            margin: 0;
+            font-size: 2.25rem;
+            letter-spacing: 1rem;
+        }
+        .btn-retro {
+            display: inline-block;
+            padding: 0.85rem 1.75rem;
+            background: #5b9dff;
+            color: #fff;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border: 2px solid #5b9dff;
+        }
+        .btn-retro:hover,
+        .btn-retro:focus-visible {
+            background: #7fb2ff;
+            border-color: #7fb2ff;
+            color: #000;
+        }
+    </style>
 </head>
 <body>
-    <section class="section container" style="text-align:center; padding-block: var(--space-8);">
-        <h1>404</h1>
-        {% assign not_found_langs = "it,en" | split: "," %}
-        {% for l in not_found_langs %}
-        <p class="hero__lead">{{ site.data.i18n.not_found_message[l] }}</p>
-        <p style="margin-bottom: var(--space-6);"><a class="btn btn--primary" href="{{ '/' | append: l | append: '/' | relative_url }}">{{ site.data.i18n.not_found_home_button[l] }}</a></p>
-        {% endfor %}
-    </section>
+    <div class="hud">
+        <div>MARIO<br><span class="value">000404</span></div>
+        <div class="coin">🍄&nbsp;&times;01</div>
+        <div>WORLD<br><span class="value">4-0-4</span></div>
+        <div>TIME<br><span class="value">000</span></div>
+    </div>
+    <div class="brickline" aria-hidden="true"></div>
+
+    <main>
+        <h1 class="big404">404</h1>
+        <p class="message">
+            Thank you for visiting!<br><br>
+            But the page you are looking for<br>
+            is in <strong>another castle</strong>!
+        </p>
+        <p class="sprites" aria-hidden="true">🍄 🏰</p>
+        <a class="btn-retro" href="{{ '/en/' | relative_url }}">⭐ Back to the castle</a>
+    </main>
+
+    <div class="brickline" aria-hidden="true"></div>
 </body>
 </html>

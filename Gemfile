@@ -4,8 +4,9 @@ source 'https://rubygems.org'
 # Jekyll/plugin di questo Gemfile e builda sempre con QUESTA gem, che fissa
 # tutte le versioni (Jekyll incluso) a quelle effettivamente in uso in
 # produzione. Usarla anche in locale evita che qualcosa funzioni qui e si
-# rompa solo alla pubblicazione (jekyll-seo-tag, jekyll-redirect-from e
-# jekyll-paginate sono già inclusi come dipendenze di questa gem).
+# rompa solo alla pubblicazione (jekyll-seo-tag e jekyll-redirect-from sono
+# già inclusi come dipendenze di questa gem; la paginazione del blog è
+# gestita a mano in _layouts/blog-index.html, non da jekyll-paginate).
 gem "github-pages", "~> 232", group: :jekyll_plugins
 
 # Ruby 3.4+ stopped shipping these as default gems; Jekyll/Liquid still need them

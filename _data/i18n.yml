@@ -186,16 +186,7 @@ contact_lead:
   it: Scrivimi pure per una chiacchierata, una collaborazione o solo per dire ciao.
   en: Feel free to reach out for a chat, a collaboration, or just to say hi.
 
-not_found_title:
-  it: Pagina non trovata
-  en: Page not found
-not_found_message:
-  it: La pagina che cerchi non esiste (più) — controlla l'indirizzo o torna alla home.
-  en: The page you're looking for doesn't exist (anymore) — check the address or head back home.
 author_bio:
   it: "Informatico, padre e marito. Appassionato di tecnologia da sempre, curioso di natura. Nel tempo libero mi dedico alla famiglia, agli amici, alla cucina e ai videogiochi. Credo fortemente in ITIL come framework da applicare non solo all'IT ma anche a normali situazioni di vita quotidiana."
   en: "IT professional, father and husband. Passionate about technology for as long as I can remember, curious by nature. In my free time I focus on family, friends, cooking and video games. I strongly believe in ITIL as a framework that applies not just to IT but to everyday life too."
 
-not_found_home_button:
-  it: Torna alla Home
-  en: Back to Home
