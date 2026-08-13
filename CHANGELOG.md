@@ -2,6 +2,16 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.1.2] - 2026-08-14 — Sitemap pulita e icone nelle card dei post
+
+### Sitemap — pagine tecniche e redirect duplicati esclusi
+
+`sitemap.xml` includeva per errore pagine non-contenuto (`assets/css/main.css`, `search.json`, `feed.xml`, `404.html`, nessuna delle quali aveva mai impostato `sitemap.exclude` nel front matter) e, soprattutto, tutte le pagine di redirect generate da `jekyll-redirect-from`: il plugin le marca già con `sitemap: false`, ma il template controllava solo il formato annidato `sitemap.exclude == "yes"`, ignorando il flag booleano — corretto aggiungendo `or page.sitemap == false` alla condizione. URL totali nel sitemap generato: 104 → 55. Disattivata anche la generazione di `redirects.json` (`redirect_from: {json: false}` in `_config.yml`): non è referenziato da nessuna pagina/script del sito ed era comunque in conflitto con il `Disallow: /*.json` di `robots.txt`.
+
+### Icona per-post nelle card del blog
+
+Il front matter di quasi ogni post porta da sempre un campo `icon:` (classe Fork Awesome, es. `fa-lock`), eredità del vecchio sito WordPress — sopravvissuto alla ricostruzione 2.0.0 ma mai consumato da nessun layout/include. Aggiunto il rendering in `_includes/post-card.html`: l'icona compare in basso a destra della card (`.card__footer`), allineata alla pill della categoria, colorata con `--color-accent`. Prima versione provata accanto al titolo — scartata dopo verifica visiva (stesso colore del testo del titolo, poco leggibile/efficace); provata anche con colore muted prima di stabilizzarsi sull'accento.
+
 ## [2.1.1] - 2026-08-13 — Fix paginazione blog e limite home
 
 ### Bug fix — post in un'altra lingua nel blog

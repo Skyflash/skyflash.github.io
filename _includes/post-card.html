@@ -4,12 +4,17 @@
   <p class="card__meta">{{ post.date | date: "%-d %b %Y" }}</p>
   <h3 class="card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
   <p class="card__desc">{{ post.description }}</p>
-  {% if post.categories %}
-  <div class="pill-row">
-    {% for category in post.categories %}
-    {% assign cat_data = site.data.blog | where: "name", category | where: "lang", short_lang | first %}
-    <a class="pill" href="{{ cat_data.href | relative_url }}">{{ category }}</a>
-    {% endfor %}
+  {% if post.categories or post.icon %}
+  <div class="card__footer">
+    {% if post.categories %}
+    <div class="pill-row">
+      {% for category in post.categories %}
+      {% assign cat_data = site.data.blog | where: "name", category | where: "lang", short_lang | first %}
+      <a class="pill" href="{{ cat_data.href | relative_url }}">{{ category }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if post.icon %}<i class="fa {{ post.icon }} card__icon" aria-hidden="true"></i>{% endif %}
   </div>
   {% endif %}
 </article>

@@ -204,6 +204,18 @@
     color: var(--color-text-muted);
     font-size: var(--text-sm);
   }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+  }
+
+  &__icon {
+    color: var(--color-accent);
+    font-size: var(--text-lg);
+  }
 }
 
 // Hero (Home)
