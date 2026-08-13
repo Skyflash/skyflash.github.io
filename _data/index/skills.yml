@@ -7,6 +7,8 @@ categories:
     skills:
       - name: Windows Server
         percentage: 95
+      - name: Active Directory / GPO / DNS / DHCP
+        percentage: 95
       - name: Hyper-V/VMware
         percentage: 95
       - name: Apache Tomcat
@@ -37,6 +39,8 @@ categories:
       - name: ITIL v4
         percentage: 85
       - name: Team Leadership
-        percentage: 90
+        percentage: 85
       - name: Service Management
+        percentage: 90
+      - name: Assistenza Clienti
         percentage: 90
