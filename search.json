@@ -1,6 +1,8 @@
 ---
 layout: null
 permalink: /search.json
+sitemap:
+  exclude: 'yes'
 ---
 {
     "code" : 0,
