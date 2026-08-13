@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Jekyll theme icon">
+  <rect width="128" height="128" rx="20" fill="#3385ff"/>
+  <rect x="20" y="28" width="88" height="72" rx="6" fill="#ffffff"/>
+  <path d="M20 34a6 6 0 0 1 6-6h76a6 6 0 0 1 6 6v12H20V34Z" fill="#ffffff"/>
+  <circle cx="32" cy="37" r="3" fill="#3385ff"/>
+  <circle cx="42" cy="37" r="3" fill="#3385ff"/>
+  <circle cx="52" cy="37" r="3" fill="#3385ff"/>
+  <rect x="28" y="58" width="72" height="8" rx="2" fill="#dbe7ff"/>
+  <rect x="28" y="72" width="50" height="8" rx="2" fill="#dbe7ff"/>
+  <rect x="28" y="86" width="60" height="8" rx="2" fill="#dbe7ff"/>
+</svg>

@@ -1,6 +1,16 @@
 # projects section data — name/desc sono mappe {it, en}
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
 - name:
+    it: Tema Jekyll per CV e Blog
+    en: Personal Resume & Blog (Jekyll theme)
+  gh_user: Skyflash
+  repo: my-personal-resume-and-blog
+  img: /static/assets/img/landing/my-personal-resume-and-blog.svg
+  desc:
+    it: "Il tema di questo stesso sito, estratto e pubblicato come progetto riutilizzabile: bilingue (IT/EN), senza JavaScript di terze parti, pronto per GitHub Pages."
+    en: "This very site's theme, extracted and published as a reusable project: bilingual (IT/EN), no third-party JavaScript, ready for GitHub Pages."
+
+- name:
     it: Kace SMA Tools
     en: Kace SMA Tools
   gh_user: KACE-SMA-Tools
