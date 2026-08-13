@@ -30,7 +30,7 @@ Girovagando alla ricerca di informazioni utili, mi sono imbattuto in un ottimo s
 * TOC 
 {:toc}
 
-## LO SCRIPT KILL-ZOMBIE
+## Lo script kill-zombie
 
 Come prima cosa, creeremo (con i permessi di root) un nuovo file kill-zombie
 
@@ -84,7 +84,7 @@ chmod +x kill-zombies
 mv kill-zombies /usr/bin
 ```
 
-### FUNZIONAMENTO
+### Funzionamento
 
 Lo script viene evocato con un flag, che ne modifica il comportamento:
 
@@ -100,7 +100,7 @@ kill-zombies --cron
 
 Lo script **dovrà essere inserito nel crontab** e richiamato quindi a cadenze regolari dal server. I processi vengono killati in automatico e ne viene lasciata traccia in /var/log/zombies.log
 
-### INSERIMENTO NEL CRONTAB
+### Inserimento nel crontab
 
 Richiamiamo l’editor del crontab con questo comando
 
@@ -116,9 +116,8 @@ Ed inseriamo questa riga:
 
 In questo modo, lo script verrà eseguito ogni 10 minuti a cadenza regolare. In caso si voglia modificare l’intervallo di tempo, sarà sufficiente cambiare ad esempio */10 in */5 (per 5 minuti)
 
-[Download zombies.sh (1 KB)](https://www.skyflash.it/download/8205/)
+[Download kill-zombies.sh](/static/assets/files/blog/process-zombie-linux/kill-zombies.sh)
 
 Riferimenti:
 
-* [Identificare ed uccidere processi zombie in un server Linux](https://www.skyflash.it/computer/linux-os/identificare-ed-uccidere-processi-zombie-in-un-server-linux/6076/)
 * [CronHowTo](https://help.ubuntu.com/community/CronHowto)

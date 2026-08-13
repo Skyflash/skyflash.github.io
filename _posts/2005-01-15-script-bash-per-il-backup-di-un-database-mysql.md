@@ -83,3 +83,21 @@ chown [nome].[group] $DIR$NAME$OF.sql
 #
 echo Backup del database $DATABASE eseguito!
 ```
+
+[Download backup-mysql.sh](/static/assets/files/blog/backup-database-mysql/backup-mysql.sh)
+
+> **Nota:** passare la password con `--password=` la rende visibile a chiunque lanci `ps` sulla stessa macchina, oltre che nella cronologia della shell. Oggi è preferibile salvare le credenziali in un file `~/.my.cnf` (con permessi `chmod 600`) e lanciare `mysqldump` senza specificarle sulla riga di comando.
+
+### Pianificazione automatica
+
+Per eseguire il backup ogni notte senza doversene ricordare, basta aggiungerlo al crontab:
+
+```bash
+crontab -e
+```
+
+ed inserire una riga come questa, che lo esegue ogni giorno all'1:00 di notte:
+
+```bash
+0 1 * * * /home/utente/backup-mysql.sh
+```

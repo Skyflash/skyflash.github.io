@@ -18,7 +18,7 @@ icon: fa-wordpress
 * TOC 
 {:toc}
 
-# L’HOTLINKING DANNEGGIA IL TUO SITO
+# L’hotlinking danneggia il tuo sito
 
 Facciamo un esempio. L’immagine che vedete qui sotto è stata caricata direttamente su un mio sito (ospite originale di questo articolo). Il server web non fa altro che andare a caricare una risorsa interna (l’immagine stessa) e mostrarla al visitatore, senza alcun carico elaborativo extra.
 
@@ -38,7 +38,7 @@ Un sito esterno, invece di effettuare il download dell’immagine e di caricarla
 
 Il risultato sarà che il secondo sito, eterno al nostro, sfrutta l’immagine senza però sacrificare il proprio spazio web, mentre il nostro sito, su cui risiede l’immagine, sarà sottoposto ad un carico eccessivo (ed assolutamente non richiesto nè tanto meno gradito) sia per quanto riguarda la propria banda passante che per le risorse del server.
 
-# COME PROTEGGERSI DA HOTLINKING
+# Come proteggersi da hotlinking
 
 Sono sufficienti alcune righe da aggiungere al proprio, immancabile, file *.htaccess* e, se volete, un’immagine preparata per lo scopo, che servirà per sbattere in faccia al webmaster antipatico la dura verità :smile:
 
@@ -57,7 +57,7 @@ RewriteCond%{REQUEST_URI}!^hotlink.jpg$
 RewriteRule\.(jpg|jpeg|png|gif|js|swf)$hotlink.jpg[NC,R,L]
 ```
 
-## SPIEGAZIONE
+## Spiegazione
 
 Alla **terza riga** trovate:
 
@@ -94,7 +94,7 @@ Specifica il formato dei file protetti dall’hotlinking (non solo le immagini n
 
 Ovviamente potrete specificare l’immagine che desiderate, ma assicuratevi che questa non sia protetta (vedi riga precedente) oppure, ancora meglio, caricatela su una risorsa esterna come [Dropbox](http://db.tt/wgafhzXi), o il risultato sarà un loop infinito!
 
-### CONCEDERE L’ACCESSO A BING, YAHOO E FACEBOOK
+### Concedere l’accesso a Bing, Yahoo e Facebook
 
 Esattamente come abbiamo fatto per Google, aggiungiamo al nostro *.htaccess* le seguenti direttive:
 
@@ -107,7 +107,7 @@ RewriteCond%{HTTP_USER_AGENT}!msnbot[NC]
 RewriteCond${HTTP_USER_AGENT}!slurp[NC]
 ```
 
-## CONCLUSIONI
+## Conclusioni
 
 Il risultato finale sarà quindi il seguente:
 
@@ -137,10 +137,8 @@ Se guardando le statistiche del vostro spazio web avete notato un consumo eccess
 
 Risorse esterne:
 
-- [Stop bandwith thief using rewrite rules on .htaccess file](http://www.istanto.net/stop-bandwith-thief-using-rewrite-rules-on-htaccess-file.html)
-- [Prevent hotlinking of images – how to hotlink protect](http://www.htaccesstools.com/hotlink-protection/)
+- [Stop bandwith thief using rewrite rules on .htaccess file](https://web.archive.org/web/20200202030302/http://www.istanto.net:80/stop-bandwith-thief-using-rewrite-rules-on-htaccess-file.html)
 - [Smarter Way To Prevent Image Hotlinking With .Htaccess](http://www.hongkiat.com/blog/smarter-way-to-prevent-image-hotlinking-with-htaccess/)
 - [Impedire l’hotlinking delle immagini con il file .htaccess](http://gabrieleromanato.com/2012/03/impedire-hotlinking-immagini-htaccess/)
-- [Proteggiamoci dall’hotlinking con un semplice file](http://vincenzodibiaggio.it/2008/07/11/proteggiamoci-dallhotlinking-con-un-semplice-file-htaccess/)
+- [Proteggiamoci dall’hotlinking con un semplice file](https://web.archive.org/web/20121013044719/http://vincenzodibiaggio.it:80/2008/07/11/proteggiamoci-dallhotlinking-con-un-semplice-file-htaccess/)
 - [Stop image hotlinking with .htaccess](http://www.thewebsqueeze.com/web-design-tutorials/stop-image-hotlinking-with-htaccess.html)
-- [Il post originale](https://www.skyflash.it/internet-reti/sicurezza/come-bloccare-lhotlinking-delle-immagini-tramite-htaccess/6552/)

@@ -21,7 +21,7 @@
       <li><a class="nav-link {% if page.url == '/cv/' %}is-active{% endif %}" href="{{ '/cv/' | relative_url }}">CV</a></li>
       <li><a class="nav-link {% if page.url == '/progetti/' %}is-active{% endif %}" href="{{ '/progetti/' | relative_url }}">Progetti</a></li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ '/blog/' | relative_url }}">Blog</a>
+        <a class="nav-link {% if page.layout == 'post' or page.layout == 'category' or page.layout == 'blog-index' %}is-active{% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a>
         <button type="button" class="nav-caret" id="nav-blog-toggle" aria-label="Mostra le categorie del blog" aria-expanded="false" aria-controls="nav-blog-submenu">
           <i class="fa fa-chevron-down" aria-hidden="true"></i>
         </button>
