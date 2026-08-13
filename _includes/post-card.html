@@ -1,4 +1,5 @@
 {% assign post = include.post %}
+{% assign short_lang = page.lang | slice: 0, 2 | default: site.default_lang %}
 <article class="card">
   <p class="card__meta">{{ post.date | date: "%-d %b %Y" }}</p>
   <h3 class="card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
@@ -6,7 +7,7 @@
   {% if post.categories %}
   <div class="pill-row">
     {% for category in post.categories %}
-    {% assign cat_data = site.data.blog | where: "name", category | first %}
+    {% assign cat_data = site.data.blog | where: "name", category | where: "lang", short_lang | first %}
     <a class="pill" href="{{ cat_data.href | relative_url }}">{{ category }}</a>
     {% endfor %}
   </div>

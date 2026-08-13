@@ -2,7 +2,7 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html itemscope itemtype="http://schema.org/Person" lang="it">
+<html itemscope itemtype="http://schema.org/Person" lang="{{ page.lang | slice: 0, 2 | default: site.default_lang }}">
 
 {% include head.html %}
 

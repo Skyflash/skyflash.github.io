@@ -1,0 +1,23 @@
+---
+layout: page
+title: CV & Experience
+description: Cristian Castellari's professional background and skills
+permalink: /en/cv/
+lang: en_US
+translation_key: page-cv
+---
+<p class="hero__lead">{{ site.data.i18n.author_bio.en }}</p>
+
+{% if site.author.cv %}
+<p><a class="btn btn--primary" href="{{ site.author.cv }}" target="_blank" rel="noopener"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;{{ site.data.i18n.cv_download_button.en }}</a></p>
+{% endif %}
+
+<h2 style="margin-top: var(--space-7);">{{ site.data.i18n.cv_experience_heading.en }}</h2>
+<div class="timeline">
+  {% for career in site.data.index.careers %}
+  {% include timeline-item.html career=career %}
+  {% endfor %}
+</div>
+
+<h2 style="margin-top: var(--space-7);">{{ site.data.i18n.cv_skills_heading.en }}</h2>
+{% include skills-bars.html %}

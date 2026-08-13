@@ -101,7 +101,9 @@
     results.innerHTML = '';
     if (!words.length || !data) return;
 
+    var currentLang = document.documentElement.lang || 'it';
     var scored = data
+      .filter(function (item) { return item.lang === currentLang; })
       .map(function (item) {
         var score = scoreItem(item, words);
         return score === null ? null : { item: item, score: score };

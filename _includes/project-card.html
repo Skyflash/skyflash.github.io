@@ -1,16 +1,17 @@
 {% assign project = include.project %}
+{% assign short_lang = page.lang | slice: 0, 2 %}
 <article class="card">
   {% if project.img %}<img class="card__image" src="{{ project.img | relative_url }}" alt="" loading="lazy">{% endif %}
   <h3 class="card__title">
     {% if project.url %}
-    <a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.name }}</a>
+    <a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.name[short_lang] }}</a>
     {% elsif project.repo %}
-    <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank" rel="noopener">{{ project.name }}</a>
+    <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank" rel="noopener">{{ project.name[short_lang] }}</a>
     {% else %}
-    {{ project.name }}
+    {{ project.name[short_lang] }}
     {% endif %}
   </h3>
-  <p class="card__desc">{{ project.desc }}</p>
+  <p class="card__desc">{{ project.desc[short_lang] }}</p>
   {% if project.repo %}
   <div class="pill-row" data-gh-user="{{ project.gh_user }}" data-gh-repo="{{ project.repo }}">
     <a class="pill" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i>&nbsp;GitHub</a>

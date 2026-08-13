@@ -12,6 +12,12 @@
 
   {% seo %}
 
+  {% include i18n-alternates.html %}
+  {% for entry in i18n_alternates %}
+    {% assign parts = entry | split: "|" %}
+    <link rel="alternate" hreflang="{{ parts[0] }}" href="{{ parts[1] | absolute_url }}">
+  {% endfor %}
+
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/static/assets/fork-awesome/css/fork-awesome.min.css' | relative_url }}">
 

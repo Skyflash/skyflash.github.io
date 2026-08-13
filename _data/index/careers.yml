@@ -1,72 +1,71 @@
-# careers section data
-# if you don't have language feature(language.yml is empty), ignore "i18n" items
+# careers section data — ogni campo testuale è una mappa {it, en}
 - name:
-    detail: Integra S.r.l. (Gruppo L'Operosa)
-    i18n: integra
+    it: Integra S.r.l. (Gruppo L'Operosa)
+    en: Integra S.r.l. (L'Operosa Group)
   desc:
-    detail: Responsabile dell'unità IT & Service Management, con coordinamento di un team di supporto di 4 persone su infrastrutture multi-cliente. Gestisco infrastrutture IT eterogenee (Windows Server, Linux, virtualizzazione Hyper-V/VMware), amministrazione di Active Directory e Microsoft 365/Entra ID, sicurezza di rete (FortiGate, FortiClient EMS) e supporto infrastrutturale alle soluzioni ERP Zucchetti, dal tuning di database e application server a backup e disaster recovery. Sono il punto di riferimento del team di supporto su priorità, escalation e relazione con i clienti.
-    i18n: integra_desc
+    it: Responsabile dell'unità IT & Service Management, con coordinamento di un team di supporto di 4 persone su infrastrutture multi-cliente. Gestisco infrastrutture IT eterogenee (Windows Server, Linux, virtualizzazione Hyper-V/VMware), amministrazione di Active Directory e Microsoft 365/Entra ID, sicurezza di rete (FortiGate, FortiClient EMS) e supporto infrastrutturale alle soluzioni ERP Zucchetti, dal tuning di database e application server a backup e disaster recovery. Sono il punto di riferimento del team di supporto su priorità, escalation e relazione con i clienti.
+    en: Head of the IT & Service Management unit, coordinating a 4-person support team across multi-client infrastructures. I manage heterogeneous IT infrastructure (Windows Server, Linux, Hyper-V/VMware virtualization), Active Directory and Microsoft 365/Entra ID administration, network security (FortiGate, FortiClient EMS), and infrastructure support for Zucchetti ERP solutions — from database and application server tuning to backup and disaster recovery. I'm the team's main point of reference for priorities, escalations, and client relationships.
   date:
-    detail: Gennaio 2022 - Presente
-    i18n: integra_date
+    it: Gennaio 2022 - Presente
+    en: January 2022 - Present
   job:
-    detail: IT & Service Management Unit Manager
-    i18n: integra_job
+    it: IT & Service Management Unit Manager
+    en: IT & Service Management Unit Manager
   icon: fa-plus-square
   present: true
 
 - name:
-    detail: Integra S.r.l. (Gruppo L'Operosa)
-    i18n: integra
+    it: Integra S.r.l. (Gruppo L'Operosa)
+    en: Integra S.r.l. (L'Operosa Group)
   desc:
-    detail: Gestione end-to-end di infrastrutture IT eterogenee (Windows Server, Linux, virtualizzazione Hyper-V/VMware) per i clienti del gruppo, con amministrazione di Active Directory, Microsoft 365/Entra ID e sicurezza di rete (FortiGate, FortiClient EMS).
-    i18n: integra_desc
+    it: Gestione end-to-end di infrastrutture IT eterogenee (Windows Server, Linux, virtualizzazione Hyper-V/VMware) per i clienti del gruppo, con amministrazione di Active Directory, Microsoft 365/Entra ID e sicurezza di rete (FortiGate, FortiClient EMS).
+    en: End-to-end management of heterogeneous IT infrastructure (Windows Server, Linux, Hyper-V/VMware virtualization) for the group's clients, including Active Directory administration, Microsoft 365/Entra ID, and network security (FortiGate, FortiClient EMS).
   date:
-    detail: Febbraio 2020 - Gennaio 2022
-    i18n: integra_date
+    it: Febbraio 2020 - Gennaio 2022
+    en: February 2020 - January 2022
   job:
-    detail: Senior System Administrator - Digital Infrastructures
-    i18n: integra_job
+    it: Senior System Administrator - Digital Infrastructures
+    en: Senior System Administrator - Digital Infrastructures
   icon: fa-plus-square
 
 - name:
-    detail: Novomatic Italia s.p.a.
-    i18n: novomatic_b
+    it: Novomatic Italia s.p.a.
+    en: Novomatic Italia s.p.a.
   desc:
-    detail: Ho il compito di gestire, analizzare e realizzare soluzioni per supportare i servizi Office Automation erogati dall’Azienda. Il sistema Kace 1000 è stato nel tempo evoluto e grazie ad esso oggi gestiamo anche script automatizzati e configurazioni dei PC client ed installazioni software on demand.
-    i18n: novomatic_b_desc
+    it: Ho il compito di gestire, analizzare e realizzare soluzioni per supportare i servizi Office Automation erogati dall'Azienda. Il sistema Kace 1000 è stato nel tempo evoluto e grazie ad esso oggi gestiamo anche script automatizzati e configurazioni dei PC client ed installazioni software on demand.
+    en: Responsible for managing, analyzing, and building solutions to support the company's Office Automation services. Over time we evolved the Kace 1000 system, which now also lets us manage automated scripts, client PC configurations, and on-demand software installations.
   date:
-    detail: Gennaio 2017 - Febbraio 2020
-    i18n: novomatic_b_date
+    it: Gennaio 2017 - Febbraio 2020
+    en: January 2017 - February 2020
   job:
-    detail: Coordinatore Office Automation Systems
-    i18n: novomatic_b_job
+    it: Coordinatore Office Automation Systems
+    en: Office Automation Systems Coordinator
   icon: fa-plus-square
 
 - name:
-    detail: Novomatic Italia Services s.r.l.
-    i18n: novomatic
+    it: Novomatic Italia Services s.r.l.
+    en: Novomatic Italia Services s.r.l.
   desc:
-    detail: Assistenza in ambito Office Automation a tutti gli utenti del Gruppo Novomatic sul territorio italiano. Gestione di server Linux e Windows che offrono diversi servizi quali Git, MDM, siti web corporate, antivirus eccetera
-    i18n: novomatic_desc
+    it: Assistenza in ambito Office Automation a tutti gli utenti del Gruppo Novomatic sul territorio italiano. Gestione di server Linux e Windows che offrono diversi servizi quali Git, MDM, siti web corporate, antivirus eccetera
+    en: Office Automation support for all Novomatic Group users across Italy. Management of Linux and Windows servers providing various services such as Git, MDM, corporate websites, antivirus, and more.
   date:
-    detail: Gennaio 2015 - Gennaio 2017
-    i18n: novomatic_date
+    it: Gennaio 2015 - Gennaio 2017
+    en: January 2015 - January 2017
   job:
-    detail: Referente Office Automation
-    i18n: novomatic_job
+    it: Referente Office Automation
+    en: Office Automation Lead
   icon: fa-plus-square
 
 - name:
-    detail: SO.GE.M.A. SpA
-    i18n: sogema
+    it: SO.GE.M.A. SpA
+    en: SO.GE.M.A. SpA
   desc:
-    detail: Ho progettato e gestito l'intera infrastruttura del Gruppo, realizzando un progetto di consolidamento e centralizzazione che ha ridotto i costi e permesso a tutti gli utenti (oltre 100) di lavorare in un ambiente funzionale ed uniforme.
-    i18n: sogema_desc
+    it: Ho progettato e gestito l'intera infrastruttura del Gruppo, realizzando un progetto di consolidamento e centralizzazione che ha ridotto i costi e permesso a tutti gli utenti (oltre 100) di lavorare in un ambiente funzionale ed uniforme.
+    en: Designed and managed the group's entire infrastructure, delivering a consolidation and centralization project that cut costs and let all users (over 100) work in a consistent, functional environment.
   date:
-    detail: Gennaio 2006 - Dicembre 2014
-    i18n: sogema_date
+    it: Gennaio 2006 - Dicembre 2014
+    en: January 2006 - December 2014
   job:
-    detail: Responsabile IT
-    i18n: sogema_job
+    it: Responsabile IT
+    en: IT Manager
   icon: fa-plus-square

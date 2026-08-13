@@ -2,7 +2,45 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
-## [2.0.0] - 2026-08-14 — Ricostruzione completa del sito
+## [2.1.0] - 2026-08-13 — Sito multilingua (IT/EN)
+
+### Contesto
+
+Il sito era mono-lingua (italiano). Aggiunto l'inglese per chrome, pagine principali (Home, CV, Progetti, Contatti) e blog **da qui in avanti**: i 23 post storici (e quelli già schedulati) restano solo in italiano, senza traduzione retroattiva. GitHub Pages builda in modalità "safe" con una whitelist di plugin che non include soluzioni i18n standard per Jekyll (`jekyll-polyglot`, `jekyll-multiple-languages-plugin`), quindi tutto è stato gestito con Liquid/front matter puri, riusando i meccanismi già presenti nel sito. (Il tedesco era stato implementato in un primo momento e poi rimosso prima del rilascio: manteneva a parità la complessità architetturale ma raddoppiava il lavoro di traduzione, senza un pubblico target chiaro per ora.)
+
+### Permalink e redirect
+
+- Entrambe le lingue vivono sotto prefisso: `/it/`, `/en/`. Gli URL italiani precedenti (senza prefisso) diventano redirect verso l'equivalente `/it/...`, via `jekyll-redirect-from` (già usato per i redirect dal vecchio WordPress) — nessun URL storico rotto.
+- Slug della sezione `/en/` tradotti in inglese dove ha senso (`/en/projects/`, `/en/contact/`, `/en/infrastructure/`, `/en/work-philosophy/`, `/en/personal-projects/`, `/en/outside-office/` — non `/en/progetti/`), lasciati invariati solo per parole già neutre o nomi propri (`tools`, `kace`).
+- `404.html` resta l'unica pagina non prefissata (vincolo GitHub Pages: dev'essere in root) ed è stata resa bilingue inline.
+
+### Architettura
+
+- Nuovo `_data/i18n.yml`: dizionario di stringhe UI condivise (nav, bottoni social, paginazione, badge "Attuale", 404, ecc.), consumato via `site.data.i18n.<chiave>[short_lang]`.
+- `_data/index/careers.yml`, `projects.yml`, `skills.yml`: campi testo passati da scalare a mappa `{it, en}` — sostituito lo scaffold `{detail, i18n}` mai attivato che era già presente (nessun `language.yml` di supporto, zero riferimenti a `.i18n` in `_layouts`/`_includes`).
+- `_data/blog.yml`: da lista flat `{name, href}` a una riga per lingua per categoria (12 righe totali); zero cambi alla logica di match esistente (`site.categories[page.category]`, `where: "name", category`).
+- Nuovo include condiviso `_includes/i18n-alternates.html`: calcola le versioni sorelle della pagina corrente tramite `translation_key` in front matter, usato uniformemente sia per i post sia per le pagine (home/CV/Progetti/Contatti/categorie) — niente prefix-swap dell'URL, dato che con slug tradotti (es. `/it/progetti/` vs `/en/projects/`) la sola sostituzione del prefisso `/it|en/` non basta più. Riusato sia da `head.html` (tag `hreflang`) sia da `nav.html` (switcher IT/EN visibile).
+- `_config.yml`: nuova chiave `default_lang` (lingua di fallback quando una pagina/post non imposta `lang`) invece di ripetere il valore hardcoded in ogni template.
+- Blog IT resta paginato (`/it/blog/pagina:num/`, unico consumer di `jekyll-paginate` nel sito — il plugin supporta un solo indice paginato per l'intero sito). EN non è paginato per ora: volume iniziale basso, si aggiungerà paginazione se/quando servirà.
+- Ricerca interna (`search.json`/`search.js`): aggiunto un campo `lang` per ogni voce, filtro sulla lingua della pagina corrente.
+- Post correlati (`_layouts/post.html`): il match ora richiede anche `post.lang == page.lang`, per non suggerire un articolo in un'altra lingua come "correlato".
+
+### Fuori scope (intenzionale)
+
+- Nessuna traduzione retroattiva dei 23 post esistenti.
+- `disclaimer.md`/`privacy.md` restano solo in italiano (spostati sotto `/it/about/...` per coerenza di struttura, con redirect dagli URL precedenti) — testo legale/regolatorio specifico per l'Italia.
+- `feed.xml` resta un unico feed globale bilingue misto.
+
+## [2.0.1] - 2026-08-13 — Ricerca interna potenziata
+
+### Ricerca interna potenziata
+
+- `search.json` ora indicizza anche le pagine di contenuto (CV, Progetti, Contatti, pagine legali, indice blog, pagine categoria), non solo i post del blog, e porta con sé tag/categorie oltre a titolo e descrizione.
+- Corretto un bug latente: i valori venivano inseriti nel JSON senza escaping (una virgoletta doppia in un titolo avrebbe rotto silenziosamente il file); ora si usa il filtro `jsonify` di Liquid.
+- `search.js`: la query viene spezzata in parole con match "AND" su tutti i campi (titolo, descrizione, tag, categorie) invece della frase esatta su solo titolo/descrizione; punteggio semplice che privilegia i match nel titolo, risultati ordinati per rilevanza invece che per ordine cronologico, estratto (descrizione) mostrato sotto ogni risultato.
+- **Bug fix — build rotta su GitHub Pages**: la pipeline "Deploy from a branch" builda con Jekyll 3.10.0 (gem `github-pages`), che non supporta `where_exp` con condizioni multiple in `or` usato per filtrare le pagine da indicizzare. Sostituito con tre `where` singoli (uno per layout) uniti via `concat` — sintassi base, stabile su qualunque versione di Jekyll.
+
+## [2.0.0] - 2026-08-12 — Ricostruzione completa del sito
 
 ### Contesto
 
@@ -42,16 +80,7 @@ Il tema precedente (derivato da [Jalpc](https://github.com/jarrekk/Jalpc): Boots
 - Diff di `sitemap.xml` e `feed.xml` fra le due build.
 - Build Jekyll pulita e verifica visiva (screenshot headless) su entrambi i temi colore, ad ogni modifica rilevante.
 
-## [Non rilasciato] - 2026-08-13
-
-### Ricerca interna potenziata
-
-- `search.json` ora indicizza anche le pagine di contenuto (CV, Progetti, Contatti, pagine legali, indice blog, pagine categoria), non solo i post del blog, e porta con sé tag/categorie oltre a titolo e descrizione.
-- Corretto un bug latente: i valori venivano inseriti nel JSON senza escaping (una virgoletta doppia in un titolo avrebbe rotto silenziosamente il file); ora si usa il filtro `jsonify` di Liquid.
-- `search.js`: la query viene spezzata in parole con match "AND" su tutti i campi (titolo, descrizione, tag, categorie) invece della frase esatta su solo titolo/descrizione; punteggio semplice che privilegia i match nel titolo, risultati ordinati per rilevanza invece che per ordine cronologico, estratto (descrizione) mostrato sotto ogni risultato.
-- **Bug fix — build rotta su GitHub Pages**: la pipeline "Deploy from a branch" builda con Jekyll 3.10.0 (gem `github-pages`), che non supporta `where_exp` con condizioni multiple in `or` usato per filtrare le pagine da indicizzare. Sostituito con tre `where` singoli (uno per layout) uniti via `concat` — sintassi base, stabile su qualunque versione di Jekyll.
-
-## [Non rilasciato] - 2026-08-12
+## [1.1.0] - 2026-08-12 — Manutenzione dipendenze sul vecchio tema
 
 ### Contesto
 

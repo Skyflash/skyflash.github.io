@@ -1,46 +1,84 @@
-# skills section data — competenze raggruppate per area
+# skills section data — competenze raggruppate per area, nomi tradotti per lingua (it/en)
 
 label: Competenze
 id: cs
 categories:
-  - name: Infrastruttura & Virtualizzazione
+  - name:
+      it: Infrastruttura & Virtualizzazione
+      en: Infrastructure & Virtualization
     skills:
-      - name: Windows Server
+      - name:
+          it: Windows Server
+          en: Windows Server
         percentage: 95
-      - name: Active Directory / GPO / DNS / DHCP
+      - name:
+          it: Active Directory / GPO / DNS / DHCP
+          en: Active Directory / GPO / DNS / DHCP
         percentage: 95
-      - name: Hyper-V/VMware
+      - name:
+          it: Hyper-V/VMware
+          en: Hyper-V/VMware
         percentage: 95
-      - name: Apache Tomcat
+      - name:
+          it: Apache Tomcat
+          en: Apache Tomcat
         percentage: 88
-      - name: Linux/Shell
+      - name:
+          it: Linux/Shell
+          en: Linux/Shell
         percentage: 85
 
-  - name: Sicurezza & Identity
+  - name:
+      it: Sicurezza & Identity
+      en: Security & Identity
     skills:
-      - name: AD / Entra ID
+      - name:
+          it: AD / Entra ID
+          en: AD / Entra ID
         percentage: 95
-      - name: Fortinet NSE6
+      - name:
+          it: Fortinet NSE6
+          en: Fortinet NSE6
         percentage: 90
-      - name: Backup & DR
+      - name:
+          it: Backup & DR
+          en: Backup & DR
         percentage: 95
 
-  - name: Systems Management & Automazione
+  - name:
+      it: Systems Management & Automazione
+      en: Systems Management & Automation
     skills:
-      - name: Quest KACE
+      - name:
+          it: Quest KACE
+          en: Quest KACE
         percentage: 99
-      - name: PowerShell
+      - name:
+          it: PowerShell
+          en: PowerShell
         percentage: 80
-      - name: Git/GitHub/Jekyll
+      - name:
+          it: Git/GitHub/Jekyll
+          en: Git/GitHub/Jekyll
         percentage: 70
 
-  - name: Leadership & Metodologia
+  - name:
+      it: Leadership & Metodologia
+      en: Leadership & Methodology
     skills:
-      - name: ITIL v4
+      - name:
+          it: ITIL v4
+          en: ITIL v4
         percentage: 85
-      - name: Team Leadership
+      - name:
+          it: Team Leadership
+          en: Team Leadership
         percentage: 85
-      - name: Service Management
+      - name:
+          it: Service Management
+          en: Service Management
         percentage: 90
-      - name: Assistenza Clienti
+      - name:
+          it: Assistenza Clienti
+          en: Customer Support
         percentage: 90

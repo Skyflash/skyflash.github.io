@@ -191,6 +191,49 @@
   }
 }
 
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.lang-switch__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+
+  & + & {
+    border-left: 1px solid var(--color-border);
+  }
+
+  // Bandiera "spenta" (scala di grigi, opaca) quando non è la lingua attiva;
+  // si accende gradualmente in hover e torna a colore pieno da attiva.
+  .flag-icon {
+    filter: grayscale(1) opacity(0.55);
+    transition: filter 0.15s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: var(--color-bg-subtle);
+
+    .flag-icon {
+      filter: grayscale(0.3) opacity(0.85);
+    }
+  }
+
+  &.is-active {
+    background: var(--color-accent-subtle);
+
+    .flag-icon {
+      filter: none;
+    }
+  }
+}
+
 .nav-search-toggle {
   display: inline-flex;
   align-items: center;

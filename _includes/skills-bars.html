@@ -1,12 +1,13 @@
+{% assign short_lang = page.lang | slice: 0, 2 %}
 <div class="skills-groups">
   {% for category in site.data.index.skills.categories %}
   <div class="skills-group">
-    <h3 class="skills-group__title">{{ category.name }}</h3>
+    <h3 class="skills-group__title">{{ category.name[short_lang] }}</h3>
     <div class="skill-bars">
       {% for skill in category.skills %}
       <div class="skill-bar">
         <div class="skill-bar__label">
-          <span>{{ skill.name }}</span>
+          <span>{{ skill.name[short_lang] }}</span>
           <span class="skill-bar__value">{{ skill.percentage }}%</span>
         </div>
         <div class="skill-bar__track">

@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{% assign short_lang = page.lang | slice: 0, 2 | default: site.default_lang %}
+{% assign i18n = site.data.i18n %}
 <section class="section container">
   <div class="section-header">
     <h1>{{ page.title }}</h1>
@@ -8,6 +10,14 @@ layout: default
 
   {% include category-index.html %}
 
+  {% if page.paginate_lang %}
+  {% assign display_posts = site.posts | where: "lang", page.paginate_lang %}
+  <div class="grid grid--3">
+    {% for post in display_posts %}
+    {% include post-card.html post=post %}
+    {% endfor %}
+  </div>
+  {% else %}
   <div class="grid grid--3">
     {% for post in paginator.posts %}
     {% include post-card.html post=post %}
@@ -15,20 +25,21 @@ layout: default
   </div>
 
   {% if paginator.total_pages > 1 %}
-  <nav class="pagination" aria-label="Paginazione articoli">
+  <nav class="pagination" aria-label="{{ i18n.pagination_aria[short_lang] }}">
     {% if paginator.previous_page %}
-    <a class="btn btn--ghost" href="{{ paginator.previous_page_path | relative_url }}">&larr; Più recenti</a>
+    <a class="btn btn--ghost" href="{{ paginator.previous_page_path | relative_url }}">{{ i18n.pagination_newer[short_lang] }}</a>
     {% else %}
-    <span class="btn btn--ghost is-disabled">&larr; Più recenti</span>
+    <span class="btn btn--ghost is-disabled">{{ i18n.pagination_newer[short_lang] }}</span>
     {% endif %}
 
-    <span class="pagination__status">Pagina {{ paginator.page }} di {{ paginator.total_pages }}</span>
+    <span class="pagination__status">{{ i18n.pagination_status_prefix[short_lang] }} {{ paginator.page }} {{ i18n.pagination_status_of[short_lang] }} {{ paginator.total_pages }}</span>
 
     {% if paginator.next_page %}
-    <a class="btn btn--ghost" href="{{ paginator.next_page_path | relative_url }}">Meno recenti &rarr;</a>
+    <a class="btn btn--ghost" href="{{ paginator.next_page_path | relative_url }}">{{ i18n.pagination_older[short_lang] }}</a>
     {% else %}
-    <span class="btn btn--ghost is-disabled">Meno recenti &rarr;</span>
+    <span class="btn btn--ghost is-disabled">{{ i18n.pagination_older[short_lang] }}</span>
     {% endif %}
   </nav>
+  {% endif %}
   {% endif %}
 </section>

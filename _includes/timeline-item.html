@@ -1,10 +1,11 @@
 {% assign career = include.career %}
+{% assign short_lang = page.lang | slice: 0, 2 %}
 <div class="timeline-item{% if career.present %} timeline-item--present{% endif %}">
   <p class="timeline-item__date">
-    {{ career.date.detail }}
-    {% if career.present %}<span class="badge-present">Attuale</span>{% endif %}
+    {{ career.date[short_lang] }}
+    {% if career.present %}<span class="badge-present">{{ site.data.i18n.career_present_badge[short_lang] }}</span>{% endif %}
   </p>
-  <h3 class="timeline-item__title">{{ career.job.detail }}</h3>
-  <p class="timeline-item__company">{{ career.name.detail }}</p>
-  {% if career.desc.detail %}<p class="timeline-item__desc">{{ career.desc.detail }}</p>{% endif %}
+  <h3 class="timeline-item__title">{{ career.job[short_lang] }}</h3>
+  <p class="timeline-item__company">{{ career.name[short_lang] }}</p>
+  {% if career.desc[short_lang] %}<p class="timeline-item__desc">{{ career.desc[short_lang] }}</p>{% endif %}
 </div>

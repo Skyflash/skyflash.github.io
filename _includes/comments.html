@@ -1,4 +1,5 @@
 {% if site.disqus %}
+{% assign short_lang = page.lang | slice: 0, 2 | default: site.default_lang %}
 {% assign page_url = site.url | append: site.baseurl | append: page.url %}
 
 <div id="disqus_thread"></div>
@@ -19,5 +20,5 @@
     })();
   }
 </script>
-<noscript>Per vedere i commenti di <a href="https://disqus.com/?ref_noscript" rel="nofollow">Disqus</a> devi abilitare JavaScript.</noscript>
+<noscript>{{ site.data.i18n.comments_js_required[short_lang] }}</noscript>
 {% endif %}

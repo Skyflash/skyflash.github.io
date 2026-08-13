@@ -1,44 +1,63 @@
+{% assign short_lang = page.lang | slice: 0, 2 | default: site.default_lang %}
+{% assign i18n = site.data.i18n %}
+{% include i18n-alternates.html %}
+{% assign home_url = "/" | append: short_lang | append: "/" %}
+{% assign cv_url = "/" | append: short_lang | append: "/cv/" %}
+{% assign projects_url = "/" | append: short_lang | append: "/" | append: i18n.slug_projects[short_lang] | append: "/" %}
+{% assign blog_url = "/" | append: short_lang | append: "/blog/" %}
+{% assign contact_url = "/" | append: short_lang | append: "/" | append: i18n.slug_contact[short_lang] | append: "/" %}
 <header class="site-header">
-  <nav class="nav container" aria-label="Navigazione principale">
-    <a class="nav-brand" href="{{ '/' | relative_url }}">{{ site.author.name }}</a>
+  <nav class="nav container" aria-label="{{ i18n.nav_aria_main[short_lang] }}">
+    <a class="nav-brand" href="{{ home_url | relative_url }}">{{ site.author.name }}</a>
 
     <div class="nav-actions" style="display:flex; align-items:center; gap: var(--space-2);">
-      <div class="theme-switch" role="group" aria-label="Tema colore">
-        <button type="button" class="theme-switch__btn" data-theme-choice="auto" aria-label="Tema automatico (segue il sistema)" aria-pressed="false"><i class="fa fa-adjust" aria-hidden="true"></i></button>
-        <button type="button" class="theme-switch__btn" data-theme-choice="light" aria-label="Tema chiaro" aria-pressed="false"><i class="fa fa-sun-o" aria-hidden="true"></i></button>
-        <button type="button" class="theme-switch__btn" data-theme-choice="dark" aria-label="Tema scuro" aria-pressed="false"><i class="fa fa-moon-o" aria-hidden="true"></i></button>
+      <div class="theme-switch" role="group" aria-label="{{ i18n.nav_aria_theme_group[short_lang] }}">
+        <button type="button" class="theme-switch__btn" data-theme-choice="auto" aria-label="{{ i18n.nav_aria_theme_auto[short_lang] }}" aria-pressed="false"><i class="fa fa-adjust" aria-hidden="true"></i></button>
+        <button type="button" class="theme-switch__btn" data-theme-choice="light" aria-label="{{ i18n.nav_aria_theme_light[short_lang] }}" aria-pressed="false"><i class="fa fa-sun-o" aria-hidden="true"></i></button>
+        <button type="button" class="theme-switch__btn" data-theme-choice="dark" aria-label="{{ i18n.nav_aria_theme_dark[short_lang] }}" aria-pressed="false"><i class="fa fa-moon-o" aria-hidden="true"></i></button>
       </div>
-      <button type="button" class="nav-search-toggle" id="nav-search-toggle" aria-label="Cerca nel blog" aria-expanded="false" aria-controls="search-panel">
+      {% if i18n_alternates.size > 1 %}
+      <div class="lang-switch" role="group" aria-label="{{ i18n.lang_switch_aria[short_lang] }}">
+        {% for entry in i18n_alternates %}
+        {% assign parts = entry | split: "|" %}
+        <a class="lang-switch__link {% if parts[0] == short_lang %}is-active{% endif %}" href="{{ parts[1] | relative_url }}" aria-label="{{ parts[0] | upcase }}"{% if parts[0] == short_lang %} aria-current="true"{% endif %}>
+          {% if parts[0] == "it" %}{% include icons/flag-it.html %}{% elsif parts[0] == "en" %}{% include icons/flag-en.html %}{% endif %}
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+      <button type="button" class="nav-search-toggle" id="nav-search-toggle" aria-label="{{ i18n.nav_aria_search_toggle[short_lang] }}" aria-expanded="false" aria-controls="search-panel">
         <i class="fa fa-search" aria-hidden="true"></i>
       </button>
-      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Apri il menu" aria-expanded="false" aria-controls="nav-list">
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="{{ i18n.nav_aria_menu_open[short_lang] }}" aria-expanded="false" aria-controls="nav-list">
         <i class="fa fa-bars" aria-hidden="true"></i>
       </button>
     </div>
 
     <ul class="nav-list" id="nav-list">
-      <li><a class="nav-link {% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">Home</a></li>
-      <li><a class="nav-link {% if page.url == '/cv/' %}is-active{% endif %}" href="{{ '/cv/' | relative_url }}">CV</a></li>
-      <li><a class="nav-link {% if page.url == '/progetti/' %}is-active{% endif %}" href="{{ '/progetti/' | relative_url }}">Progetti</a></li>
+      <li><a class="nav-link {% if page.url == home_url %}is-active{% endif %}" href="{{ home_url | relative_url }}">{{ i18n.nav_home[short_lang] }}</a></li>
+      <li><a class="nav-link {% if page.url == cv_url %}is-active{% endif %}" href="{{ cv_url | relative_url }}">{{ i18n.nav_cv[short_lang] }}</a></li>
+      <li><a class="nav-link {% if page.url == projects_url %}is-active{% endif %}" href="{{ projects_url | relative_url }}">{{ i18n.nav_projects[short_lang] }}</a></li>
       <li class="nav-item">
-        <a class="nav-link {% if page.layout == 'post' or page.layout == 'category' or page.layout == 'blog-index' %}is-active{% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a>
-        <button type="button" class="nav-caret" id="nav-blog-toggle" aria-label="Mostra le categorie del blog" aria-expanded="false" aria-controls="nav-blog-submenu">
+        <a class="nav-link {% if page.layout == 'post' or page.layout == 'category' or page.layout == 'blog-index' %}is-active{% endif %}" href="{{ blog_url | relative_url }}">{{ i18n.nav_blog[short_lang] }}</a>
+        <button type="button" class="nav-caret" id="nav-blog-toggle" aria-label="{{ i18n.nav_aria_blog_submenu[short_lang] }}" aria-expanded="false" aria-controls="nav-blog-submenu">
           <i class="fa fa-chevron-down" aria-hidden="true"></i>
         </button>
         <ul class="nav-submenu" id="nav-blog-submenu">
-          {% for category in site.data.blog %}
+          {% assign blog_categories = site.data.blog | where: "lang", short_lang %}
+          {% for category in blog_categories %}
           <li><a href="{{ category.href | relative_url }}">{{ category.name }}</a></li>
           {% endfor %}
         </ul>
       </li>
-      <li><a class="nav-link {% if page.url == '/contatti/' %}is-active{% endif %}" href="{{ '/contatti/' | relative_url }}">Contatti</a></li>
+      <li><a class="nav-link {% if page.url == contact_url %}is-active{% endif %}" href="{{ contact_url | relative_url }}">{{ i18n.nav_contact[short_lang] }}</a></li>
     </ul>
   </nav>
 
   <div class="search-panel" id="search-panel" hidden>
     <div class="container">
-      <label class="visually-hidden" for="search-input">Cerca nel blog</label>
-      <input type="search" id="search-input" class="search-input" placeholder="Cerca negli articoli del blog…" autocomplete="off">
+      <label class="visually-hidden" for="search-input">{{ i18n.search_label[short_lang] }}</label>
+      <input type="search" id="search-input" class="search-input" placeholder="{{ i18n.search_placeholder[short_lang] }}" autocomplete="off">
       <ul id="search-results" class="search-results"></ul>
     </div>
   </div>

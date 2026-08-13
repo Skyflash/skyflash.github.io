@@ -1,39 +1,41 @@
+{% assign short_lang = page.lang | slice: 0, 2 | default: site.default_lang %}
+{% assign i18n = site.data.i18n %}
 {% assign page_url = site.url | append: site.baseurl | append: page.url %}
 {% capture share_text %}{{ page.title }} — {{ page_url }}{% endcapture %}
-{% capture email_body %}Dai un'occhiata a questo articolo: {{ page_url }}{% endcapture %}
+{% capture email_body %}{{ i18n.share_email_body[short_lang] }} {{ page_url }}{% endcapture %}
 
 <div class="share-box">
-  <h5>Condividi:</h5>
+  <h5>{{ i18n.share_heading[short_lang] }}</h5>
   <div class="share-buttons">
-    <a class="share-btn share-btn--facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ page_url | url_encode }}" target="_blank" rel="noopener noreferrer" title="Condividi su Facebook">
+    <a class="share-btn share-btn--facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ page_url | url_encode }}" target="_blank" rel="noopener noreferrer" title="{{ i18n.share_facebook[short_lang] }}">
       <i class="fa fa-facebook-official" aria-hidden="true"></i>&nbsp;Facebook
     </a>
 
-    <a class="share-btn share-btn--x" href="https://x.com/intent/tweet?text={{ page.title | url_encode }}&amp;url={{ page_url | url_encode }}" target="_blank" rel="noopener noreferrer" title="Condividi su X (Twitter)">
-      {% include icon-x.html %}&nbsp;X (Twitter)
+    <a class="share-btn share-btn--x" href="https://x.com/intent/tweet?text={{ page.title | url_encode }}&amp;url={{ page_url | url_encode }}" target="_blank" rel="noopener noreferrer" title="{{ i18n.share_x[short_lang] }}">
+      {% include icons/x.html %}&nbsp;X (Twitter)
     </a>
 
-    <a class="share-btn share-btn--whatsapp" href="https://api.whatsapp.com/send?text={{ share_text | url_encode }}" target="_blank" rel="noopener noreferrer" title="Condividi su WhatsApp">
+    <a class="share-btn share-btn--whatsapp" href="https://api.whatsapp.com/send?text={{ share_text | url_encode }}" target="_blank" rel="noopener noreferrer" title="{{ i18n.share_whatsapp[short_lang] }}">
       <i class="fa fa-whatsapp" aria-hidden="true"></i>&nbsp;WhatsApp
     </a>
 
-    <a class="share-btn share-btn--telegram" href="https://t.me/share/url?url={{ page_url | url_encode }}&amp;text={{ page.title | url_encode }}" target="_blank" rel="noopener noreferrer" title="Condividi su Telegram">
+    <a class="share-btn share-btn--telegram" href="https://t.me/share/url?url={{ page_url | url_encode }}&amp;text={{ page.title | url_encode }}" target="_blank" rel="noopener noreferrer" title="{{ i18n.share_telegram[short_lang] }}">
       <i class="fa fa-telegram" aria-hidden="true"></i>&nbsp;Telegram
     </a>
 
-    <a class="share-btn share-btn--bluesky" href="https://bsky.app/intent/compose?text={{ share_text | url_encode }}" target="_blank" rel="noopener noreferrer" title="Condividi su Bluesky">
-      {% include icon-bluesky.html %}&nbsp;Bluesky
+    <a class="share-btn share-btn--bluesky" href="https://bsky.app/intent/compose?text={{ share_text | url_encode }}" target="_blank" rel="noopener noreferrer" title="{{ i18n.share_bluesky[short_lang] }}">
+      {% include icons/bluesky.html %}&nbsp;Bluesky
     </a>
 
-    <a class="share-btn share-btn--linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url={{ page_url | url_encode }}" target="_blank" rel="noopener noreferrer" title="Condividi su LinkedIn">
+    <a class="share-btn share-btn--linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url={{ page_url | url_encode }}" target="_blank" rel="noopener noreferrer" title="{{ i18n.share_linkedin[short_lang] }}">
       <i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp;LinkedIn
     </a>
 
-    <a class="share-btn share-btn--reddit" href="https://www.reddit.com/submit?url={{ page_url | url_encode }}&amp;title={{ page.title | url_encode }}" target="_blank" rel="noopener noreferrer" title="Condividi su Reddit">
+    <a class="share-btn share-btn--reddit" href="https://www.reddit.com/submit?url={{ page_url | url_encode }}&amp;title={{ page.title | url_encode }}" target="_blank" rel="noopener noreferrer" title="{{ i18n.share_reddit[short_lang] }}">
       <i class="fa fa-reddit-alien" aria-hidden="true"></i>&nbsp;Reddit
     </a>
 
-    <a class="share-btn share-btn--email" href="mailto:?subject={{ page.title | url_encode }}&amp;body={{ email_body | url_encode }}" title="Condividi via Email">
+    <a class="share-btn share-btn--email" href="mailto:?subject={{ page.title | url_encode }}&amp;body={{ email_body | url_encode }}" title="{{ i18n.share_email[short_lang] }}">
       <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Email
     </a>
   </div>

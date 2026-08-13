@@ -7,7 +7,7 @@ permalink: /404.html
 <html lang="it">
 <head>
     <meta charset="utf-8">
-    <title>Pagina non trovata — {{ site.title }}</title>
+    <title>{{ site.data.i18n.not_found_title.it }} / {{ site.data.i18n.not_found_title.en }} — {{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
     <link rel="shortcut icon" href="{{ '/static/assets/img/favicon.jpg' | relative_url }}">
@@ -16,8 +16,11 @@ permalink: /404.html
 <body>
     <section class="section container" style="text-align:center; padding-block: var(--space-8);">
         <h1>404</h1>
-        <p class="hero__lead">La pagina che cerchi non esiste (più) — controlla l'indirizzo o torna alla home.</p>
-        <p><a class="btn btn--primary" href="{{ '/' | relative_url }}">Torna alla Home</a></p>
+        {% assign not_found_langs = "it,en" | split: "," %}
+        {% for l in not_found_langs %}
+        <p class="hero__lead">{{ site.data.i18n.not_found_message[l] }}</p>
+        <p style="margin-bottom: var(--space-6);"><a class="btn btn--primary" href="{{ '/' | append: l | append: '/' | relative_url }}">{{ site.data.i18n.not_found_home_button[l] }}</a></p>
+        {% endfor %}
     </section>
 </body>
 </html>

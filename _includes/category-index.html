@@ -1,8 +1,11 @@
-<nav class="category-index" aria-label="Categorie del blog">
-  {% for category in site.data.blog %}
+{% assign short_lang = page.lang | slice: 0, 2 | default: site.default_lang %}
+<nav class="category-index" aria-label="{{ site.data.i18n.category_index_aria[short_lang] }}">
+  {% assign blog_categories = site.data.blog | where: "lang", short_lang %}
+  {% for category in blog_categories %}
+  {% assign category_posts = site.categories[category.name] | where: "lang", page.lang %}
   <a class="category-pill" href="{{ category.href | relative_url }}">
     {{ category.name }}
-    <span class="category-pill__count">{{ site.categories[category.name].size | default: 0 }}</span>
+    <span class="category-pill__count">{{ category_posts.size | default: 0 }}</span>
   </a>
   {% endfor %}
 </nav>

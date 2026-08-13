@@ -1,3 +1,4 @@
+{% assign short_lang = page.lang | slice: 0, 2 | default: site.default_lang %}
 <footer class="site-footer">
   <div class="container footer-inner">
     <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name }}</p>
@@ -16,17 +17,17 @@
       <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="me noopener" aria-label="Twitter/X"><i class="fa fa-twitter" aria-hidden="true"></i></a>
       {% endif %}
       {% if site.author.bluesky %}
-      <a href="https://bsky.app/profile/{{ site.author.bluesky }}" target="_blank" rel="me noopener" aria-label="Bluesky">{% include icon-bluesky.html %}</a>
+      <a href="https://bsky.app/profile/{{ site.author.bluesky }}" target="_blank" rel="me noopener" aria-label="Bluesky">{% include icons/bluesky.html %}</a>
       {% endif %}
       {% if site.author.email %}
       <a href="mailto:{{ site.author.email }}" aria-label="Email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
       {% endif %}
-      <a href="{{ '/feed.xml' | relative_url }}" aria-label="Feed RSS"><i class="fa fa-rss" aria-hidden="true"></i></a>
+      <a href="{{ '/feed.xml' | relative_url }}" aria-label="{{ site.data.i18n.footer_aria_feed[short_lang] }}"><i class="fa fa-rss" aria-hidden="true"></i></a>
     </div>
 
     <div class="footer-legal">
-      <a href="{{ '/about/disclaimer/' | relative_url }}">Disclaimer</a>
-      <a href="{{ '/about/privacy/' | relative_url }}">Privacy</a>
+      <a href="{{ '/it/about/disclaimer/' | relative_url }}">{{ site.data.i18n.footer_disclaimer[short_lang] }}</a>
+      <a href="{{ '/it/about/privacy/' | relative_url }}">{{ site.data.i18n.footer_privacy[short_lang] }}</a>
     </div>
   </div>
 </footer>

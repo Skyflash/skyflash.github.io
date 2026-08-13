@@ -1,16 +1,18 @@
 ---
 layout: default
 ---
+{% assign short_lang = page.lang | slice: 0, 2 | default: site.default_lang %}
+{% assign i18n = site.data.i18n %}
 <article class="section container">
   <header class="post-header">
     <p class="card__meta">
-      {{ page.date | date: "%-d %b %Y" }} · {{ page.content | number_of_words }} parole · Tempo di lettura: {{ page.content | number_of_words | divided_by: 180 }} min
+      {{ page.date | date: "%-d %b %Y" }} · {{ page.content | number_of_words }} {{ i18n.post_words[short_lang] }} · {{ i18n.post_reading_time[short_lang] }} {{ page.content | number_of_words | divided_by: 180 }} {{ i18n.post_reading_time_min[short_lang] }}
     </p>
     <h1>{{ page.title }}</h1>
     {% if page.categories %}
     <div class="pill-row">
       {% for category in page.categories %}
-      {% assign cat_data = site.data.blog | where: "name", category | first %}
+      {% assign cat_data = site.data.blog | where: "name", category | where: "lang", short_lang | first %}
       <a class="pill" href="{{ cat_data.href | relative_url }}">{{ category }}</a>
       {% endfor %}
     </div>
@@ -47,7 +49,7 @@ layout: default
   {% for post in site.posts %}
     {% assign sameTagCount = 0 %}
     {% for tag in post.tags %}
-      {% if post.url != page.url and page.tags contains tag %}
+      {% if post.url != page.url and post.lang == page.lang and page.tags contains tag %}
         {% assign sameTagCount = sameTagCount | plus: 1 %}
       {% endif %}
     {% endfor %}
@@ -61,7 +63,7 @@ layout: default
   {% if related.size > 0 %}
   <div class="related-posts">
     <div class="section-header">
-      <h2>Potrebbe interessarti anche</h2>
+      <h2>{{ i18n.post_related_heading[short_lang] }}</h2>
     </div>
     <div class="grid grid--3">
       {% for post in related %}

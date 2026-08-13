@@ -1,43 +1,62 @@
-# projects section data
-# If you don't have language feature(language.yml is empty), ignore "i18n" items
+# projects section data — name/desc sono mappe {it, en}
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
-- name: Kace SMA Tools
+- name:
+    it: Kace SMA Tools
+    en: Kace SMA Tools
   gh_user: KACE-SMA-Tools
   url: https://github.com/kace-sma-tools
   img: /static/assets/img/landing/kacesmatools.png
-  desc: Idee, script e suggerimenti utili per Quest Kace Systems Management Appliace (precedentmente noto come K1000) 
-  #i18n: kace-sma-tools
+  desc:
+    it: Idee, script e suggerimenti utili per Quest Kace Systems Management Appliance (precedentemente noto come K1000)
+    en: Ideas, scripts, and useful tips for the Quest Kace Systems Management Appliance (formerly known as K1000).
 
-- name: K1000 Database Queries
+- name:
+    it: K1000 Database Queries
+    en: K1000 Database Queries
   gh_user: KACE-SMA-Tools
   repo: K1000-Database-Queries
   img: /static/assets/img/landing/development.png
-  desc:  Una collezione di queries MySQL per Il KACE 1000 (Quest Kace Systems Management Appliance)
-  #i18n: k1000-database-queries
+  desc:
+    it: Una collezione di queries MySQL per il KACE 1000 (Quest Kace Systems Management Appliance)
+    en: A collection of MySQL queries for the KACE 1000 (Quest Kace Systems Management Appliance).
 
-- name: IPUI to IPEI
+- name:
+    it: IPUI to IPEI
+    en: IPUI to IPEI
   gh_user: Skyflash
   repo: ipui2ipei
   img: /static/assets/img/landing/dect-85-512.png
-  desc: IPUI 2 IPEI converte i codici IPUI, tipici dei telefoni DECT Siemens, allo standard IPEI.
+  desc:
+    it: IPUI 2 IPEI converte i codici IPUI, tipici dei telefoni DECT Siemens, allo standard IPEI.
+    en: IPUI 2 IPEI converts IPUI codes, typical of Siemens DECT phones, to the IPEI standard.
 
-- name: FlottaStellare.it
-  gh_user:  ed-acfs
+- name:
+    it: FlottaStellare.it
+    en: FlottaStellare.it
+  gh_user: ed-acfs
   repo: ed-acfs.github.io
-  url:  https://flottastellare.it
-  img:  /static/assets/img/landing/flottastellare.png
-  desc: "Il sito web per lo Squadrone Flotta Stellare di Elite: Dangerous"
+  url: https://flottastellare.it
+  img: /static/assets/img/landing/flottastellare.png
+  desc:
+    it: "Il sito web per lo Squadrone Flotta Stellare di Elite: Dangerous"
+    en: "The website for the Flotta Stellare squadron in Elite: Dangerous."
 
-- name: La Traduzione di Morrowind
+- name:
+    it: La Traduzione di Morrowind
+    en: The Morrowind Translation
   gh_user: Skyflash
   repo: morrowind-italian-itp-translation
   img: /static/assets/img/landing/morrowind.png
-  desc: La traduzione in Italiano di Morrowind, Tribunal e Bloodmoon - A cura dell'ITP
-  #i18n: morrowind-translation
+  desc:
+    it: La traduzione in Italiano di Morrowind, Tribunal e Bloodmoon - A cura dell'ITP
+    en: The Italian translation of Morrowind, Tribunal, and Bloodmoon — by ITP.
 
-- name: This website on Github
+- name:
+    it: Questo sito su GitHub
+    en: This website on GitHub
   gh_user: Skyflash
   repo: skyflash.github.io
   img: /static/assets/img/landing/me.jpg
-  desc: Il repository GitHub su cui viene sviluppato questo sito
-  #i18n: skyflash-github
+  desc:
+    it: Il repository GitHub su cui viene sviluppato questo sito
+    en: The GitHub repository this website is built on.

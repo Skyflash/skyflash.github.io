@@ -34,6 +34,10 @@ kramdown:
 ####################################
 #
 lang: it_IT
+# Lingua di fallback (codice breve) quando una pagina/post non imposta `lang`.
+# Unico punto da cambiare per spostare il default del sito su un'altra lingua.
+# Lingue supportate dal sito: it (italiano), en (inglese).
+default_lang: it
 permalink: /blog/:categories/:title/
 
 social:
@@ -92,7 +96,7 @@ plugins:
   - jekyll-paginate
 
 paginate: 15
-paginate_path: "/blog/pagina:num/"
+paginate_path: "/it/blog/pagina:num/"
 
 # scss
 sass:

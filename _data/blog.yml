@@ -1,18 +1,47 @@
-# categorie del blog, mostrate nel sottomenu di navigazione (ordine alfabetico)
+# categorie del blog, mostrate nel sottomenu di navigazione (ordine alfabetico per lingua)
+# una riga per lingua per categoria: "name" è anche la chiave di match con post.categories
+# (site.categories[name] / where: "name", category), quindi ogni lingua usa il proprio nome letterale.
+# "href": stesso slug fra le lingue solo dove ha senso (parole già neutre/nomi propri come
+# "tools"/"kace"); per le altre lo slug è tradotto in inglese nella sezione /en/, per non
+# mostrare a un lettore anglofono un URL con una parola italiana (es. /en/infrastructure/,
+# non /en/infrastruttura/). Le categorie vivono a livello radice, non sotto /blog/.
+
+# --- it ---
 - name: Infrastruttura & Sistemi
-  href: /infrastruttura/
-
+  href: /it/infrastruttura/
+  lang: it
 - name: Filosofia di Lavoro
-  href: /itil/
-  
+  href: /it/itil/
+  lang: it
 - name: Strumenti
-  href: /tools/
-
+  href: /it/tools/
+  lang: it
 - name: Kace
-  href: /kace/
-
+  href: /it/kace/
+  lang: it
 - name: Progetti Personali
-  href: /progetti-personali/
-
+  href: /it/progetti-personali/
+  lang: it
 - name: "Fuori dall'Ufficio"
-  href: /fuori-ufficio/
+  href: /it/fuori-ufficio/
+  lang: it
+
+# --- en ---
+- name: Infrastructure & Systems
+  href: /en/infrastructure/
+  lang: en
+- name: Work Philosophy
+  href: /en/work-philosophy/
+  lang: en
+- name: Tools
+  href: /en/tools/
+  lang: en
+- name: Kace
+  href: /en/kace/
+  lang: en
+- name: Personal Projects
+  href: /en/personal-projects/
+  lang: en
+- name: Outside the Office
+  href: /en/outside-office/
+  lang: en

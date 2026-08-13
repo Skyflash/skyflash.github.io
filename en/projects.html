@@ -1,0 +1,13 @@
+---
+layout: page
+title: Projects
+description: A few personal projects by Cristian Castellari
+permalink: /en/projects/
+lang: en_US
+translation_key: page-projects
+---
+<div class="grid grid--3">
+  {% for project in site.data.index.projects %}
+  {% include project-card.html project=project %}
+  {% endfor %}
+</div>

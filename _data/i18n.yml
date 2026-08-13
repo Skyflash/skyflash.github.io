@@ -1,0 +1,201 @@
+# Stringhe UI condivise per lingua. Chiave breve -> {it, en}.
+# Uso: {{ site.data.i18n.nav_cv[short_lang] }}  (short_lang = it | en)
+
+nav_home:
+  it: Home
+  en: Home
+nav_cv:
+  it: CV
+  en: CV
+nav_projects:
+  it: Progetti
+  en: Projects
+nav_contact:
+  it: Contatti
+  en: Contact
+nav_blog:
+  it: Blog
+  en: Blog
+slug_projects:
+  it: progetti
+  en: projects
+slug_contact:
+  it: contatti
+  en: contact
+nav_aria_main:
+  it: Navigazione principale
+  en: Main navigation
+nav_aria_theme_group:
+  it: Tema colore
+  en: Color theme
+nav_aria_theme_auto:
+  it: Tema automatico (segue il sistema)
+  en: Automatic theme (follows system)
+nav_aria_theme_light:
+  it: Tema chiaro
+  en: Light theme
+nav_aria_theme_dark:
+  it: Tema scuro
+  en: Dark theme
+nav_aria_search_toggle:
+  it: Cerca nel blog
+  en: Search the blog
+nav_aria_menu_open:
+  it: Apri il menu
+  en: Open menu
+nav_aria_blog_submenu:
+  it: Mostra le categorie del blog
+  en: Show blog categories
+search_label:
+  it: Cerca nel blog
+  en: Search the blog
+search_placeholder:
+  it: Cerca negli articoli del blog…
+  en: Search blog posts…
+lang_switch_aria:
+  it: Cambia lingua
+  en: Change language
+
+footer_disclaimer:
+  it: Disclaimer
+  en: Disclaimer
+footer_privacy:
+  it: Privacy
+  en: Privacy
+footer_aria_feed:
+  it: Feed RSS
+  en: RSS feed
+
+share_heading:
+  it: "Condividi:"
+  en: "Share:"
+share_facebook:
+  it: Condividi su Facebook
+  en: Share on Facebook
+share_x:
+  it: Condividi su X (Twitter)
+  en: Share on X (Twitter)
+share_whatsapp:
+  it: Condividi su WhatsApp
+  en: Share on WhatsApp
+share_telegram:
+  it: Condividi su Telegram
+  en: Share on Telegram
+share_bluesky:
+  it: Condividi su Bluesky
+  en: Share on Bluesky
+share_linkedin:
+  it: Condividi su LinkedIn
+  en: Share on LinkedIn
+share_reddit:
+  it: Condividi su Reddit
+  en: Share on Reddit
+share_email:
+  it: Condividi via Email
+  en: Share via email
+share_email_body:
+  it: "Dai un'occhiata a questo articolo:"
+  en: "Take a look at this article:"
+
+comments_js_required:
+  it: 'Per vedere i commenti di <a href="https://disqus.com/?ref_noscript" rel="nofollow">Disqus</a> devi abilitare JavaScript.'
+  en: 'To see the <a href="https://disqus.com/?ref_noscript" rel="nofollow">Disqus</a> comments, please enable JavaScript.'
+
+category_index_aria:
+  it: Categorie del blog
+  en: Blog categories
+category_eyebrow:
+  it: Categoria
+  en: Category
+category_empty:
+  it: Nessun articolo in questa categoria per ora.
+  en: No articles in this category yet.
+
+pagination_aria:
+  it: Paginazione articoli
+  en: Post pagination
+pagination_newer:
+  it: "← Più recenti"
+  en: "← Newer"
+pagination_older:
+  it: "Meno recenti →"
+  en: "Older →"
+pagination_status_prefix:
+  it: Pagina
+  en: Page
+pagination_status_of:
+  it: di
+  en: of
+
+post_words:
+  it: parole
+  en: words
+post_reading_time:
+  it: "Tempo di lettura:"
+  en: "Reading time:"
+post_reading_time_min:
+  it: min
+  en: min
+post_related_heading:
+  it: Potrebbe interessarti anche
+  en: You might also like
+
+career_present_badge:
+  it: Attuale
+  en: Present
+
+home_hero_at:
+  it: presso
+  en: at
+home_cv_button:
+  it: Vedi il CV
+  en: View my CV
+home_contact_button:
+  it: Contattami
+  en: Get in touch
+home_projects_eyebrow:
+  it: Progetti
+  en: Projects
+home_projects_heading:
+  it: Alcune cose che ho costruito
+  en: A few things I've built
+home_projects_cta:
+  it: Vedi tutti i progetti
+  en: See all projects
+home_blog_eyebrow:
+  it: Blog
+  en: Blog
+home_blog_heading:
+  it: Ultimi articoli
+  en: Latest articles
+home_blog_cta:
+  it: Vai al blog
+  en: Go to the blog
+
+cv_download_button:
+  it: Scarica il CV in PDF
+  en: Download CV as PDF
+cv_experience_heading:
+  it: Esperienze
+  en: Experience
+cv_skills_heading:
+  it: Competenze
+  en: Skills
+
+contact_lead:
+  it: Scrivimi pure per una chiacchierata, una collaborazione o solo per dire ciao.
+  en: Feel free to reach out for a chat, a collaboration, or just to say hi.
+
+not_found_title:
+  it: Pagina non trovata
+  en: Page not found
+not_found_message:
+  it: La pagina che cerchi non esiste (più) — controlla l'indirizzo o torna alla home.
+  en: The page you're looking for doesn't exist (anymore) — check the address or head back home.
+author_bio:
+  it: "Informatico, padre e marito. Appassionato di tecnologia da sempre, curioso di natura. Nel tempo libero mi dedico alla famiglia, agli amici, alla cucina e ai videogiochi. Credo fortemente in ITIL come framework da applicare non solo all'IT ma anche a normali situazioni di vita quotidiana."
+  en: "IT professional, father and husband. Passionate about technology for as long as I can remember, curious by nature. In my free time I focus on family, friends, cooking and video games. I strongly believe in ITIL as a framework that applies not just to IT but to everyday life too."
+
+not_found_home_button:
+  it: Torna alla Home
+  en: Back to Home

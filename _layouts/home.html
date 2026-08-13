@@ -1,15 +1,18 @@
 ---
 layout: default
 ---
+{% assign short_lang = page.lang | slice: 0, 2 | default: site.default_lang %}
+{% assign i18n = site.data.i18n %}
+{% assign latest_posts = site.posts | where: "lang", page.lang | limit: 3 %}
 <section class="section container">
   <div class="hero">
     <div class="hero__content">
-      <span class="hero__eyebrow">{{ site.data.index.careers.first.job.detail }} presso {{ site.data.index.careers.first.name.detail }}</span>
+      <span class="hero__eyebrow">{{ site.data.index.careers.first.job[short_lang] }} {{ i18n.home_hero_at[short_lang] }} {{ site.data.index.careers.first.name[short_lang] }}</span>
       <h1 class="hero__title">{{ site.author.first_name }} {{ site.author.last_name }}</h1>
-      <p class="hero__lead">{{ site.author.desc }}</p>
+      <p class="hero__lead">{{ i18n.author_bio[short_lang] }}</p>
       <div class="hero__actions">
-        <a class="btn btn--primary" href="{{ '/cv/' | relative_url }}">Vedi il CV</a>
-        <a class="btn btn--ghost" href="{{ '/contatti/' | relative_url }}">Contattami</a>
+        <a class="btn btn--primary" href="{{ '/' | append: short_lang | append: '/cv/' | relative_url }}">{{ i18n.home_cv_button[short_lang] }}</a>
+        <a class="btn btn--ghost" href="{{ '/' | append: short_lang | append: '/' | append: i18n.slug_contact[short_lang] | append: '/' | relative_url }}">{{ i18n.home_contact_button[short_lang] }}</a>
       </div>
     </div>
     <img class="hero__avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
@@ -19,29 +22,29 @@ layout: default
 <section class="section section--subtle">
   <div class="container">
     <div class="section-header">
-      <span class="eyebrow">Progetti</span>
-      <h2>Alcune cose che ho costruito</h2>
+      <span class="eyebrow">{{ i18n.home_projects_eyebrow[short_lang] }}</span>
+      <h2>{{ i18n.home_projects_heading[short_lang] }}</h2>
     </div>
     <div class="grid grid--3">
       {% for project in site.data.index.projects limit:3 %}
       {% include project-card.html project=project %}
       {% endfor %}
     </div>
-    <p style="margin-top: var(--space-4);"><a class="btn btn--ghost" href="{{ '/progetti/' | relative_url }}">Vedi tutti i progetti</a></p>
+    <p style="margin-top: var(--space-4);"><a class="btn btn--ghost" href="{{ '/' | append: short_lang | append: '/' | append: i18n.slug_projects[short_lang] | append: '/' | relative_url }}">{{ i18n.home_projects_cta[short_lang] }}</a></p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="section-header">
-      <span class="eyebrow">Blog</span>
-      <h2>Ultimi articoli</h2>
+      <span class="eyebrow">{{ i18n.home_blog_eyebrow[short_lang] }}</span>
+      <h2>{{ i18n.home_blog_heading[short_lang] }}</h2>
     </div>
     <div class="grid grid--3">
-      {% for post in site.posts limit:3 %}
+      {% for post in latest_posts %}
       {% include post-card.html post=post %}
       {% endfor %}
     </div>
-    <p style="margin-top: var(--space-4);"><a class="btn btn--ghost" href="{{ '/blog/' | relative_url }}">Vai al blog</a></p>
+    <p style="margin-top: var(--space-4);"><a class="btn btn--ghost" href="{{ '/' | append: short_lang | append: '/blog/' | relative_url }}">{{ i18n.home_blog_cta[short_lang] }}</a></p>
   </div>
 </section>

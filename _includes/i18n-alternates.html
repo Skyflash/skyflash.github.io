@@ -1,0 +1,35 @@
+{% comment %}
+  Calcola le versioni sorelle (altre lingue) della pagina corrente, come lista di
+  stringhe "lang|url". Usato sia da head.html (hreflang) sia da nav.html (switcher).
+  Nota: {% include %} in Jekyll condivide lo scope Liquid col chiamante, quindi
+  `i18n_alternates` resta valorizzato anche fuori da questo file.
+
+  Meccanismo unico basato su `translation_key` in front matter, sia per i post sia
+  per le pagine (home/CV/Progetti/Contatti/categorie). Niente prefix-swap dell'URL:
+  gli slug possono differire fra lingue (es. /it/progetti/ vs /en/projects/), quindi
+  la sola sostituzione del prefisso /it|en/ non basta più a trovare la pagina sorella.
+  Pagine senza `translation_key` (post storici, pagine legali, 404) non hanno
+  switcher: comportamento di default, nessuna configurazione extra richiesta.
+{% endcomment %}
+{% assign short_lang = page.lang | slice: 0, 2 %}
+{% assign i18n_alternates = "" | split: "" %}
+
+{% if page.translation_key %}
+  {% if page.layout == "post" %}
+    {% assign siblings = site.posts | where: "translation_key", page.translation_key %}
+  {% else %}
+    {% assign siblings = site.pages | where: "translation_key", page.translation_key %}
+  {% endif %}
+  {% comment %} Ordine fisso it -> en (l'italiano è la lingua di default del sito),
+  indipendente dall'ordine con cui Jekyll restituisce site.posts/site.pages. {% endcomment %}
+  {% assign ordered_langs = "it,en" | split: "," %}
+  {% for l in ordered_langs %}
+    {% for sibling in siblings %}
+      {% assign sibling_short_lang = sibling.lang | slice: 0, 2 %}
+      {% if sibling_short_lang == l %}
+        {% assign entry = sibling_short_lang | append: "|" | append: sibling.url %}
+        {% assign i18n_alternates = i18n_alternates | push: entry %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
