@@ -4,6 +4,10 @@
   max-width: var(--content-max-width);
   margin-inline: auto;
   padding-inline: var(--space-4);
+
+  &--wide {
+    max-width: 1600px;
+  }
 }
 
 .section {

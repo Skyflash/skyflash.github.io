@@ -1,6 +1,18 @@
 ---
 layout: default
 ---
+{% if page.wide %}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h1>{{ page.title }}</h1>
+    </div>
+  </div>
+  <div class="container container--wide">
+    {{ content }}
+  </div>
+</section>
+{% else %}
 <section class="section container">
   <div class="section-header">
     <h1>{{ page.title }}</h1>
@@ -9,3 +21,4 @@ layout: default
     {{ content }}
   </div>
 </section>
+{% endif %}
