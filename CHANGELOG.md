@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.2.1] - 2026-08-14 — Layout dedicato per la pagina Progetti
+
+### Griglia dei progetti troppo stretta — layout dedicato in stile Blog
+
+La pagina Progetti (`en/projects.html`, `it/progetti.html`) riusava `layout: page`, pensato per contenuti testuali lunghi (CV, Contatti): il contenuto veniva avvolto in `.prose`, con `max-width: 760px` per la leggibilità del testo. Applicato a una griglia a 3 colonne di card, il vincolo schiacciava ogni card a ~245px di larghezza, rendendo le descrizioni strette su 4-5 righe.
+
+Primo tentativo (poi scartato): un flag `wide` in `layout: page` che allargava il container a 1600px e saltava `.prose` solo per quella pagina — funzionante ma una toppa su un layout condiviso con CV/Contatti/Privacy, e con un effetto collaterale: il titolo "Progetti" risultava disallineato rispetto al titolo delle altre pagine su viewport di larghezza intermedia (1360–1600px), dove il container standard restava centrato con margine mentre quello allargato no.
+
+Sostituito con un layout dedicato, `_layouts/projects.html`, sul modello di `_layouts/blog-index.html` (che non ha mai sofferto il problema, non passando da `.prose`): titolo e griglia nello stesso `.container` standard (1360px), senza alcun vincolo aggiuntivo. Le card ora hanno la stessa larghezza (~420px) di quelle del Blog, il titolo è allineato a tutte le altre pagine del sito, e `_layouts/page.html` è tornato alla sua forma originale, senza condizionali.
+
+### Rifinitura testi delle descrizioni progetti
+
+Titoli e descrizioni in `_data/index/projects.yml` chiariti (es. "Italian Translation Project" per l'ITP) e punteggiatura uniformata.
+
 ## [2.2.0] - 2026-08-14 — Cookie consent, SEO social e favicon configurabile
 
 ### Cookie consent: da cookie-bar.eu a CookieConsent v3
