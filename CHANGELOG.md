@@ -2,6 +2,23 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.7.0] - 2026-08-14 — Recuperate le cover originali di 4 post storici
+
+Ritrovato un backup completo (non solo il dump del database) del vecchio blog WordPress, comprensivo della cartella `wp-content/uploads` con i file media originali — fino ad oggi si pensava che le immagini fossero perse per sempre dopo l'attacco ransomware. Da qui recuperate le immagini "in evidenza" originali (il campo WordPress separato dal contenuto del post, non un semplice `<img>` nel testo — per questo erano sfuggite a un primo controllo basato solo sul contenuto) di 4 post storici che sul sito nuovo risultavano senza cover:
+
+- "Backup automatizzato dei database su SQL Express" (IT+EN): foto stock di un hard disk aperto; recuperato anche lo screenshot originale di Task Scheduler, reinserito nel punto del testo in cui compariva ("Schedulazione").
+- "Script bash per il backup di un database MySQL": la maglietta "I just took a HUGE mySQL DUMP".
+- "Come proteggere un sito dagli attacchi - Parte 1 - I bad crawler": il robottino "We want all your keywords".
+- "Come proteggere un sito dagli attacchi - Parte 2 - Il file .htaccess": l'illustrazione "BAD ROBOT".
+
+## [2.6.0] - 2026-08-14 — Link al feed RSS nell'indice del blog
+
+`feed.xml` esisteva già (feed custom, non dal plugin `jekyll-feed`) ma era raggiungibile solo dalla piccola icona nel footer. Aggiunto un link "Feed RSS" ben visibile, allineato a destra sulla stessa riga del titolo "Blog".
+
+- `_layouts/blog-index.html`: nuovo link icona+testo verso `/feed.xml`, riusando la stringa i18n `footer_aria_feed` già presente per il link del footer.
+- `_sass/_layout.scss`: nuovo modificatore `.section-header--blog` (flex, titolo a sinistra e link a destra) e stile `.rss-link` con il classico arancione RSS.
+- Verificato in locale che `/feed.xml` sia XML valido, si rigeneri ad ogni build con tutti i post in ordine cronologico corretto e rifletta subito le modifiche al front matter (es. i title della voce precedente).
+
 ## [2.5.0] - 2026-08-14 — Audit SEO e social sharing dei post
 
 Verifica sistematica di meta tag, description e immagini di condivisione su tutti i 31 post (IT+EN), confrontando front matter dichiarato e HTML effettivamente generato da `jekyll-seo-tag`.

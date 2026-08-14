@@ -5,6 +5,7 @@ title: "Script bash per il backup di un database MySQL"
 date: '2005-01-15 15:08:20'
 description: "Uno script bash per automatizzare il backup giornaliero di un database MySQL su server Linux, con rotazione dei file per ogni giorno della settimana."
 intro: "In passato ho avuto bisogno di uno script che, in modo automatico, mi facesse una serie di backup del database MySQL che gira sul nostro server in azienda."
+image: "/static/assets/img/blog/backup-mysql/cover.jpg"
 categories:
 - Infrastruttura & Sistemi
 keywords: bash, mysql, backup, linux, script

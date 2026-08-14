@@ -5,6 +5,7 @@ title: "Backup automatizzato dei database su SQL Express"
 date: '2012-05-24 17:03:37'
 description: "Automatizzare il backup dei database su SQL Server Express, privo di SQL Agent: script T-SQL, pulizia in VBScript e attività pianificata di Windows."
 intro: "SQL Server Express viene distribuito senza SQL Agent, quindi non è possibile schedulare internamente a SQL Server processi automatizzati, come ad esempio il backup."
+image: "/static/assets/img/blog/backup-sql-express/cover.jpg"
 categories:
 - Infrastruttura & Sistemi
 keywords: sql server, sql express, backup, database, vbscript
@@ -156,6 +157,8 @@ L'unica modifica da fare sarà l'inserimento del nome e della istanza del vostro
 ## Schedulazione
 
 Non resta che creare una **Operazione pianificata** dal **Pannello di controllo di Windows**, il cui semplice compito consisterà nell'esecuzione di **C:\SQL_Backup\scripts\databasebackup.cmd**, impostando un orario ed una ricorrenza secondo le proprie necessità.
+
+![Configurazione dell'operazione pianificata in Windows, con il percorso di databasebackup.cmd impostato come azione da eseguire](/static/assets/img/blog/backup-sql-express/sqlbackup.jpg)
 
 ## Aggiornamento (2026): la versione moderna con PowerShell
 

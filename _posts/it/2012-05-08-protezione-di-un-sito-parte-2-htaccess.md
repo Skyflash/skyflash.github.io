@@ -5,6 +5,7 @@ title: "Come proteggere un sito dagli attacchi - Parte 2 - Il file .htaccess"
 date: '2012-05-08 16:05:48'
 description: "Proteggere un sito web tramite il file .htaccess, con una serie di direttive in grado di intercettare e bloccare gli attacchi dei bot - 5G Blacklist 2012"
 intro: "La tecnica della trappola vista nella parte 1 è molto efficiente, ma potrebbe non bastare a garantire una protezione di alto livello contro i bot che vanno alla ricerca di exploit e falle di sicurezza."
+image: "/static/assets/img/blog/protezione-sito-htaccess/cover.jpg"
 categories:
 - Infrastruttura & Sistemi
 keywords: sicurezza, htaccess, bad crawler, bot

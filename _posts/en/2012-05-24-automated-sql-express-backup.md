@@ -5,6 +5,7 @@ title: "Automated SQL Express database backups"
 date: '2012-05-24 17:03:37'
 description: "How to automate database backups on SQL Server Express, which has no SQL Agent, using a T-SQL script, a VBScript cleanup script, and a Windows scheduled task."
 intro: "SQL Server Express ships without SQL Agent, so it isn't possible to schedule automated processes — like backups — from within SQL Server itself."
+image: "/static/assets/img/blog/backup-sql-express/cover.jpg"
 categories:
 - Infrastructure & Systems
 keywords: sql server, sql express, backup, database, vbscript
@@ -153,6 +154,8 @@ The only change needed is entering your server's name and instance, replacing **
 ## Scheduling
 
 All that's left is to create a **Scheduled Task** from the **Windows Control Panel**, whose only job will be to run **C:\SQL_Backup\scripts\databasebackup.cmd**, setting a time and recurrence to fit your needs.
+
+![Scheduled Task configuration in Windows, with the path to databasebackup.cmd set as the action to run (original Italian-language screenshot from 2012)](/static/assets/img/blog/backup-sql-express/sqlbackup.jpg)
 
 ## Update (2026): the modern PowerShell version
 
