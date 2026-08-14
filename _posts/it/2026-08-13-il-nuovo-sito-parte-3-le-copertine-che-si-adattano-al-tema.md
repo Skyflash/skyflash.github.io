@@ -1,8 +1,8 @@
 ---
-title: "Il nuovo sito, parte 3: le copertine che si adattano al tema (senza una riga di JavaScript)"
+title: "Il nuovo sito, parte 3: le copertine che si adattano al tema"
 layout: post
 date: '2026-08-13 10:00:00'
-description: La storia in diretta di come una semplice richiesta — "usa uno screenshot del vecchio e uno del nuovo sito come copertina" — sia diventata un piccolo rabbit hole fatto di browser headless, dissolvenze fallite e un trucco CSS per far apparire l'immagine giusta a seconda del tema del lettore.
+description: Come una richiesta semplice — una cover con lo screenshot del vecchio e nuovo sito — diventa un rabbit hole tra browser headless e un trucco CSS per adattarsi al tema.
 intro: "A volte il post più interessante da scrivere è quello sulla cosa appena successa. Questa è la storia, in diretta, di come le copertine di questa stessa serie di articoli abbiano imparato a cambiare da sole a seconda che tu stia leggendo in chiaro o in scuro."
 image: "/static/assets/img/blog/nuovo-sito-2026/parte1-cover.jpg"
 image_dark: "/static/assets/img/blog/nuovo-sito-2026/parte1-cover-dark.jpg"

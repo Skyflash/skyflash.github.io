@@ -1,8 +1,8 @@
 ---
-title: "Manutenzione straordinaria del sito: quando aggiornare le dipendenze rompe tutto (e perché non si era mai rotto prima)"
+title: "Manutenzione straordinaria: quando aggiornare le dipendenze rompe tutto"
 layout: post
 date: '2026-08-12 14:00:00'
-description: Cosa succede quando aggiorni sul serio, per la prima volta dal 2019, le dipendenze di un sito Jekyll. Tre bug dormienti, un tema compilato con la libreria sbagliata da anni, e come li ho trovati e sistemati tutti in un pomeriggio.
+description: "Cosa succede aggiornando sul serio, per la prima volta dal 2019, le dipendenze di un sito Jekyll: tre bug dormienti e un tema con la libreria sbagliata da anni."
 intro: "Oggi ho aggiornato le dipendenze di questo sito (Ruby, Jekyll, npm, Bootstrap, Chart.js) per la prima volta sul serio dal 2019. Risultato: il sito si è rotto quasi subito. La cosa interessante non è che si sia rotto, ma perché non si era mai rotto prima."
 image: "/static/assets/img/blog/manutenzione-sito-2026/cover.jpg"
 lang: it_IT

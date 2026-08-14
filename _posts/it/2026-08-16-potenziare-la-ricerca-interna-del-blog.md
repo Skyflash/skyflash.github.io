@@ -1,8 +1,8 @@
 ---
-title: "Potenziare la ricerca interna del blog (rubando qualche idea al sito di un altro me)"
+title: "Potenziare la ricerca interna del blog"
 layout: post
 date: '2026-08-16 15:32:00'
-description: Il motore di ricerca di questo blog cercava solo nel titolo e nella descrizione dei post, ignorava le pagine statiche e non capiva le query a più parole. Confrontandolo con quello — molto più maturo — del sito del mio squadrone di Elite Dangerous, ho trovato il modo di migliorarlo senza aggiungere nessuna libreria esterna.
+description: La ricerca del blog cercava solo in titolo e descrizione, ignorava le pagine statiche e non capiva le query a più parole. Come l'ho resa migliore senza librerie esterne.
 intro: "A volte il miglioramento più utile non nasce da un bug, ma da un confronto: guardare come un altro progetto ha risolto lo stesso problema, e rubare le idee buone senza rubare anche le dipendenze."
 lang: it_IT
 categories:

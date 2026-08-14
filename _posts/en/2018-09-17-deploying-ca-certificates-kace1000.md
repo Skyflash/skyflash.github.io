@@ -2,7 +2,7 @@
 title: How to import a CA certificate on Windows PCs with Kace 1000
 layout: post
 date: '2018-09-17 11:30:00'
-description: Let's see together how to deploy Windows certificates using KACE 1000
+description: How to automatically deploy a CA certificate to Windows PCs with KACE 1000, without manual steps or local admin rights for the user.
 lang: en_US
 image: "/static/assets/img/blog/ssl.png"
 categories:

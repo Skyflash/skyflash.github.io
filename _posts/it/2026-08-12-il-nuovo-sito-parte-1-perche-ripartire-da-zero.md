@@ -1,8 +1,8 @@
 ---
-title: "Il nuovo sito, parte 1: perché ho deciso di ripartire da zero (con un'IA come collega)"
+title: "Il nuovo sito, parte 1: perché ho deciso di ripartire da zero"
 layout: post
 date: '2026-08-12 18:00:00'
-description: Dalla manutenzione di un sito Jekyll del 2019 alla decisione di ricostruirlo completamente in poche ore, lavorando fianco a fianco con Claude Code. La storia di come è nata la versione 2.0 di questo sito.
+description: "Dalla manutenzione di un sito Jekyll del 2019 alla decisione di ricostruirlo da zero in poche ore, insieme a Claude Code: come è nata la versione 2.0 del sito."
 intro: "Questa mattina ho aggiornato le dipendenze di questo sito. Nel pomeriggio l'ho buttato giù e ricostruito da zero. Ecco perché, e come ci sono arrivato in poche ore invece che in settimane."
 image: "/static/assets/img/blog/nuovo-sito-2026/parte1-cover.jpg"
 image_dark: "/static/assets/img/blog/nuovo-sito-2026/parte1-cover-dark.jpg"

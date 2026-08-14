@@ -2,7 +2,7 @@
 title: "Il nuovo sito, parte 5: breadcrumb, metainfo riordinate e un post in vetrina"
 layout: post
 date: '2026-08-14 22:00:00'
-description: Un breadcrumb con dati strutturati per Google, la riga data/tempo di lettura spostata (due volte, prima di trovare il posto giusto) e un post in evidenza in cima al blog — con annessa lezione su cosa succede a ritagliare un'immagine che non sai com'è fatta.
+description: Un breadcrumb con dati strutturati per Google, la riga data/lettura riposizionata e un post in evidenza in cima al blog — con una lezione su come non ritagliare una cover.
 intro: "Le prime quattro parti raccontavano la ricostruzione, i bug, le copertine, le rifiniture. Questa è la prima puntata del \"dopo\": tre modifiche pensate per rendere il sito più facile da navigare e più leggibile per chi legge — e, di riflesso, anche per chi indicizza."
 image: "/static/assets/img/blog/nuovo-sito-2026/parte5-cover.png"
 image_dark: "/static/assets/img/blog/nuovo-sito-2026/parte5-cover-dark.png"

@@ -1,7 +1,7 @@
 ---
 layout: post
 lang: it_IT
-title: "Come proteggere il proprio sito dagli attacchi dei bad crawlers - Parte 1 (aggiornato)"
+title: "Come proteggere un sito dagli attacchi - Parte 1 - I bad crawler"
 date: '2012-05-07 11:36:11'
 description: "Come creare una trappola (\"blackhole\") per bloccare i bad crawler che sovraccaricano il server, usando lo script Blackhole di Perishable Press."
 intro: "Questo blog da alcuni giorni si trova sotto attacco dei cosiddetti \"bad crawler\", cioè di bot il cui scopo consiste nel download indiscriminato di ogni singolo elemento che componga il sito web."

@@ -36,10 +36,11 @@ layout: default
     {% endif %}
   </header>
 
+  {% assign generic_cover = "/static/assets/img/blog/blog-cover-generic.png" %}
   {% if page.image and page.image_dark %}
   <img class="post-image post-image--on-light" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
   <img class="post-image post-image--on-dark" src="{{ page.image_dark | relative_url }}" alt="{{ page.title }}">
-  {% elsif page.image %}
+  {% elsif page.image and page.image != generic_cover %}
   <img class="post-image" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
   {% endif %}
 

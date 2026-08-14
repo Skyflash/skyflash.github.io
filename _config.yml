@@ -47,7 +47,7 @@ default_lang: it
 permalink: /blog/:categories/:title/
 
 twitter:
-  card: summary
+  card: summary_large_image
   username: BloggerStanco
 
 webmaster_verifications:
@@ -102,6 +102,17 @@ redirect_from:
 # plugin) perché deve filtrare i post per lingua — jekyll-paginate pagina
 # sempre TUTTI i site.posts, senza modo di escludere le altre lingue.
 blog_posts_per_page: 15
+
+# Immagine di fallback per i post senza `image` in front matter: senza
+# questo default jekyll-seo-tag non genera affatto og:image/twitter:image,
+# quindi quei post condividono una card social senza anteprima. Placeholder
+# generico in attesa di una cover dedicata per ciascun post.
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      image: /static/assets/img/blog/blog-cover-generic.png
 
 # scss
 sass:

@@ -2,7 +2,7 @@
 title: "A fast, solid VPN with WireGuard: from Windows Server 2022 to Windows 11"
 layout: post
 date: '2026-08-14 00:15:00'
-description: A practical guide to setting up a WireGuard VPN with the server on Windows Server 2022 and clients on Windows 11 — key generation, config files, port forwarding, full tunnel vs split tunnel, and a few security notes.
+description: "A practical guide to a WireGuard VPN with server on Windows Server 2022 and clients on Windows 11: keys, config, port forwarding, full vs split tunnel, and security tips."
 intro: "WireGuard doesn't need much of an introduction: tiny codebase, modern cryptography, and throughput that OpenVPN and IPsec can only dream of. What's missing out there is a guide that starts from a concrete, common case — server on Windows Server 2022, client on Windows 11 — without glossing over the steps that aren't as obvious on Windows as they are on Linux."
 image: "/static/assets/img/blog/wireguard-windows/cover.png"
 image_dark: "/static/assets/img/blog/wireguard-windows/cover-dark.png"

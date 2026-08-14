@@ -3,7 +3,7 @@ layout: post
 lang: en_US
 title: "Automated SQL Express database backups"
 date: '2012-05-24 17:03:37'
-description: "How to automate database backups on SQL Server Express, which doesn't include SQL Agent, using a T-SQL script, a cleanup script in VBScript, and a Windows scheduled task."
+description: "How to automate database backups on SQL Server Express, which has no SQL Agent, using a T-SQL script, a VBScript cleanup script, and a Windows scheduled task."
 intro: "SQL Server Express ships without SQL Agent, so it isn't possible to schedule automated processes — like backups — from within SQL Server itself."
 categories:
 - Infrastructure & Systems

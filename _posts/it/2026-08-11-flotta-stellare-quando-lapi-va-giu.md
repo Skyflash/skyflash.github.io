@@ -2,7 +2,7 @@
 title: "Quando l'API va giù: tenere aggiornata la mappa di flottastellare.it"
 layout: post
 date: '2026-08-11 18:30:00'
-description: L'API di EDSM smette di rispondere e lascia a secco lo script che teneva aggiornata la tabella dei sistemi controllati dallo squadrone Flotta Stellare, su Elite Dangerous. La caccia a un'alternativa, uno scarto (Inara) e una sostituzione (Spansh) che fa anche di più di prima.
+description: "L'API di EDSM smette di rispondere e lo script che aggiorna la mappa di Flotta Stellare va in crisi: la caccia a un'alternativa, tra uno scarto e una sostituzione migliore."
 intro: "Non tutto quello che sistemo in una giornata finisce su questo blog sotto forma di articolo tecnico da manuale. A volte è solo uno script Python che smette di funzionare perché un servizio terzo è andato giù, e va sostituito prima che qualcuno se ne accorga."
 image: "/static/assets/img/blog/flotta-stellare/cover.png"
 image_dark: "/static/assets/img/blog/flotta-stellare/cover-dark.png"

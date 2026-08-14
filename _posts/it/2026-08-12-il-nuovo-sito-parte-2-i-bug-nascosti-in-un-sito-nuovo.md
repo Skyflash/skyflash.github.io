@@ -2,7 +2,7 @@
 title: "Il nuovo sito, parte 2: i bug nascosti in un sito nuovo di zecca"
 layout: post
 date: '2026-08-12 18:20:00'
-description: Cinque bug reali, scoperti nelle ore successive al lancio del nuovo sito — non debito tecnico ereditato, ma difetti genuini in codice scritto quello stesso pomeriggio. Cascata CSS, rate limit di GitHub, e un bug di Jekyll che mi ha fatto leggere il suo codice sorgente.
+description: "Cinque bug scoperti dopo il lancio del nuovo sito: non debito tecnico ereditato, ma difetti nati lo stesso pomeriggio. Cascata CSS, rate limit di GitHub e un bug di Jekyll."
 intro: "Un sito nuovo di zecca, costruito da zero in poche ore, dovrebbe essere pulito. Il mio ha nascosto cinque bug tutt'altro che banali — scoperti uno alla volta, nelle ore successive al lancio, mentre lo usavo davvero."
 image: "/static/assets/img/blog/nuovo-sito-2026/parte2-cover.jpg"
 image_dark: "/static/assets/img/blog/nuovo-sito-2026/parte2-cover-dark.jpg"

@@ -2,6 +2,16 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.5.0] - 2026-08-14 — Audit SEO e social sharing dei post
+
+Verifica sistematica di meta tag, description e immagini di condivisione su tutti i 31 post (IT+EN), confrontando front matter dichiarato e HTML effettivamente generato da `jekyll-seo-tag`.
+
+- `_config.yml`: `twitter:card` da `summary` a `summary_large_image` — con `summary` le anteprima su X/Twitter mostravano un'immagine piccola e quadrata, sprecando le cover panoramiche presenti sulla maggior parte dei post.
+- Riscritte le `description` di 15 post (IT+EN) troppo lunghe (fino a 419 caratteri, praticamente il primo paragrafo incollato) o troppo corte (<70 caratteri), portandole nella fascia utile prima del troncamento su Google/social.
+- Accorciati 5 title fuori misura (fino a 118 caratteri) rimuovendo i sottotitoli tra parentesi che li allungavano oltre la soglia di troncamento nei risultati Google; i title solo leggermente sopra soglia sono stati lasciati invariati per non alterare inutilmente la voce dei post.
+- **Post senza immagine propria non avevano alcun `og:image`/`twitter:image`**: verificato nel sorgente del plugin (`jekyll-seo-tag`, `image_drop.rb`) che non esiste un fallback automatico — chi condivideva quei post sui social vedeva una card senza anteprima. Aggiunta un'immagine placeholder generica (`static/assets/img/blog/blog-cover-generic.png`) come default via `defaults:` in `_config.yml` (scope `_posts`) per ogni post privo di `image`; in attesa di cover dedicate per i post più vecchi.
+- `_layouts/post.html`: la cover placeholder è esclusa esplicitamente dal rendering della hero image in pagina (mostrata solo nei meta tag social), per non far comparire un banner di branding generico dentro vecchi articoli tecnici che non ne avevano mai avuto uno.
+
 ## [2.4.0] - 2026-08-14 — Post in evidenza nell'indice del blog
 
 Ispirato da [jekyllpad.com/blog](https://www.jekyllpad.com/blog): un post per lingua può essere marcato `featured: true` nel front matter per comparire in una card grande in cima all'indice del blog (solo prima pagina), escluso dalla griglia normale sottostante per non duplicarlo. Nessun post è featured di default: è una scelta editoriale esplicita, non calcolata automaticamente sull'ultimo pubblicato.
