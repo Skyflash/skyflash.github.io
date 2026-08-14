@@ -30,6 +30,37 @@
   h2 {
     margin: 0;
   }
+
+  &--blog {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+
+    h1 {
+      margin: 0;
+    }
+  }
+}
+
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: #ee802f;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  transition: color 0.15s ease;
+
+  i {
+    font-size: var(--text-lg);
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: #f4993d;
+  }
 }
 
 .grid {

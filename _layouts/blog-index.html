@@ -18,8 +18,11 @@ layout: default
 {% assign offset = page_num | minus: 1 | times: per_page %}
 {% assign base_blog_url = "/" | append: short_lang | append: "/blog/" %}
 <section class="section container">
-  <div class="section-header">
+  <div class="section-header section-header--blog">
     <h1>{{ page.title }}</h1>
+    <a class="rss-link" href="{{ '/feed.xml' | relative_url }}">
+      <i class="fa fa-rss" aria-hidden="true"></i> {{ i18n.footer_aria_feed[short_lang] }}
+    </a>
   </div>
 
   {% if page_num == 1 and featured_post %}
