@@ -1,14 +1,14 @@
 # projects section data — name/desc sono mappe {it, en}
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
 - name:
-    it: Tema Jekyll per CV e Blog
-    en: Personal Resume & Blog (Jekyll theme)
+    it: My Personal Resume & Blog (Un tema per Jekyll)
+    en: Personal Resume & Blog (A Jekyll theme)
   gh_user: Skyflash
   repo: my-personal-resume-and-blog
   img: /static/assets/img/landing/my-personal-resume-and-blog.svg
   desc:
-    it: "Il tema di questo stesso sito, estratto e pubblicato come progetto riutilizzabile: bilingue (IT/EN), senza JavaScript di terze parti, pronto per GitHub Pages."
-    en: "This very site's theme, extracted and published as a reusable project: bilingual (IT/EN), no third-party JavaScript, ready for GitHub Pages."
+    it: "Il tema di questo stesso sito, estratto e pubblicato come progetto riutilizzabile: bilingue (IT/EN), senza JavaScript di terze parti, pronto per GitHub Pages"
+    en: "This very site's theme, extracted and published as a reusable project: bilingual (IT/EN), no third-party JavaScript, ready for GitHub Pages"
 
 - name:
     it: Kace SMA Tools
@@ -18,7 +18,7 @@
   img: /static/assets/img/landing/kacesmatools.png
   desc:
     it: Idee, script e suggerimenti utili per Quest Kace Systems Management Appliance (precedentemente noto come K1000)
-    en: Ideas, scripts, and useful tips for the Quest Kace Systems Management Appliance (formerly known as K1000).
+    en: Ideas, scripts, and useful tips for the Quest Kace Systems Management Appliance (formerly known as K1000)
 
 - name:
     it: K1000 Database Queries
@@ -27,8 +27,8 @@
   repo: K1000-Database-Queries
   img: /static/assets/img/landing/development.png
   desc:
-    it: Una collezione di queries MySQL per il KACE 1000 (Quest Kace Systems Management Appliance)
-    en: A collection of MySQL queries for the KACE 1000 (Quest Kace Systems Management Appliance).
+    it: Una collezione di queries MySQL per KACE SMA (Quest Kace Systems Management Appliance, un tempo conosciuto come K1000) 
+    en: A collection of MySQL queries for KACE SMA (Quest Kace Systems Management Appliance, formerly known as K1000)
 
 - name:
     it: IPUI to IPEI
@@ -37,8 +37,8 @@
   repo: ipui2ipei
   img: /static/assets/img/landing/dect-85-512.png
   desc:
-    it: IPUI 2 IPEI converte i codici IPUI, tipici dei telefoni DECT Siemens, allo standard IPEI.
-    en: IPUI 2 IPEI converts IPUI codes, typical of Siemens DECT phones, to the IPEI standard.
+    it: IPUI 2 IPEI converte i codici IPUI, tipici dei telefoni DECT Siemens, allo standard IPEI
+    en: IPUI 2 IPEI converts IPUI codes, typical of Siemens DECT phones, to the IPEI standard
 
 - name:
     it: FlottaStellare.it
@@ -49,7 +49,7 @@
   img: /static/assets/img/landing/flottastellare.png
   desc:
     it: "Il sito web per lo Squadrone Flotta Stellare di Elite: Dangerous"
-    en: "The website for the Flotta Stellare squadron in Elite: Dangerous."
+    en: "The website for the Flotta Stellare squadron in Elite: Dangerous"
 
 - name:
     it: La Traduzione di Morrowind
@@ -58,8 +58,8 @@
   repo: morrowind-italian-itp-translation
   img: /static/assets/img/landing/morrowind.png
   desc:
-    it: La traduzione in Italiano di Morrowind, Tribunal e Bloodmoon - A cura dell'ITP
-    en: The Italian translation of Morrowind, Tribunal, and Bloodmoon — by ITP.
+    it: La traduzione in Italiano di Morrowind, Tribunal e Bloodmoon - A cura dell'ITP (Italian Translation Project)
+    en: The Italian translation of Morrowind, Tribunal, and Bloodmoon — by ITP (Italian Translation Project)
 
 - name:
     it: Questo sito su GitHub
