@@ -41,6 +41,13 @@
   }
 }
 
+.post-meta {
+  max-width: 760px;
+  margin: 0 auto var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
 .post-intro {
   max-width: 760px;
   margin: 0 auto var(--space-5);

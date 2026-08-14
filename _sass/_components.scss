@@ -7,6 +7,49 @@
   vertical-align: -0.125em;
 }
 
+// Breadcrumb (articoli e pagine categoria)
+.breadcrumb {
+  margin-bottom: var(--space-2);
+
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+
+    &:not(:last-child)::after {
+      content: "/";
+      color: var(--color-border);
+    }
+  }
+
+  a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-accent);
+      text-decoration: underline;
+    }
+  }
+
+  [aria-current="page"] {
+    color: var(--color-text);
+  }
+}
+
 // Indice categorie (pagina Blog)
 .category-index {
   display: flex;

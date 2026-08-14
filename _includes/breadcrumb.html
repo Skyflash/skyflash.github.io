@@ -1,0 +1,40 @@
+{% comment %}
+  Breadcrumb: nav visibile + JSON-LD BreadcrumbList, generati dagli stessi dati
+  (non due fonti separate da tenere allineate a mano).
+
+  Parametri:
+  - include.labels: array di stringhe (etichette), l'ultima è la pagina corrente
+  - include.urls: array di stringhe, stessa lunghezza di labels — path relativi al sito
+    (es. "/it/blog/"), non ancora passati per relative_url/absolute_url; l'ultima voce
+    (pagina corrente) ha url vuoto: niente link, niente "item" nello schema.
+{% endcomment %}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    {% for label in include.labels %}
+    <li>
+      {% if forloop.last %}
+      <span aria-current="page">{{ label }}</span>
+      {% else %}
+      <a href="{{ include.urls[forloop.index0] | relative_url }}">{{ label }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {% for label in include.labels %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "name": {{ label | jsonify }}
+      {% unless forloop.last %},"item": {{ include.urls[forloop.index0] | absolute_url | jsonify }}{% endunless %}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>

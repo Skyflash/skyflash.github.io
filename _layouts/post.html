@@ -3,12 +3,29 @@ layout: default
 ---
 {% assign short_lang = page.lang | slice: 0, 2 | default: site.default_lang %}
 {% assign i18n = site.data.i18n %}
+{% assign home_url = "/" | append: short_lang | append: "/" %}
+{% assign blog_url = "/" | append: short_lang | append: "/blog/" %}
+{% assign crumb_labels = "" | split: "" %}
+{% assign crumb_urls = "" | split: "" %}
+{% assign crumb_labels = crumb_labels | push: i18n.nav_home[short_lang] %}
+{% assign crumb_urls = crumb_urls | push: home_url %}
+{% assign crumb_labels = crumb_labels | push: i18n.nav_blog[short_lang] %}
+{% assign crumb_urls = crumb_urls | push: blog_url %}
+{% if page.categories %}
+  {% assign crumb_category = page.categories | first %}
+  {% assign crumb_cat_data = site.data.blog | where: "name", crumb_category | where: "lang", short_lang | first %}
+  {% assign crumb_labels = crumb_labels | push: crumb_category %}
+  {% assign crumb_urls = crumb_urls | push: crumb_cat_data.href %}
+{% endif %}
+{% assign crumb_labels = crumb_labels | push: page.title %}
+{% assign crumb_urls = crumb_urls | push: "" %}
 <article class="section container">
   <header class="post-header">
-    <p class="card__meta">
+    {% include breadcrumb.html labels=crumb_labels urls=crumb_urls %}
+    <h1>{{ page.title }}</h1>
+    <p class="post-meta">
       {{ page.date | date: "%-d %b %Y" }} · {{ page.content | number_of_words }} {{ i18n.post_words[short_lang] }} · {{ i18n.post_reading_time[short_lang] }} {{ page.content | number_of_words | divided_by: 180 }} {{ i18n.post_reading_time_min[short_lang] }}
     </p>
-    <h1>{{ page.title }}</h1>
     {% if page.categories %}
     <div class="pill-row">
       {% for category in page.categories %}

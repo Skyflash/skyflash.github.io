@@ -2,6 +2,23 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.0] - 2026-08-14 — Breadcrumb su articoli e pagine categoria
+
+### Navigazione e SEO: breadcrumb con dati strutturati
+
+Aggiunto un breadcrumb (Home / Blog / Categoria / Titolo) sugli articoli del blog e sulle pagine categoria (Home / Blog / Categoria), sia come nav visibile sia come JSON-LD `BreadcrumbList` — utile per la navigazione e perché Google lo usa per sostituire l'URL nudo con un percorso leggibile nei risultati di ricerca. `jekyll-seo-tag` (già in uso per SEO/Open Graph) non genera breadcrumb di suo: verificato sull'output compilato, produce solo schema `BlogPosting`/`WebSite`/`Person`. Aggiunto quindi un secondo blocco `application/ld+json` indipendente (pratica comune, pagine con più blocchi JSON-LD sono valide).
+
+- Nuovo `_includes/breadcrumb.html`: genera nav visibile e JSON-LD dagli stessi due array (`labels`/`urls`) passati dal layout chiamante, cosicché i due non possano mai disallinearsi. Costruiti con il filtro `push` (già usato in `post.html` per i post correlati) invece di serializzazioni testuali fragili — Liquid non supporta letterali hash, ma supporta array reali.
+- Wired in `_layouts/post.html` e `_layouts/category.html`; nuovo stile `.breadcrumb` in `_sass/_components.scss`.
+
+### Riordino header articolo
+
+Diverse iterazioni sul posizionamento di meta-info (data/parole/tempo di lettura) e categoria nell'header di `_layouts/post.html`, con verifica visiva ad ogni passaggio (screenshot chiaro/scuro/mobile):
+
+- La riga meta-info, prima sopra il titolo, ora sta subito sotto (nuova classe `.post-meta` in `_sass/_blog.scss`, stessa colonna di lettura da 760px di titolo/testo — motivo del primo tentativo fallito: il breadcrumb, inserito fuori da `.post-header`, restava ancorato al bordo dell'intero container da 1360px invece che alla colonna centrata, disallineato dal titolo).
+- La pill della categoria, ridondante subito sotto al breadcrumb (che la mostra già), spostata sotto la riga meta invece che sopra.
+- Spaziatura fra breadcrumb e titolo ridotta (24px → 8px, sembrava eccessiva).
+
 ## [2.2.1] - 2026-08-14 — Layout dedicato per la pagina Progetti
 
 ### Griglia dei progetti troppo stretta — layout dedicato in stile Blog

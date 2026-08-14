@@ -2,7 +2,19 @@
 layout: default
 ---
 {% assign short_lang = page.lang | slice: 0, 2 | default: site.default_lang %}
+{% assign i18n = site.data.i18n %}
+{% assign home_url = "/" | append: short_lang | append: "/" %}
+{% assign blog_url = "/" | append: short_lang | append: "/blog/" %}
+{% assign crumb_labels = "" | split: "" %}
+{% assign crumb_urls = "" | split: "" %}
+{% assign crumb_labels = crumb_labels | push: i18n.nav_home[short_lang] %}
+{% assign crumb_urls = crumb_urls | push: home_url %}
+{% assign crumb_labels = crumb_labels | push: i18n.nav_blog[short_lang] %}
+{% assign crumb_urls = crumb_urls | push: blog_url %}
+{% assign crumb_labels = crumb_labels | push: page.title %}
+{% assign crumb_urls = crumb_urls | push: "" %}
 <section class="section container">
+  {% include breadcrumb.html labels=crumb_labels urls=crumb_urls %}
   <div class="section-header">
     <span class="eyebrow">{{ site.data.i18n.category_eyebrow[short_lang] }}</span>
     <h1>{{ page.title }}</h1>
