@@ -2,6 +2,14 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.4.0] - 2026-08-14 — Post in evidenza nell'indice del blog
+
+Ispirato da [jekyllpad.com/blog](https://www.jekyllpad.com/blog): un post per lingua può essere marcato `featured: true` nel front matter per comparire in una card grande in cima all'indice del blog (solo prima pagina), escluso dalla griglia normale sottostante per non duplicarlo. Nessun post è featured di default: è una scelta editoriale esplicita, non calcolata automaticamente sull'ultimo pubblicato.
+
+- `_layouts/blog-index.html`: individua il post `featured` (per lingua) via `where: "featured", true`, lo esclude dalla lista normale ricostruendo l'array con `push` (stesso idioma già usato per i post correlati in `post.html` — niente `where_exp`, evitato di proposito: causa nota di instabilità con condizioni multiple su Jekyll 3.10, vedi voce 2.0.1 più sotto).
+- Nuovo componente `.featured-post` in `_sass/_blog.scss`: immagine a sinistra (42% larghezza) e testo a destra su desktop, impilati su mobile; badge "In evidenza"/"Featured" con sfondo pieno e icona stella (prima versione, con sfondo tenue, giudicata poco visibile).
+- **Iterazioni sul ritaglio dell'immagine**: un primo tentativo con `object-fit: cover` e altezza fissata (poi rapporto 16:9) tagliava il testo incorporato nelle grafiche di copertina — prima il titolo "WireGuard" in alto, poi un banner panoramico ("Alto Comando Flotta Stellare", proporzioni 4:1) illeggibile perché tagliato ai lati. Le copertine di questo blog sono spesso grafiche con testo a posizioni imprevedibili, non foto: nessun `object-position` fisso va bene per tutte. Risolto abbandonando il ritaglio, lasciando ogni immagine alle sue proporzioni naturali (`height: auto`) — stesso approccio già usato da `.post-image` sugli articoli.
+
 ## [2.3.0] - 2026-08-14 — Breadcrumb su articoli e pagine categoria
 
 ### Navigazione e SEO: breadcrumb con dati strutturati

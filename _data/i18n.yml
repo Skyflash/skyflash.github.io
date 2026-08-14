@@ -104,6 +104,9 @@ comments_js_required:
   it: 'Per vedere i commenti di <a href="https://disqus.com/?ref_noscript" rel="nofollow">Disqus</a> devi abilitare JavaScript.'
   en: 'To see the <a href="https://disqus.com/?ref_noscript" rel="nofollow">Disqus</a> comments, please enable JavaScript.'
 
+blog_featured_badge:
+  it: In evidenza
+  en: Featured
 category_index_aria:
   it: Categorie del blog
   en: Blog categories

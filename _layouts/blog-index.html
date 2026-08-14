@@ -6,7 +6,14 @@ layout: default
 {% assign per_page = site.blog_posts_per_page %}
 {% assign page_num = page.page_num | default: 1 %}
 {% assign lang_posts = site.posts | where: "lang", page.lang %}
-{% assign total_posts = lang_posts.size %}
+{% assign featured_post = lang_posts | where: "featured", true | first %}
+{% assign grid_posts = "" | split: "" %}
+{% for post in lang_posts %}
+  {% unless featured_post and post.url == featured_post.url %}
+    {% assign grid_posts = grid_posts | push: post %}
+  {% endunless %}
+{% endfor %}
+{% assign total_posts = grid_posts.size %}
 {% assign total_pages = total_posts | plus: per_page | minus: 1 | divided_by: per_page %}
 {% assign offset = page_num | minus: 1 | times: per_page %}
 {% assign base_blog_url = "/" | append: short_lang | append: "/blog/" %}
@@ -15,10 +22,27 @@ layout: default
     <h1>{{ page.title }}</h1>
   </div>
 
+  {% if page_num == 1 and featured_post %}
+  <a class="featured-post" href="{{ featured_post.url | relative_url }}">
+    {% if featured_post.image and featured_post.image_dark %}
+    <img class="featured-post__image post-image--on-light" src="{{ featured_post.image | relative_url }}" alt="">
+    <img class="featured-post__image post-image--on-dark" src="{{ featured_post.image_dark | relative_url }}" alt="">
+    {% elsif featured_post.image %}
+    <img class="featured-post__image" src="{{ featured_post.image | relative_url }}" alt="">
+    {% endif %}
+    <div class="featured-post__body">
+      <span class="featured-post__badge"><i class="fa fa-star" aria-hidden="true"></i> {{ i18n.blog_featured_badge[short_lang] }}</span>
+      <h2 class="featured-post__title">{{ featured_post.title }}</h2>
+      <p class="card__meta">{{ featured_post.date | date: "%-d %b %Y" }}</p>
+      <p class="card__desc">{{ featured_post.description }}</p>
+    </div>
+  </a>
+  {% endif %}
+
   {% include category-index.html %}
 
   <div class="grid grid--3">
-    {% for post in lang_posts offset: offset limit: per_page %}
+    {% for post in grid_posts offset: offset limit: per_page %}
     {% include post-card.html post=post %}
     {% endfor %}
   </div>

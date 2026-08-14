@@ -7,6 +7,7 @@ intro: "WireGuard doesn't need much of an introduction: tiny codebase, modern cr
 image: "/static/assets/img/blog/wireguard-windows/cover.png"
 image_dark: "/static/assets/img/blog/wireguard-windows/cover-dark.png"
 lang: en_US
+featured: true
 categories:
 - Infrastructure & Systems
 keywords: wireguard, vpn, windows server 2022, windows 11, networking, security, tunnel, powershell, nat

@@ -7,6 +7,7 @@ intro: "Non tutto quello che sistemo in una giornata finisce su questo blog sott
 image: "/static/assets/img/blog/flotta-stellare/cover.png"
 image_dark: "/static/assets/img/blog/flotta-stellare/cover-dark.png"
 lang: it_IT
+featured: true
 categories:
 - Fuori dall'Ufficio
 keywords: elite dangerous, jekyll, python, api, dati aperti, bgs
