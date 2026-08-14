@@ -3,13 +3,19 @@
 # Site wide configuration
 ####################################
 #
+# Sezione generale del sito
 title: Cristian Castellari — CV, Progetti e Blog
 tagline: "Lavoro e passioni personali"
 description: "Il CV, le esperienze e il blog di Cristian Castellari — si parla tanto di lavoro quanto delle mie passioni personali."
+#
+# Sezione URL e SEO
 keywords: cristian, castellari, blog, jekyll, gh-pages, kace, github, wordpress
 baseurl:  '' # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
 url: https://cristiancastellari.it  # url should be 'http://<github_username>.github.io/homepage' as before
+#
+# Sezione immagini
 img_path: /static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
+favicon: /static/assets/img/favicon.svg  # cambia qui per usare una favicon diversa (svg, ico, jpg, png vanno tutti bene)
 
 #
 ###################################
@@ -39,14 +45,6 @@ lang: it_IT
 # Lingue supportate dal sito: it (italiano), en (inglese).
 default_lang: it
 permalink: /blog/:categories/:title/
-
-social:
-  name: Cristian Castellari
-  links:
-    - https://twitter.com/BloggerStanco
-    - https://www.facebook.com/cristian.castellari
-    - https://www.linkedin.com/in/cristiancastellari/
-    - https://github.com/Skyflash
 
 twitter:
   card: summary

@@ -2,6 +2,38 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.2.0] - 2026-08-14 — Cookie consent, SEO social e favicon configurabile
+
+### Cookie consent: da cookie-bar.eu a CookieConsent v3
+
+`cookie-bar.eu` (script caricato in `_includes/cookieconsent.html`) è fermo alla versione 1.10.3, pubblicata il 17 luglio 2023 — oltre tre anni senza aggiornamenti. Sostituito con [CookieConsent v3](https://cookieconsent.orestbida.com/) (orestbida, MIT, ultimo push a fine luglio 2026), scelto rispetto a `tarteaucitron.js` (alternativa altrettanto valida) principalmente per il peso: ~23KB minificati contro ~87KB, coerente con un sito che si dichiara "senza JavaScript di terze parti" nel proprio README.
+
+- Due categorie di consenso: `necessary` (readonly) e `thirdparty` (per Disqus, estendibile a futuri embed). Testi del banner e del pannello preferenze in italiano/inglese nativi nella libreria, con `autoDetect: 'document'` che legge la `<html lang>` già impostata da ogni pagina — zero codice di i18n aggiuntivo.
+- **Bug fix — il consenso granulare non faceva mai caricare Disqus**: con la vecchia libreria, `_includes/comments.html` controllava solo il cookie generico "accetta tutto" (`cookiebar=CookieAllowed`), ignorando il cookie granulare per le terze parti. Un visitatore che sceglieva "accetto solo le terze parti" — la categoria esatta a cui appartiene Disqus — non vedeva comunque i commenti. Risolto passando al meccanismo dichiarativo di CookieConsent (`manageScriptTags`): lo script di embed di Disqus è ora un `<script type="text/plain" data-category="thirdparty" data-src="...">`, attivato dalla libreria stessa in base alla categoria realmente accettata.
+- Nuovo `_sass/_cookieconsent.scss`: rimappa le variabili CSS della libreria (`--cc-bg`, `--cc-btn-primary-bg`, ecc.) sui token del sito (`--color-*` in `_tokens.scss`), così banner e pannello preferenze ereditano automaticamente chiaro/scuro/automatico senza bisogno della classe `.cc--darkmode` della libreria né di JS aggiuntivo.
+- Aggiunto un link "Preferenze cookie" nel footer (`_includes/footer.html`, nuova chiave `footer_cookie_prefs` in `_data/i18n.yml`) che riapre il pannello preferenze in qualsiasi momento — poter revocare/cambiare il consenso con la stessa facilità con cui lo si dà è un requisito delle linee guida del Garante Privacy (giugno 2021), non solo una comodità.
+
+### SEO: i profili social non comparivano mai nel JSON-LD della home
+
+Il blocco `social: {name, links}` in `_config.yml` esisteva da tempo ma non produceva **mai** output: `jekyll-seo-tag` considera "home" solo le pagine con url esattamente `/` o `/about/` (vedi `HOMEPAGE_OR_ABOUT_REGEX` nel gem), mentre le home di questo sito vivono sotto `/it/` ed `/en/` per via del routing bilingue — quella regex non scattava mai, quindi `sameAs`/tipo `WebSite` non venivano mai emessi nel JSON-LD, a prescindere da cosa contenesse `social.links`. Verificato confrontando il JSON-LD generato prima/dopo in `_site/it/index.html`.
+
+- Aggiunto un override esplicito `seo: {type: WebSite, links: [...]}` nel front matter di `it/index.html` ed `en/index.html` (unico modo per bypassare il bug della regex), con l'elenco profili aggiornato — includeva Bluesky, mai aggiunto a `social.links` nonostante fosse già presente in `author.bluesky` e nel footer.
+- Rimosso il blocco `social:` da `_config.yml`, ormai ridondante e senza alcun consumer.
+
+### Rebrand X (ex Twitter)
+
+`jekyll-seo-tag` 2.8.0 (versione fissata dalla gem `github-pages` usata per il deploy) non ha alcuna chiave "x": genera ancora `twitter:card`/`twitter:site`/`twitter:creator` (nomi invariati anche dopo il rebrand, X li supporta così). Aggiornato quello che è codice nostro, non del plugin:
+
+- Link footer e pagine Contatti (IT/EN) da `twitter.com` a `x.com`.
+- Nuova icona SVG dedicata (`_includes/icons/x.html`) al posto di `fa-twitter` — Fork Awesome è un fork di Font Awesome 4 (2015), mai aggiornato dopo il rebrand X del 2023: il logo non esiste nel set.
+
+### Favicon configurabile e ridisegnata
+
+Portata da [my-personal-resume-and-blog](https://github.com/Skyflash/my-personal-resume-and-blog) la stessa idea: nuova chiave `favicon:` in `_config.yml`, usata da `_includes/head.html` e `404.html` al posto del path hardcoded — un fork cambia la favicon in un punto solo.
+
+- Nuovo `static/assets/img/favicon.svg`: monogramma "C" (le iniziali di nome e cognome coincidono) disegnato come singolo arco, con un trattino a fianco che richiama il cursore di un prompt di terminale — nod al contenuto del blog (VPN, KACE, backup, script). Colore `#3385ff`/`#5b9dff` (accent chiaro/scuro del sito) con variante automatica via `prefers-color-scheme` incorporata nell'SVG stesso.
+- Sostituisce il vecchio `favicon.jpg`, in uso da circa vent'anni; il file resta nel repo ma non è più referenziato da nulla.
+
 ## [2.1.2] - 2026-08-14 — Sitemap pulita e icone nelle card dei post
 
 ### Sitemap — pagine tecniche e redirect duplicati esclusi

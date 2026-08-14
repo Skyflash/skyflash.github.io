@@ -6,4 +6,16 @@ permalink: /it/
 redirect_from: /
 lang: it_IT
 translation_key: page-home
+# Override manuale: jekyll-seo-tag considera "home" solo le pagine con url
+# esattamente "/" o "/about/" (vedi HOMEPAGE_OR_ABOUT_REGEX nel gem), quindi
+# su un sito bilingue con home su /it/ e /en/ non riconoscerebbe mai questa
+# pagina come home e non emetterebbe "sameAs"/type WebSite nel JSON-LD.
+seo:
+  type: WebSite
+  links:
+    - https://x.com/BloggerStanco
+    - https://www.facebook.com/cristian.castellari
+    - https://www.linkedin.com/in/cristiancastellari/
+    - https://github.com/skyflash
+    - https://bsky.app/profile/cristiancastellari.bsky.social
 ---

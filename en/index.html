@@ -5,4 +5,16 @@ description: "Cristian Castellari's CV, work experience and blog — as much abo
 permalink: /en/
 lang: en_US
 translation_key: page-home
+# Manual override: jekyll-seo-tag only treats pages with url exactly "/" or
+# "/about/" as the homepage (see HOMEPAGE_OR_ABOUT_REGEX in the gem), so on a
+# bilingual site with homepages at /it/ and /en/ it would never recognize
+# this page as the homepage and would skip "sameAs"/WebSite type in JSON-LD.
+seo:
+  type: WebSite
+  links:
+    - https://x.com/BloggerStanco
+    - https://www.facebook.com/cristian.castellari
+    - https://www.linkedin.com/in/cristiancastellari/
+    - https://github.com/skyflash
+    - https://bsky.app/profile/cristiancastellari.bsky.social
 ---

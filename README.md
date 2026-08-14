@@ -15,6 +15,8 @@ Il tema — scritto da zero, senza framework CSS/JS di terze parti — è **open
 - **Statistiche GitHub live** (stelle/fork) sulle card dei progetti, con cache in `localStorage` per restare sotto il rate limit dell'API pubblica.
 - Icone via [Fork Awesome](https://forkaweso.me/), con SVG inline in `_includes/icons/` per i loghi non presenti nel set (X, Bluesky) e per le bandiere dello switcher lingua.
 - Permalink dei post configurabili e stabili — pensato per non rompere l'indicizzazione quando si cambiano categorie o struttura del blog (vedi `jekyll-redirect-from` in `_config.yml`).
+- **Favicon configurabile**: una chiave `favicon:` in `_config.yml`, nessun path hardcoded nei template.
+- **Cookie consent GDPR** con [CookieConsent v3](https://cookieconsent.orestbida.com/) (MIT, gratuito): banner IT/EN nativo, categorie tecnici/terze parti, tema agganciato ai token CSS del sito, blocco dichiarativo degli script di terze parti (es. Disqus) fino al consenso.
 
 ## Stack
 
@@ -51,9 +53,11 @@ bundle exec jekyll serve --future
 
 ### Personalizzare il tema per un sito proprio
 
-- **Identità e social**: sezione `author:`/`social:` in `_config.yml`.
+- **Identità e social**: sezione `author:` in `_config.yml`.
+- **Favicon**: chiave `favicon:` in `_config.yml` (svg, ico, jpg, png vanno tutti bene).
 - **Lingua di default**: `default_lang` in `_config.yml` — unico punto da cambiare per spostare il fallback su un'altra lingua.
-- **Palette colori**: variabili CSS in `_sass/_tokens.scss` (tema chiaro di default, override automatico/esplicito per lo scuro).
+- **Palette colori**: variabili CSS in `_sass/_tokens.scss` (tema chiaro di default, override automatico/esplicito per lo scuro) — `_sass/_cookieconsent.scss` la riusa automaticamente, nessuna palette separata da mantenere.
+- **Cookie consent**: categorie, testi IT/EN e shortname Disqus in `_includes/cookieconsent.html` / `_includes/comments.html`.
 - **CV/Esperienze**: `_data/index/careers.yml` (timeline) e `_data/index/skills.yml` (competenze per area).
 - **Progetti**: `_data/index/projects.yml`.
 - **Categorie del blog**: `_data/blog.yml` — aggiungere una riga per lingua e creare la pagina categoria corrispondente in `it/`/`en/`.

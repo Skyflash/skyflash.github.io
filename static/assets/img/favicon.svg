@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Cristian Castellari">
+  <style>
+    path, line { stroke: #3385ff; }
+    @media (prefers-color-scheme: dark) {
+      path, line { stroke: #5b9dff; }
+    }
+  </style>
+  <path d="M15.36 16.5 A7 7 0 1 1 15.36 7.5" fill="none" stroke-width="3.4" stroke-linecap="round"/>
+  <line x1="18.5" y1="17.5" x2="22" y2="17.5" stroke-width="3.4" stroke-linecap="round"/>
+</svg>

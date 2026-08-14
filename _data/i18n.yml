@@ -62,6 +62,9 @@ footer_disclaimer:
 footer_privacy:
   it: Privacy
   en: Privacy
+footer_cookie_prefs:
+  it: Preferenze cookie
+  en: Cookie preferences
 footer_aria_feed:
   it: Feed RSS
   en: RSS feed

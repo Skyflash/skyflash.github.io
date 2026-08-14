@@ -1,1 +1,78 @@
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?theme=momh&customize=1&always=1&showNoConsent=1&showPolicyLink=1&privacyPage=https%3A%2F%2Fcristiancastellari.it%2Fit%2Fabout%2Fprivacy%2F"></script>
+{% assign privacy_it = '/it/about/privacy/' | relative_url %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css">
+<script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
+<script>
+  CookieConsent.run({
+    categories: {
+      necessary: {
+        enabled: true,
+        readOnly: true
+      },
+      thirdparty: {}
+    },
+    language: {
+      default: 'it',
+      autoDetect: 'document',
+      translations: {
+        it: {
+          consentModal: {
+            title: 'Questo sito usa i cookie',
+            description: 'Uso solo cookie tecnici necessari al funzionamento del sito. I commenti sotto i post sono ospitati da Disqus, che imposta cookie di terze parti solo se acconsenti. <a href="{{ privacy_it }}">Leggi l’informativa privacy</a>.',
+            acceptAllBtn: 'Accetta tutto',
+            acceptNecessaryBtn: 'Solo necessari',
+            showPreferencesBtn: 'Gestisci preferenze',
+            footer: '<a href="{{ privacy_it }}">Privacy policy</a>'
+          },
+          preferencesModal: {
+            title: 'Preferenze sui cookie',
+            acceptAllBtn: 'Accetta tutto',
+            acceptNecessaryBtn: 'Solo necessari',
+            savePreferencesBtn: 'Salva le preferenze',
+            closeIconLabel: 'Chiudi',
+            sections: [
+              {
+                title: 'Cookie tecnici',
+                description: 'Necessari al funzionamento del sito: lingua, tema chiaro/scuro, preferenze di consenso. Non possono essere disattivati.',
+                linkedCategory: 'necessary'
+              },
+              {
+                title: 'Cookie di terze parti',
+                description: 'Usati da Disqus per mostrare e gestire i commenti sotto i post del blog.',
+                linkedCategory: 'thirdparty'
+              }
+            ]
+          }
+        },
+        en: {
+          consentModal: {
+            title: 'This site uses cookies',
+            description: 'I only use technical cookies required for the site to work. Comments under posts are hosted by Disqus, which sets third-party cookies only if you agree. <a href="{{ privacy_it }}">Read the privacy policy</a> (Italian only, for now).',
+            acceptAllBtn: 'Accept all',
+            acceptNecessaryBtn: 'Necessary only',
+            showPreferencesBtn: 'Manage preferences',
+            footer: '<a href="{{ privacy_it }}">Privacy policy</a>'
+          },
+          preferencesModal: {
+            title: 'Cookie preferences',
+            acceptAllBtn: 'Accept all',
+            acceptNecessaryBtn: 'Necessary only',
+            savePreferencesBtn: 'Save preferences',
+            closeIconLabel: 'Close',
+            sections: [
+              {
+                title: 'Technical cookies',
+                description: 'Required for the site to work: language, light/dark theme, consent preferences. Cannot be disabled.',
+                linkedCategory: 'necessary'
+              },
+              {
+                title: 'Third-party cookies',
+                description: 'Used by Disqus to show and manage comments under blog posts.',
+                linkedCategory: 'thirdparty'
+              }
+            ]
+          }
+        }
+      }
+    }
+  });
+</script>

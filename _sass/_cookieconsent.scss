@@ -1,0 +1,40 @@
+// CookieConsent v3 (orestbida) — riusa i token del sito (_tokens.scss) al
+// posto del tema di default della libreria, così eredita gratis il chiaro/
+// scuro già gestito lì, senza bisogno della classe .cc--darkmode o di JS.
+#cc-main {
+  --cc-font-family: var(--font-sans);
+  --cc-bg: var(--color-bg);
+  --cc-primary-color: var(--color-text);
+  --cc-secondary-color: var(--color-text-muted);
+  --cc-modal-border-radius: var(--radius);
+  --cc-btn-border-radius: var(--radius);
+  --cc-link-color: var(--color-accent);
+  --cc-overlay-bg: rgba(0, 0, 0, 0.55);
+
+  --cc-btn-primary-bg: var(--color-accent);
+  --cc-btn-primary-color: #ffffff;
+  --cc-btn-primary-border-color: var(--cc-btn-primary-bg);
+  --cc-btn-primary-hover-bg: var(--color-accent-hover);
+  --cc-btn-primary-hover-color: #ffffff;
+  --cc-btn-primary-hover-border-color: var(--cc-btn-primary-hover-bg);
+
+  --cc-btn-secondary-bg: var(--color-bg-subtle);
+  --cc-btn-secondary-color: var(--color-text);
+  --cc-btn-secondary-border-color: var(--color-border);
+  --cc-btn-secondary-hover-bg: var(--color-accent-subtle);
+  --cc-btn-secondary-hover-color: var(--color-accent-hover);
+  --cc-btn-secondary-hover-border-color: var(--color-accent-subtle);
+
+  --cc-separator-border-color: var(--color-border);
+  --cc-toggle-on-bg: var(--color-accent);
+  --cc-toggle-off-bg: var(--color-text-muted);
+
+  --cc-cookie-category-block-bg: var(--color-bg-subtle);
+  --cc-cookie-category-block-border: var(--color-border);
+  --cc-cookie-category-block-hover-bg: var(--color-accent-subtle);
+  --cc-cookie-category-block-hover-border: var(--color-accent-subtle);
+
+  --cc-footer-bg: var(--color-bg-subtle);
+  --cc-footer-color: var(--color-text-muted);
+  --cc-footer-border-color: var(--color-border);
+}
