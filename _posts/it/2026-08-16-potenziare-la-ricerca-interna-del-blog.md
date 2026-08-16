@@ -1,7 +1,7 @@
 ---
 title: "Potenziare la ricerca interna del blog"
 layout: post
-date: '2026-08-16 15:32:00'
+date: '2026-08-16 11:32:00'
 description: La ricerca del blog cercava solo in titolo e descrizione, ignorava le pagine statiche e non capiva le query a più parole. Come l'ho resa migliore senza librerie esterne.
 intro: "A volte il miglioramento più utile non nasce da un bug, ma da un confronto: guardare come un altro progetto ha risolto lo stesso problema, e rubare le idee buone senza rubare anche le dipendenze."
 lang: it_IT
