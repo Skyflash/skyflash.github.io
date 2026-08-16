@@ -3,11 +3,18 @@
 <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
 <script>
   CookieConsent.run({
+    onConsent: function () {
+      if (typeof loadAnalytics === 'function' && CookieConsent.acceptedCategory('analytics')) loadAnalytics();
+    },
+    onChange: function () {
+      if (typeof loadAnalytics === 'function' && CookieConsent.acceptedCategory('analytics')) loadAnalytics();
+    },
     categories: {
       necessary: {
         enabled: true,
         readOnly: true
       },
+      analytics: {},
       thirdparty: {}
     },
     language: {
@@ -17,7 +24,7 @@
         it: {
           consentModal: {
             title: 'Questo sito usa i cookie',
-            description: 'Uso solo cookie tecnici necessari al funzionamento del sito. I commenti sotto i post sono ospitati da Disqus, che imposta cookie di terze parti solo se acconsenti. <a href="{{ privacy_it }}">Leggi l’informativa privacy</a>.',
+            description: 'Uso cookie tecnici necessari al funzionamento del sito, cookie di analisi (Google Analytics, con IP anonimizzato) per capire come viene usato il sito, e cookie di terze parti impostati da Disqus per i commenti sotto i post del blog, solo se acconsenti. <a href="{{ privacy_it }}">Leggi l’informativa privacy</a>.',
             acceptAllBtn: 'Accetta tutto',
             acceptNecessaryBtn: 'Solo necessari',
             showPreferencesBtn: 'Gestisci preferenze',
@@ -36,6 +43,11 @@
                 linkedCategory: 'necessary'
               },
               {
+                title: 'Cookie di analisi',
+                description: 'Google Analytics, con anonimizzazione dell’IP, per capire come viene usato il sito.',
+                linkedCategory: 'analytics'
+              },
+              {
                 title: 'Cookie di terze parti',
                 description: 'Usati da Disqus per mostrare e gestire i commenti sotto i post del blog.',
                 linkedCategory: 'thirdparty'
@@ -46,7 +58,7 @@
         en: {
           consentModal: {
             title: 'This site uses cookies',
-            description: 'I only use technical cookies required for the site to work. Comments under posts are hosted by Disqus, which sets third-party cookies only if you agree. <a href="{{ privacy_it }}">Read the privacy policy</a> (Italian only, for now).',
+            description: 'I use technical cookies required for the site to work, analytics cookies (Google Analytics, with anonymized IP) to understand how the site is used, and third-party cookies set by Disqus for comments under blog posts, only if you agree. <a href="{{ privacy_it }}">Read the privacy policy</a> (Italian only, for now).',
             acceptAllBtn: 'Accept all',
             acceptNecessaryBtn: 'Necessary only',
             showPreferencesBtn: 'Manage preferences',
@@ -63,6 +75,11 @@
                 title: 'Technical cookies',
                 description: 'Required for the site to work: language, light/dark theme, consent preferences. Cannot be disabled.',
                 linkedCategory: 'necessary'
+              },
+              {
+                title: 'Analytics cookies',
+                description: 'Google Analytics, with anonymized IP, to understand how the site is used.',
+                linkedCategory: 'analytics'
               },
               {
                 title: 'Third-party cookies',

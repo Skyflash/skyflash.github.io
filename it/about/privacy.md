@@ -111,6 +111,8 @@ Il presente sito fa uso delle seguenti categorie di cookie:
 
 - **Preferenze**, che consentono al sito web di memorizzare informazioni che ne influenzano il comportamento o l'aspetto, quali la lingua preferita o la località nella quale ti trovi, anch'essi necessari al funzionamento del sito e quindi assimilabili ai cookie tecnici.
 
+- **Analisi (statistica)**, utilizzati da Google Analytics per raccogliere informazioni in forma aggregata sull'utilizzo del sito (pagine visitate, provenienza del traffico, tempo di permanenza). Questi cookie vengono installati **solo previo consenso** espresso tramite il banner, e l'indirizzo IP dell'utente viene anonimizzato prima della memorizzazione. Si veda la sezione "Cookie di terze parti" per i dettagli.
+
 <i class="fa fa-info-circle fa-3x fa-pull-left" aria-hidden="true" style="color: #337ab7;"></i> Cliccando OK sul banner presente al primo accesso al sito oppure navigando il sito, il visitatore acconsente espressamente all'uso dei cookie e delle tecnologie similari, e in particolare alla registrazione di tali cookie sul suo terminale per le finalità sopra indicate, oppure all'accesso tramite i cookie ad informazioni sul suo terminale.
 
 <br>
@@ -137,6 +139,11 @@ Questo sito funge anche da intermediario per cookie di terze parti (come i pulsa
 Si rammenta che generalmente il tracciamento degli utenti non comporta identificazione dello stesso, a meno che l'Utente non sia già iscritto al servizio e non sia anche già loggato, nel qual caso si intende che l'Utente ha già espresso il suo consenso direttamente alla terza parte al momento dell'iscrizione al relativo servizio (es. Facebook).
 
 Il presente sito utilizza cookie delle seguenti terze parti:
+
+* **Google Analytics** (Google Ireland Limited): servizio di analisi statistica che consente di rilevare in forma aggregata come i visitatori usano il sito (pagine visitate, durata della visita, provenienza del traffico, tipo di dispositivo). È attivato **solo se l'Utente presta il consenso** tramite il banner cookie, e l'indirizzo IP viene anonimizzato prima di essere memorizzato (parametro `anonymize_ip`), riducendo il rischio di identificazione diretta dell'Utente.<br>
+Dati raccolti: identificativo del cookie/client, indirizzo IP (anonimizzato), pagine visitate, dati tecnici del dispositivo e del browser.<br>
+Luogo di trattamento dei dati: Unione Europea / Spazio Economico Europeo, con eventuale trasferimento extra-UE da parte di Google in base alle clausole contrattuali standard.<br>
+**L'Utente può revocare il consenso in qualsiasi momento** tramite il link "Gestisci preferenze cookie" a fondo pagina, oppure tramite il [componente aggiuntivo di disattivazione di Google Analytics](https://tools.google.com/dlpage/gaoptout). Per maggiori informazioni si veda l'[informativa privacy di Google](https://policies.google.com/privacy).
 
 * **Disqus**: consente di inserire commenti sul sito e di creare collegamenti tra commenti anche tra siti diversi. Quando visiti una pagina di questo sito web che contiene il box commenti di Disqus, il tuo browser si collega direttamente ai server di Disqus da dove è caricato il box. Puoi inserire un commento connettendoti al tuo account Disqus, nel quale caso Disqus raccoglie informazioni sulla tua visita a questo e altri siti, e potrà collegare i tuoi movimenti online direttamente al tuo profilo personale. Se fornisci il consenso anche alla condivisione dei dati con terzi, Disqus li userà per fornirti pubblicità personalizzata.<br>
 Eventualmente, però, **puoi non fornire il consenso ai contenuti personalizzati**. Inoltre puoi anche commentare inserendo solo il nome e la mail, senza connetterti ad un account.<br><br>
@@ -181,4 +188,4 @@ Le richieste vanno inoltrate al Titolare del trattamento.
 <hr>
 
 ### Aggiornamenti
-La presente privacy policy è aggiornata alla data del **12 Febbraio 2021**
+La presente privacy policy è aggiornata alla data del **16 Agosto 2026** (aggiunta sezione Google Analytics)

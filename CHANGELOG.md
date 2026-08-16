@@ -2,6 +2,17 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.8.0] - 2026-08-16 — Google Analytics 4 con caricamento subordinato al consenso
+
+Sostituito il vecchio script Universal Analytics (`analytics.js`, dismesso da Google a luglio 2023 e già disattivato qui) con Google Analytics 4 (`gtag.js`), seguendo lo stesso schema già collaudato su ed-acfs.github.io. A differenza della vecchia integrazione, lo script GA ora si carica solo dopo il consenso esplicito dell'utente, non incondizionatamente.
+
+- `_includes/analytics.html` rimosso, sostituito da `_includes/tracking.html`: definisce `loadAnalytics()` (gtag.js con `anonymize_ip: true`) solo se `site.ga.id` è impostato, ma non la esegue.
+- `_includes/cookieconsent.html`: nuova categoria `analytics` nel banner, con `onConsent`/`onChange` che invocano `loadAnalytics()` solo se l'utente ha accettato quella categoria. Aggiornate le traduzioni IT/EN del banner e del pannello preferenze.
+- `_includes/head.html` include `tracking.html` (definizione della funzione, presto in pagina); `_includes/footer.html` non include più il vecchio `analytics.html`.
+- `_config.yml`: rimosso il blocco `go:` (Google Optimize, dismesso da Google nel 2023); impostato `ga.id` con il Measurement ID della nuova proprietà GA4 creata per `cristiancastellari.it`.
+- `it/about/privacy.md`: aggiunta la categoria "Analisi (statistica)" tra i cookie descritti e una voce dedicata a Google Analytics nella sezione "Cookie di terze parti" (dati raccolti, anonimizzazione IP, luogo di trattamento, modalità di opt-out).
+- Verificato con build locale (`bundle exec jekyll build`) che lo script GA venga generato correttamente con il Measurement ID reale, e che resti comunque subordinato al consenso (nessuna chiamata a `loadAnalytics()` finché l'utente non accetta la categoria "analytics" nel banner).
+
 ## [2.7.1] - 2026-08-16 — Massimo 3 post correlati in "Potrebbe interessarti anche"
 
 `_layouts/post.html` mostrava fino a 4 post correlati in una griglia a 3 colonne (`grid--3`): il quarto andava a capo da solo, rompendo la griglia. Ridotto `maxRelated` da 4 a 3 per riempire sempre la riga senza aggiungere una quarta colonna. Verificato in locale con `bundle exec jekyll serve` che, su un post con almeno 3 correlati per tag, la sezione mostri esattamente 3 card allineate.
