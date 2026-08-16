@@ -2,6 +2,10 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.7.1] - 2026-08-16 — Massimo 3 post correlati in "Potrebbe interessarti anche"
+
+`_layouts/post.html` mostrava fino a 4 post correlati in una griglia a 3 colonne (`grid--3`): il quarto andava a capo da solo, rompendo la griglia. Ridotto `maxRelated` da 4 a 3 per riempire sempre la riga senza aggiungere una quarta colonna. Verificato in locale con `bundle exec jekyll serve` che, su un post con almeno 3 correlati per tag, la sezione mostri esattamente 3 card allineate.
+
 ## [2.7.0] - 2026-08-14 — Recuperate le cover originali di 4 post storici
 
 Ritrovato un backup completo (non solo il dump del database) del vecchio blog WordPress, comprensivo della cartella `wp-content/uploads` con i file media originali — fino ad oggi si pensava che le immagini fossero perse per sempre dopo l'attacco ransomware. Da qui recuperate le immagini "in evidenza" originali (il campo WordPress separato dal contenuto del post, non un semplice `<img>` nel testo — per questo erano sfuggite a un primo controllo basato solo sul contenuto) di 4 post storici che sul sito nuovo risultavano senza cover:
