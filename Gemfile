@@ -34,8 +34,12 @@ gem 'bigdecimal'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data"
 
-# Performance-booster for watching directories on Windows
-gem "wdm", ">= 0.1.0" if Gem.win_platform?
+# Performance-booster for watching directories on Windows. Deve usare
+# `platforms:` (meccanismo nativo di Bundler) e non un `if Gem.win_platform?`:
+# quest'ultimo viene valutato quando il Gemfile viene letto, quindi su CI
+# Linux la gem sparirebbe dal Gemfile mentre resta nel lockfile, mandando in
+# conflitto la modalità frozen usata in CI.
+gem "wdm", ">= 0.1.0", platforms: [:windows]
 
 gem "webrick"
 gem "rack", ">= 2.1.4"
