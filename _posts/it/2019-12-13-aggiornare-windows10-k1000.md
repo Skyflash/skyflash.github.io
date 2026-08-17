@@ -2,6 +2,7 @@
 title: Distribuire un aggiornamento di build di Windows 10 via Kace
 layout: post
 date: '2019-12-16 11:30:00'
+last_modified_at: '2026-08-17'
 description: Usiamo Kace per aggiornare un PC da Windows 7/8/10 all'ultima build di Windows 10
 lang: it_IT
 image: "/static/assets/img/blog/kace/smartcard/kace.jpg"
@@ -48,8 +49,7 @@ Per ottenere la ISO di Windows 10 useremo **uno quasiasi** di questi **tre metod
      4. In "Scegli il supporto da usare" seleziona **File ISO** e clicca **Avanti**
      5. Scegli un nome per il file (esempio: **Windows10_1903_Italiano_x64.iso**) e prosegui. Inizierà il download della ISO configurata così come hai deciso nelle opzioni precedenti
      6. Clicca **Fine** al completamento per chiudere il wizard
-3. *Metodo Alternativo: Scaricare la ISO direttamente da [https://www.microsoft.com/en-us/software-download/windows10ISO](https://www.microsoft.com/en-us/
-software-download/windows10ISO), visitando la URL con un computer **non Windows** (OS X o Linux)*
+3. *Metodo Alternativo: Scaricare la ISO direttamente da [https://www.microsoft.com/en-us/software-download/windows10ISO](https://www.microsoft.com/en-us/software-download/windows10ISO), visitando la URL con un computer **non Windows** (OS X o Linux)*
 
 ### Montare la ISO e creare un file .zip
 

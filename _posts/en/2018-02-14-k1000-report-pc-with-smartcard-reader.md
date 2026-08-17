@@ -30,7 +30,7 @@ The script does not depend on K1000, so if you don't have KACE SMA in your envir
 ## How it works
 
 1. The vbs script executes a WMI query over the target device(s) and saves an output file named _smartcard.txt_ (see below in the [Setup section](#setup))
-2. The vbs script is scheduled and deployed to the target device(s) via K1000 [_Online KScript_](#the-kscript)
+2. The vbs script is scheduled and deployed to the target device(s) via K1000 [_Online KScript_](#the-kscript-smarcardvbs)
 3. A K1000 [_Custom Inventory Rule_](#the-custom-inventory-rule) reads the output file for every inventoried device and stores the information in the database
 4. A scheduled [Report](#the-report) (choose your favorite format between HTML, CSV, PDF or Excel) returns only PCs with a smart card reader installed
 5. Done!

@@ -1,0 +1,62 @@
+# Pubblica il sito su GitHub Pages tramite Actions, al posto della pipeline
+# legacy "Deploy from a branch". Non fa nulla finché in Settings → Pages →
+# Build and deployment → Source non viene scelto manualmente "GitHub
+# Actions" al posto di "Deploy from a branch": va cambiato a mano quando si
+# è pronti, questo file da solo non altera la pubblicazione attuale.
+#
+# Si attiva su push a master, manualmente, e ogni giorno via cron — il
+# rebuild schedulato serve a pubblicare da soli i post con data futura
+# quando arriva il loro turno (Jekyll esclude i post datati nel futuro ad
+# ogni build, quindi senza un rebuild periodico resterebbero invisibili
+# finché non arriva un push manuale).
+name: Deploy Pages
+
+on:
+  push:
+    branches: [master]
+  schedule:
+    - cron: '0 5 * * *' # 05:00 UTC ≈ 06:00/07:00 Europe/Rome a seconda dell'ora legale
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./_site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

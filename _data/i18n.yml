@@ -145,6 +145,9 @@ post_reading_time_min:
 post_related_heading:
   it: Potrebbe interessarti anche
   en: You might also like
+post_updated:
+  it: "Aggiornato il"
+  en: "Updated on"
 
 career_present_badge:
   it: Attuale

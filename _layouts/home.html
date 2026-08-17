@@ -15,7 +15,7 @@ layout: default
         <a class="btn btn--ghost" href="{{ '/' | append: short_lang | append: '/' | append: i18n.slug_contact[short_lang] | append: '/' | relative_url }}">{{ i18n.home_contact_button[short_lang] }}</a>
       </div>
     </div>
-    <img class="hero__avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
+    <img class="hero__avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" fetchpriority="high">
   </div>
 </section>
 

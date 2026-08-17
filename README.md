@@ -20,8 +20,9 @@ Il tema — scritto da zero, senza framework CSS/JS di terze parti — è **open
 
 ## Stack
 
-- [Jekyll](https://jekyllrb.com/) 3.10 (Ruby, via la gem [`github-pages`](https://github.com/github/pages-gem) che fissa le versioni a quelle usate in produzione), Sass nativo
-- Plugin: `jekyll-seo-tag`, `jekyll-redirect-from` (la paginazione del blog è gestita a mano, non da un plugin, perché deve filtrare per lingua)
+- [Jekyll](https://jekyllrb.com/) 4.4.1 (Ruby), dichiarato direttamente in `Gemfile` — non più tramite la gem [`github-pages`](https://github.com/github/pages-gem), sostituita per poter buildare/pubblicare tramite GitHub Actions invece della pipeline legacy "Deploy from a branch" (vedi [CHANGELOG.md](CHANGELOG.md) [2.8.0])
+- Sass nativo via [Dart Sass](https://sass-lang.com/dart-sass/) (`jekyll-sass-converter` 3.x)
+- Plugin: `jekyll-seo-tag`, `jekyll-redirect-from`, `jekyll-target-blank` (link esterni con `target="_blank" rel="noopener noreferrer"` automatico) — la paginazione del blog è gestita a mano, non da un plugin, perché deve filtrare per lingua
 - [Fork Awesome](https://forkaweso.me/) per le icone
 
 Nessuna dipendenza Node/npm: non serve alcuna build front-end.
@@ -50,6 +51,20 @@ bundle exec jekyll serve --future
 - `_data/index/`: contenuti strutturati di Home/CV (`careers.yml`, `skills.yml`, `projects.yml`), campi testo come mappa `{it, en}`.
 - `_layouts/` / `_includes/`: template del tema; `_includes/icons/` per le SVG inline (loghi social, bandiere).
 - `_sass/`: design system (`_tokens.scss` per palette/tipografia/spaziatura, un file per componente).
+
+### Segnalare l'aggiornamento di un post
+
+Ogni post può avere un campo `last_modified_at:` nel front matter (formato `AAAA-MM-GG`, o `AAAA-MM-GG HH:MM:SS`):
+
+```yaml
+---
+title: Il mio post
+date: '2019-12-16 11:30:00'
+last_modified_at: '2026-08-17'
+---
+```
+
+Se presente e diverso dal giorno di `date`, `_layouts/post.html` mostra "Aggiornato il" accanto a data/tempo di lettura. È **volutamente manuale**, non calcolato in automatico dal log Git: un calcolo automatico risentirebbe di qualunque commit tecnico che tocca il file (refactor, migrazioni, correzioni di battitura) anche senza una vera revisione del contenuto. Impostalo a mano solo quando aggiorni davvero un post nel merito.
 
 ### Personalizzare il tema per un sito proprio
 

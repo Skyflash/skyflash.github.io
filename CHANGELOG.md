@@ -2,7 +2,34 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
-## [2.8.0] - 2026-08-16 — Google Analytics 4 con caricamento subordinato al consenso
+## [2.8.0] - 2026-08-17 — Migrazione a Jekyll 4 + GitHub Actions (preparata, non ancora attiva)
+
+Sostituita, sul branch `explore/github-actions-jekyll4`, la gem `github-pages` (che fissa Jekyll a 3.10.0 e libSass 1.x per la pipeline legacy "Deploy from a branch") con Jekyll 4.4.1 e i plugin dichiarati direttamente nel `Gemfile`, in vista del passaggio alla pubblicazione tramite GitHub Actions. **La pubblicazione in produzione resta quella legacy finché non si cambia manualmente il source in Settings → Pages → Build and deployment**: questo aggiornamento da solo non cambia nulla sul sito live.
+
+### Migrazione Jekyll 4 e nuovi workflow
+
+- `Gemfile`: `jekyll ~> 4.3` (risolto a 4.4.1) e `jekyll-sass-converter ~> 3.0` (Dart Sass, al posto della libSass 1.5.2 deprecata) dichiarati direttamente, non più tramite `github-pages`; aggiunta `kramdown-parser-gfm` (prima arrivava come dipendenza transitiva).
+- Verificata l'assenza di regressioni con un confronto completo, file per file, fra l'output della build legacy (Jekyll 3.10/libSass) e quello della nuova pipeline (Jekyll 4.4.1/Dart Sass): pagine HTML identiche byte per byte, CSS semanticamente identico (solo differenze cosmetiche di minificazione fra i due compilatori Sass), unica differenza reale un file CSS orfano (`style.css`, mai referenziato da alcuna pagina, residuo dei temi bundlati in `github-pages`) che la build legacy includeva per errore anche nella sitemap e che Jekyll 4 non genera più.
+- Due nuovi workflow GitHub Actions:
+  - `.github/workflows/build-check.yml`: build + `html-proofer` (link interni, immagini, anchor) su ogni push/pull request di ogni branch — solo verifica, nessuna pubblicazione.
+  - `.github/workflows/pages.yml`: build + deploy vero e proprio su GitHub Pages (`actions/upload-pages-artifact`, `actions/deploy-pages`), attivo su push a `master`, manualmente, e ogni giorno alle 5:00 UTC — il rebuild schedulato serve a pubblicare da soli i post con data futura una volta arrivato il loro turno (Jekyll esclude i post futuri ad ogni build; senza un rebuild periodico resterebbero invisibili finché non arriva un push manuale). **Il job di deploy non ha alcun effetto finché il source di Pages non viene cambiato manualmente in Settings.**
+
+### Bug scovati (e corretti) dai nuovi controlli
+
+- `_posts/it/2019-12-13-aggiornare-windows10-k1000.md`: un link Microsoft andava a capo dentro l'URL in markdown, producendo uno spazio letterale nell'URL renderizzato — tollerato in silenzio dalla pipeline legacy, ma non da `jekyll-target-blank` (vedi sotto), che è andato in errore alla build. Corretto unendo le righe.
+- `_posts/it/` e `_posts/en/2018-02-14-k1000-report-pc-with-smartcard-reader.md`: link interno `#the-kscript` che puntava a un anchor inesistente — l'heading reale ("The KScript (smarcard.vbs)") genera l'id `the-kscript-smarcardvbs`. Trovato da `html-proofer`, corretto in entrambe le lingue.
+- `Gemfile`: la gem `wdm` (solo Windows) era condizionata con `if Gem.win_platform?`, un `if` Ruby valutato alla lettura del Gemfile — su CI Linux la gem sparisce dal Gemfile mentre resta nel lockfile, mandando in conflitto la modalità frozen usata in CI ("Some dependencies were deleted from your gemfile"). Corretto con `platforms: [:windows]`, il meccanismo nativo di Bundler per questo caso.
+- `Gemfile.lock`: generato solo su Windows (piattaforma `x64-mingw-ucrt`), mancava la piattaforma `x86_64-linux` necessaria ai runner Ubuntu di GitHub Actions — `bundle install` falliva subito in CI. Aggiunta con `bundle lock --add-platform x86_64-linux`.
+
+### Nuovi plugin e piccoli miglioramenti
+
+- `jekyll-target-blank`: link esterni con `target="_blank" rel="noopener noreferrer"` automatico, in tutto il sito.
+- Campo front matter manuale `last_modified_at` sui post, mostrato in `_layouts/post.html` come "Aggiornato il" quando diverso dalla data di pubblicazione — **volutamente manuale**, non calcolato automaticamente dal log Git (`jekyll-last-modified-at`, scartato): la migrazione multilingua IT/EN di agosto ha riscritto quasi tutti i post storici, un calcolo automatico avrebbe segnato "aggiornato" quasi ogni articolo del blog alla stessa data, anche dove nulla è cambiato nel merito.
+- `fetchpriority="high"` sulle immagini sopra la piega (avatar in home, post in evidenza nell'indice blog, copertina dell'articolo) — le uniche tre posizioni del tema dove compare un'immagine "hero"; non toccato `project-card.html`, che è sotto la piega e ha già `loading="lazy"`.
+- `html-proofer`, oltre ai due fix sopra, configurato con `--no-enforce-https` (alcuni post storici linkano risorse esterne rimaste solo in `http://`, non link rotti) e `--ignore-urls` sui `mailto:?subject=...&body=...` dei pulsanti "condividi via email" (nessun destinatario di proposito, falso positivo del controllo).
+- Nuovo `static/assets/img/favicon.jpg` (sostituisce il vecchio, generato da `favicon.svg`) e nuovo `favicon.png` con sfondo trasparente.
+
+## [2.7.2] - 2026-08-16 — Google Analytics 4 con caricamento subordinato al consenso
 
 Sostituito il vecchio script Universal Analytics (`analytics.js`, dismesso da Google a luglio 2023 e già disattivato qui) con Google Analytics 4 (`gtag.js`), seguendo lo stesso schema già collaudato su ed-acfs.github.io. A differenza della vecchia integrazione, lo script GA ora si carica solo dopo il consenso esplicito dell'utente, non incondizionatamente.
 
