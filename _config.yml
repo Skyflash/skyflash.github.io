@@ -87,6 +87,7 @@ ga:
 plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
+  - jekyll-target-blank
 
 # redirects.json non è usato da nessuna pagina/script del sito: è solo un
 # elenco JSON generato dal plugin per usi esterni. Disattivato per non

@@ -28,10 +28,10 @@ layout: default
   {% if page_num == 1 and featured_post %}
   <a class="featured-post" href="{{ featured_post.url | relative_url }}">
     {% if featured_post.image and featured_post.image_dark %}
-    <img class="featured-post__image post-image--on-light" src="{{ featured_post.image | relative_url }}" alt="">
-    <img class="featured-post__image post-image--on-dark" src="{{ featured_post.image_dark | relative_url }}" alt="">
+    <img class="featured-post__image post-image--on-light" src="{{ featured_post.image | relative_url }}" alt="" fetchpriority="high">
+    <img class="featured-post__image post-image--on-dark" src="{{ featured_post.image_dark | relative_url }}" alt="" fetchpriority="high">
     {% elsif featured_post.image %}
-    <img class="featured-post__image" src="{{ featured_post.image | relative_url }}" alt="">
+    <img class="featured-post__image" src="{{ featured_post.image | relative_url }}" alt="" fetchpriority="high">
     {% endif %}
     <div class="featured-post__body">
       <span class="featured-post__badge"><i class="fa fa-star" aria-hidden="true"></i> {{ i18n.blog_featured_badge[short_lang] }}</span>

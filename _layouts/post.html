@@ -25,6 +25,12 @@ layout: default
     <h1>{{ page.title }}</h1>
     <p class="post-meta">
       {{ page.date | date: "%-d %b %Y" }} · {{ page.content | number_of_words }} {{ i18n.post_words[short_lang] }} · {{ i18n.post_reading_time[short_lang] }} {{ page.content | number_of_words | divided_by: 180 }} {{ i18n.post_reading_time_min[short_lang] }}
+      {% comment %} last_modified_at è un campo manuale in front matter, non calcolato dal git log: evita di segnare "aggiornato" ogni post storico dopo migrazioni tecniche massive (es. quella IT/EN). {% endcomment %}
+      {% assign updated_day = page.last_modified_at | date: "%Y-%m-%d" %}
+      {% assign published_day = page.date | date: "%Y-%m-%d" %}
+      {% if page.last_modified_at and updated_day != published_day %}
+      · {{ i18n.post_updated[short_lang] }} {{ page.last_modified_at | date: "%-d %b %Y" }}
+      {% endif %}
     </p>
     {% if page.categories %}
     <div class="pill-row">
@@ -38,10 +44,10 @@ layout: default
 
   {% assign generic_cover = "/static/assets/img/blog/blog-cover-generic.png" %}
   {% if page.image and page.image_dark %}
-  <img class="post-image post-image--on-light" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-  <img class="post-image post-image--on-dark" src="{{ page.image_dark | relative_url }}" alt="{{ page.title }}">
+  <img class="post-image post-image--on-light" src="{{ page.image | relative_url }}" alt="{{ page.title }}" fetchpriority="high">
+  <img class="post-image post-image--on-dark" src="{{ page.image_dark | relative_url }}" alt="{{ page.title }}" fetchpriority="high">
   {% elsif page.image and page.image != generic_cover %}
-  <img class="post-image" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  <img class="post-image" src="{{ page.image | relative_url }}" alt="{{ page.title }}" fetchpriority="high">
   {% endif %}
 
   {% if page.intro %}<p class="post-intro">{{ page.intro }}</p>{% endif %}
