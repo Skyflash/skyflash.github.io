@@ -51,6 +51,20 @@ bundle exec jekyll serve --future
 - `_layouts/` / `_includes/`: template del tema; `_includes/icons/` per le SVG inline (loghi social, bandiere).
 - `_sass/`: design system (`_tokens.scss` per palette/tipografia/spaziatura, un file per componente).
 
+### Segnalare l'aggiornamento di un post
+
+Ogni post può avere un campo `last_modified_at:` nel front matter (formato `AAAA-MM-GG`, o `AAAA-MM-GG HH:MM:SS`):
+
+```yaml
+---
+title: Il mio post
+date: '2019-12-16 11:30:00'
+last_modified_at: '2026-08-17'
+---
+```
+
+Se presente e diverso dal giorno di `date`, `_layouts/post.html` mostra "Aggiornato il" accanto a data/tempo di lettura. È **volutamente manuale**, non calcolato in automatico dal log Git: un calcolo automatico risentirebbe di qualunque commit tecnico che tocca il file (refactor, migrazioni, correzioni di battitura) anche senza una vera revisione del contenuto. Impostalo a mano solo quando aggiorni davvero un post nel merito.
+
 ### Personalizzare il tema per un sito proprio
 
 - **Identità e social**: sezione `author:` in `_config.yml`.
