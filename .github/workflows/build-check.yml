@@ -22,4 +22,14 @@ jobs:
         run: bundle exec jekyll build
 
       - name: Check internal links, images and anchors
-        run: bundle exec htmlproofer ./_site --disable-external --checks Links,Images
+        # --no-enforce-https: alcuni post storici linkano risorse esterne
+        # solo-http (forum chiusi, pagine mai passate a https) — non sono
+        # link rotti, solo non-https, non vale la pena inseguirle tutte.
+        # --ignore-urls: i pulsanti "condividi via email" generano
+        # mailto:?subject=...&body=... senza destinatario di proposito
+        # (l'utente sceglie a chi inviare), html-proofer li segnala come
+        # falso positivo "contains no email address".
+        run: >-
+          bundle exec htmlproofer ./_site --disable-external --checks Links,Images
+          --no-enforce-https
+          --ignore-urls "/^mailto:\?subject=/"
