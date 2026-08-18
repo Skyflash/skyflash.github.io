@@ -36,6 +36,13 @@
       }
     } catch (e) {}
     updateButtons(choice);
+    // Disqus decide chiaro/scuro leggendo il colore di sfondo una sola volta,
+    // al caricamento dell'embed: cambiare tema dopo non lo fa ridisegnare da
+    // solo (bug noto), lasciandolo con testo bianco su sfondo chiaro o
+    // viceversa. DISQUS.reset forza una nuova rilevazione sul tema corrente.
+    if (window.DISQUS && typeof window.disqus_config === 'function') {
+      window.DISQUS.reset({ reload: true, config: window.disqus_config });
+    }
   }
 
   buttons.forEach(function (btn) {

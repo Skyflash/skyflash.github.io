@@ -2,6 +2,12 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.8.1] - 2026-08-18 — Fix testo invisibile di Disqus dopo un cambio tema
+
+Segnalato un bug: il banner "Regolamento dei commenti" di Disqus, leggibile in tema scuro, diventava praticamente invisibile (restavano visibili solo link e bottone) passando al tema chiaro con lo switcher del sito. Non è un'impostazione lato Disqus: Disqus decide se disegnarsi chiaro o scuro leggendo il colore di sfondo che eredita **una sola volta**, al momento in cui l'embed viene caricato — cambiare tema dopo, senza ricaricare la pagina, lo lascia con lo schema colori sbagliato per il nuovo sfondo (testo bianco su sfondo ormai chiaro).
+
+- `assets/js/theme.js`: alla selezione di un nuovo tema, se l'embed Disqus è già stato caricato (`window.DISQUS` esiste, cioè l'utente ha dato consenso "terze parti" su un post con commenti), viene invocato `DISQUS.reset({ reload: true, config: disqus_config })` per forzare una nuova rilevazione del colore di sfondo sul tema appena scelto, riusando la stessa configurazione di pagina (`page.url`/`page.identifier`) già definita in `_includes/comments.html` — nessun nuovo thread, solo un ridisegno.
+
 ## [2.8.0] - 2026-08-17 — Migrazione a Jekyll 4 + GitHub Actions (preparata, non ancora attiva)
 
 Sostituita, sul branch `explore/github-actions-jekyll4`, la gem `github-pages` (che fissa Jekyll a 3.10.0 e libSass 1.x per la pipeline legacy "Deploy from a branch") con Jekyll 4.4.1 e i plugin dichiarati direttamente nel `Gemfile`, in vista del passaggio alla pubblicazione tramite GitHub Actions. **La pubblicazione in produzione resta quella legacy finché non si cambia manualmente il source in Settings → Pages → Build and deployment**: questo aggiornamento da solo non cambia nulla sul sito live.
