@@ -23,7 +23,10 @@ tags:
 - ipei
 - conversione
 icon: fa-refresh
+last_modified_at: '2026-08-18 12:30:00'
 ---
+
+> **Aggiornamento (agosto 2026):** lo strumento è stato ricostruito da zero — via Bootstrap e jQuery, dentro Jekyll 4, ora bilingue italiano/inglese. Il link qui sotto resta lo stesso di sempre; ho raccontato il dietro le quinte del redesign in [un nuovo post]({{ '/it/blog/progetti-personali/il-redesign-di-ipui2ipei/' | relative_url }}).
 
 Talvolta (prendiamo ad esempio le installazioni aziendali) diventa necessario registrare sull'impianto DECT un telefono di produttore diverso da quello del centralino, vuoi per mancanza di disponibilità del prodotto voluto, vuoi per pure e semplici ragioni di budget (un cordless **Siemes** costa mediamente fra i 50 e i 70€, mentre un terminale ad esempio **Spectralink** o **Avaya** supera allegramente i 250€).
 
