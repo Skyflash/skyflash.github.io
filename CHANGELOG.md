@@ -2,6 +2,14 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.8.2] - 2026-08-19 — Saluto personale in cima alla pagina Contatti
+
+Portato da ipui2ipei lo stesso saluto personale al posto del titolo H1 generico ("Ciao, sono Cristian!" / "It's-a me, Cristian!", omaggio a Mario), già annotato come "da riportare, prima o poi" sul sito principale.
+
+- `_layouts/page.html`: `<h1>{{ page.heading | default: page.title }}</h1>` — nuovo campo front matter opzionale `heading` per sostituire il testo del titolo visibile senza toccare `page.title`, che resta invariato per `<title>`/meta description e per le altre pagine che usano questo layout (non impostano `heading`, quindi il fallback lascia tutto com'era).
+- `_data/i18n.yml`: nuova voce `contact_greeting` (it/en).
+- `it/contatti.html`, `en/contact.html`: aggiunto `heading: "Ciao, sono Cristian!"` / `heading: "It's-a me, Cristian!"` in front matter.
+
 ## [2.8.1] - 2026-08-18 — Fix testo invisibile di Disqus dopo un cambio tema
 
 Segnalato un bug: il banner "Regolamento dei commenti" di Disqus, leggibile in tema scuro, diventava praticamente invisibile (restavano visibili solo link e bottone) passando al tema chiaro con lo switcher del sito. Non è un'impostazione lato Disqus: Disqus decide se disegnarsi chiaro o scuro leggendo il colore di sfondo che eredita **una sola volta**, al momento in cui l'embed viene caricato — cambiare tema dopo, senza ricaricare la pagina, lo lascia con lo schema colori sbagliato per il nuovo sfondo (testo bianco su sfondo ormai chiaro).

@@ -191,6 +191,9 @@ cv_skills_heading:
   it: Competenze
   en: Skills
 
+contact_greeting:
+  it: "Ciao, sono Cristian!"
+  en: "It's-a me, Cristian!"
 contact_lead:
   it: Scrivimi pure per una chiacchierata, una collaborazione o solo per dire ciao.
   en: Feel free to reach out for a chat, a collaboration, or just to say hi.
