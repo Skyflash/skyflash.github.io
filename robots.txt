@@ -3,6 +3,10 @@ title: robots
 ---
 User-agent: *
 Disallow: /static/*
+# Eccezione: immagini dei post, per farle comparire in Google Immagini e
+# come anteprima nei risultati normali (il blocco su /static/* nasce dal
+# vecchio tema WordPress per escludere CSS/font/icone, non i contenuti).
+Allow: /static/assets/img/
 Disallow: /donate/
 Disallow: /donate
 Disallow: /ciao-mondo/
