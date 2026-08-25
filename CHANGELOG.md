@@ -2,6 +2,13 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.8.4] - 2026-08-25 — Tema chiaro: sfondo meno "sparante" (da verificare su mobile)
+
+Su segnalazione che il bianco puro del tema chiaro "spara" troppo.
+
+- `_sass/_tokens.scss`: `--color-bg` da `#ffffff` a `#f1f2f4`, `--color-bg-subtle` da `#f6f7f9` a `#e6e8eb`. Di conseguenza scurito anche `--color-border` da `#e3e6ea` a `#d7dade`, altrimenti troppo vicino al nuovo `--color-bg-subtle` e i bordi delle card sarebbero diventati quasi invisibili nelle sezioni "subtle". Solo tema chiaro, tema scuro invariato.
+- Commit isolato apposta: se il grigio non convince su mobile, `git revert` di questo commit riporta al bianco puro senza toccare gli altri fix di accessibilità del commit precedente.
+
 ## [2.8.3] - 2026-08-25 — Accessibilità: skip link, reduced motion, contrasto link
 
 Audit rapido su WCAG 2.2 (skill `accessibility`): tre lacune trovate e sistemate.

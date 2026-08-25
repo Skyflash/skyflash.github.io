@@ -9,11 +9,11 @@
   color-scheme: light;
 
   // Colori
-  --color-bg: #ffffff;
-  --color-bg-subtle: #f6f7f9;
+  --color-bg: #f1f2f4;
+  --color-bg-subtle: #e6e8eb;
   --color-text: #1a1d21;
   --color-text-muted: #5b6370;
-  --color-border: #e3e6ea;
+  --color-border: #d7dade;
   // #3385ff dava ~3.5:1 su bianco, sotto la soglia AA 4.5:1 per il testo dei
   // link; #1e6fe0 (l'ex hover) ci arriva (~4.8:1).
   --color-accent: #1e6fe0;
@@ -87,11 +87,11 @@
 // (non solo "non-scuro") così vince sempre, indipendentemente dal sistema.
 :root[data-theme="light"] {
   color-scheme: light;
-  --color-bg: #ffffff;
-  --color-bg-subtle: #f6f7f9;
+  --color-bg: #f1f2f4;
+  --color-bg-subtle: #e6e8eb;
   --color-text: #1a1d21;
   --color-text-muted: #5b6370;
-  --color-border: #e3e6ea;
+  --color-border: #d7dade;
   --color-accent: #1e6fe0;
   --color-accent-hover: #1656b8;
   --color-accent-subtle: #eaf1ff;
