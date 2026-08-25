@@ -2,6 +2,14 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.8.3] - 2026-08-25 — Accessibilità: skip link, reduced motion, contrasto link
+
+Audit rapido su WCAG 2.2 (skill `accessibility`): tre lacune trovate e sistemate.
+
+- `_layouts/default.html`, `_sass/_layout.scss`, `_data/i18n.yml`: aggiunto uno skip link ("Vai al contenuto" / "Skip to content") subito dopo `<body>`, visibile solo al focus da tastiera (`.skip-link:focus-visible`) — prima chi naviga da tastiera o screen reader doveva attraversare tutto l'header (brand, switch tema, switch lingua, ricerca, menu, submenu blog) prima di arrivare al contenuto, su ogni pagina.
+- `_sass/_reset.scss`: aggiunta `@media (prefers-reduced-motion: reduce)` che disattiva `scroll-behavior: smooth` e azzera la durata di transizioni/animazioni per chi ha impostato "riduci le animazioni" nel sistema.
+- `_sass/_tokens.scss`: `--color-accent` scurito da `#3385ff` (~3.5:1 di contrasto su bianco, sotto la soglia AA 4.5:1 per il testo dei link) a `#1e6fe0` (~4.8:1, era già il colore hover); nuovo `--color-accent-hover` `#1656b8`. Solo tema chiaro — in tema scuro l'accent (`#5b9dff` su `#12141a`, ~6.8:1) era già a norma. La sottolineatura dei link nel testo prosa (`.prose a`) era già presente, non serviva aggiungerla.
+
 ## [2.8.2] - 2026-08-19 — Saluto personale in cima alla pagina Contatti
 
 Portato da ipui2ipei lo stesso saluto personale al posto del titolo H1 generico ("Ciao, sono Cristian!" / "It's-a me, Cristian!", omaggio a Mario), già annotato come "da riportare, prima o poi" sul sito principale.

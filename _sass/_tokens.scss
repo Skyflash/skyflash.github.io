@@ -14,8 +14,10 @@
   --color-text: #1a1d21;
   --color-text-muted: #5b6370;
   --color-border: #e3e6ea;
-  --color-accent: #3385ff;
-  --color-accent-hover: #1e6fe0;
+  // #3385ff dava ~3.5:1 su bianco, sotto la soglia AA 4.5:1 per il testo dei
+  // link; #1e6fe0 (l'ex hover) ci arriva (~4.8:1).
+  --color-accent: #1e6fe0;
+  --color-accent-hover: #1656b8;
   --color-accent-subtle: #eaf1ff;
 
   // Tipografia
@@ -90,8 +92,8 @@
   --color-text: #1a1d21;
   --color-text-muted: #5b6370;
   --color-border: #e3e6ea;
-  --color-accent: #3385ff;
-  --color-accent-hover: #1e6fe0;
+  --color-accent: #1e6fe0;
+  --color-accent-hover: #1656b8;
   --color-accent-subtle: #eaf1ff;
   --shadow-sm: 0 1px 2px rgba(26, 29, 33, 0.06);
   --shadow-md: 0 4px 16px rgba(26, 29, 33, 0.08);

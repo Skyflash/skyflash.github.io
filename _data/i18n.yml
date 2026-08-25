@@ -1,6 +1,9 @@
 # Stringhe UI condivise per lingua. Chiave breve -> {it, en}.
 # Uso: {{ site.data.i18n.nav_cv[short_lang] }}  (short_lang = it | en)
 
+skip_to_content:
+  it: Vai al contenuto
+  en: Skip to content
 nav_home:
   it: Home
   en: Home

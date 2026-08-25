@@ -8,9 +8,12 @@ layout: compress
 
 <body>
 
+{% assign short_lang = page.lang | slice: 0, 2 | default: site.default_lang %}
+<a class="skip-link" href="#main-content">{{ site.data.i18n.skip_to_content[short_lang] }}</a>
+
 {% include nav.html %}
 
-<main>
+<main id="main-content">
 {{ content }}
 </main>
 
