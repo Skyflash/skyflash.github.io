@@ -2,14 +2,14 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
-## [2.8.4] - 2026-08-25 — Tema chiaro: sfondo meno "sparante" (da verificare su mobile)
+## [2.3.4] - 2026-08-25 — Tema chiaro: sfondo meno "sparante" (da verificare su mobile)
 
 Su segnalazione che il bianco puro del tema chiaro "spara" troppo.
 
 - `_sass/_tokens.scss`: `--color-bg` da `#ffffff` a `#f1f2f4`, `--color-bg-subtle` da `#f6f7f9` a `#e6e8eb`. Di conseguenza scurito anche `--color-border` da `#e3e6ea` a `#d7dade`, altrimenti troppo vicino al nuovo `--color-bg-subtle` e i bordi delle card sarebbero diventati quasi invisibili nelle sezioni "subtle". Solo tema chiaro, tema scuro invariato.
 - Commit isolato apposta: se il grigio non convince su mobile, `git revert` di questo commit riporta al bianco puro senza toccare gli altri fix di accessibilità del commit precedente.
 
-## [2.8.3] - 2026-08-25 — Accessibilità: skip link, reduced motion, contrasto link
+## [2.3.3] - 2026-08-25 — Accessibilità: skip link, reduced motion, contrasto link
 
 Audit rapido su WCAG 2.2 (skill `accessibility`): tre lacune trovate e sistemate.
 
@@ -17,7 +17,7 @@ Audit rapido su WCAG 2.2 (skill `accessibility`): tre lacune trovate e sistemate
 - `_sass/_reset.scss`: aggiunta `@media (prefers-reduced-motion: reduce)` che disattiva `scroll-behavior: smooth` e azzera la durata di transizioni/animazioni per chi ha impostato "riduci le animazioni" nel sistema.
 - `_sass/_tokens.scss`: `--color-accent` scurito da `#3385ff` (~3.5:1 di contrasto su bianco, sotto la soglia AA 4.5:1 per il testo dei link) a `#1e6fe0` (~4.8:1, era già il colore hover); nuovo `--color-accent-hover` `#1656b8`. Solo tema chiaro — in tema scuro l'accent (`#5b9dff` su `#12141a`, ~6.8:1) era già a norma. La sottolineatura dei link nel testo prosa (`.prose a`) era già presente, non serviva aggiungerla.
 
-## [2.8.2] - 2026-08-19 — Saluto personale in cima alla pagina Contatti
+## [2.3.2] - 2026-08-19 — Saluto personale in cima alla pagina Contatti
 
 Portato da ipui2ipei lo stesso saluto personale al posto del titolo H1 generico ("Ciao, sono Cristian!" / "It's-a me, Cristian!", omaggio a Mario), già annotato come "da riportare, prima o poi" sul sito principale.
 
@@ -25,15 +25,15 @@ Portato da ipui2ipei lo stesso saluto personale al posto del titolo H1 generico 
 - `_data/i18n.yml`: nuova voce `contact_greeting` (it/en).
 - `it/contatti.html`, `en/contact.html`: aggiunto `heading: "Ciao, sono Cristian!"` / `heading: "It's-a me, Cristian!"` in front matter.
 
-## [2.8.1] - 2026-08-18 — Fix testo invisibile di Disqus dopo un cambio tema
+## [2.3.1] - 2026-08-18 — Fix testo invisibile di Disqus dopo un cambio tema
 
 Segnalato un bug: il banner "Regolamento dei commenti" di Disqus, leggibile in tema scuro, diventava praticamente invisibile (restavano visibili solo link e bottone) passando al tema chiaro con lo switcher del sito. Non è un'impostazione lato Disqus: Disqus decide se disegnarsi chiaro o scuro leggendo il colore di sfondo che eredita **una sola volta**, al momento in cui l'embed viene caricato — cambiare tema dopo, senza ricaricare la pagina, lo lascia con lo schema colori sbagliato per il nuovo sfondo (testo bianco su sfondo ormai chiaro).
 
 - `assets/js/theme.js`: alla selezione di un nuovo tema, se l'embed Disqus è già stato caricato (`window.DISQUS` esiste, cioè l'utente ha dato consenso "terze parti" su un post con commenti), viene invocato `DISQUS.reset({ reload: true, config: disqus_config })` per forzare una nuova rilevazione del colore di sfondo sul tema appena scelto, riusando la stessa configurazione di pagina (`page.url`/`page.identifier`) già definita in `_includes/comments.html` — nessun nuovo thread, solo un ridisegno.
 
-## [2.8.0] - 2026-08-17 — Migrazione a Jekyll 4 + GitHub Actions (preparata, non ancora attiva)
+## [2.3.0] - 2026-08-17 — Migrazione a Jekyll 4 + GitHub Actions
 
-Sostituita, sul branch `explore/github-actions-jekyll4`, la gem `github-pages` (che fissa Jekyll a 3.10.0 e libSass 1.x per la pipeline legacy "Deploy from a branch") con Jekyll 4.4.1 e i plugin dichiarati direttamente nel `Gemfile`, in vista del passaggio alla pubblicazione tramite GitHub Actions. **La pubblicazione in produzione resta quella legacy finché non si cambia manualmente il source in Settings → Pages → Build and deployment**: questo aggiornamento da solo non cambia nulla sul sito live.
+Sostituita, sul branch `explore/github-actions-jekyll4` (poi mergiato in `master`), la gem `github-pages` (che fissa Jekyll a 3.10.0 e libSass 1.x per la pipeline legacy "Deploy from a branch") con Jekyll 4.4.1 e i plugin dichiarati direttamente nel `Gemfile`, passando la pubblicazione a GitHub Actions.
 
 ### Migrazione Jekyll 4 e nuovi workflow
 
@@ -41,7 +41,7 @@ Sostituita, sul branch `explore/github-actions-jekyll4`, la gem `github-pages` (
 - Verificata l'assenza di regressioni con un confronto completo, file per file, fra l'output della build legacy (Jekyll 3.10/libSass) e quello della nuova pipeline (Jekyll 4.4.1/Dart Sass): pagine HTML identiche byte per byte, CSS semanticamente identico (solo differenze cosmetiche di minificazione fra i due compilatori Sass), unica differenza reale un file CSS orfano (`style.css`, mai referenziato da alcuna pagina, residuo dei temi bundlati in `github-pages`) che la build legacy includeva per errore anche nella sitemap e che Jekyll 4 non genera più.
 - Due nuovi workflow GitHub Actions:
   - `.github/workflows/build-check.yml`: build + `html-proofer` (link interni, immagini, anchor) su ogni push/pull request di ogni branch — solo verifica, nessuna pubblicazione.
-  - `.github/workflows/pages.yml`: build + deploy vero e proprio su GitHub Pages (`actions/upload-pages-artifact`, `actions/deploy-pages`), attivo su push a `master`, manualmente, e ogni giorno alle 5:00 UTC — il rebuild schedulato serve a pubblicare da soli i post con data futura una volta arrivato il loro turno (Jekyll esclude i post futuri ad ogni build; senza un rebuild periodico resterebbero invisibili finché non arriva un push manuale). **Il job di deploy non ha alcun effetto finché il source di Pages non viene cambiato manualmente in Settings.**
+  - `.github/workflows/pages.yml`: build + deploy vero e proprio su GitHub Pages (`actions/upload-pages-artifact`, `actions/deploy-pages`), attivo su push a `master`, manualmente, e ogni giorno alle 5:00 UTC — il rebuild schedulato serve a pubblicare da soli i post con data futura una volta arrivato il loro turno (Jekyll esclude i post futuri ad ogni build; senza un rebuild periodico resterebbero invisibili finché non arriva un push manuale).
 
 ### Bug scovati (e corretti) dai nuovi controlli
 
@@ -58,7 +58,7 @@ Sostituita, sul branch `explore/github-actions-jekyll4`, la gem `github-pages` (
 - `html-proofer`, oltre ai due fix sopra, configurato con `--no-enforce-https` (alcuni post storici linkano risorse esterne rimaste solo in `http://`, non link rotti) e `--ignore-urls` sui `mailto:?subject=...&body=...` dei pulsanti "condividi via email" (nessun destinatario di proposito, falso positivo del controllo).
 - Nuovo `static/assets/img/favicon.jpg` (sostituisce il vecchio, generato da `favicon.svg`) e nuovo `favicon.png` con sfondo trasparente.
 
-## [2.7.2] - 2026-08-16 — Google Analytics 4 con caricamento subordinato al consenso
+## [2.2.8] - 2026-08-16 — Google Analytics 4 con caricamento subordinato al consenso
 
 Sostituito il vecchio script Universal Analytics (`analytics.js`, dismesso da Google a luglio 2023 e già disattivato qui) con Google Analytics 4 (`gtag.js`), seguendo lo stesso schema già collaudato su ed-acfs.github.io. A differenza della vecchia integrazione, lo script GA ora si carica solo dopo il consenso esplicito dell'utente, non incondizionatamente.
 
@@ -69,11 +69,11 @@ Sostituito il vecchio script Universal Analytics (`analytics.js`, dismesso da Go
 - `it/about/privacy.md`: aggiunta la categoria "Analisi (statistica)" tra i cookie descritti e una voce dedicata a Google Analytics nella sezione "Cookie di terze parti" (dati raccolti, anonimizzazione IP, luogo di trattamento, modalità di opt-out).
 - Verificato con build locale (`bundle exec jekyll build`) che lo script GA venga generato correttamente con il Measurement ID reale, e che resti comunque subordinato al consenso (nessuna chiamata a `loadAnalytics()` finché l'utente non accetta la categoria "analytics" nel banner).
 
-## [2.7.1] - 2026-08-16 — Massimo 3 post correlati in "Potrebbe interessarti anche"
+## [2.2.7] - 2026-08-16 — Massimo 3 post correlati in "Potrebbe interessarti anche"
 
 `_layouts/post.html` mostrava fino a 4 post correlati in una griglia a 3 colonne (`grid--3`): il quarto andava a capo da solo, rompendo la griglia. Ridotto `maxRelated` da 4 a 3 per riempire sempre la riga senza aggiungere una quarta colonna. Verificato in locale con `bundle exec jekyll serve` che, su un post con almeno 3 correlati per tag, la sezione mostri esattamente 3 card allineate.
 
-## [2.7.0] - 2026-08-14 — Recuperate le cover originali di 4 post storici
+## [2.2.6] - 2026-08-14 — Recuperate le cover originali di 4 post storici
 
 Ritrovato un backup completo (non solo il dump del database) del vecchio blog WordPress, comprensivo della cartella `wp-content/uploads` con i file media originali — fino ad oggi si pensava che le immagini fossero perse per sempre dopo l'attacco ransomware. Da qui recuperate le immagini "in evidenza" originali (il campo WordPress separato dal contenuto del post, non un semplice `<img>` nel testo — per questo erano sfuggite a un primo controllo basato solo sul contenuto) di 4 post storici che sul sito nuovo risultavano senza cover:
 
@@ -82,7 +82,7 @@ Ritrovato un backup completo (non solo il dump del database) del vecchio blog Wo
 - "Come proteggere un sito dagli attacchi - Parte 1 - I bad crawler": il robottino "We want all your keywords".
 - "Come proteggere un sito dagli attacchi - Parte 2 - Il file .htaccess": l'illustrazione "BAD ROBOT".
 
-## [2.6.0] - 2026-08-14 — Link al feed RSS nell'indice del blog
+## [2.2.5] - 2026-08-14 — Link al feed RSS nell'indice del blog
 
 `feed.xml` esisteva già (feed custom, non dal plugin `jekyll-feed`) ma era raggiungibile solo dalla piccola icona nel footer. Aggiunto un link "Feed RSS" ben visibile, allineato a destra sulla stessa riga del titolo "Blog".
 
@@ -90,7 +90,7 @@ Ritrovato un backup completo (non solo il dump del database) del vecchio blog Wo
 - `_sass/_layout.scss`: nuovo modificatore `.section-header--blog` (flex, titolo a sinistra e link a destra) e stile `.rss-link` con il classico arancione RSS.
 - Verificato in locale che `/feed.xml` sia XML valido, si rigeneri ad ogni build con tutti i post in ordine cronologico corretto e rifletta subito le modifiche al front matter (es. i title della voce precedente).
 
-## [2.5.0] - 2026-08-14 — Audit SEO e social sharing dei post
+## [2.2.4] - 2026-08-14 — Audit SEO e social sharing dei post
 
 Verifica sistematica di meta tag, description e immagini di condivisione su tutti i 31 post (IT+EN), confrontando front matter dichiarato e HTML effettivamente generato da `jekyll-seo-tag`.
 
@@ -100,7 +100,7 @@ Verifica sistematica di meta tag, description e immagini di condivisione su tutt
 - **Post senza immagine propria non avevano alcun `og:image`/`twitter:image`**: verificato nel sorgente del plugin (`jekyll-seo-tag`, `image_drop.rb`) che non esiste un fallback automatico — chi condivideva quei post sui social vedeva una card senza anteprima. Aggiunta un'immagine placeholder generica (`static/assets/img/blog/blog-cover-generic.png`) come default via `defaults:` in `_config.yml` (scope `_posts`) per ogni post privo di `image`; in attesa di cover dedicate per i post più vecchi.
 - `_layouts/post.html`: la cover placeholder è esclusa esplicitamente dal rendering della hero image in pagina (mostrata solo nei meta tag social), per non far comparire un banner di branding generico dentro vecchi articoli tecnici che non ne avevano mai avuto uno.
 
-## [2.4.0] - 2026-08-14 — Post in evidenza nell'indice del blog
+## [2.2.3] - 2026-08-14 — Post in evidenza nell'indice del blog
 
 Ispirato da [jekyllpad.com/blog](https://www.jekyllpad.com/blog): un post per lingua può essere marcato `featured: true` nel front matter per comparire in una card grande in cima all'indice del blog (solo prima pagina), escluso dalla griglia normale sottostante per non duplicarlo. Nessun post è featured di default: è una scelta editoriale esplicita, non calcolata automaticamente sull'ultimo pubblicato.
 
@@ -108,7 +108,7 @@ Ispirato da [jekyllpad.com/blog](https://www.jekyllpad.com/blog): un post per li
 - Nuovo componente `.featured-post` in `_sass/_blog.scss`: immagine a sinistra (42% larghezza) e testo a destra su desktop, impilati su mobile; badge "In evidenza"/"Featured" con sfondo pieno e icona stella (prima versione, con sfondo tenue, giudicata poco visibile).
 - **Iterazioni sul ritaglio dell'immagine**: un primo tentativo con `object-fit: cover` e altezza fissata (poi rapporto 16:9) tagliava il testo incorporato nelle grafiche di copertina — prima il titolo "WireGuard" in alto, poi un banner panoramico ("Alto Comando Flotta Stellare", proporzioni 4:1) illeggibile perché tagliato ai lati. Le copertine di questo blog sono spesso grafiche con testo a posizioni imprevedibili, non foto: nessun `object-position` fisso va bene per tutte. Risolto abbandonando il ritaglio, lasciando ogni immagine alle sue proporzioni naturali (`height: auto`) — stesso approccio già usato da `.post-image` sugli articoli.
 
-## [2.3.0] - 2026-08-14 — Breadcrumb su articoli e pagine categoria
+## [2.2.2] - 2026-08-14 — Breadcrumb su articoli e pagine categoria
 
 ### Navigazione e SEO: breadcrumb con dati strutturati
 
