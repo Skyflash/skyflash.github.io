@@ -5,7 +5,11 @@
 
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
   <meta name="baseurl" content="{{ site.baseurl }}">
+  {% if page.page_num and page.page_num > 1 %}
+  <meta name="robots" content="noindex,follow">
+  {% else %}
   <meta name="robots" content="index,follow">
+  {% endif %}
   <meta name="rating" content="{{ site.settings.rating }}">
 
   <link rel="shortcut icon" href="{{ site.favicon | relative_url }}">

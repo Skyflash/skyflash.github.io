@@ -2,6 +2,13 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.5] - 2026-08-29 — SEO: noindex sulla paginazione, rimosso microdata inutilizzato
+
+Da un'analisi SEO del sito: title e meta description erano identici tra `/it/blog/` e `/it/blog/pagina2/` (entrambi ereditano `title: Blog` dal front matter), un classico "duplicate meta tag" segnalabile in Search Console.
+
+- `_includes/head.html`: `<meta name="robots">` ora condizionale su `page.page_num` — `noindex,follow` dalla pagina 2 in poi della paginazione del blog, `index,follow` altrove. Le pagine successive alla prima non hanno contenuto unico da posizionare, quindi non serve indicizzarle: i link ai post restano seguiti (`follow`) per il crawling.
+- `_layouts/default.html`: rimosso `itemscope itemtype="http://schema.org/Person"` dal tag `<html>` — non c'era nessun `itemprop` associato in tutta la codebase, quindi non produceva dati strutturati validi. I dati strutturati reali del sito arrivano già dal JSON-LD generato da `jekyll-seo-tag`.
+
 ## [2.3.4] - 2026-08-25 — Tema chiaro: sfondo meno "sparante" (da verificare su mobile)
 
 Su segnalazione che il bianco puro del tema chiaro "spara" troppo.
