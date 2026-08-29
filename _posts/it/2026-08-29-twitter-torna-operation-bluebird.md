@@ -6,6 +6,7 @@ description: "Una startup guidata dall'ex general counsel di Twitter ha lanciato
 intro: "Una startup fondata da un ex avvocato di Twitter sostiene che Elon Musk abbia di fatto abbandonato il marchio Twitter. Un giudice, per ora solo a voce, sembra pensarla allo stesso modo."
 image: "/static/assets/img/blog/operation-bluebird/cover.webp"
 lang: it_IT
+featured: true
 categories:
 - "Fuori dall'Ufficio"
 keywords: twitter, x, elon musk, operation bluebird, twitter.now, marchio, causa legale
