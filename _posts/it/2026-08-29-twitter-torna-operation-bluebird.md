@@ -1,8 +1,8 @@
 ---
-title: "Twitter torna? La scommessa legale di Operation Bluebird"
+title: "Twitter potrebbe tornare grazie a Operation Bluebird?"
 layout: post
 date: '2026-08-29 09:00:00'
-description: "Una startup guidata dall'ex general counsel di Twitter ha lanciato Twitter.now e sta cercando di riprendersi legalmente il marchio abbandonato da X. Storia, causa in corso e qualche previsione."
+description: "Nel 2009 ho tradotto Twitter in italiano da volontario. Oggi Operation Bluebird prova, in tribunale, a riprendersi quel marchio che Musk ha abbandonato nel 2023."
 intro: "Una startup fondata da un ex avvocato di Twitter sostiene che Elon Musk abbia di fatto abbandonato il marchio Twitter. Un giudice, per ora solo a voce, sembra pensarla allo stesso modo."
 image: "/static/assets/img/blog/operation-bluebird/cover.webp"
 lang: it_IT
