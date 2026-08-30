@@ -76,8 +76,11 @@ author:  # change following line to your infomation.
   Credo fortemente in ITIL come framework da applicare non solo all'IT ma anche a normali situazioni di vita quotidiana"
 
 # comment
-disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
-  name: cristiancastellari-it
+giscus:  # comments backed by GitHub Discussions; go to https://giscus.app to (re)generate these values if you change repo, or comment out the block to disable comments.
+  repo: skyflash/skyflash.github.io
+  repo_id: MDEwOlJlcG9zaXRvcnkxNDA4MzA5ODM=
+  category: Announcements
+  category_id: DIC_kwDOCGTpB84DEgRc
 
 # analytics
 ## google analytics (GA4)

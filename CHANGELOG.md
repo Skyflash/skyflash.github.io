@@ -2,6 +2,18 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.6] - 2026-08-30 — Migrazione commenti da Disqus a Giscus
+
+Disqus richiede la registrazione a un servizio che pochi lettori usano davvero, ed è un ulteriore fornitore di terze parti da gestire nel cookie banner. Passato a [Giscus](https://giscus.app) (open source, MIT): i commenti diventano thread di GitHub Discussions nel repository del sito, senza infrastruttura da mantenere e senza cookie di tracciamento propri — resta comunque richiesto un account GitHub per commentare.
+
+- `_config.yml`: rimosso il blocco `disqus:`, aggiunto `giscus:` con `repo`/`repo_id`/`category`/`category_id` (valori generati su giscus.app per questo repository, categoria Discussions "Announcements" così solo i maintainer/giscus possono aprire nuove discussion — i lettori possono comunque rispondere).
+- `_includes/comments.html`: riscritto da zero. Il vecchio embed Disqus sfruttava il blocco dichiarativo di CookieConsent (`type="text/plain" data-category="thirdparty"`), ma quel meccanismo usa proprio l'attributo `data-category` — che per Giscus indica invece la categoria della Discussion GitHub, quindi sullo stesso tag sarebbe entrato in conflitto con se stesso. Risolto caricando lo script `giscus.app/client.js` in modo imperativo via `window.loadComments()`, con lo stesso pattern già usato per `loadAnalytics()`.
+- `_includes/cookieconsent.html`: `onConsent`/`onChange` ora richiamano anche `loadComments()` se la categoria "terze parti" è stata accettata; testi IT/EN del banner e del pannello preferenze aggiornati per citare Giscus invece di Disqus.
+- `assets/js/theme.js`: il vecchio hack `DISQUS.reset` (necessario perché Disqus legge il colore di sfondo una sola volta al caricamento) sostituito dal meccanismo nativo di Giscus — un `postMessage({ giscus: { setConfig: { theme } } })` all'iframe `iframe.giscus-frame`, che aggiorna il tema live senza ricaricare l'embed.
+- `_data/i18n.yml`: testo `comments_js_required` (fallback noscript) aggiornato per Giscus.
+- `it/about/privacy.md`: riscritta la sezione dedicata (dati raccolti, luogo di trattamento, modalità di opt-out/cancellazione commenti) per riflettere il funzionamento reale di Giscus, non solo un cerca-e-sostituisci del nome — i dati trattati sono diversi (username/avatar pubblico GitHub anziché nome/mail liberi inseriti in un form).
+- `README.md`: aggiornati i riferimenti a Disqus nella descrizione delle feature e nella sezione di configurazione.
+
 ## [2.3.5] - 2026-08-29 — SEO: noindex sulla paginazione, rimosso microdata inutilizzato
 
 Da un'analisi SEO del sito: title e meta description erano identici tra `/it/blog/` e `/it/blog/pagina2/` (entrambi ereditano `title: Blog` dal front matter), un classico "duplicate meta tag" segnalabile in Search Console.

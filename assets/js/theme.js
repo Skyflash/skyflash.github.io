@@ -36,12 +36,13 @@
       }
     } catch (e) {}
     updateButtons(choice);
-    // Disqus decide chiaro/scuro leggendo il colore di sfondo una sola volta,
-    // al caricamento dell'embed: cambiare tema dopo non lo fa ridisegnare da
-    // solo (bug noto), lasciandolo con testo bianco su sfondo chiaro o
-    // viceversa. DISQUS.reset forza una nuova rilevazione sul tema corrente.
-    if (window.DISQUS && typeof window.disqus_config === 'function') {
-      window.DISQUS.reset({ reload: true, config: window.disqus_config });
+    // Giscus vive in un iframe cross-origin: cambiare tema sull'host non lo
+    // aggiorna da solo, va detto esplicitamente via postMessage.
+    var giscusFrame = document.querySelector('iframe.giscus-frame');
+    if (giscusFrame) {
+      giscusFrame.contentWindow.postMessage({
+        giscus: { setConfig: { theme: choice === 'auto' ? 'preferred_color_scheme' : choice } }
+      }, 'https://giscus.app');
     }
   }
 

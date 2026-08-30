@@ -15,7 +15,7 @@ In ottemperanza degli obblighi derivanti dal **Regolamento europeo per la protez
 
 Il presente sito non pubblica annunci pubblicitari, non usa dati a fini di invio di pubblicità, però fa uso di servizi di terze parti al fine di migliorare l'utilizzo del sito, terze parti che potrebbero raccogliere dati degli utenti e poi usarli per inviare annunci pubblicitari personalizzati su altri siti. Tuttavia il presente sito pone in essere ogni sforzo possibile per tutelare la privacy degli utenti e minimizzare la raccolta dei dati personali. Ad esempio:
 
-- inserimento dei commenti tramite un servizio fornito da terza parte (Disqus). Disqus, al momento dell'inserimento del commento chiede specificamente il consenso fornendo una sua propria informativa. In quel momento l'utente può stabilire come i suoi dati verranno trattati da Disqus. Questo sito non tratta in alcun modo i suddetti dati.  
+- inserimento dei commenti tramite un servizio fornito da terza parte (Giscus, basato su GitHub Discussions). Per commentare è necessario accedere con un account GitHub: è GitHub stesso a gestire l'autenticazione e a fornire la propria informativa privacy. Questo sito non tratta in alcun modo i dati dell'account GitHub dell'utente.  
 
 Per ulteriori informazioni potete leggere **l'informativa completa** qui di seguito.
 
@@ -69,12 +69,12 @@ Questi dati non sono disponibili in alcun modo e restano di esclusiva gestione d
 
 <i class="fa fa-pencil-square-o fa-3x fa-pull-left" aria-hidden="true" style="color: #337ab7;"></i> **Dati conferiti volontariamente**
 
-Il sito può raccogliere altri dati in caso di utilizzo volontario di servizi da parte degli utenti, quali servizi di commenti, di comunicazione (moduli per contatti, box commenti), e verranno utilizzati esclusivamente per l'erogazione del servizio richiesto:
+Il sito può raccogliere altri dati in caso di utilizzo volontario di servizi da parte degli utenti, quali servizi di comunicazione (moduli per contatti), e verranno utilizzati esclusivamente per l'erogazione del servizio richiesto:
 
 - nome
 - indirizzo email
 
-I commenti sono gestiti tramite un servizio esterno (Disqus) per il quale si rimanda alle policy del servizio per ulteriori informazioni (si veda la sezione cookies). 
+I commenti sono invece gestiti tramite un servizio esterno (Giscus, basato su GitHub Discussions): per commentare occorre un account GitHub, e sono username pubblico e avatar dell'account GitHub dell'utente ad essere associati al commento (nessun modulo con nome/email separato). Per ulteriori informazioni si rimanda alle policy del servizio (si veda la sezione cookies). 
  
 <br>
 
@@ -97,7 +97,7 @@ I dati rilevati dal sito generalmente non vengono forniti a terzi, tranne che in
 
 #### Trasferimento dei dati in paesi extra UE
 
-<i class="fa fa-info-circle fa-3x fa-pull-left" aria-hidden="true" style="color: #337ab7;"></i> Il presente sito potrebbe condividere alcuni dei dati raccolti con servizi localizzati al di fuori dell'area dell'Unione Europea. In particolare con Google, Facebook e Microsoft (LinkedIn) tramite i social plugin, Disqus e il servizio di Google Analytics. Il trasferimento è autorizzato in base a specifiche decisioni dell'Unione Europea e del Garante per la tutela dei dati personali, oppure in base alle clausole contrattuali standard previste dai singoli servizi. 
+<i class="fa fa-info-circle fa-3x fa-pull-left" aria-hidden="true" style="color: #337ab7;"></i> Il presente sito potrebbe condividere alcuni dei dati raccolti con servizi localizzati al di fuori dell'area dell'Unione Europea. In particolare con Google, Facebook e Microsoft (LinkedIn) tramite i social plugin, GitHub (per i commenti, tramite Giscus) e il servizio di Google Analytics. Il trasferimento è autorizzato in base a specifiche decisioni dell'Unione Europea e del Garante per la tutela dei dati personali, oppure in base alle clausole contrattuali standard previste dai singoli servizi. 
 
 <hr> 
 
@@ -125,7 +125,7 @@ L'utente può rifiutare l'utilizzo dei cookie e in qualsiasi momento può revoca
 
 - Video di YouTube o altri servizi di condivisione video
 - Le funzionalità di sharing sui social network
-- i commenti di Disqus
+- i commenti di Giscus
 
 Le istruzioni per la disabilitazione dei cookie, e per l'eventuale eliminazione di cookie già presenti sul dispositivo dell'Utente, si trovano alle seguenti pagine web: 
 
@@ -145,13 +145,11 @@ Dati raccolti: identificativo del cookie/client, indirizzo IP (anonimizzato), pa
 Luogo di trattamento dei dati: Unione Europea / Spazio Economico Europeo, con eventuale trasferimento extra-UE da parte di Google in base alle clausole contrattuali standard.<br>
 **L'Utente può revocare il consenso in qualsiasi momento** tramite il link "Gestisci preferenze cookie" a fondo pagina, oppure tramite il [componente aggiuntivo di disattivazione di Google Analytics](https://tools.google.com/dlpage/gaoptout). Per maggiori informazioni si veda l'[informativa privacy di Google](https://policies.google.com/privacy).
 
-* **Disqus**: consente di inserire commenti sul sito e di creare collegamenti tra commenti anche tra siti diversi. Quando visiti una pagina di questo sito web che contiene il box commenti di Disqus, il tuo browser si collega direttamente ai server di Disqus da dove è caricato il box. Puoi inserire un commento connettendoti al tuo account Disqus, nel quale caso Disqus raccoglie informazioni sulla tua visita a questo e altri siti, e potrà collegare i tuoi movimenti online direttamente al tuo profilo personale. Se fornisci il consenso anche alla condivisione dei dati con terzi, Disqus li userà per fornirti pubblicità personalizzata.<br>
-Eventualmente, però, **puoi non fornire il consenso ai contenuti personalizzati**. Inoltre puoi anche commentare inserendo solo il nome e la mail, senza connetterti ad un account.<br><br>
-<i class="fa fa-info-circle fa-3x fa-pull-left" aria-hidden="true" style="color: #337ab7;"></i> **Disqus è titolare autonomo del trattamento dei dati**, e fornisce una sua specifica Informativa privacy con i dettagli del suo trattamento dati. 
-Se non desideri che Disqus registri i dati relativi alla tua visita sul nostro sito web e i i tuoi comportamenti online, devi uscire dal tuo account Disqus e, probabilmente, eliminare i cookie che Disqus ha installato nel tuo browser. 
-Dati raccolti: numero e comportamento degli utenti, indirizzo IP, identificativo del browser, identificativo del sito web che incorpora il box commenti. <br />
-Luogo di trattamento dei dati: USA<br />
-**L'Utente può disabilitare selettivamente l'azione di Disqus di raccolta di dati personali** alla pagina di [opt-out](https://disqus.com/data-sharing-settings/). 
+* **Giscus**: consente di inserire commenti sul sito, salvandoli come discussioni nel repository GitHub pubblico di questo sito (GitHub Discussions). Per commentare è necessario accedere con un account GitHub: non è previsto l'inserimento di commenti anonimi o tramite semplice nome/mail. Il widget viene caricato solo previo consenso (categoria "terze parti" del banner), e quando lo fai il tuo browser si collega ai server di giscus.app e di GitHub. Il commento pubblicato è visibile pubblicamente su GitHub, associato allo username e all'avatar pubblico del tuo account.<br>
+Giscus stesso (progetto open source, MIT) dichiara di non usare cookie di tracciamento né di raccogliere dati di analisi: si limita a inoltrare le richieste necessarie a leggere/scrivere sulle GitHub Discussions per conto del browser dell'utente. Il trattamento del tuo account e della sessione di accesso è però gestito interamente da **GitHub (Microsoft)**, titolare autonomo, che fornisce una sua specifica Informativa privacy.<br><br>
+Dati raccolti: username e avatar pubblico dell'account GitHub, contenuto del commento (pubblico, memorizzato su GitHub), indirizzo IP e dati tecnici raccolti da GitHub durante l'autenticazione.<br />
+Luogo di trattamento dei dati: USA (GitHub/Microsoft)<br />
+**Puoi eliminare in autonomia un tuo commento** direttamente da GitHub (è una risposta in una Discussion del repository del sito, di cui resti autore), oppure revocare l'accesso concesso all'app "giscus" dalle impostazioni delle [applicazioni autorizzate](https://github.com/settings/applications) del tuo account GitHub. 
 
 <hr> 
 
@@ -188,4 +186,4 @@ Le richieste vanno inoltrate al Titolare del trattamento.
 <hr>
 
 ### Aggiornamenti
-La presente privacy policy è aggiornata alla data del **16 Agosto 2026** (aggiunta sezione Google Analytics)
+La presente privacy policy è aggiornata alla data del **30 Agosto 2026** (sostituzione di Disqus con Giscus per i commenti)
