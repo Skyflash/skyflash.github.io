@@ -8,3 +8,5 @@ _site
 .claude
 node_modules
 npm-debug.log
+seo-data/
+SEO-REPORT.md
