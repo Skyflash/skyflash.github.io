@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DocSteer">
+  <title>DocSteer</title>
+  <defs>
+    <linearGradient id="ds-logo-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1668f0"/>
+      <stop offset="1" stop-color="#00b4d8"/>
+    </linearGradient>
+  </defs>
+  <!-- Same mark as the favicon. The navbar renders this beside the site title,
+       so it is the mark only — never a wordmark, or the name shows twice. -->
+  <rect width="64" height="64" rx="14" fill="url(#ds-logo-bg)"/>
+  <path d="M32 11 L42 32 L22 32 Z" fill="#ffffff"/>
+  <path d="M22 32 L42 32 L32 53 Z" fill="#ffffff" opacity=".45"/>
+</svg>
