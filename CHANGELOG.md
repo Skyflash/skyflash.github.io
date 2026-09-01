@@ -2,6 +2,15 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.7] - 2026-09-01 — Lightbox per le immagini dei post
+
+Un articolo con quattro screenshot ravvicinati aveva bisogno di un modo per ingrandirli. Aggiunto un componente lightbox minimale e senza dipendenze, coerente con la regola "zero JavaScript di terze parti" del sito.
+
+- `assets/js/lightbox.js` (nuovo, ~60 righe, IIFE come gli altri script): delega il click su `.post-image`, crea l'overlay al primo utilizzo, chiude con Esc / click sullo sfondo / pulsante. Blocca lo scroll del `body` mentre è aperto e ripristina il focus alla chiusura. Le immagini diventano `role="button"` + `tabindex="0"` e si aprono anche da tastiera (Invio/Spazio). Se la pagina non ha `.post-image`, lo script esce subito.
+- `_sass/_lightbox.scss` (nuovo, importato in `assets/css/main.scss` dopo `blog`): overlay `position: fixed` a `z-index: 200` (sopra la navbar sticky a 50 e lo skip link a 100), sfondo `rgba(0,0,0,0.92)`, transizione di opacità gestita dalla regola globale `prefers-reduced-motion`. `cursor: zoom-in` sulle `.post-image`, `zoom-out` sull'immagine ingrandita.
+- `_includes/footer.html`: aggiunto il tag `<script>` per `lightbox.js` nella lista in fondo al body.
+- Progressive enhancement puro: senza JS le immagini restano inline e leggibili, solo non ingrandibili. Vale per tutte le `.post-image` del sito, comprese le copertine degli articoli.
+
 ## [2.3.6] - 2026-08-30 — Migrazione commenti da Disqus a Giscus
 
 Disqus richiede la registrazione a un servizio che pochi lettori usano davvero, ed è un ulteriore fornitore di terze parti da gestire nel cookie banner. Passato a [Giscus](https://giscus.app) (open source, MIT): i commenti diventano thread di GitHub Discussions nel repository del sito, senza infrastruttura da mantenere e senza cookie di tracciamento propri — resta comunque richiesto un account GitHub per commentare.

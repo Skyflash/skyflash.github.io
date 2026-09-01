@@ -1,0 +1,60 @@
+// Lightbox per le immagini dei post. Markup creato da assets/js/lightbox.js;
+// qui solo l'overlay e lo stato "aperto". Senza JS le immagini restano
+// inline e leggibili, solo non ingrandibili.
+.post-image {
+  cursor: zoom-in;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200; // sopra la navbar sticky (50) e lo skip-link (100)
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  background: rgba(0, 0, 0, 0.92);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+
+  &.is-open {
+    opacity: 1;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  cursor: zoom-out;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+
+  &:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+}
