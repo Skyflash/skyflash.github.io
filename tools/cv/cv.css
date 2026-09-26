@@ -1,0 +1,197 @@
+/* CV in PDF — stile ripreso dal vecchio CV (colonna blu, timeline, Source Sans Pro). A4. */
+
+@font-face { font-family: "SSP"; font-weight: 400; src: url("{{FONTS}}/SourceSansPro-Regular.ttf"); }
+@font-face { font-family: "SSP"; font-weight: 600; src: url("{{FONTS}}/SourceSansPro-Semibold.ttf"); }
+@font-face { font-family: "SSP"; font-weight: 700; src: url("{{FONTS}}/SourceSansPro-Bold.ttf"); }
+
+:root {
+  --blue: #3f6592;
+  --blue-light: #a9bdd6;
+  --ink: #2b2f36;
+  --muted: #5d6470;
+  --rule: #d9dde3;
+  --side: 62mm;
+  --pad: 11mm;
+}
+
+/* Niente margini di stampa: la fascia blu arriva al bordo, lo spazio lo danno i padding */
+@page { size: A4; margin: 0; }
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: "SSP", sans-serif;
+  font-size: 9pt;
+  line-height: 1.45;
+  color: var(--ink);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* La fascia blu è fixed: Chromium la ripete su ogni pagina */
+.strip {
+  position: fixed;
+  top: 0; bottom: 0; left: 0;
+  width: var(--side);
+  background: var(--blue);
+  z-index: -1;
+}
+
+/* Colonna laterale (solo prima pagina) */
+.side {
+  position: absolute;
+  top: 0; left: 0;
+  width: var(--side);
+  padding: 12mm 7mm 0;
+  color: #fff;
+}
+.photo {
+  display: block;
+  width: 38mm; height: 38mm;
+  margin: 0 auto 7mm;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.2mm solid rgba(255,255,255,.9);
+}
+.side__title {
+  font-size: 10.5pt;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin: 6mm 0 3mm;
+  padding-bottom: 1.5mm;
+  border-bottom: .3mm solid rgba(255,255,255,.35);
+}
+.contact { display: flex; gap: 2.5mm; margin-bottom: 2.8mm; }
+.ico { width: 3.6mm; height: 3.6mm; flex: none; fill: currentColor; margin-top: .4mm; }
+.contact__label { font-weight: 600; }
+.contact__value { color: #e8eef6; word-break: break-word; }
+.lang { display: flex; justify-content: space-between; margin-bottom: 1.5mm; }
+.lang span:first-child { font-weight: 600; }
+.lang__level { color: #e8eef6; }
+
+.cert { margin-bottom: 2.4mm; }
+.cert__name { font-weight: 600; line-height: 1.3; }
+.cert__meta { color: #e8eef6; font-size: 8.3pt; }
+
+/* Colonna principale */
+/* clone: il padding si ripete su ogni pagina, così il contenuto che scorre non tocca il bordo */
+.main {
+  margin-left: var(--side);
+  padding: 12mm var(--pad) 8mm;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.head h1 {
+  font-size: 24pt;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 0;
+}
+.head__role { color: var(--blue); font-size: 12pt; font-weight: 600; margin-top: 1.5mm; }
+.head__sub { color: var(--muted); font-size: 8.8pt; margin-top: .5mm; }
+.head__profile { margin: 4mm 0 0; }
+
+.sec { margin-top: 5mm; }
+.sec__title {
+  font-size: 11pt;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin: 0 0 3.5mm;
+  padding-bottom: 1.5mm;
+  border-bottom: .3mm solid var(--rule);
+  break-after: avoid;
+}
+
+/* Timeline */
+.tl { position: relative; }
+.tl__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 27mm 1fr;
+  gap: 3mm;
+  padding: 0 0 3.2mm 4mm;
+  border-left: .35mm solid var(--ink);
+  break-inside: avoid;
+}
+.tl__item:last-child { padding-bottom: 0; }
+.tl__item::before {
+  content: "";
+  position: absolute;
+  left: -1.1mm; top: 1.2mm;
+  width: 1.5mm; height: 1.5mm;
+  border: .35mm solid var(--ink);
+  border-radius: 50%;
+  background: #fff;
+}
+.tl__date { color: var(--muted); }
+.tl__title { font-weight: 600; font-size: 9.8pt; }
+.tl__org { color: var(--blue); }
+.tl__desc { margin: 1mm 0 0; color: #3b4049; }
+
+/* Timeline compatta (certificazioni e corsi): una riga per voce */
+.tl--compact .tl__item { padding-bottom: 1.6mm; }
+.tl--compact .tl__title { display: inline; font-size: 9pt; }
+.tl--compact .tl__org { display: inline; }
+.tl--compact .tl__org::before { content: " · "; color: var(--muted); }
+
+/* Competenze: una riga per area, nome a sinistra ed etichette a destra */
+.skills__group {
+  display: grid;
+  grid-template-columns: 44mm 1fr;
+  gap: 3mm;
+  margin-bottom: 2mm;
+  break-inside: avoid;
+}
+.skills__group h3 { font-size: 9pt; font-weight: 600; margin: .4mm 0 0; line-height: 1.3; }
+.tags { display: flex; flex-wrap: wrap; align-items: flex-start; align-content: flex-start; gap: 1.2mm; }
+.tag {
+  background: #e8eef6;
+  color: #24466d;
+  border-radius: 1mm;
+  padding: .3mm 1.8mm;
+  font-size: 8.5pt;
+}
+
+/* Profilo a blocchi, come nel vecchio CV */
+.pf { margin: 1.8mm 0 0; }
+.pf__title { font-weight: 600; color: var(--blue); }
+
+/* Corsi: una riga per voce */
+.course { display: grid; grid-template-columns: 17mm 1fr; gap: 2mm; margin-bottom: .8mm; break-inside: avoid; }
+.course__date { color: var(--muted); }
+.course__name { font-weight: 600; }
+.course__org { color: var(--blue); }
+.courses__older { margin: 1.5mm 0 0; color: #3b4049; }
+.courses__older strong { font-weight: 600; }
+
+/* Progetti: righe a tutta larghezza */
+.proj { break-inside: avoid; margin-bottom: 2.4mm; }
+.proj__name { font-weight: 600; font-size: 9.5pt; }
+.proj__meta { color: var(--blue); font-size: 8.5pt; }
+.proj__desc { margin: .5mm 0 0; color: #3b4049; }
+/* Progetti personali: descrizione sulla stessa riga del nome */
+.projs--inline .proj { margin-bottom: 1.4mm; }
+.projs--inline .proj > div, .projs--inline .proj__desc { display: inline; }
+.projs--inline .proj__desc::before { content: " — "; color: var(--muted); }
+a { color: inherit; text-decoration: none; }
+
+/* Nota in fondo alla colonna blu della seconda pagina (consenso privacy o recapiti su richiesta) */
+.side-note {
+  position: absolute;
+  /* ancorato dall'alto (circa 6 righe di testo): transform e bottom allungherebbero il documento */
+  top: calc(2 * 297mm - 36mm);
+  left: 0;
+  width: var(--side);
+  margin: 0;
+  padding: 0 7mm;
+  font-size: 7pt;
+  line-height: 1.4;
+  color: #dfe7f1;
+}
+.side-note--short { top: calc(2 * 297mm - 18mm); }
+.updated { margin-top: 1.5mm; font-size: 7.5pt; color: var(--muted); }

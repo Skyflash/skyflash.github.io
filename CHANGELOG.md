@@ -2,6 +2,18 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.9] - 2026-09-26 — CV in PDF rigenerato dai dati del sito
+
+Il PDF scaricabile era fermo al 2021 (generato con wkhtmltopdf, esperienza in Integra senza descrizione, competenze diverse dal sito, indirizzo vecchio). Ora si genera da script, con gli stessi dati della pagina CV, in 2 pagine A4.
+
+- `tools/cv/build.py` (nuovo): legge `_data/index/careers.yml` e `skills.yml` più `tools/cv/cv.yml`, produce l'HTML e lo stampa in PDF con Edge headless. Due versioni dallo stesso template, entrambe in `static/assets/cv/`: pubblica (solo città) e recruiter `CV_Cristian_Castellari_completo.pdf` (indirizzo, telefono, data di nascita, consenso privacy GDPR), quest'ultima ignorata da git. Edge viene lanciato con un profilo dedicato e lo script attende che il PDF sia scritto, perché `msedge.exe` può restituire il controllo prima di aver finito.
+- Contenuti del PDF: titolo allineato alla headline di LinkedIn, profilo nella struttura del vecchio CV (competenze comunicative e organizzative, chiusura sul troubleshooting), esperienze (ruoli più vecchi accorciati solo nel PDF), competenze come etichette per area invece delle barre con percentuale, "Progetti principali" di lavoro (Hyper-V 2026, BitLocker 2023, Asset & Systems Management L'Operosa 2022-23, Asset Management Novomatic 2015, consolidamento SO.GE.M.A. 2009-11), "Progetti personali e open source" (DocSteer, il tema del sito, Kace SMA Tools, FlottaStellare.it, nome cliccabile), corsi dal 2020 più una riga per i precedenti. Certificazioni Acronis, Fortinet e ITIL in corso di validità nella colonna laterale. Fonte per certificazioni, corsi e progetti: LinkedIn, settembre 2026. E-mail, sito, LinkedIn e link dei progetti sono cliccabili. In fondo alla colonna blu della seconda pagina: il consenso privacy nella versione recruiter, "Recapiti completi disponibili su richiesta via e-mail" in quella pubblica.
+- `tools/cv/cv.css` (nuovo): stile ripreso dal vecchio CV (colonna blu, timeline, Source Sans Pro). Pagina senza margini di stampa con `box-decoration-break: clone` sul contenuto, così la fascia blu arriva al bordo e il padding si ripete su ogni pagina. Font in `tools/cv/fonts/` con licenza OFL.
+- `tools/cv/cv.yml` e `tools/cv/README.md` (nuovi): dati del CV non presenti in `_data/` e istruzioni per rigenerare.
+- `.gitignore`: esclusi `tools/cv/private.yml` (dati personali, il repo è pubblico), `tools/cv/out/` e il PDF recruiter in `static/assets/cv/`.
+- `_config.yml`: `tools` aggiunto a `exclude`, così Jekyll non lo pubblica.
+- `static/assets/cv/CV_Cristian_Castellari.pdf`: rigenerato (versione pubblica).
+
 ## [2.3.8] - 2026-09-26 — Competenze: nuova area AI
 
 - `_data/index/skills.yml`: aggiunta la categoria "AI & Sviluppo assistito" / "AI & Assisted Development" (fra "Systems Management & Automazione" e "Leadership & Metodologia") con Claude / Claude Code, Prompt & Context Engineering, sviluppo e automazione con AI, MCP / Skill / Agenti. Nessuna modifica a template o stili: la sezione competenze itera già sulle categorie.

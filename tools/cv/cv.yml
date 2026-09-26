@@ -1,0 +1,156 @@
+# Dati del CV in PDF che non stanno già in _data/index/ (esperienze e competenze arrivano da lì).
+# Tutto quello che c'è qui è pubblico: i dati personali vanno in private.yml (ignorato da git).
+
+name: Cristian Castellari
+title: IT & Service Management Unit Manager
+# Seconda riga del titolo, allineata alla headline di LinkedIn
+subtitle: Coordinamento Team di Supporto IT · Infrastrutture, Virtualizzazione & Sicurezza · ITIL v4
+photo: static/assets/img/landing/me.jpg
+
+# Contatti pubblicati in entrambe le versioni
+city: Imola (BO)
+email: c.castellari@gmail.com
+website: https://cristiancastellari.it
+linkedin: www.linkedin.com/in/cristiancastellari
+
+# Solo versione pubblica: nota in fondo alla colonna blu di pagina 2 (nella recruiter c'è il consenso privacy)
+public_note: Recapiti completi disponibili su richiesta via e-mail.
+
+# Profilo: una frase di apertura, poi i blocchi del vecchio CV (comunicative, organizzative) e la chiusura
+profile: >-
+  Da vent'anni mi occupo di infrastrutture IT, prima come amministratore di sistemi e oggi alla
+  guida dell'unità IT & Service Management di Integra.
+profile_sections:
+  - title: Competenze comunicative
+    text: >-
+      Lavoro volentieri in team e costruisco con colleghi e clienti rapporti basati sulla fiducia,
+      con un approccio diplomatico anche nelle situazioni più delicate.
+  - title: Competenze organizzative
+    text: >-
+      Condivido gli obiettivi dell'azienda per cui lavoro e ne rispetto processi e ruoli. Nel mio
+      percorso ho definito e portato a termine progetti anche importanti, con un approccio ITIL.
+      Mi trovo a mio agio con gli strumenti di AI, come Claude.
+# Frase finale del profilo, a sé come nel vecchio CV
+profile_closing: Possiedo spiccate qualità di troubleshooting.
+
+# Descrizioni più brevi solo per il PDF, per titolo del ruolo (_data/index/careers.yml resta com'è).
+# I ruoli non elencati usano il testo del sito.
+career_desc:
+  Coordinatore Office Automation Systems: >-
+    Gestione ed evoluzione dei servizi Office Automation del Gruppo: con Kace 1000 script
+    automatizzati, configurazioni e installazioni software on demand su oltre 800 PC.
+    Procedure ISO 27001 e documentazione interna.
+  Referente Office Automation: >-
+    Supporto Office Automation agli utenti del Gruppo Novomatic in Italia e gestione dei server
+    Linux e Windows (Git, MDM, siti corporate, antivirus).
+  Responsabile IT: >-
+    Responsabile dell'infrastruttura IT e telefonica del Gruppo: tre società, sei filiali,
+    oltre 100 utenti.
+
+languages:
+  - name: Italiano
+    level: Madrelingua
+  - name: Inglese
+    level: ""   # da definire: il vecchio CV riportava 1 stella su 5
+
+# Certificazioni in corso di validità (fonte: LinkedIn, settembre 2026), mostrate nella colonna laterale.
+# Omesse perché scadute o superate da una più recente: Zyxel ZCNA Nebula (dic 2024), Cubbit Introduction
+# (set 2024), Fortinet NSE 4 Network Security Professional (gen 2023), Acronis Cloud Tech Foundation (gen 2022).
+certifications:
+  - date: ago 2026
+    name: "Cloud Tech Professional: Disaster Recovery, Microsoft 365, XDR"
+    org: Acronis
+  - date: ago 2026
+    name: "Cloud Tech Pro: Backup, RMM"
+    org: Acronis
+  - date: gen 2025
+    name: Fortinet Certified Professional Network Security
+    org: Fortinet
+  - date: gen 2025
+    name: NSE 6 Certified in SASE
+    org: Fortinet
+  - date: gen 2025
+    name: NSE 6 Certified in Secure Networking
+    org: Fortinet
+  - date: gen 2025
+    name: NSE 4 Certified in FortiOS
+    org: Fortinet
+  - date: "2015"
+    name: ITIL Foundation V3 in IT Service Management
+    org: Exin
+
+# Corsi dal 2020 in poi; i precedenti in una riga riassuntiva
+courses:
+  - date: ago 2026
+    name: Semplificazione del lavoro con Microsoft Copilot
+    org: LinkedIn
+  - date: ago 2026
+    name: Supporto IT per una forza lavoro ibrida
+    org: LinkedIn
+  - date: ago 2026
+    name: "Assistenza clienti: gestire le aspettative dei clienti"
+    org: LinkedIn
+  - date: lug 2026
+    name: Intro to Acronis
+    org: Acronis
+  - date: set 2023
+    name: "Windows Server 2019: File Services"
+    org: LinkedIn
+  - date: apr 2021
+    name: "Windows Server 2019: Active Directory Enterprise Infrastructure"
+    org: LinkedIn
+  - date: set 2020
+    name: "Windows Server 2019: Implementing Group Policy"
+    org: LinkedIn
+courses_older: >-
+  PowerShell v4 (2016), Active Directory e Group Policy (Serverlab, 2012), Lotus Domino 7 (2008).
+
+# Progetti principali (fonte: LinkedIn, settembre 2026). In griglia a due colonne, riga per riga:
+# i due progetti di asset management stanno affiancati.
+projects:
+  - name: Infrastruttura Hyper-V per un cliente
+    org: Integra S.r.l.
+    date: mar 2026 - mag 2026
+    desc: >-
+      Progettazione e realizzazione end-to-end su HP ProLiant Gen10: Active Directory ridondato,
+      rete segmentata, file server, integrazione con Entra ID, backup a più livelli cifrato.
+  - name: BitLocker su tutti i PC del Gruppo L'Operosa
+    org: Integra S.r.l.
+    date: set 2023 - dic 2023
+    desc: >-
+      Cifratura automatica dei dischi per i requisiti ISO 27001, con deploy via Kace SMA e
+      PowerShell e le chiavi di ripristino raccolte centralmente.
+  - name: Asset & Systems Management del Gruppo L'Operosa
+    org: Integra S.r.l.
+    date: giu 2022 - mag 2023
+    desc: >-
+      Asset IT di tutte le sedi (SD-WAN e MPLS) gestiti con Quest Kace SMA: software, licenze e
+      baseline uniforme sul 100% del parco macchine.
+  - name: Asset Management del Gruppo Novomatic
+    org: Novomatic Italia S.p.A.
+    date: giu 2015 - set 2015
+    desc: >-
+      Progetto realizzato con Dell su Dell KACE 1000: software, licenze e assistenza remota
+      per oltre 550 PC distribuiti su rete geografica.
+  - name: Consolidamento dell'infrastruttura del Gruppo
+    org: SO.GE.M.A. S.p.A.
+    date: lug 2009 - nov 2011
+    desc: >-
+      Con Serverlab, centralizzazione di utenti e applicazioni di più sedi e aziende su una farm
+      Citrix XenServer, XenApp e XenDesktop: meno complessità e tempi di intervento quasi azzerati.
+
+# Progetti personali e open source (fonte: _data/index/projects.yml e LinkedIn, testi accorciati).
+# Il nome è un link cliccabile nel PDF; l'URL non viene stampato per stare su una riga.
+personal_projects:
+  - name: DocSteer
+    url: https://github.com/Skyflash/docsteer
+    desc: Tema Jekyll open source per documentazione tecnica (2026).
+  - name: My Personal Resume & Blog
+    url: https://github.com/Skyflash/my-personal-resume-and-blog
+    desc: Il tema bilingue di cristiancastellari.it, riutilizzabile da chiunque.
+  - name: Kace SMA Tools
+    url: https://github.com/kace-sma-tools
+    desc: Script e query per Quest Kace SMA, condivisi con la community.
+  - name: FlottaStellare.it
+    url: https://flottastellare.it
+    desc: Sito no-profit per una community di Elite Dangerous (dal 2019).

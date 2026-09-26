@@ -10,3 +10,8 @@ node_modules
 npm-debug.log
 seo-data/
 SEO-REPORT.md
+
+# CV in PDF: dati personali e output della versione recruiter (tools/cv/)
+tools/cv/private.yml
+tools/cv/out/
+static/assets/cv/CV_Cristian_Castellari_completo.pdf
