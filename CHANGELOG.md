@@ -2,6 +2,10 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.8] - 2026-09-26 — Competenze: nuova area AI
+
+- `_data/index/skills.yml`: aggiunta la categoria "AI & Sviluppo assistito" / "AI & Assisted Development" (fra "Systems Management & Automazione" e "Leadership & Metodologia") con Claude / Claude Code, Prompt & Context Engineering, sviluppo e automazione con AI, MCP / Skill / Agenti. Nessuna modifica a template o stili: la sezione competenze itera già sulle categorie.
+
 ## [2.3.7] - 2026-09-01 — Lightbox per le immagini dei post
 
 Un articolo con quattro screenshot ravvicinati aveva bisogno di un modo per ingrandirli. Aggiunto un componente lightbox minimale e senza dipendenze, coerente con la regola "zero JavaScript di terze parti" del sito.

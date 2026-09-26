@@ -63,6 +63,27 @@ categories:
         percentage: 70
 
   - name:
+      it: AI & Sviluppo assistito
+      en: AI & Assisted Development
+    skills:
+      - name:
+          it: Claude / Claude Code
+          en: Claude / Claude Code
+        percentage: 85
+      - name:
+          it: Prompt & Context Engineering
+          en: Prompt & Context Engineering
+        percentage: 80
+      - name:
+          it: Sviluppo e automazione con AI
+          en: AI-assisted Development & Automation
+        percentage: 80
+      - name:
+          it: MCP / Skill / Agenti
+          en: MCP / Skills / Agents
+        percentage: 65
+
+  - name:
       it: Leadership & Metodologia
       en: Leadership & Methodology
     skills:
