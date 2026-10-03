@@ -13,7 +13,7 @@ Serve PyYAML (`pip install pyyaml`), come per il CV.
 
 | Social | Cosa arriva già compilato |
 |---|---|
-| LinkedIn | testo e link |
+| LinkedIn | solo il link, con l'anteprima: il testo si incolla dagli appunti |
 | Threads | testo e link (massimo 500 caratteri in tutto) |
 | Facebook | solo il link: il testo si incolla dagli appunti |
 
@@ -39,4 +39,4 @@ Senza `social:` lo script usa `intro`. Il link al post lo aggiunge lui.
 
 Lo script controlla che l'indirizzo del post risponda e si ferma se non risponde ancora: LinkedIn e Facebook tengono in cache l'anteprima di un link, e un link condiviso prima del deploy resta per giorni con un 404 o senza immagine. `--force` salta il controllo. I post con data futura non vengono scelti come "più recente" finché non arriva il loro giorno.
 
-Il link di LinkedIn con il testo precompilato (`feed/?shareActive=true&text=`) non è documentato ufficialmente: se un giorno smette di funzionare, il testo è comunque negli appunti.
+Per LinkedIn si usa il link di condivisione ufficiale (`sharing/share-offsite/?url=`). Quello che precompila anche il testo (`feed/?shareActive=true&text=`) non è documentato e perdeva il link al post.

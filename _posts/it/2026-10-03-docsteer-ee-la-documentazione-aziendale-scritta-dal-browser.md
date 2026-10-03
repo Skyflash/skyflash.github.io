@@ -4,6 +4,18 @@ layout: post
 date: '2026-10-03 09:00:00'
 description: "DocSteer-EE è il successore applicativo del tema Jekyll DocSteer: documentazione, knowledge base e FAQ per i team, con editor nel browser, cronologia delle versioni, revisione e accesso con Active Directory o single sign-on. È in alpha, e il piano gratuito basta già per usarlo in azienda."
 intro: "Un tema Jekyll va benissimo finché chi scrive la documentazione ha accesso al repository. In azienda quasi mai è così. DocSteer-EE nasce da lì."
+social:
+  default: |-
+    Un tema Jekyll va benissimo finché chi scrive la documentazione ha accesso al repository. In azienda quasi mai è così.
+
+    Da lì nasce DocSteer-EE, il successore applicativo di DocSteer: documentazione, knowledge base e FAQ scritte dal browser, con cronologia delle versioni, revisione e accesso con Active Directory o single sign-on.
+
+    È in alpha, non ancora pubblica. Il confine fra gratis e a pagamento passa sulle funzionalità, mai sui volumi: la versione gratuita, LDAP e OIDC compresi, basta già per usarla in azienda.
+
+    E c'è un costruttore di filtri LDAP a caselle, per chi come me ha perso troppe serate a contare parentesi.
+
+    Prima di aprirla mi interessa capire cosa manca a chi gestisce la documentazione aziendale ogni giorno. Voi cosa usate oggi? E cosa vi fa abbandonare una wiki interna?
+  threads: "DocSteer-EE: documentazione, knowledge base e FAQ per le aziende, scritte dal browser, con versioni, revisione e login Active Directory. È in alpha. La versione gratuita basta già per usarla in azienda, senza limiti sul contenuto. Voi cosa usate oggi per la documentazione interna?"
 image: "/static/assets/img/blog/docsteer-ee/cover.png"
 lang: it_IT
 featured: true

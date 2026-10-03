@@ -2,6 +2,11 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.12] - 2026-10-03 — LinkedIn con il link di condivisione ufficiale
+
+- `tools/social/share.py`: LinkedIn usa `sharing/share-offsite/?url=` al posto di `feed/?shareActive=true&text=`. Quest'ultimo, non documentato, precompilava il testo ma perdeva il link al post. Ora LinkedIn si comporta come Facebook: link con anteprima nella finestra, testo da incollare dagli appunti. `tools/social/README.md` aggiornato.
+- Post di DocSteer-EE (IT): aggiunto il campo `social:` con i testi usati per la condivisione, uno per LinkedIn e Facebook e una versione corta per Threads.
+
 ## [2.3.11] - 2026-10-03 — I titoli dei progetti portano alla demo
 
 - `_data/index/projects.yml`: aggiunto `url:` a "My Personal Resume & Blog" (`cristiancastellari.it/my-personal-resume-and-blog/`) e a DocSteer (`cristiancastellari.it/docsteer/`). Il titolo della card porta alla demo, il pulsante GitHub resta sul repository. Nessuna modifica a `_includes/project-card.html`, che gestiva già `url:` prima di `repo:`.

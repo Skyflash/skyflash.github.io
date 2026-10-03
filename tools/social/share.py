@@ -4,9 +4,8 @@ Niente API e niente token: per ogni social copia il testo negli appunti e apre
 la finestra di condivisione nel browser, già compilata dove il social lo
 permette. Si controlla, si incolla dove serve e si pubblica a mano.
 
-  - LinkedIn: testo e link già compilati
-  - Threads:  testo e link già compilati (massimo 500 caratteri)
-  - Facebook: solo il link; il testo si incolla dagli appunti
+  - Threads:           testo e link già compilati (massimo 500 caratteri)
+  - LinkedIn, Facebook: solo il link, con l'anteprima; il testo si incolla dagli appunti
 
 Il testo viene dal front matter del post:
 
@@ -95,7 +94,7 @@ def copy_to_clipboard(text):
 def share_url(network, text, url):
     q = urllib.parse.quote
     if network == "linkedin":
-        return f"https://www.linkedin.com/feed/?shareActive=true&text={q(text + chr(10) + chr(10) + url)}"
+        return f"https://www.linkedin.com/sharing/share-offsite/?url={q(url)}"
     if network == "facebook":
         return f"https://www.facebook.com/sharer/sharer.php?u={q(url)}"
     return f"https://www.threads.net/intent/post?text={q(text)}&url={q(url)}"
@@ -131,7 +130,7 @@ def main():
         if n == "threads" and len(text) + len(url) + 1 > THREADS_MAX:
             print(f"! Threads: testo + link fanno {len(text) + len(url) + 1} caratteri, il massimo è {THREADS_MAX}.")
             print("  Aggiungi una versione corta in social: threads: nel front matter.\n")
-        copy_to_clipboard(text if n != "linkedin" else text + "\n\n" + url)
+        copy_to_clipboard(text)
         print(f"[{n}] testo copiato negli appunti, apro la finestra di condivisione...")
         webbrowser.open(share_url(n, text, url))
         if n != networks[-1]:
