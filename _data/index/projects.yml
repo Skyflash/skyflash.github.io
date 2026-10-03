@@ -5,6 +5,7 @@
     en: Personal Resume & Blog (A Jekyll theme)
   gh_user: Skyflash
   repo: my-personal-resume-and-blog
+  url: https://cristiancastellari.it/my-personal-resume-and-blog/
   img: /static/assets/img/landing/my-personal-resume-and-blog.svg
   desc:
     it: "Il tema di questo stesso sito, estratto e pubblicato come progetto riutilizzabile: bilingue (IT/EN), senza JavaScript di terze parti, pronto per GitHub Pages"
@@ -15,6 +16,7 @@
     en: DocSteer (A Jekyll theme for documentation)
   gh_user: Skyflash
   repo: docsteer
+  url: https://cristiancastellari.it/docsteer/
   img: /static/assets/img/landing/docsteer.svg
   desc:
     it: "Un tema Jekyll veloce e senza framework per documentazione tecnica, portali di supporto e knowledge base interne: ricerca live, sei skin di colore con tema chiaro e scuro, lightbox per le immagini, indice automatico e SEO pronta all'uso. Pubblicato come gem, MIT."

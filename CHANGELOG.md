@@ -2,6 +2,10 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.11] - 2026-10-03 — I titoli dei progetti portano alla demo
+
+- `_data/index/projects.yml`: aggiunto `url:` a "My Personal Resume & Blog" (`cristiancastellari.it/my-personal-resume-and-blog/`) e a DocSteer (`cristiancastellari.it/docsteer/`). Il titolo della card porta alla demo, il pulsante GitHub resta sul repository. Nessuna modifica a `_includes/project-card.html`, che gestiva già `url:` prima di `repo:`.
+
 ## [2.3.10] - 2026-10-03 — Condivisione dei post sui social
 
 Condivisione semiautomatica su LinkedIn, Facebook e Threads, senza API: le API di LinkedIn per i profili personali richiedono un token da rinnovare a mano ogni 60 giorni, un costo fisso sproporzionato per un post al mese.
