@@ -2,6 +2,14 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.10] - 2026-10-03 — Condivisione dei post sui social
+
+Condivisione semiautomatica su LinkedIn, Facebook e Threads, senza API: le API di LinkedIn per i profili personali richiedono un token da rinnovare a mano ogni 60 giorni, un costo fisso sproporzionato per un post al mese.
+
+- `tools/social/share.py` (nuovo): prende il post più recente (o quello indicato), costruisce l'URL dal `permalink`, controlla che il post sia già online e poi, social per social, copia il testo negli appunti e apre la finestra di condivisione. LinkedIn e Threads la ricevono già compilata con testo e link, Facebook solo con il link (non permette di precompilare il testo). Avvisa se il testo per Threads supera i 500 caratteri. I post con data futura sono ignorati finché non è il loro giorno.
+- Testo dal nuovo campo facoltativo `social:` del front matter, una stringa o un testo per social con `default`; senza, usa `intro`.
+- `tools/social/README.md` (nuovo): uso e limiti.
+
 ## [2.3.9] - 2026-09-26 — CV in PDF rigenerato dai dati del sito
 
 Il PDF scaricabile era fermo al 2021 (generato con wkhtmltopdf, esperienza in Integra senza descrizione, competenze diverse dal sito, indirizzo vecchio). Ora si genera da script, con gli stessi dati della pagina CV, in 2 pagine A4.
