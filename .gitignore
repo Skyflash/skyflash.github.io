@@ -15,3 +15,6 @@ SEO-REPORT.md
 tools/cv/private.yml
 tools/cv/out/
 static/assets/cv/CV_Cristian_Castellari_completo.pdf
+
+# Cache di Python degli script in tools/
+__pycache__/
