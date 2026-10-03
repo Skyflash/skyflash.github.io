@@ -6,7 +6,7 @@ description: "DocSteer è un tema Jekyll per documentazione tecnica, portali di 
 intro: "Una pagina di documentazione che esiste ma che nessuno riesce a trovare vale quanto una pagina che non è mai stata scritta. DocSteer è un tema Jekyll costruito attorno a quel problema."
 image: "/static/assets/img/blog/docsteer/cover.png"
 lang: it_IT
-featured: true
+featured: false
 categories:
 - Progetti Personali
 keywords: docsteer, jekyll, tema, documentazione, knowledge base, ricerca, dark mode, gem, github pages, claude code

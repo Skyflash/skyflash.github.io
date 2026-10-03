@@ -6,7 +6,7 @@ description: "DocSteer is a Jekyll theme for technical documentation, support po
 intro: "A documentation page that exists but that nobody can find is worth about as much as a page that was never written. DocSteer is a Jekyll theme built around that problem."
 image: "/static/assets/img/blog/docsteer/cover.png"
 lang: en_US
-featured: true
+featured: false
 categories:
 - Personal Projects
 keywords: docsteer, jekyll, theme, documentation, knowledge base, search, dark mode, gem, github pages, claude code
