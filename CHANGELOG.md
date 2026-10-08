@@ -2,6 +2,11 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.13] - 2026-10-08 — Post sull'ACFS BGS Tool
+
+- Nuovo post (IT, Progetti Personali): "ACFS BGS Tool: quattro giorni con Claude Code per il BGS di Elite Dangerous". Racconta per lettori IT il metodo di lavoro con Claude Code, le decisioni di dominio e i limiti delle fonti dati; rimanda al post per i piloti sul sito dello squadrone (`flottastellare.it/blog/acfs-bgs-tool/`). Con campo `social:` per LinkedIn, Facebook e Threads.
+- Copertina in `static/assets/img/blog/acfs-bgs-tool/cover.png`, la stessa schermata del tool usata sul sito dello squadrone. Una sola immagine per entrambi i temi: il tool non ha una variante chiara e scura.
+
 ## [2.3.12] - 2026-10-03 — LinkedIn con il link di condivisione ufficiale
 
 - `tools/social/share.py`: LinkedIn usa `sharing/share-offsite/?url=` al posto di `feed/?shareActive=true&text=`. Quest'ultimo, non documentato, precompilava il testo ma perdeva il link al post. Ora LinkedIn si comporta come Facebook: link con anteprima nella finestra, testo da incollare dagli appunti. `tools/social/README.md` aggiornato.
