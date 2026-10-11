@@ -64,6 +64,17 @@
     en: "The website for the Flotta Stellare squadron in Elite: Dangerous"
 
 - name:
+    it: ACFS BGS Tool
+    en: ACFS BGS Tool
+  gh_user: ed-acfs
+  repo: acfs-bgs-tool
+  url: https://flottastellare.it/acfs-bgs-tool/
+  img: /static/assets/img/blog/acfs-bgs-tool/cover.png
+  desc:
+    it: "Lo strumento con cui lo squadrone Flotta Stellare segue il BGS di Elite: Dangerous: tutti i sistemi della fazione ordinati per priorità, con il motivo scritto accanto, su dati Spansh aggiornati da GitHub Actions"
+    en: "The tool the Flotta Stellare squadron uses to follow the BGS in Elite: Dangerous: every faction system sorted by priority, with the reason written next to it, on Spansh data refreshed by GitHub Actions"
+
+- name:
     it: La Traduzione di Morrowind
     en: The Morrowind Translation
   gh_user: Skyflash

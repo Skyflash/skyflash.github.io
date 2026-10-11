@@ -2,6 +2,10 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.14] - 2026-10-11 — ACFS BGS Tool fra i progetti
+
+- `_data/index/projects.yml`: nuova card "ACFS BGS Tool", subito dopo FlottaStellare.it. Il titolo porta al tool (`flottastellare.it/acfs-bgs-tool/`), il pulsante GitHub al repository `ed-acfs/acfs-bgs-tool`. Immagine: la copertina del post (`static/assets/img/blog/acfs-bgs-tool/cover.png`), riusata senza duplicarla.
+
 ## [2.3.13] - 2026-10-08 — Post sull'ACFS BGS Tool
 
 - Nuovo post (IT, Progetti Personali): "ACFS BGS Tool: quattro giorni con Claude Code per il BGS di Elite Dangerous". Racconta per lettori IT il metodo di lavoro con Claude Code, le decisioni di dominio e i limiti delle fonti dati; rimanda al post per i piloti sul sito dello squadrone (`flottastellare.it/blog/acfs-bgs-tool/`). Con campo `social:` per LinkedIn, Facebook e Threads.
