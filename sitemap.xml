@@ -53,9 +53,14 @@ sitemap:
     </url>
     {% endunless %}
   {% endfor %}
+  {% comment %} Il tool ipui2ipei è un repo a parte (Skyflash/ipui2ipei): /ipui2ipei/ è solo un
+  redirect noindex, quindi qui vanno le due versioni linguistiche. {% endcomment %}
+  {% assign ipui_paths = "/ipui2ipei/it/,/ipui2ipei/en/" | split: "," %}
+  {% for path in ipui_paths %}
     <url>
-      <loc>{{ site.url }}/ipui2ipei/</loc>
+      <loc>{{ site.url }}{{ path }}</loc>
       <changefreq>monthly</changefreq>
       <priority>0.3</priority>
     </url>
+  {% endfor %}
 </urlset>

@@ -21,6 +21,11 @@
     {% assign parts = entry | split: "|" %}
     <link rel="alternate" hreflang="{{ parts[0] }}" href="{{ parts[1] | absolute_url }}">
   {% endfor %}
+  {% comment %} x-default sulla prima versione (l'italiano, vedi ordine in i18n-alternates.html) {% endcomment %}
+  {% if i18n_alternates.size > 1 %}
+    {% assign parts = i18n_alternates.first | split: "|" %}
+    <link rel="alternate" hreflang="x-default" href="{{ parts[1] | absolute_url }}">
+  {% endif %}
 
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/static/assets/fork-awesome/css/fork-awesome.min.css' | relative_url }}">

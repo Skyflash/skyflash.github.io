@@ -2,6 +2,12 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.15] - 2026-10-11 — Correzioni SEO dal report dell'11/10
+
+- `sitemap.xml`: l'URL scritto a mano `/ipui2ipei/` (dal redesign di agosto solo un redirect `noindex`) sostituito con le due pagine vere del tool, `/ipui2ipei/it/` e `/ipui2ipei/en/`. Il `robots.txt` del repo ipui2ipei vive in `/ipui2ipei/robots.txt` e Google non lo legge, quindi la sua sitemap non veniva mai scoperta.
+- `_config.yml`: `title` da "Cristian Castellari — CV, Progetti e Blog" a "Cristian Castellari". jekyll-seo-tag lo aggiunge in coda a ogni title: il suffisso passa da 44 a 22 caratteri e il nome si vede anche con title lunghi. Le due home prendono "CV, Progetti e Blog" / "CV, Projects and Blog" come title proprio. Corretto anche il title della home EN, che finiva con il suffisso italiano.
+- `_includes/head.html`: `hreflang="x-default"` verso la versione italiana su ogni pagina con traduzione.
+
 ## [2.3.14] - 2026-10-11 — ACFS BGS Tool fra i progetti
 
 - `_data/index/projects.yml`: nuova card "ACFS BGS Tool", subito dopo FlottaStellare.it. Il titolo porta al tool (`flottastellare.it/acfs-bgs-tool/`), il pulsante GitHub al repository `ed-acfs/acfs-bgs-tool`. Immagine: la copertina del post (`static/assets/img/blog/acfs-bgs-tool/cover.png`), riusata senza duplicarla.
