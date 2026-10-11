@@ -5,7 +5,8 @@ _site
 .idea
 .DS_Store
 .vscode
-.claude
+.claude/*
+!.claude/skills/
 node_modules
 npm-debug.log
 seo-data/
