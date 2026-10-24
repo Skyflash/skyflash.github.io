@@ -2,6 +2,13 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.18] - 2026-10-24 — Pagine del blog generate in automatico
+
+Con i due post sull'ACFS Server i post italiani in griglia sono diventati 31 (32 meno quello in vetrina), cioè 3 pagine da 15. Il layout `blog-index` calcolava già 3 pagine e linkava `/it/blog/pagina3/`, ma le pagine della paginazione erano file scritti a mano e la terza mancava: il link "Più vecchi" dalla pagina 2 finiva in 404.
+
+- `_plugins/blog_pagination.rb` (nuovo): un generatore che, per ogni pagina indice con layout `blog-index`, conta i post della sua lingua (meno quello in vetrina, come fa il layout) e crea le pagine `paginaN/` che servono, copiando front matter e contenuto dell'indice con `page_num` e `permalink` propri. Se l'indice ha un `redirect_from` (quello italiano ha `/blog/`), la pagina N prende `/blog/paginaN/`. Gira prima di jekyll-redirect-from, che così vede quei redirect. Funziona perché il sito si pubblica con GitHub Actions: la vecchia pipeline "Deploy from a branch" ignorava i plugin custom.
+- `it/blog/pagina2.html` rimosso: ora la genera il plugin. HTML di `/it/blog/pagina2/` e del redirect `/blog/pagina2/` identico a prima.
+
 ## [2.3.17] - 2026-10-24 — EDDN come flusso, con un'immagine di lato
 
 - Post "ACFS Server: un server nostro…": la sezione "Da dove arrivano i dati" racconta EDDN come un fiume che non conserva niente e che i tool ascoltano prendendo i dati come arrivano. Accompagnata da un'illustrazione in stile Tron generata con l'AI (`static/assets/img/blog/acfs-server/tron-flusso.jpg`, 720×1013, 200 KB, ritagliata in alto per togliere il bollino "Made with AI").
