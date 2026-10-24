@@ -2,6 +2,12 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.16] - 2026-10-24 — Due post sull'ACFS Server
+
+- Nuovo post (IT, Progetti Personali), 23 ottobre: "ACFS Server: un server nostro, a zero euro, per il BGS di Elite Dangerous". Perché l'ACFS BGS Tool è passato da un sito statico a un server sempre acceso: ascoltatore EDDN, SQLite, Docker e Caddy su Oracle Cloud Free, aggiornamento automatico, backup, eventi su Discord e `/v1/site` per la mappa 3D dello squadrone. Copertina: la mappa 3D di flottastellare.it alimentata dal server (`static/assets/img/blog/acfs-server/cover.png`).
+- Nuovo post (IT, Progetti Personali), 24 ottobre: "ACFS Server, seconda parte: accesso con Discord, BGS-Tally e una roadmap senza confini". Accesso con Discord senza bot e ruoli come permessi, chiavi BGS-Tally self-service con filtro sul PC del pilota, due bug trovati leggendo il codice del plugin, gli Ordini condivisi e la roadmap. Copertina: il tool alla 1.5.7-beta con "Accedi con Discord" (`static/assets/img/blog/acfs-server-discord-bgs-tally/cover.png`).
+- Entrambi con campo `social:` per LinkedIn, Facebook e Threads.
+
 ## [2.3.15] - 2026-10-11 — Correzioni SEO dal report dell'11/10
 
 - `sitemap.xml`: l'URL scritto a mano `/ipui2ipei/` (dal redesign di agosto solo un redirect `noindex`) sostituito con le due pagine vere del tool, `/ipui2ipei/it/` e `/ipui2ipei/en/`. Il `robots.txt` del repo ipui2ipei vive in `/ipui2ipei/robots.txt` e Google non lo legge, quindi la sua sitemap non veniva mai scoperta.
