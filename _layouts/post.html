@@ -58,7 +58,7 @@ layout: default
 
   {% if page.tags %}
   <div class="pill-row prose" style="margin-top: var(--space-4);">
-    {% for tag in page.tags %}<span class="pill">{{ tag }}</span>{% endfor %}
+    {% for tag in page.tags %}<a class="pill" href="{{ blog_url | relative_url }}?tag={{ tag | url_encode }}" rel="tag">{{ tag }}</a>{% endfor %}
   </div>
   {% endif %}
 

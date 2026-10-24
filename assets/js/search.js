@@ -96,14 +96,18 @@
     });
   }
 
+  function currentLang() {
+    return document.documentElement.lang || 'it';
+  }
+
   input.addEventListener('input', function () {
     var words = input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
     results.innerHTML = '';
     if (!words.length || !data) return;
 
-    var currentLang = document.documentElement.lang || 'it';
+    var lang = currentLang();
     var scored = data
-      .filter(function (item) { return item.lang === currentLang; })
+      .filter(function (item) { return item.lang === lang; })
       .map(function (item) {
         var score = scoreItem(item, words);
         return score === null ? null : { item: item, score: score };
@@ -115,4 +119,23 @@
 
     renderResults(scored);
   });
+
+  // I tag in fondo ai post linkano a /<lingua>/blog/?tag=<tag>: qui il
+  // pannello si apre con il tag già scritto e mostra tutti i post che hanno
+  // esattamente quel tag (non un match testuale, che con "ia" troverebbe
+  // mezzo blog), dal più recente. Se poi si modifica il testo, l'evento
+  // "input" sopra torna alla ricerca normale.
+  var tag = new URLSearchParams(window.location.search).get('tag');
+  if (tag) {
+    openPanel();
+    input.value = tag;
+    loadData().then(function () {
+      var wanted = tag.toLowerCase();
+      var lang = currentLang();
+      renderResults(data.filter(function (item) {
+        if (item.lang !== lang || !item.tags) return false;
+        return item.tags.toLowerCase().split(', ').indexOf(wanted) !== -1;
+      }));
+    });
+  }
 })();

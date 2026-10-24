@@ -2,6 +2,13 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.19] - 2026-10-24 — Tag dei post cliccabili
+
+I tag in fondo ai post erano etichette mute: servivano solo a scegliere i post correlati. Ora portano a tutti i post con lo stesso tag, senza creare pagine nuove. Una pagina per tag sarebbe stata "thin content" (in italiano 51 tag su 88 sono usati in un solo post) e avrebbe fatto concorrenza alle pagine categoria.
+
+- `_layouts/post.html`: ogni tag è un link `rel="tag"` a `/<lingua>/blog/?tag=<tag>`. L'URL con il parametro ha lo stesso canonical di `/<lingua>/blog/`, quindi per Google non nasce una pagina in più.
+- `assets/js/search.js`: con `?tag=` nell'URL il pannello di ricerca si apre con il tag già scritto e mostra tutti i post della lingua che hanno esattamente quel tag, dal più recente, senza il limite di 8 risultati. Non è un match sul testo, che con "ia" troverebbe mezzo blog. Se si modifica il testo si torna alla ricerca normale.
+
 ## [2.3.18] - 2026-10-24 — Pagine del blog generate in automatico
 
 Con i due post sull'ACFS Server i post italiani in griglia sono diventati 31 (32 meno quello in vetrina), cioè 3 pagine da 15. Il layout `blog-index` calcolava già 3 pagine e linkava `/it/blog/pagina3/`, ma le pagine della paginazione erano file scritti a mano e la terza mancava: il link "Più vecchi" dalla pagina 2 finiva in 404.
