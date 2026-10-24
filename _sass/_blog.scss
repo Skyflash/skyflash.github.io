@@ -14,6 +14,18 @@
   border-radius: var(--radius);
 }
 
+// Immagine verticale affiancata al testo: su schermi stretti torna centrata
+// e ridotta, da md in su flotta a destra e il paragrafo le scorre accanto.
+.post-image--side {
+  max-width: 360px;
+
+  @media (min-width: $bp-md) {
+    float: right;
+    width: 40%;
+    margin: var(--space-1) 0 var(--space-3) var(--space-4);
+  }
+}
+
 // Post in evidenza (indice blog): un solo post per lingua, marcato con
 // `featured: true` nel front matter — vedi _layouts/blog-index.html.
 .featured-post {
@@ -131,6 +143,11 @@
   h4 {
     margin-top: var(--space-6);
     margin-bottom: var(--space-2);
+  }
+
+  // Un'immagine flottante non sconfina nella sezione successiva.
+  h2 {
+    clear: both;
   }
 
   p,

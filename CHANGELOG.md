@@ -2,6 +2,11 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.17] - 2026-10-24 — EDDN come flusso, con un'immagine di lato
+
+- Post "ACFS Server: un server nostro…": la sezione "Da dove arrivano i dati" racconta EDDN come un fiume che non conserva niente e che i tool ascoltano prendendo i dati come arrivano. Accompagnata da un'illustrazione in stile Tron generata con l'AI (`static/assets/img/blog/acfs-server/tron-flusso.jpg`, 720×1013, 200 KB, ritagliata in alto per togliere il bollino "Made with AI").
+- `_sass/_blog.scss`: nuova classe `.post-image--side` per le immagini verticali affiancate al testo (flottano a destra al 40%, max 360px, da `$bp-md` in su; sotto tornano centrate). Gli `h2` di `.prose` hanno `clear: both`, così un'immagine flottante non sconfina nella sezione successiva.
+
 ## [2.3.16] - 2026-10-24 — Due post sull'ACFS Server
 
 - Nuovo post (IT, Progetti Personali), 23 ottobre: "ACFS Server: un server nostro, a zero euro, per il BGS di Elite Dangerous". Perché l'ACFS BGS Tool è passato da un sito statico a un server sempre acceso: ascoltatore EDDN, SQLite, Docker e Caddy su Oracle Cloud Free, aggiornamento automatico, backup, eventi su Discord e `/v1/site` per la mappa 3D dello squadrone. Copertina: la mappa 3D di flottastellare.it alimentata dal server (`static/assets/img/blog/acfs-server/cover.png`).

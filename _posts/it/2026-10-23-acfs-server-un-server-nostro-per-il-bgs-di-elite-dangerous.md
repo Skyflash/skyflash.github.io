@@ -73,7 +73,11 @@ La spinta finale è venuta dai **Canonn**, gli stessi da cui il tool era partito
 
 ## Da dove arrivano i dati
 
-Il gioco non ha un'API pubblica per la galassia. I dati li portano i giocatori: programmi come EDMC leggono il diario di volo (il *journal*) e, se il pilota lo permette, inviano ogni salto a **[EDDN](https://github.com/EDCD/EDDN)**, l'Elite Dangerous Data Network. È un flusso pubblico, in tempo reale, a cui chiunque può collegarsi. Spansh, Inara ed EliteBGS si alimentano da lì.
+<img class="post-image post-image--side" src="{{ '/static/assets/img/blog/acfs-server/tron-flusso.jpg' | relative_url }}" alt="Illustrazione in stile Tron: una figura in tuta nera con linee luminose, a braccia alzate su una piattaforma circolare, investita da una pioggia di dati blu e arancioni">
+
+Il gioco non ha un'API pubblica per la galassia. I dati li portano i giocatori stessi: programmi come EDMC leggono il diario di volo (il *journal*) e, se il pilota lo permette, inviano a **[EDDN](https://github.com/EDCD/EDDN)**, l'Elite Dangerous Data Network, ogni salto, ogni attracco, ogni mercato visitato.
+
+Il risultato è un fiume. Migliaia di comandanti, in ogni angolo della galassia e a ogni ora, riversano lì quello che vedono. EDDN non conserva niente e non risponde a domande: trasmette e basta. Chi vuole i dati si mette in ascolto e li prende come arrivano. Spansh, Inara ed EliteBGS fanno così, e da adesso anche noi.
 
 Ogni salto in un sistema popolato porta con sé l'elenco delle fazioni, con influenze, stati e conflitti. E nei conflitti c'è un campo, `WonDays`, con i giorni vinti da ciascuna parte: il punteggio che cercavamo da settimane. Bastava ascoltare.
 
