@@ -6,14 +6,34 @@ description: "Perché l'ACFS BGS Tool è passato da un sito statico a un server 
 intro: "Un sito statico aggiornato da GitHub Actions ha retto due settimane. Poi le domande dello squadrone sono diventate più veloci dei dati. In un fine settimana, con Claude Code, è nato un server tutto nostro: ascolta la galassia in diretta, ricorda quello che vede e lo racconta a chi ne ha bisogno."
 social:
   default: |-
-    Un sito statico aggiornato da GitHub Actions ha retto due settimane. Poi le domande del mio squadrone di Elite Dangerous sono diventate più veloci dei dati.
+    Ho costruito un tool per il mio squadrone di Elite Dangerous, un simulatore spaziale che riproduce in scala 1:1 l'intera Galassia.
+    Doveva essere un progettino da weekend. È diventato decisamente di più.
 
-    Così, con Claude Code, è nato l'ACFS Server: un ascoltatore del flusso pubblico EDDN, un database SQLite e un'API, in Docker su Oracle Cloud Free. Costo: zero euro. Primo giorno: nella notte di prova aveva visto tutti i sistemi aggiornati da Spansh, più il punteggio dei conflitti che Spansh non conserva.
+    Qualche settimana fa io e Claude ci siamo messi a creare uno strumento che ci dicesse dove conviene operare ogni giorno. La nostra passione è il BGS: una simulazione politica interna al gioco che permette alle fazioni di espandersi e "esistere davvero" in game.
 
-    La regola più utile? Un server fermo deve rendere il tool meno fresco, non rotto.
+    In quattro giorni avevamo un sito statico che si aggiornava da solo. Perfetto.
+    Peccato che GitHub, ogni tanto, considerasse "ogni mezz'ora" un concetto filosofico.
 
-    Voi dove fate girare i vostri progetti personali sempre accesi?
-  threads: "Il tool BGS del mio squadrone di Elite Dangerous aveva superato i limiti di un sito statico. Con Claude Code è nato un server nostro a zero euro: ascoltatore EDDN, SQLite e un'API su Oracle Cloud Free. La regola più utile: un server fermo rende il tool meno fresco, non rotto. Voi dove fate girare i progetti personali?"
+    E il dato più importante? Il punteggio di guerre ed elezioni.
+    Nessuna fonte affidabile. Zero.
+
+    Quindi abbiamo fatto quello che una persona sana eviterebbe:
+    un server tutto nostro, che ascolta in diretta i dati che i giocatori mandano mentre volano.
+    La prima notte aveva già visto tutto quello che aveva visto Spansh… più i punteggi che Spansh non conserva.
+
+    Poi ci siamo fatti prendere la mano:
+    – login con Discord (basta password urlate in chat)
+    – plugin dei piloti filtrato direttamente sul loro PC
+    – solo i dati utili alla squadra
+
+    La parte più divertente?
+    Due bug invisibili ai test. Li abbiamo trovati solo aprendo il codice del plugin.
+    Mai fidarsi delle supposizioni.
+
+    E voi? Avete mai costruito qualcosa per una community o un hobby? Mi piacerebbe leggere le vostre storie.
+
+    Ho raccontato tutto in due puntate: la prima è qui 👇
+  threads: "Doveva essere un progettino da weekend per il mio squadrone di Elite Dangerous. È diventato un server tutto nostro, che ascolta in diretta i dati dei giocatori, con login Discord e i dati dei piloti filtrati sul loro PC. E due bug invisibili ai test, trovati solo aprendo il codice del plugin. Voi avete mai costruito qualcosa per una community? 👇"
 image: "/static/assets/img/blog/acfs-server/cover.png"
 lang: it_IT
 categories:
