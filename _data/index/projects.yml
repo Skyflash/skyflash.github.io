@@ -12,6 +12,17 @@
     en: "This very site's theme, extracted and published as a reusable project: bilingual (IT/EN), no third-party JavaScript, ready for GitHub Pages"
 
 - name:
+    it: Robo-XCopy (Un front end per robocopy in stile Amiga)
+    en: Robo-XCopy (An Amiga-style front end for robocopy)
+  gh_user: Skyflash
+  repo: RoboXCopy
+  url: https://roboxcopy.com/
+  img: /static/assets/img/blog/roboxcopy/cover.png
+  desc:
+    it: "Un'interfaccia grafica per robocopy di Windows nello stile di X-Copy dell'Amiga, scritta in Rust: simulazione (DRY RUN), comando sempre visibile e COPY BUILDER per costruire la copia passo passo. MIT."
+    en: "A graphical front end for Windows robocopy in the style of the Amiga's X-Copy, written in Rust: dry run, always-visible command line and a COPY BUILDER to put the copy together step by step. MIT."
+
+- name:
     it: DocSteer (Un tema Jekyll per la documentazione)
     en: DocSteer (A Jekyll theme for documentation)
   gh_user: Skyflash
@@ -73,6 +84,14 @@
   desc:
     it: "Lo strumento con cui lo squadrone Flotta Stellare segue il BGS di Elite: Dangerous: tutti i sistemi della fazione ordinati per priorità, con il motivo scritto accanto, su dati Spansh aggiornati da GitHub Actions"
     en: "The tool the Flotta Stellare squadron uses to follow the BGS in Elite: Dangerous: every faction system sorted by priority, with the reason written next to it, on Spansh data refreshed by GitHub Actions"
+
+- name:
+    it: ACFS Server
+    en: ACFS Server
+  img: /static/assets/img/blog/acfs-server/cover.png
+  desc:
+    it: "Il server dello squadrone Flotta Stellare per il BGS di Elite: Dangerous: ascolta EDDN in diretta, ricorda ciò che vede in SQLite e lo serve con un'API al BGS Tool e alla mappa 3D, con login Discord e avvisi automatici. Gira su Oracle Cloud Free."
+    en: "The Flotta Stellare squadron's server for the Elite: Dangerous BGS: it listens to EDDN live, remembers what it sees in SQLite and serves it through an API to the BGS Tool and the 3D map, with Discord login and automatic alerts. Runs on Oracle Cloud Free."
 
 - name:
     it: La Traduzione di Morrowind

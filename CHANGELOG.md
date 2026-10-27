@@ -4,6 +4,9 @@ Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
 ## [2.3.20] - 2026-10-27 — Robo-XCopy, nuovo post in evidenza
 
+- `_data/index/projects.yml`: aggiunta la card di Robo-XCopy nella lista dei progetti, subito prima di DocSteer. Il titolo porta a roboxcopy.com, il pulsante GitHub al repository `Skyflash/RoboXCopy`; l'immagine è la `cover.png` del post.
+- `_data/index/projects.yml`: aggiunta la card di ACFS Server, dopo ACFS BGS Tool (già presente). Il repository `ed-acfs/acfs-server` è privato, quindi la card non ha `repo:` né `url:`: niente titolo cliccabile e niente pulsante GitHub che finirebbe in 404. Immagine: `static/assets/img/blog/acfs-server/cover.png`.
+
 - Nuovo post, IT e EN (Progetti Personali / Personal Projects), 27 ottobre: "Robo-XCopy: un front end per robocopy in stile Amiga, scritto in Rust in due ore e mezza". Cos'è e come si usa (DRY RUN, comando sempre visibile, COPY BUILDER), i due temi, le scelte tecniche e quello che ha insegnato robocopy lanciato davvero nei test, compreso il bug della 0.1.0 che richiedeva il Visual C++ Redistributable. Immagini: `static/assets/img/blog/roboxcopy/` (`cover.png`, `builder.png`, `classic.png`, dagli screenshot del repository RoboXCopy). I due post condividono `translation_key: robo-xcopy`. Il post IT ha il campo `social:`.
 - `featured: true` passa dai due post su DocSteer-EE a quelli su Robo-XCopy. Nel post EN i link al nuovo sito e all'ACFS BGS Tool sono sostituiti da DocSteer-EE, perché quei due non hanno versione inglese.
 
