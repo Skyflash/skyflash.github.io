@@ -2,6 +2,11 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.20] - 2026-10-27 — Robo-XCopy, nuovo post in evidenza
+
+- Nuovo post, IT e EN (Progetti Personali / Personal Projects), 27 ottobre: "Robo-XCopy: un front end per robocopy in stile Amiga, scritto in Rust in due ore e mezza". Cos'è e come si usa (DRY RUN, comando sempre visibile, COPY BUILDER), i due temi, le scelte tecniche e quello che ha insegnato robocopy lanciato davvero nei test, compreso il bug della 0.1.0 che richiedeva il Visual C++ Redistributable. Immagini: `static/assets/img/blog/roboxcopy/` (`cover.png`, `builder.png`, `classic.png`, dagli screenshot del repository RoboXCopy). I due post condividono `translation_key: robo-xcopy`. Il post IT ha il campo `social:`.
+- `featured: true` passa dai due post su DocSteer-EE a quelli su Robo-XCopy. Nel post EN i link al nuovo sito e all'ACFS BGS Tool sono sostituiti da DocSteer-EE, perché quei due non hanno versione inglese.
+
 ## [2.3.19] - 2026-10-24 — Tag dei post cliccabili
 
 I tag in fondo ai post erano etichette mute: servivano solo a scegliere i post correlati. Ora portano a tutti i post con lo stesso tag, senza creare pagine nuove. Una pagina per tag sarebbe stata "thin content" (in italiano 51 tag su 88 sono usati in un solo post) e avrebbe fatto concorrenza alle pagine categoria.

@@ -6,7 +6,6 @@ description: "DocSteer-EE is the application successor to the DocSteer Jekyll th
 intro: "A Jekyll theme is perfectly fine as long as the people writing the documentation have access to the repository. In a company that is almost never the case. DocSteer-EE starts from there."
 image: "/static/assets/img/blog/docsteer-ee/cover.png"
 lang: en_US
-featured: true
 categories:
 - Personal Projects
 keywords: docsteer, docsteer-ee, documentation, knowledge base, faq, company wiki, active directory, ldap, oidc, single sign-on, sveltekit, postgres, open core, claude code

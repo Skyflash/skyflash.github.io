@@ -18,7 +18,6 @@ social:
   threads: "DocSteer-EE: documentazione, knowledge base e FAQ per le aziende, scritte dal browser, con versioni, revisione e login Active Directory. È in alpha. La versione gratuita basta già per usarla in azienda, senza limiti sul contenuto. Voi cosa usate oggi per la documentazione interna?"
 image: "/static/assets/img/blog/docsteer-ee/cover.png"
 lang: it_IT
-featured: true
 categories:
 - Progetti Personali
 keywords: docsteer, docsteer-ee, documentazione, knowledge base, faq, wiki aziendale, active directory, ldap, oidc, single sign-on, sveltekit, postgres, open core, claude code
