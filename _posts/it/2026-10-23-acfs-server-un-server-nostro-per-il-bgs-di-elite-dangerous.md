@@ -145,6 +145,6 @@ Le decisioni che contano, però, non erano tecniche. Quanto rumore accettare su 
 
 ## E adesso
 
-Il server è in produzione da cinque giorni, e ha già cambiato il modo in cui il tool e il sito ricevono i dati. Il prossimo articolo racconta come è diventato dello squadrone: l'accesso con Discord, i dati del plugin BGS-Tally e quello che c'è nella roadmap.
+Il server è in produzione da cinque giorni, e ha già cambiato il modo in cui il tool e il sito ricevono i dati. La [seconda parte]({{ '/it/blog/progetti-personali/acfs-server-accesso-con-discord-e-bgs-tally/' | relative_url }}) racconta come è diventato dello squadrone: l'accesso con Discord, i dati del plugin BGS-Tally e quello che c'è nella roadmap.
 
 Voi avete un progetto personale che a un certo punto ha avuto bisogno di un server sempre acceso? Dove lo fate girare, e cosa vi ha fatto scegliere?

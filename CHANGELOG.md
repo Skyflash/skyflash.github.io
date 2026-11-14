@@ -2,6 +2,12 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.24] - 2026-11-14 — Link dalla prima alla seconda parte dell'ACFS Server
+
+Proposta P3 del SEO Monitor. La seconda parte dell'ACFS Server linkava la prima, ma la prima non linkava la seconda.
+
+- `_posts/it/2026-10-23-acfs-server-un-server-nostro-per-il-bgs-di-elite-dangerous.md`: nella sezione "E adesso", "Il prossimo articolo racconta…" diventa "La [seconda parte] racconta…", con il link a `/it/blog/progetti-personali/acfs-server-accesso-con-discord-e-bgs-tally/`. È lo stesso formato del link che la seconda parte ha verso la prima.
+
 ## [2.3.23] - 2026-11-14 — robots.txt fuori dalla sitemap
 
 Proposta P3 del SEO Monitor. `robots.txt` ha un front matter perché usa `{{site.url}}`, quindi Jekyll lo tratta come pagina e la sitemap lo elencava tra le pagine da indicizzare.
