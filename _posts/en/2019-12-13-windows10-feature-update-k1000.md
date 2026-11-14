@@ -2,7 +2,7 @@
 title: Deploying a Windows 10 feature update via Kace
 layout: post
 date: '2019-12-16 11:30:00'
-description: Using Kace to upgrade a PC from Windows 7/8/10 to the latest Windows 10 build
+description: "Deploy a Windows 10 feature update with KACE SMA (K1000), step by step: repackage the ISO, push it with a Managed Install, and reuse the steps for each new build."
 lang: en_US
 image: "/static/assets/img/blog/kace/smartcard/kace.jpg"
 categories:

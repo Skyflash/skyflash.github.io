@@ -2,6 +2,12 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.25] - 2026-11-14 — Description del post EN sul feature update di Windows 10 con KACE
+
+Proposta P3 del SEO Monitor. Il post ha 288 impressioni, 0 clic e posizione media 6,57. La description diceva solo "Using Kace to upgrade a PC…" e non spiegava cosa si impara.
+
+- `_posts/en/2019-12-13-windows10-feature-update-k1000.md`: la nuova description dice cosa insegna il post (distribuire un feature update di Windows 10 con KACE SMA/K1000, passo per passo) e che i passaggi si ripetono per ogni build nuova. Contenuto e URL non cambiano.
+
 ## [2.3.24] - 2026-11-14 — Link dalla prima alla seconda parte dell'ACFS Server
 
 Proposta P3 del SEO Monitor. La seconda parte dell'ACFS Server linkava la prima, ma la prima non linkava la seconda.
