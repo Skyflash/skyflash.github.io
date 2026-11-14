@@ -2,6 +2,12 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.23] - 2026-11-14 — robots.txt fuori dalla sitemap
+
+Proposta P3 del SEO Monitor. `robots.txt` ha un front matter perché usa `{{site.url}}`, quindi Jekyll lo tratta come pagina e la sitemap lo elencava tra le pagine da indicizzare.
+
+- `robots.txt`: aggiunto `sitemap: false` al front matter. Il loop di `sitemap.xml` su `site.pages` esclude già le pagine con questo campo. Nella sitemap online era l'unico URL che non fosse una pagina.
+
 ## [2.3.22] - 2026-11-14 — Demo dei temi dichiarate a Google
 
 Proposta P2 del SEO Monitor. Le demo di DocSteer e di my-personal-resume-and-blog stanno su cristiancastellari.it ma nessun file del sito le dichiarava ai motori di ricerca.

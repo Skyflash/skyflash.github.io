@@ -1,5 +1,6 @@
 ---
 title: robots
+sitemap: false
 ---
 User-agent: *
 Disallow: /static/*
