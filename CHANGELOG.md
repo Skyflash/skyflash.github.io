@@ -2,6 +2,12 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.21] - 2026-11-14 — Title e description del post EN su WireGuard
+
+Proposta P1 del SEO Monitor. Il post EN su WireGuard ha 1.368 impressioni e 12 clic (CTR 0,88%, posizione media 7,68). Le query "wireguard windows server" e "wg server for windows" sono tra la 9ª e l'11ª posizione, ma title e description non cominciavano con quello che la gente cerca.
+
+- `_posts/en/2026-08-14-fast-solid-vpn-with-wireguard.md`: il title diventa "WireGuard server on Windows Server 2022, clients on Windows 11" (62 caratteri prima del suffisso) e la description comincia con "Set up a WireGuard server on Windows Server 2022". URL e contenuto non cambiano: il permalink usa il nome del file, non il title.
+
 ## [2.3.20] - 2026-10-27 — Robo-XCopy, nuovo post in evidenza
 
 - `_data/index/projects.yml`: aggiunta la card di Robo-XCopy nella lista dei progetti, subito prima di DocSteer. Il titolo porta a roboxcopy.com, il pulsante GitHub al repository `Skyflash/RoboXCopy`; l'immagine è la `cover.png` del post.
