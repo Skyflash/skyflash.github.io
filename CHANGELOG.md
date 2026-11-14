@@ -2,6 +2,13 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.22] - 2026-11-14 — Demo dei temi dichiarate a Google
+
+Proposta P2 del SEO Monitor. Le demo di DocSteer e di my-personal-resume-and-blog stanno su cristiancastellari.it ma nessun file del sito le dichiarava ai motori di ricerca.
+
+- `robots.txt`: aggiunta la riga `Sitemap:` per `/docsteer/sitemap.xml`, la sitemap della demo DocSteer, che contiene solo pagine.
+- `sitemap.xml`: nel blocco scritto a mano, dopo le due versioni di ipui2ipei, aggiunte `/my-personal-resume-and-blog/en/` e `/my-personal-resume-and-blog/it/`. La sitemap di quel tema contiene anche file che non sono pagine, quindi non va dichiarata così com'è.
+
 ## [2.3.21] - 2026-11-14 — Title e description del post EN su WireGuard
 
 Proposta P1 del SEO Monitor. Il post EN su WireGuard ha 1.368 impressioni e 12 clic (CTR 0,88%, posizione media 7,68). Le query "wireguard windows server" e "wg server for windows" sono tra la 9ª e l'11ª posizione, ma title e description non cominciavano con quello che la gente cerca.

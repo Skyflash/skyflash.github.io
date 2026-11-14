@@ -18,6 +18,8 @@ Disallow: /*.json
 
 
 Sitemap: {{site.url}}/sitemap.xml
+# Demo del tema DocSteer (repo a parte, Skyflash/docsteer): ha una sitemap sua, pulita.
+Sitemap: {{site.url}}/docsteer/sitemap.xml
 
 #                    ⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀
 #                    ⠀⠀⠀⠀⠀⠀⠀⣸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣇⠀⠀⠀⠀⠀⠀⠀

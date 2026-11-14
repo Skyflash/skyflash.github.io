@@ -54,9 +54,12 @@ sitemap:
     {% endunless %}
   {% endfor %}
   {% comment %} Il tool ipui2ipei è un repo a parte (Skyflash/ipui2ipei): /ipui2ipei/ è solo un
-  redirect noindex, quindi qui vanno le due versioni linguistiche. {% endcomment %}
-  {% assign ipui_paths = "/ipui2ipei/it/,/ipui2ipei/en/" | split: "," %}
-  {% for path in ipui_paths %}
+  redirect noindex, quindi qui vanno le due versioni linguistiche.
+  Stesso discorso per la demo del tema my-personal-resume-and-blog: la sua sitemap contiene
+  anche file che non sono pagine, quindi non la dichiariamo in robots.txt e mettiamo qui
+  solo le due home. {% endcomment %}
+  {% assign extra_paths = "/ipui2ipei/it/,/ipui2ipei/en/,/my-personal-resume-and-blog/en/,/my-personal-resume-and-blog/it/" | split: "," %}
+  {% for path in extra_paths %}
     <url>
       <loc>{{ site.url }}{{ path }}</loc>
       <changefreq>monthly</changefreq>
