@@ -43,7 +43,7 @@ categories:
       - name:
           it: Backup & DR
           en: Backup & DR
-        percentage: 95
+        percentage: 90
 
   - name:
       it: Systems Management & Automazione
@@ -56,11 +56,11 @@ categories:
       - name:
           it: PowerShell
           en: PowerShell
-        percentage: 80
+        percentage: 75
       - name:
           it: Git/GitHub/Jekyll
           en: Git/GitHub/Jekyll
-        percentage: 70
+        percentage: 80
 
   - name:
       it: AI & Sviluppo assistito
@@ -69,7 +69,7 @@ categories:
       - name:
           it: Claude / Claude Code
           en: Claude / Claude Code
-        percentage: 85
+        percentage: 80
       - name:
           it: Prompt & Context Engineering
           en: Prompt & Context Engineering
