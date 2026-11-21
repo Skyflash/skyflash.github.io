@@ -60,22 +60,26 @@ Trovarli a mano vuol dire aprire Spansh o Inara, cercare attorno a una stazione,
 
 ## L'idea dei Canonn, di nuovo
 
-Come per il tool, anche qui c'era già qualcuno che ci aveva pensato: i **Canonn**, con il loro [Colony Finder](https://canonn-science.github.io/canonn_colony_finder/). Una bella tabella di circa 4.700 sistemi da colonizzare attorno alle loro stazioni, con i corpi interessanti scritti accanto.
+Come per il BGS Tool, anche qui c'era già qualcuno che ci aveva già pensato: i **Canonn**, con il loro [Colony Finder](https://canonn-science.github.io/canonn_colony_finder/). Una bella tabella di circa 4.700 sistemi da colonizzare attorno alle loro stazioni, con i corpi interessanti scritti accanto.
 
-Guardandolo da vicino, però, aveva tre limiti per noi. Lo generano leggendo una volta l'archivio completo della galassia di Spansh, 117 GB, e lo aggiornano a mano (l'ultima volta, quando l'ho guardato, era di due settimane prima). Non sa niente di BGS. E il codice non ha una licenza, quindi da lì potevamo prendere solo l'idea.
+Guardandolo da vicino, però, aveva alcuni limiti, che per la nostra necessità non lo rendevano ottimale. 
 
-La sorpresa è arrivata provando Spansh: la sua ricerca dei sistemi, quella normale che usa chiunque dal sito, restituisce anche i sistemi disabitati, con tutti i corpi e con lo stato della colonizzazione. Attorno alla prima stazione che abbiamo provato ne sono usciti 27. Quindi l'archivio da 117 GB non serviva: bastava fare una ricerca attorno a ogni nostra stazione, una alla volta e con calma, per non pesare su Spansh.
+1. Viene generato leggendo di volta in volta l'archivio completo della galassia di Spansh (ben 117 GB!), e soprattutto viene aggiornato a mano (l'ultima volta, quando l'ho guardato, era di due settimane prima). 
+2. Non sa niente di BGS, che invece per noi è fondamentale.
+3. Il codice non ha una licenza esplicita, il che ci avrebbe potuto portare problemi futuri.
 
-## Una giornata: il 25 ottobre
+La sorpresa è arrivata in seguito, provando Spansh: la sua ricerca dei sistemi, quella normale che usa chiunque dal sito, restituisce anche i sistemi disabitati, con tutti i corpi e con lo stato della colonizzazione. Attorno alla prima stazione che abbiamo provato ne sono usciti 27. _Quindi l'archivio da 117 GB non serviva_: bastava fare una ricerca attorno a ogni nostra stazione, una alla volta e con calma, per non pesare su Spansh.
 
-Il Colony Plotter 1.0, chiamiamolo così, è nato il 25 ottobre, in una giornata sola. Il motore sta in un [repository a parte](https://github.com/ed-acfs/acfs-colony-plotter), pubblico e con licenza MIT, perché non c'è niente di segreto e magari serve a qualcun altro. Funziona così:
+## E venne il 25 ottobre
 
-1. prende tutte le stazioni controllate da Flotta Stellare (gli insediamenti di Odyssey no, non hanno il Contatto di Colonizzazione);
+La prima versione del Colony Plotter è nata il 25 ottobre, in una giornata sola. Il motore principale si trova in un [repository a parte](https://github.com/ed-acfs/acfs-colony-plotter), pubblico e con licenza MIT, perché non c'è niente di segreto e magari serve a qualcun altro. Funziona in questo modo:
+
+1. prende tutte le stazioni controllate da Flotta Stellare (ma non gli insediamenti di Odyssey: non hanno un _Colonization Contact_ da cui acquistare il beacon);
 2. per ognuna chiede a Spansh i sistemi entro 15 anni luce, più i corpi con gli anelli, che la ricerca dei sistemi non dice;
 3. tiene quelli liberi, segna quelli già reclamati da qualcuno, e per ogni sistema scrive **perché è interessante**, corpo per corpo;
 4. calcola da quali nostre stazioni ci si arriva, dalla più vicina, e con quali fazioni nascerebbe il sistema nuovo.
 
-Lo fa girare il server dello squadrone una volta al giorno, e la pagina la vede solo chi ha il ruolo giusto sul nostro server Discord, con l'accesso che avevo raccontato l'altra volta: i membri dello squadrone e, con un ruolo apposta, anche amici e ospiti. Oggi, mentre scrivo, i sistemi liberi attorno alle nostre stazioni sono 919 (più 112 già reclamati da qualcuno). Di questi, 34 hanno biologia, 101 anelli *Pristine* e 22 almeno un hotspot. Altro che "per una stazione si fa".
+Il tutto viene fatto girare dal server dello squadrone una volta al giorno. Inoltre, la pagina è visibile solo da chi ha un ruolo specifico all'interno del nostro Discord: i membri dello squadrone e, con un ruolo pensato appositamente, anche amici ed ospiti. Oggi, mentre scrivo, i sistemi liberi attorno alle nostre stazioni sono 919 (più 112 già reclamati da qualcuno). Di questi, 34 hanno biologia, 101 anelli *Pristine* e 22 almeno un hotspot. Altro che "per una stazione si fa".
 
 Per capire a cosa è "adatto" un sistema (raffineria, industria, estrazione, agricoltura, turismo) mi sono fatto leggere la **Colonization Mega Guide** di CMDR Mechan, un documento enorme che chiunque colonizzi in Elite prima o poi apre. Da lì è uscito un riassunto di poche pagine, che il motore usa per i suoi punteggi. Come un corpo decide l'economia di un porto l'abbiamo spiegato nel [terzo capitolo della nostra guida](https://flottastellare.it/blog/colonizzazione-parte3/). Una cosa l'ho dovuta correggere io: la guida dice che il sistema nuovo dà il 13% anche alla fazione dello squadrone. Se però la stazione di partenza è già nostra, Flotta Stellare ha già il 60%, e il 13% non le arriva una seconda volta. Sono le cose che si imparano giocando, non leggendo.
 
