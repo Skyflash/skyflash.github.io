@@ -2,6 +2,11 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.27] - 2026-11-21 — Post sull'ACFS Colony Plotter
+
+- `_posts/it/2026-11-21-acfs-colony-plotter-colonizzare-elite-dangerous.md`: nuovo post, il terzo sul lavoro per l'ACFS dopo i due sull'ACFS Server. Racconta il Colony Plotter: perché è nato, il motore che cerca su Spansh attorno alle stazioni di Flotta Stellare, il riordino della 1.9.0, il Ponte e la roadmap. Linka il post sull'ACFS BGS Tool e la seconda parte sull'ACFS Server.
+- `static/assets/img/blog/acfs-colony-plotter/`: la copertina (`cover.png`) e quattro screenshot del Colony Plotter: la scheda di un sistema con anelli Pristine, i segni In evidenza nel tema chiaro, il Ponte verso Hyades Sector LY-X a2-0 e la vista da telefono, affiancata al testo.
+
 ## [2.3.26] - 2026-11-21 — Description del post sulla traduzione di Morrowind
 
 Proposta P1 del SEO Monitor. Dal 21/08 al 18/11 il post ha avuto 385 impressioni e 4 clic. "morrowind traduzione ita" e "morrowind italiano" contano circa 115 impressioni in posizione 8–10, con 0 clic. La description parlava della storia della traduzione, non del download.
