@@ -2,6 +2,12 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.26] - 2026-11-21 — Description del post sulla traduzione di Morrowind
+
+Proposta P1 del SEO Monitor. Dal 21/08 al 18/11 il post ha avuto 385 impressioni e 4 clic. "morrowind traduzione ita" e "morrowind italiano" contano circa 115 impressioni in posizione 8–10, con 0 clic. La description parlava della storia della traduzione, non del download.
+
+- `_posts/it/2018-04-05-la-traduzione-di-morrowind-e-bloodmoon.md`: nel title "in italiano" diventa "italiana", quindi ora è "La traduzione italiana di Morrowind, Tribunal e Bloodmoon". La description mette in testa il download di Morrowind, Tribunal e Bloodmoon e poi la storia del progetto. Dopo la frase d'apertura c'è una riga che rimanda alla sezione "La traduzione in Italiano di Morrowind - Download". Alle keywords si aggiungono "ita" e "download". Il permalink non cambia.
+
 ## [2.3.25] - 2026-11-14 — Description del post EN sul feature update di Windows 10 con KACE
 
 Proposta P3 del SEO Monitor. Il post ha 288 impressioni, 0 clic e posizione media 6,57. La description diceva solo "Using Kace to upgrade a PC…" e non spiegava cosa si impara.

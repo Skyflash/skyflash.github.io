@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "La traduzione in italiano di Morrowind, Tribunal e Bloodmoon"
+title:  "La traduzione italiana di Morrowind, Tribunal e Bloodmoon"
 date:   2018-04-05
 lang: it_IT
-description: "La storia della traduzione di Morrowind in Italiano creata dal team ITP - Contiene i link per scaricare la traduzione in Italiano di Morrowind"
+description: "Scarica la traduzione italiana di Morrowind, Tribunal e Bloodmoon del team ITP, e leggi la storia del progetto che l'ha realizzata."
 intro: "The Elder Scrolls III: Morrowind ha rivoluzionato i canoni di libertà individuale del giocatore nel mondo virtuale del gioco stesso. Mai, fino a Morrowind, un CRPG era stato in grado di offrire una tale libertà di esplorazione ed una tale quantità di quests secondarie e PNG."
 image: /static/assets/img/blog/29-morrowind.jpg
-keywords: "morrowind,traduzione,itp"
+keywords: "morrowind,traduzione,ita,download,itp"
 categories: ["Fuori dall'Ufficio"]
 tags: [morrowind,itp,games]
 icon: fa-gamepad
@@ -18,6 +18,8 @@ redirect_from:
   - /blog/fuori-ufficio/la-traduzione-di-morrowind-e-bloodmoon/
 ---
 > Il 2002, ludicamente parlando, verrà ricordato per l'uscita dell'attesissimo terzo capitolo della saga The Elder Scrolls.
+
+Se cercate la traduzione da scaricare, i link sono nella sezione [La traduzione in Italiano di Morrowind - Download](#la-traduzione-in-italiano-di-morrowind---download).
 
 * TOC
 {:toc}
