@@ -74,7 +74,7 @@ La sorpresa è arrivata in seguito, provando Spansh: la sua ricerca dei sistemi,
 
 La prima versione del Colony Plotter è nata il 25 ottobre, in una giornata sola. Il motore principale si trova in un [repository a parte](https://github.com/ed-acfs/acfs-colony-plotter), pubblico e con licenza MIT, perché non c'è niente di segreto e magari serve a qualcun altro. Funziona in questo modo:
 
-1. prende tutte le stazioni controllate da Flotta Stellare (ma non gli insediamenti di Odyssey: non hanno un _Colonization Contact_ da cui acquistare il beacon);
+1. prende tutte le stazioni controllate da Flotta Stellare (ma non gli insediamenti di Odyssey: non hanno un _Colonisation Contact_ da cui acquistare il beacon);
 2. per ognuna chiede a Spansh i sistemi entro 15 anni luce, più i corpi con gli anelli, che la ricerca dei sistemi non dice;
 3. tiene quelli liberi, segna quelli già reclamati da qualcuno, e per ogni sistema scrive **perché è interessante**, corpo per corpo;
 4. calcola da quali nostre stazioni ci si arriva, dalla più vicina, e con quali fazioni nascerebbe il sistema nuovo.
@@ -131,14 +131,14 @@ L'introduzione del Ponte nella pagina comincia con *"Spazio, ultima frontiera. Q
 
 Il metodo è quello di sempre. Claude Code ha scritto il codice, ha letto Spansh e la Mega Guide, ha fatto le prove e mi ha portato le proposte. Io ho fatto il giocatore: ho deciso cosa è interessante e cosa no, ho corretto le regole quando non tornavano con quello che vedo in gioco, e ho detto "no, così non mi piace" quando non mi piaceva. Che, ve lo assicuro, è più difficile di quanto sembri: bisogna capire *perché* non ti piace.
 
-Il Colony Plotter era partito da una frase precisa: volevo "un bel prodotto una volta finito", non uno strumento cucito su misura per la prossima operazione dello squadrone. Il 20 novembre, con la versione 1.9.0 del tool, è uscito dalla beta. Finito non lo è, ma comincia a somigliare a quello che avevo in testa.
+Il Colony Plotter era partito da una frase precisa: volevo "un bel prodotto una volta finito", non uno strumento cucito su misura per la prossima operazione dello squadrone e poi dimenticato. Il 20 novembre, con la versione 1.9.0 del BGS Tool, è uscito dalla beta. Non è ancora 100% finito, ma comincia ad assomigliare a quello che avevo in testa.
 
-## E adesso
+## E adesso?
 
 Nella roadmap ci sono già le prossime cose:
 
-- **un indirizzo tutto suo**, tipo `colonyplotter.flottastellare.it`, da installare sul telefono come un'app;
-- **la taratura dei punteggi**: oggi la raffineria vince troppo spesso, solo perché i pianeti rocciosi sono tanti. Va rivista sui sistemi veri, con chi ci costruisce;
+- **un indirizzo tutto suo**, tipo `colonyplotter.flottastellare.it` e la PWA da installare sul telefono come un'app;
+- **la taratura dei punteggi**: oggi la raffineria vince troppo spesso, solo perché i pianeti rocciosi sono tanti. Va rivista sui sistemi veri, insieme agli Architetti;
 - **l'avanzamento dei cantieri**, con le consegne prese dal plugin BGS-Tally dei piloti, per sapere quanto manca senza chiederlo in chat;
 - **un Ponte tutto nostro**, che fra due tappe possibili preferisca quella con i corpi più utili invece della più corta.
 
