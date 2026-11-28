@@ -14,6 +14,7 @@ permalink: "/it/blog/infrastruttura/:title/"
 redirect_from:
   - /blog/linux/idenficare-processi-zombie-linux/
   - /blog/infrastruttura/idenficare-processi-zombie-linux/
+translation_key: linux-zombie-processes
 tags:
 - linux
 - scripting
@@ -87,6 +88,8 @@ mv kill-zombies /usr/bin
 ```
 
 ### Funzionamento
+
+Uno zombie è già morto e non si può terminare: lo script manda `kill -9` al processo padre (la quarta colonna di `ps l`, il PPID) e, una volta chiuso il padre, init adotta gli zombie e li rimuove. Va usato quindi sapendo quale servizio si sta fermando.
 
 Lo script viene evocato con un flag, che ne modifica il comportamento:
 

@@ -2,6 +2,19 @@
 
 Tutte le modifiche rilevanti al sito sono documentate in questo file.
 
+## [2.3.29] - 2026-11-28 — Title del post sul Colony Plotter
+
+Proposta P3 del SEO Monitor. Nella SERP il title veniva troncato a "ACFS Colony Plotter: dove piantare la prossima bandierina in", quindi "Elite Dangerous" restava fuori e "colonizzare" non c'era.
+
+- `_posts/it/2026-11-21-acfs-colony-plotter-colonizzare-elite-dangerous.md`: il title diventa "ACFS Colony Plotter: quali sistemi colonizzare in Elite Dangerous". La "bandierina" passa nell'intro: "La parte difficile è scegliere dove piantare la prossima bandierina". Il permalink non cambia.
+
+## [2.3.28] - 2026-11-28 — Versione inglese del post sui processi zombie
+
+Proposta P3 del SEO Monitor. Dal 28/08 al 25/11 la query inglese "zombie process" ha avuto 55 impressioni sul post IT, in posizione 7,9, e nessun clic.
+
+- `_posts/en/2015-10-25-find-kill-zombie-processes-linux.md`: nuovo post, traduzione di quello italiano, con title "Find and kill zombie processes on Linux with a bash script". Il permalink è `/en/blog/infrastructure/find-kill-zombie-processes-linux/`. Usa la stessa immagine e lo stesso file da scaricare.
+- `_posts/it/2015-10-25-idenficare-processi-zombie-linux.md`: aggiunto `translation_key: linux-zombie-processes`, lo stesso del post EN. In "Funzionamento" c'è una riga nuova: uno zombie non si può terminare, quindi lo script manda `kill -9` al processo padre (la quarta colonna di `ps l`). Va usato sapendo quale servizio si ferma. La stessa riga c'è nel post EN.
+
 ## [2.3.27] - 2026-11-21 — Post sull'ACFS Colony Plotter
 
 - `_posts/it/2026-11-21-acfs-colony-plotter-colonizzare-elite-dangerous.md`: nuovo post, il terzo sul lavoro per l'ACFS dopo i due sull'ACFS Server. Racconta il Colony Plotter: perché è nato, il motore che cerca su Spansh attorno alle stazioni di Flotta Stellare, il riordino della 1.9.0, il Ponte e la roadmap. Linka il post sull'ACFS BGS Tool e la seconda parte sull'ACFS Server.

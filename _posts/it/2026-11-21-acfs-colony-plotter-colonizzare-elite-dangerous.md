@@ -1,9 +1,9 @@
 ---
-title: "ACFS Colony Plotter: dove piantare la prossima bandierina in Elite Dangerous"
+title: "ACFS Colony Plotter: quali sistemi colonizzare in Elite Dangerous"
 layout: post
 date: '2026-11-21 09:00:00'
 description: "Il Colony Plotter dell'ACFS BGS Tool: i sistemi da colonizzare entro 15 anni luce dalle stazioni di Flotta Stellare, con i motivi per cui valgono il viaggio, e il Ponte per arrivare a quelli lontani. Come è nato, cosa abbiamo sbagliato e cosa viene dopo."
-intro: "Con la colonizzazione, in Elite Dangerous i giocatori possono reclamare un sistema disabitato e costruirci stazioni e porti. La parte difficile è scegliere quale colonizzare: attorno alle nostre stazioni ce ne sono quasi mille, e la maggior parte sono sassi. Il Colony Plotter serve a trovare quelli che non lo sono."
+intro: "Con la colonizzazione, in Elite Dangerous i giocatori possono reclamare un sistema disabitato e costruirci stazioni e porti. La parte difficile è scegliere dove piantare la prossima bandierina: attorno alle nostre stazioni ce ne sono quasi mille, e la maggior parte sono sassi. Il Colony Plotter serve a trovare quelli che non lo sono."
 social:
   default: |-
     In Elite Dangerous si può prendere un sistema stellare vuoto e costruirci sopra stazioni, porti, basi. Il bello è sceglierlo. Il brutto è che attorno a ogni stazione ce ne sono decine, e quasi tutti sono sassi.
